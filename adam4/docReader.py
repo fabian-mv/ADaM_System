@@ -711,7 +711,6 @@ def test_org_product_functions(text):
 
 def test_org_product(fileMatrx):
     for i in range(len(fileMatrx)):
-    #for i in range(745):
         print(str(i) + "\t|\t" + fileMatrx[i][0])
         test_org_product_functions(get_text_from(fileMatrx[i][0]))
         print("_____________________________________________________________________________________________________________________")
