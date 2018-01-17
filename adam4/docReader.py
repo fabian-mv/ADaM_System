@@ -6,6 +6,8 @@ from os import walk
 from os.path import join, abspath , splitext
 import base64
 import datetime
+import copy
+import pprint
 
 """
           _____          __  __    _______     _______ _______ ______ __  __ 
@@ -348,6 +350,38 @@ def get_org_dayOperations_product(text):
     return needle
 
 
+def get_org_typesidPk_product(text):
+    start = "Es Institución Pública: ("
+    mid = ") Municipalidad ("
+    mid1 = ") Es Empresa Privada: ("
+    mid2 = ") Es Organización no Gubernamental: ("
+    end = ") Nombre del producto de apoyo"
+    needle1 = text[text.find(start) + len(start): text.find(mid)]
+    needle2 = text[text.find(mid) + len(mid): text.find(mid1)]
+    needle3 = text[text.find(mid1) + len(mid1): text.find(mid2)]
+    needle4 = text[text.find(mid2) + len(mid2): text.find(end)]
+
+    if(needle1.replace(" " , "") == "x" or needle1.replace(" " , "") == "X"):
+        print("\t\033[94mtypesidPk:\033[0m 3")
+        return 3
+
+    elif(needle2.replace(" " , "") == "x" or needle2.replace(" " , "") == "X"):
+        print("\t\033[94mtypesidPk:\033[0m 2")
+        return 2
+
+    elif (needle3.replace(" ", "") == "x" or needle3.replace(" ", "") == "X"):
+        print("\t\033[94mtypesidPk:\033[0m 4")
+        return 4
+
+    elif (needle4.replace(" ", "") == "x" or needle4.replace(" ", "") == "X"):
+        print("\t\033[94mtypesidPk:\033[0m 1")
+        return 1
+
+    else:
+        print("\t\u001B[31mtypesidPk:\033[0m 1")
+        return 1
+
+
 # ------------------------------------SERVICES------------------------------------ #
 
 def get_service_isPrivate(text):
@@ -685,7 +719,7 @@ def test_org_product_functions(text):
     # isApproved = 1
     # isChecked = 1
     # isDeleted = 0
-    # organizationsTypesidPk = fkId
+    get_org_typesidPk_product(text)
 
 
 def test_org_product(fileMatrx):
@@ -697,7 +731,46 @@ def test_org_product(fileMatrx):
 
 # ------------------------------------BUILDING------------------------------------ #
 
-# def ---------------------------
+#TODO hacer que esto sirva
+def generate_Organizations_dictionary_product(productMatrix):
+    Organizations = []
+    printer = pprint.PrettyPrinter(indent=4 , width=80, depth=3)
+    c = 1
+
+    for row in productMatrix:
+        temp = {}
+        text = get_text_from(row[0])
+
+        temp["idPk"] = c
+        temp["dni"] = "No brinda información"
+        temp["name"] = get_org_name_product(text)
+        temp["email"] = get_org_email_product(text)
+        temp["web"] = get_org_web_product(text)
+        temp["telephone"] = get_org_telephone_product(text)
+        temp["legalRepresentative"] = "No brinda información"
+        temp["assembly"] = []
+        temp["socialNetworks"] = get_org_socialnetworks_product(text)
+        temp["wazeAddress"] = get_org_socialnetworks_product(text)
+        temp["schedule"] = "n"
+        temp["reaches"] = get_org_reaches_product(text)
+        temp["mision"] = get_org_mision_product(text)
+        temp["vision"] = get_org_vision_product(text)
+        temp["objetive"] = get_org_objective_product(text)
+        temp["dayOperations"] = get_org_dayOperations_product(text)
+        temp["isAproved"] = 1
+        temp["isChecked"] = 1
+        temp["isDeleted"] = 0
+        temp["organizationsTypesidPk"] = get_org_typesidPk_product(text)
+
+        c += 1
+        Organizations.append(copy.deepcopy(temp))
+
+    printer.pprint(Organizations)
+
+
+
+
+
 
 
 # ------------------------------------MAIN------------------------------------ #
@@ -705,14 +778,19 @@ def test_org_product(fileMatrx):
 def main():
     print("          _____          __  __    _______     _______ _______ ______ __  __ \n    /\   |  __ \   /\   |  \/  |  / ____\ \   / / ____|__   __|  ____|  \/  |\n   /  \  | |  | | /  \  | \  / | | (___  \ \_/ / (___    | |  | |__  | \  / |\n  / /\ \ | |  | |/ /\ \ | |\/| |  \___ \  \   / \___ \   | |  |  __| | |\/| |\n / ____ \| |__| / ____ \| |  | |  ____) |  | |  ____) |  | |  | |____| |  | |\n/_/    \_\_____/_/    \_\_|  |_| |_____/   |_| |_____/   |_|  |______|_|  |_|\n                    -Automatic Database Migration System-                    \n\n\n")
 
-    serviceMatrx = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo")
-    productMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/")
-    #path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/San Jose/AZMONT/SALVAESCALERAS/Capri/AZMONT S.A - Prod. Salvaescalera Capri.docx"
-    #text = get_text_from(path)
+    #serviceMatrx = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo")
+    #productMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/")
+    path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/San Jose/AZMONT/SALVAESCALERAS/Capri/AZMONT S.A - Prod. Salvaescalera Capri.docx"
+    text = get_text_from(path)
 
 
-    test_org_product(serviceMatrx)
+    #test_service(serviceMatrx)
+    #test_product(productMatrix)
+    #test_org_product(productMatrix)
 
+    get_org_typesidPk_product(text)
+
+    #generate_Organizations_dictionary_product(productMatrix)
 
 
 
