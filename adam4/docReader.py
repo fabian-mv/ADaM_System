@@ -62,37 +62,19 @@ def get_text_from(path):
     #SERVICE_ORG_REPLACEMENTS
     text = text.replace("Nombre del ente que brinda el servicio de apoyo:", "Nombre del ente que brinda el producto de apoyo (institución, municipalidad, empresa u organización no gubernamental):")
     #PRODUCTS_ITEM_REPLACEMENTS
-    text = text.replace(
-        "Nombre del prod. de apoyo: Indique el nombre completo del servicio de apoyo que se brinda",
-        "Nombre del producto de apoyo: Indique el nombre completo del servicio de apoyo que se brinda")
-    text = text.replace(
-        "Nombre del producto de apoyo: Indique el nombre completo del producto de apoyo, como lo enuncia la entidad que lo brinda.",
-        "Nombre del producto de apoyo: Indique el nombre completo del servicio de apoyo que se brinda")
-    text = text.replace(
-        "Nombre del producto de apoyo: Indique el nombre completo del producto de apoyo como lo enuncia la entidad que lo brinda.",
-        "Nombre del producto de apoyo: Indique el nombre completo del servicio de apoyo que se brinda")
-    text = text.replace(
-        "fines:",
-        "Fines:")
-    text = text.replace(
-        "Fínes:",
-        "Fines:")
-    text = text.replace(
-        "fínes:",
-        "Fines:")
-    text = text.replace(
-        "fines",
-        "Fines:")
-    text = text.replace(
-        "Fínes",
-        "Fines:")
-    text = text.replace(
-        "fínes",
-        "Fines:")
-    text = text.replace(
-        "14. Clasificación del producto de apoyo",
-        "Para uso interno ")
+    text = text.replace("Nombre del prod. de apoyo: Indique el nombre completo del servicio de apoyo que se brinda","Nombre del producto de apoyo: Indique el nombre completo del servicio de apoyo que se brinda")
+    text = text.replace("Nombre del producto de apoyo: Indique el nombre completo del producto de apoyo, como lo enuncia la entidad que lo brinda.","Nombre del producto de apoyo: Indique el nombre completo del servicio de apoyo que se brinda")
+    text = text.replace("Nombre del producto de apoyo: Indique el nombre completo del producto de apoyo como lo enuncia la entidad que lo brinda.","Nombre del producto de apoyo: Indique el nombre completo del servicio de apoyo que se brinda")
+    text = text.replace("fines:","Fines:")
+    text = text.replace("Fínes:","Fines:")
+    text = text.replace("fínes:","Fines:")
+    text = text.replace("fines","Fines:")
+    text = text.replace("Fínes","Fines:")
+    text = text.replace("fínes","Fines:")
+    text = text.replace("14. Clasificación del producto de apoyo","Para uso interno ")
     text = text.replace("Observaciones: Consignar en este último apartado, algún detalle o característica del producto de apoyo, que no quede reflejado en los ítems anteriores de esta ficha.","Observaciones:")
+    text = text.replace("Localización del servicio de apoyo","7. Uso y aplicaciones del producto de apoyo")
+    text = text.replace("7. Localización de la Organización","7. Uso y aplicaciones del producto de apoyo")
 
     print("\033[94mTEXTO: \033[0m" + text)
     return text
@@ -214,8 +196,10 @@ def get_date():
 
 # ------------------------------------ITEMS------------------------------------ #
 
-def get_item_name_product(text):
+def get_item_name(text):
     start = "Nombre del producto de apoyo: Indique el nombre completo del servicio de apoyo que se brinda"
+    if text.find(start) == -1:
+        start = "Nombre del producto de apoyo:"
     end = "7. Uso y aplicaciones del producto de apoyo"
     needle = text[text.find(start) + len(start): text.find(end)]
     print("\t\033[94mName of item:\033[0m " + needle)
@@ -234,20 +218,45 @@ def get_item_name_service(text):
     return needle
 
 
-def get_item_description(text):
+def get_item_description_products(text):
     start = "Fines:"
     if text.find(start) == -1:
         print("\t\033[94mDescription of product/service:\033[0m -")
         return "-"
     end = "Misión:"
-    needle = text[text.find(start) + len(start): text.find(end)]
+    if text.find(end) == -1:
+        end = "Objetivos"
+    needle = text[find_nth(text, start, 1) + len(start): text.find(end)]
     print("\t\033[94mDescription of product/service:\033[0m " + needle)
     return needle
 
 
-def get_item_observations(text):
+def get_item_description_service(text):
+    start = "Fines:"
+    if text.find(start) == -1 or text.count(start) < 2:
+        print("\t\033[94mDescription of product/service:\033[0m -")
+        return "-"
+    end = "Misión:"
+    if text.find(end) == -1:
+        end = "Objetivos"
+    needle = text[find_nth(text, start, 1) + len(start): text.find(end)]
+    print("\t\033[94mDescription of product/service:\033[0m " + needle)
+    return needle
+
+
+def get_item_observations_products(text):
     start = "Observaciones:"
     end = "Para uso interno "
+    needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
+    print("\t\033[94mObservations:\033[0m " + needle)
+    return needle
+
+
+def get_item_observations_services(text):
+    start = "Observaciones: Indique aquí información que considere importante, detalle características del servicio que no queden reflejadas en los ítems anteriores."
+    end = "Para uso interno "
+    if text.find(end) == -1:
+        end = "."
     needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
     print("\t\033[94mObservations:\033[0m " + needle)
     return needle
@@ -255,6 +264,8 @@ def get_item_observations(text):
 def get_item_typeDeficiency(text):
     start = "Tipo de discapacidad:"
     end = "Otra:"
+    if text.find(end) == -1:
+        end = "15. Horario del servicio"
     needle = text[text.find(start) + len(start): text.find(end)]
     print("\t\033[94mtypeDeficiency:\033[0m " + needle)
     return needle
@@ -262,6 +273,9 @@ def get_item_typeDeficiency(text):
 
 def get_item_age(text):
     start = "Grupo etario (edad):"
+    if text.find(start) == -1:
+        print("\t\033[94mage:\033[0m " + "-")
+        return "-"
     end = "Tipo de discapacidad:"
     needle = text[text.find(start) + len(start): text.find(end)]
     print("\t\033[94mage:\033[0m " + needle)
@@ -271,7 +285,9 @@ def get_item_age(text):
 def get_item_sex(text):
     start = "Género:"
     end = "Grupo etario"
-    needle = text[text.find(start) + len(start): text.find(end)]
+    if text.find(end) == -1:
+        end = ") "
+    needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
 
     count = 0
     if needle.find("X") != -1:
@@ -695,9 +711,32 @@ def test_product(fileMatrx):
 def test_item_product_functions(text):
     # idPk += 1
     # code = 0
-    get_item_name_product(text)
-    get_item_description(text)
-    get_item_observations(text)
+    get_item_name(text)
+    get_item_description_products(text)
+    get_item_observations_products(text)
+    # image1
+    # image2
+    # image3
+    # visibility = 1
+    # isProduct = 1
+    get_date()  # onDateUpdated
+    get_date()  # onDateCreated
+    get_date()  # daysToOperations
+    get_item_typeDeficiency(text)
+    get_item_age(text)
+    get_item_sex(text)
+    # isForPregnant = "-"
+    # isAproved = 1
+    # isChecked = 1
+    # isDeleted = 0
+    # organizationsIdFk = fkId
+
+def test_item_service_functions(text):
+    # idPk += 1
+    # code = 0
+    get_item_name(text)
+    get_item_description_service(text)
+    get_item_observations_services(text)
     # image1
     # image2
     # image3
@@ -722,30 +761,6 @@ def test_item_product(fileMatrx):
         test_item_product_functions(get_text_from(fileMatrx[i][0]))
         print("_____________________________________________________________________________________________________________________")
         print("")
-
-
-def test_item_service_functions(text):
-    # idPk += 1
-    # code = 0
-    get_item_name_service(text)
-    get_item_description(text)
-    get_item_observations(text)
-    # image1
-    # image2
-    # image3
-    # visibility = 1
-    # isProduct = 1
-    get_date()  # onDateUpdated
-    get_date()  # onDateCreated
-    get_date()  # daysToOperations
-    get_item_typeDeficiency(text)
-    get_item_age(text)
-    get_item_sex(text)
-    # isForPregnant = "-"
-    # isAproved = 1
-    # isChecked = 1
-    # isDeleted = 0
-    # organizationsIdFk = fkId
 
 
 def test_item_service(fileMatrx):
@@ -854,7 +869,7 @@ def dic2csv(dictionaries):
 
 def main():
     print("          _____          __  __    _______     _______ _______ ______ __  __ \n    /\   |  __ \   /\   |  \/  |  / ____\ \   / / ____|__   __|  ____|  \/  |\n   /  \  | |  | | /  \  | \  / | | (___  \ \_/ / (___    | |  | |__  | \  / |\n  / /\ \ | |  | |/ /\ \ | |\/| |  \___ \  \   / \___ \   | |  |  __| | |\/| |\n / ____ \| |__| / ____ \| |  | |  ____) |  | |  ____) |  | |  | |____| |  | |\n/_/    \_\_____/_/    \_\_|  |_| |_____/   |_| |_____/   |_|  |______|_|  |_|\n                    -Automatic Database Migration System-                    \n\n\n")
-    #serviceMatrx = get_files_from("/home/cipherlux/Dropbox/Inclutec/Migración/Informe Final CO - changed/Servicios de apoyo")
+    serviceMatrx = get_files_from("/home/cipherlux/Dropbox/Inclutec/Migración/Informe Final CO - changed/Servicios de apoyo")
     productMatrix = get_files_from("/home/cipherlux/Dropbox/Inclutec/Migración/Informe Final CO - changed/Productos de apoyo")
     #path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/San Jose/AZMONT/SALVAESCALERAS/Capri/AZMONT S.A - Prod. Salvaescalera Capri.docx"
     #text = get_text_from(path)
@@ -863,7 +878,8 @@ def main():
     #test_service(serviceMatrx)
     #test_product(productMatrix)
     #test_org_product(serviceMatrx)
-    test_item_product(productMatrix)
+    #test_item_product(productMatrix)
+    test_item_service(serviceMatrx)
 
     #get_org_typesidPk_product(text)
     #dic2csv(list)
@@ -887,4 +903,3 @@ if __name__ == "__main__":
 # TODO: (wazeAddress) Check this files and repair them. (FUNDACION SERVIO FLORES)
 # TODO: (Mision) Check this files and repair them. (Centro de Terapia de Lenguaje Semillitas de Dios)
 # TODO: (Vision) Check this files and repair them. (Centro de Terapia de Lenguaje Semillitas de Dios)
-# ------------------------------------Problems with some item enterprises------------------------------------ #
