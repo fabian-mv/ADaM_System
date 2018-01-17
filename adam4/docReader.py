@@ -1,11 +1,13 @@
-import docx2txt
-import adam4.urlmarker as urlmarker
+import base64
+import datetime
 import json
 import re
 from os import walk
-from os.path import join, abspath , splitext
-import base64
-import datetime
+from os.path import splitext, join, abspath
+
+import docx2txt
+
+import adam4.urlmarker as urlmarker
 
 """
           _____          __  __    _______     _______ _______ ______ __  __ 
@@ -61,23 +63,21 @@ def find_nth(haystack, needle, n):
 
 def get_files_from(path):
     all = []
-    for (path, dirs, files) in walk(path):
-        meedleList = []
+    count = -1
+    for (direc, dirs, files) in walk(path):
+        middleList = []
         if files != []:
-            for elm in files:
-                if elm.endswith((".docx", ".doc")):
-                    meedleList.append(join(abspath(path), elm))
-            for elm in files:
-                if elm.endswith((".jpeg", ".jpg", ".png", ".gif", ".JPG")):
-                    meedleList.append(join(abspath(path), elm))
-            all.append(meedleList)
-    for list in all:
-        correct = False
-        for file in list:
-            if file.endswith((".docx", ".doc")):
-                correct = True
-        if not correct:
-            all.remove(list)
+            allow = False
+            for file in files:
+                if file.endswith(".docx"):
+                    middleList.append(join(abspath(direc), file))
+                    all.append(middleList)
+                    allow = True
+                    count += 1
+            if allow:
+                for file in files:
+                    if file.endswith((".jpeg", ".jpg", ".png", ".gif", ".JPG")):
+                        all[count].append(join(abspath(direc), file))
     return all
 
 
@@ -710,8 +710,8 @@ def test_org_product_functions(text):
 
 
 def test_org_product(fileMatrx):
-    #for i in range(len(fileMatrx)):
-    for i in range(279):
+    for i in range(len(fileMatrx)):
+    #for i in range(745):
         print(str(i) + "\t|\t" + fileMatrx[i][0])
         test_org_product_functions(get_text_from(fileMatrx[i][0]))
         print("_____________________________________________________________________________________________________________________")
@@ -727,12 +727,13 @@ def test_org_product(fileMatrx):
 def main():
     print("          _____          __  __    _______     _______ _______ ______ __  __ \n    /\   |  __ \   /\   |  \/  |  / ____\ \   / / ____|__   __|  ____|  \/  |\n   /  \  | |  | | /  \  | \  / | | (___  \ \_/ / (___    | |  | |__  | \  / |\n  / /\ \ | |  | |/ /\ \ | |\/| |  \___ \  \   / \___ \   | |  |  __| | |\/| |\n / ____ \| |__| / ____ \| |  | |  ____) |  | |  ____) |  | |  | |____| |  | |\n/_/    \_\_____/_/    \_\_|  |_| |_____/   |_| |_____/   |_|  |______|_|  |_|\n                    -Automatic Database Migration System-                    \n\n\n")
 
-    serviceMatrx = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo")
+    #serviceMatrx = get_files_from(
+    # "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo")
     productMatrix = get_files_from("/home/cipherlux/Dropbox/Inclutec/Migración/Informe Final CO - changed/Productos de apoyo")
     #path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/San Jose/AZMONT/SALVAESCALERAS/Capri/AZMONT S.A - Prod. Salvaescalera Capri.docx"
     #text = get_text_from(path)
 
-    test_org_product(productMatrix)
+    #test_org_product(productMatrix)
 
 
 
