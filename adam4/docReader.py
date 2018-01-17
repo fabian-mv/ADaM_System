@@ -41,12 +41,12 @@ def get_text_from(path):
     text = text.replace("Sí", "Si")                            # replaces characters
     text = text.replace("sí", "Si")                            # replaces characters
     text = text.replace("Observaciones :" , "Observaciones:")  # remove the extra space on "Observaciones" word
-    text = text.replace("Teléfono (s)" , "telelelelele")
-    text = text.replace("Teléfono(s)", "telelelelele")
-    text = text.replace("Teléfono (s) ", "telelelelele")
-    text = text.replace("Teléfono(s) ", "telelelelele")
-    text = text.replace("telelelelele:", "telelelelele")
-    #text = text.replace("Señale el tipo de oferente del producto de apoyo", " Señale el tipo de oferente del servicio de apoyo")
+    text = text.replace("Teléfono (s)" , " telelelelele ")
+    text = text.replace("Teléfono(s)", " telelelelele ")
+    text = text.replace("Teléfono (s) ", " telelelelele ")
+    text = text.replace("Teléfono(s) ", " telelelelele ")
+    text = text.replace("telelelelele:", " telelelelele ")
+    text = text.replace("Señale el tipo de oferente del producto de apoyo", " Señale el tipo de oferente del servicio de apoyo")
     text = text.replace("Nombre del servicio de apoyo"," Nombre del producto de apoyo")
     text = text.replace("Fax:", "Fax")
     text = text.replace("fax:", "Fax")
@@ -55,7 +55,10 @@ def get_text_from(path):
     text = text.replace("\t" , " ")                            # replaces tabs with spaces
     text = text.replace("●" , "")                              # removes all bullets from text
     text = re.sub(' +' , ' ' , text)                           # removes all repeated whitespace from text
-    #print("\033[94mTEXTO: \033[0m" + text)
+    text = text.replace("Nombre del ente que brinda el servicio de apoyo (institución, municipalidad, empresa u organización no gubernamental):", "Nombre del ente que brinda el producto de apoyo (institución, municipalidad, empresa u organización no gubernamental):")
+    text = text.replace("4. Descripción del ente", "4. Descripción del ente que brinda el producto de apoyo")
+    text = text.replace(" Características generales, uso, aplicaciones y existencia del producto de apoyo", "Ubicación")
+    print("\033[94mTEXTO: \033[0m" + text)
     return text
 
 
@@ -261,13 +264,9 @@ def get_item_sex(text):
 #TODO ARREGLAR ESTA VARA (que sirva para servicios y ademas verificar que sea de  la organizacion y no del productio/servicio)
 def get_org_name_product(text):
     start = "Nombre del ente que brinda el producto de apoyo (institución, municipalidad, empresa u organización no gubernamental):"
-    if text.find(start) == -1:
-        start = "Nombre del ente que brinda el servicio de apoyo (institución, municipalidad, empresa u organización no gubernamental):"
     end = "4. Descripción del ente que brinda el producto de apoyo"
-    if text.find(end) == -1:
-        end = "4. Descripción del ente"
     needle = text[text.find(start) + len(start): text.find(end)]
-    #print("\t\033[94mname:\033[0m " + needle)
+    print("\t\033[94mname:\033[0m " + needle)
     return needle
 
 
@@ -275,7 +274,7 @@ def get_org_email_product(text):
     start = "Dirección de correo electrónico:"
     end = "Web del servicio:"
     needle = text[text.find(start) + len(start): text.find(end)]
-    #print("\t\033[94memail:\033[0m " + needle)
+    print("\t\033[94memail:\033[0m " + needle)
     return needle
 
 
@@ -283,7 +282,7 @@ def get_org_web_product(text):
     start = "Web del servicio:"
     end = "Redes sociales:"
     needle = text[text.find(start) + len(start): text.find(end)]
-    #print("\t\033[94mwebsite:\033[0m " + needle)
+    print("\t\033[94mwebsite:\033[0m " + needle)
     return needle
 
 
@@ -300,7 +299,7 @@ def get_org_telephone_product(text):
     needle = ""
     for i in fixedphones:
         needle += " " + i
-    #print("\t\033[94mtelephone:\033[0m " + needle)
+    print("\t\033[94mtelephone:\033[0m " + needle)
     return needle
 
 
@@ -319,40 +318,42 @@ def get_org_socialnetworks_product(text):
                 if url.find(name):
                     new[name] = url
             dict.update(new)
-    #print("\t\033[94msocialnetworks:\033[0m " + str(dict))
+    print("\t\033[94msocialnetworks:\033[0m " + str(dict))
     return dict
 
 
 def get_org_wazeAddress_product(text):
     start = "Dirección waze:"
     end = "Ubicación"
-    needle = text[text.find(start) + len(start): text.find(end)]
+    needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
     urls = re.findall(urlmarker.WEB_URL_REGEX, needle)
-    #print("\t\033[94mwazeAddress:\033[0m " + str(urls))
+    print("\t\033[94mwazeAddress:\033[0m " + str(urls))
     return urls
 
 
 def get_org_reaches_product(text):
-    start = " Fines: "
-    end = " Misión: "
+    start = "Fines:"
+    end = "Misión:"
     needle = text[text.find(start) + len(start): text.find(end)]
-    #print("\t\033[94mreaches:\033[0m " + needle)
+    print("\t\033[94mreaches:\033[0m " + needle)
     return needle
 
 
 def get_org_mision_product(text):
-    start = " Misión: "
+    start = "Misión:"
     end = " Visión: "
     needle = text[text.find(start) + len(start): text.find(end)]
-    #print("\t\033[94mmision:\033[0m " + needle)
+    print("\t\033[94mmision:\033[0m " + needle)
     return needle
 
 
 def get_org_vision_product(text):
     start = " Visión: "
-    end = " Objetivos: "
+    end = "Objetivos:"
+    if text.find(end) == -1:
+        end = "Señale el tipo"
     needle = text[text.find(start) + len(start): text.find(end)]
-    #print("\t\033[94mvision:\033[0m " + needle)
+    print("\t\033[94mvision:\033[0m " + needle)
     return needle
 
 
@@ -360,7 +361,7 @@ def get_org_objective_product(text):
     start = " Objetivos: "
     end = " Señale el tipo de oferente del servicio de apoyo"
     needle = text[text.find(start) + len(start): text.find(end)]
-    #print("\t\033[94mobjective:\033[0m " + needle)
+    print("\t\033[94mobjective:\033[0m " + needle)
     needle = needle.replace("5." , "")
     return needle
 
@@ -369,7 +370,7 @@ def get_org_dayOperations_product(text):
     start = "de la semana que atienden para la obtención de productos de apoyo. "
     end = "Forma de atención:"
     needle = text[text.find(start) + len(start): text.find(end)]
-    #print("\t\033[94mdayOperations:\033[0m " + needle)
+    print("\t\033[94mdayOperations:\033[0m " + needle)
     needle = needle.replace("13.", "")
     return needle
 
@@ -386,23 +387,23 @@ def get_org_typesidPk_product(text):
     needle4 = text[text.find(mid2) + len(mid2): text.find(end)]
 
     if(needle1.replace(" " , "") == "x" or needle1.replace(" " , "") == "X"):
-        #print("\t\033[94mtypesidPk:\033[0m 3")
+        print("\t\033[94mtypesidPk:\033[0m 3")
         return 3
 
     elif(needle2.replace(" " , "") == "x" or needle2.replace(" " , "") == "X"):
-        #print("\t\033[94mtypesidPk:\033[0m 2")
+        print("\t\033[94mtypesidPk:\033[0m 2")
         return 2
 
     elif (needle3.replace(" ", "") == "x" or needle3.replace(" ", "") == "X"):
-        #print("\t\033[94mtypesidPk:\033[0m 4")
+        print("\t\033[94mtypesidPk:\033[0m 4")
         return 4
 
     elif (needle4.replace(" ", "") == "x" or needle4.replace(" ", "") == "X"):
-        #print("\t\033[94mtypesidPk:\033[0m 1")
+        print("\t\033[94mtypesidPk:\033[0m 1")
         return 1
 
     else:
-        #print("\t\u001B[31mtypesidPk:\033[0m 1")
+        print("\t\u001B[31mtypesidPk:\033[0m 1")
         return 1
 
 
@@ -748,6 +749,12 @@ def test_org_product_functions(text):
 
 def test_org_product(fileMatrx):
     for i in range(len(fileMatrx)):
+        #TODO: (idPK) Check this files and repair them. (San Jose/Equipo_Montes_De_Oca)
+        #TODO: (Reaches) Check files and repair them. (APRONAGUE, Hosp. Trauma INS, CENAREC, CCSS)
+        #TODO: (Mision) Check this files and repair them. (APRONAGUE)
+        #TODO: (Vision) Check this files and repair them. (APRONAGUE)
+        #TODO: (Objectives) Check this files and repair them. (Hosp. Trauma INS, CENAREC)
+        #if i not in list(range(493, 555)) + list(range(724, 724+207)):
         print(str(i) + "\t|\t" + fileMatrx[i][0])
         test_org_product_functions(get_text_from(fileMatrx[i][0]))
         print("_____________________________________________________________________________________________________________________")
@@ -832,11 +839,10 @@ def main():
 
     #test_service(serviceMatrx)
     #test_product(productMatrix)
-    #test_org_product(productMatrix)
+    test_org_product(productMatrix)
 
     #get_org_typesidPk_product(text)
-    list = generate_Organizations_dictionary_product(productMatrix)
-    dic2csv(list)
+    #dic2csv(list)
 
 
 
