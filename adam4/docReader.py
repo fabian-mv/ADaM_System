@@ -2,6 +2,7 @@ import base64
 import datetime
 import json
 import re
+import string
 from os import walk
 from os.path import join, abspath , splitext
 import base64
@@ -10,7 +11,7 @@ import copy
 import pprint
 import docx2txt
 import sys
-
+import csv
 from adam4 import urlmarker
 
 """
@@ -54,7 +55,7 @@ def get_text_from(path):
     text = text.replace("\t" , " ")                            # replaces tabs with spaces
     text = text.replace("●" , "")                              # removes all bullets from text
     text = re.sub(' +' , ' ' , text)                           # removes all repeated whitespace from text
-    print("\033[94mTEXTO: \033[0m" + text)
+    #print("\033[94mTEXTO: \033[0m" + text)
     return text
 
 
@@ -266,7 +267,7 @@ def get_org_name_product(text):
     if text.find(end) == -1:
         end = "4. Descripción del ente"
     needle = text[text.find(start) + len(start): text.find(end)]
-    print("\t\033[94mname:\033[0m " + needle)
+    #print("\t\033[94mname:\033[0m " + needle)
     return needle
 
 
@@ -274,7 +275,7 @@ def get_org_email_product(text):
     start = "Dirección de correo electrónico:"
     end = "Web del servicio:"
     needle = text[text.find(start) + len(start): text.find(end)]
-    print("\t\033[94memail:\033[0m " + needle)
+    #print("\t\033[94memail:\033[0m " + needle)
     return needle
 
 
@@ -282,7 +283,7 @@ def get_org_web_product(text):
     start = "Web del servicio:"
     end = "Redes sociales:"
     needle = text[text.find(start) + len(start): text.find(end)]
-    print("\t\033[94mwebsite:\033[0m " + needle)
+    #print("\t\033[94mwebsite:\033[0m " + needle)
     return needle
 
 
@@ -299,7 +300,7 @@ def get_org_telephone_product(text):
     needle = ""
     for i in fixedphones:
         needle += " " + i
-    print("\t\033[94mtelephone:\033[0m " + needle)
+    #print("\t\033[94mtelephone:\033[0m " + needle)
     return needle
 
 
@@ -318,8 +319,8 @@ def get_org_socialnetworks_product(text):
                 if url.find(name):
                     new[name] = url
             dict.update(new)
-    print("\t\033[94msocialnetworks:\033[0m " + json.dumps(dict))
-    return json.dumps(dict)
+    #print("\t\033[94msocialnetworks:\033[0m " + str(dict))
+    return dict
 
 
 def get_org_wazeAddress_product(text):
@@ -327,16 +328,15 @@ def get_org_wazeAddress_product(text):
     end = "Ubicación"
     needle = text[text.find(start) + len(start): text.find(end)]
     urls = re.findall(urlmarker.WEB_URL_REGEX, needle)
-    list = [str(url) for url in urls]
-    print("\t\033[94mwazeAddress:\033[0m " + json.dumps(list))
-    return json.dumps(urls)
+    #print("\t\033[94mwazeAddress:\033[0m " + str(urls))
+    return urls
 
 
 def get_org_reaches_product(text):
     start = " Fines: "
     end = " Misión: "
     needle = text[text.find(start) + len(start): text.find(end)]
-    print("\t\033[94mreaches:\033[0m " + needle)
+    #print("\t\033[94mreaches:\033[0m " + needle)
     return needle
 
 
@@ -344,7 +344,7 @@ def get_org_mision_product(text):
     start = " Misión: "
     end = " Visión: "
     needle = text[text.find(start) + len(start): text.find(end)]
-    print("\t\033[94mmision:\033[0m " + needle)
+    #print("\t\033[94mmision:\033[0m " + needle)
     return needle
 
 
@@ -352,7 +352,7 @@ def get_org_vision_product(text):
     start = " Visión: "
     end = " Objetivos: "
     needle = text[text.find(start) + len(start): text.find(end)]
-    print("\t\033[94mvision:\033[0m " + needle)
+    #print("\t\033[94mvision:\033[0m " + needle)
     return needle
 
 
@@ -360,7 +360,7 @@ def get_org_objective_product(text):
     start = " Objetivos: "
     end = " Señale el tipo de oferente del servicio de apoyo"
     needle = text[text.find(start) + len(start): text.find(end)]
-    print("\t\033[94mobjective:\033[0m " + needle)
+    #print("\t\033[94mobjective:\033[0m " + needle)
     needle = needle.replace("5." , "")
     return needle
 
@@ -369,7 +369,7 @@ def get_org_dayOperations_product(text):
     start = "de la semana que atienden para la obtención de productos de apoyo. "
     end = "Forma de atención:"
     needle = text[text.find(start) + len(start): text.find(end)]
-    print("\t\033[94mdayOperations:\033[0m " + needle)
+    #print("\t\033[94mdayOperations:\033[0m " + needle)
     needle = needle.replace("13.", "")
     return needle
 
@@ -386,24 +386,23 @@ def get_org_typesidPk_product(text):
     needle4 = text[text.find(mid2) + len(mid2): text.find(end)]
 
     if(needle1.replace(" " , "") == "x" or needle1.replace(" " , "") == "X"):
-        print("\t\033[94mtypesidPk:\033[0m 3")
+        #print("\t\033[94mtypesidPk:\033[0m 3")
         return 3
 
     elif(needle2.replace(" " , "") == "x" or needle2.replace(" " , "") == "X"):
-        print("\t\033[94mtypesidPk:\033[0m 2")
+        #print("\t\033[94mtypesidPk:\033[0m 2")
         return 2
 
     elif (needle3.replace(" ", "") == "x" or needle3.replace(" ", "") == "X"):
-        print("\t\033[94mtypesidPk:\033[0m 4")
+        #print("\t\033[94mtypesidPk:\033[0m 4")
         return 4
 
     elif (needle4.replace(" ", "") == "x" or needle4.replace(" ", "") == "X"):
-        print("\t\033[94mtypesidPk:\033[0m 1")
+        #print("\t\033[94mtypesidPk:\033[0m 1")
         return 1
 
     else:
-        print("\t\u001B[31mtypesidPk:\033[0m 1")
-        sys.exit(1)
+        #print("\t\u001B[31mtypesidPk:\033[0m 1")
         return 1
 
 
@@ -759,39 +758,62 @@ def test_org_product(fileMatrx):
 #TODO hacer que esto sirva
 def generate_Organizations_dictionary_product(productMatrix):
     Organizations = []
-    printer = pprint.PrettyPrinter(indent=4 , width=80, depth=3)
+    printer = pprint.PrettyPrinter(indent=4 , width=500, depth=3)
     c = 1
+    org_ready = []
 
     for row in productMatrix:
         temp = {}
         text = get_text_from(row[0])
+        if get_org_name_product(text) not in org_ready:
+            org_ready.append(get_org_name_product(text))
+            temp["idPk"] = c
+            temp["dni"] = "&No brinda información&"
+            temp["name"] = "&" + get_org_name_product(text) + "&"
+            temp["email"] = "&" + get_org_email_product(text) + "&"
+            temp["web"] = "&" + get_org_web_product(text) + "&"
+            temp["telephone"] = "&" + get_org_telephone_product(text) + "&"
+            temp["legalRepresentative"] = "&No brinda información&"
+            temp["assembly"] = []
+            temp["socialNetworks"] = get_org_socialnetworks_product(text)
+            temp["wazeAddress"] = get_org_wazeAddress_product(text)
+            temp["schedule"] = "&n&"
+            temp["reaches"] = "&" + get_org_reaches_product(text) + "&"
+            temp["mision"] = "&" + get_org_mision_product(text) + "&"
+            temp["vision"] = "&" + get_org_vision_product(text) + "&"
+            temp["objetive"] = "&" + get_org_objective_product(text) + "&"
+            temp["dayOperations"] = {}
+            temp["isAproved"] = 1
+            temp["isChecked"] = 1
+            temp["isDeleted"] = 0
+            temp["organizationsTypesidPk"] = get_org_typesidPk_product(text)
+            c += 1
 
-        temp["idPk"] = c
-        temp["dni"] = "No brinda información"
-        temp["name"] = get_org_name_product(text)
-        temp["email"] = get_org_email_product(text)
-        temp["web"] = get_org_web_product(text)
-        temp["telephone"] = get_org_telephone_product(text)
-        temp["legalRepresentative"] = "No brinda información"
-        temp["assembly"] = []
-        temp["socialNetworks"] = get_org_socialnetworks_product(text)
-        temp["wazeAddress"] = get_org_socialnetworks_product(text)
-        temp["schedule"] = "n"
-        temp["reaches"] = get_org_reaches_product(text)
-        temp["mision"] = get_org_mision_product(text)
-        temp["vision"] = get_org_vision_product(text)
-        temp["objetive"] = get_org_objective_product(text)
-        temp["dayOperations"] = get_org_dayOperations_product(text)
-        temp["isAproved"] = 1
-        temp["isChecked"] = 1
-        temp["isDeleted"] = 0
-        temp["organizationsTypesidPk"] = get_org_typesidPk_product(text)
+            Organizations.append(copy.deepcopy(temp))
 
-        c += 1
-        Organizations.append(copy.deepcopy(temp))
+    #print(Organizations)
 
-    printer.pprint(Organizations)
+    return Organizations
 
+
+def dic2csv(dictionaries):
+    cols_name = ["idPk", "dni" , "name" , "email" , "web" , "telephone" , "legalRepresentative" , "assembly" , "socialNetworks" , "wazeAddress" , "schedule" , "reaches" , "mision" , "vision" , "objetive" , "dayOperations" ,"isAproved" , "isChecked" , "isDeleted" , "organizationsTypesidPk"]
+    file = open("toExport.csv", "w")
+
+    with file:
+        csv.register_dialect("toMYSQL", delimiter=";")
+        writer = csv.DictWriter(file, fieldnames=cols_name, dialect="toMYSQL")
+        writer.writeheader()
+        for dict in dictionaries:
+            writer.writerow(dict)
+        file.close()
+
+    file = open("toExport.csv", "r")
+    old = file.read()
+    file.close()
+    file = open("toExport.csv", "w")
+    file.write(old.replace("&", "\""))
+    file.close()
 
 
 
@@ -804,17 +826,17 @@ def main():
     print("          _____          __  __    _______     _______ _______ ______ __  __ \n    /\   |  __ \   /\   |  \/  |  / ____\ \   / / ____|__   __|  ____|  \/  |\n   /  \  | |  | | /  \  | \  / | | (___  \ \_/ / (___    | |  | |__  | \  / |\n  / /\ \ | |  | |/ /\ \ | |\/| |  \___ \  \   / \___ \   | |  |  __| | |\/| |\n / ____ \| |__| / ____ \| |  | |  ____) |  | |  ____) |  | |  | |____| |  | |\n/_/    \_\_____/_/    \_\_|  |_| |_____/   |_| |_____/   |_|  |______|_|  |_|\n                    -Automatic Database Migration System-                    \n\n\n")
     #serviceMatrx = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo")
     productMatrix = get_files_from("/home/cipherlux/Dropbox/Inclutec/Migración/Informe Final CO - changed/Productos de apoyo")
-    path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/San Jose/AZMONT/SALVAESCALERAS/Capri/AZMONT S.A - Prod. Salvaescalera Capri.docx"
-    text = get_text_from(path)
+    #path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/San Jose/AZMONT/SALVAESCALERAS/Capri/AZMONT S.A - Prod. Salvaescalera Capri.docx"
+    #text = get_text_from(path)
 
 
     #test_service(serviceMatrx)
     #test_product(productMatrix)
-    test_org_product(productMatrix)
+    #test_org_product(productMatrix)
 
     #get_org_typesidPk_product(text)
-
-    #generate_Organizations_dictionary_product(productMatrix)
+    list = generate_Organizations_dictionary_product(productMatrix)
+    dic2csv(list)
 
 
 
