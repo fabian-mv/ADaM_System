@@ -1,5 +1,5 @@
-import docx2txt
-import adam4.urlmarker as urlmarker
+import base64
+import datetime
 import json
 import re
 from os import walk
@@ -8,6 +8,9 @@ import base64
 import datetime
 import copy
 import pprint
+import docx2txt
+
+from adam4 import urlmarker
 
 """
           _____          __  __    _______     _______ _______ ______ __  __ 
@@ -40,6 +43,11 @@ def get_text_from(path):
     text = text.replace("Teléfono(s)", "telelelelele")
     text = text.replace("Teléfono (s) ", "telelelelele")
     text = text.replace("Teléfono(s) ", "telelelelele")
+    text = text.replace("telelelelele:", "telelelelele")
+    text = text.replace("Señale el tipo de oferente del producto de apoyo", " Señale el tipo de oferente del servicio de apoyo")
+    text = text.replace("Fax:", "Fax")
+    text = text.replace("fax:", "Fax")
+    text = text.replace("fax", "Fax")
     text = text.replace("\n" , " ")                            # removes all newline characters from text
     text = text.replace("\t" , " ")                            # replaces tabs with spaces
     text = text.replace("●" , "")                              # removes all bullets from text
@@ -58,16 +66,21 @@ def find_nth(haystack, needle, n):
 
 def get_files_from(path):
     all = []
-    for (path, dirs, files) in walk(path):
-        meedleList = []
+    count = -1
+    for (direc, dirs, files) in walk(path):
+        middleList = []
         if files != []:
-            for elm in files:
-                if elm.endswith((".docx", ".doc")):
-                    meedleList.append(join(abspath(path), elm))
-            for elm in files:
-                if elm.endswith((".jpeg", ".jpg", ".png", ".gif", ".JPG")):
-                    meedleList.append(join(abspath(path), elm))
-            all.append(meedleList)
+            allow = False
+            for file in files:
+                if file.endswith(".docx"):
+                    middleList.append(join(abspath(direc), file))
+                    all.append(middleList)
+                    allow = True
+                    count += 1
+            if allow:
+                for file in files:
+                    if file.endswith((".jpeg", ".jpg", ".png", ".gif", ".JPG")):
+                        all[count].append(join(abspath(direc), file))
     return all
 
 
@@ -272,9 +285,18 @@ def get_org_web_product(text):
 
 
 def get_org_telephone_product(text):
-    start = " telelelelele: "
+    start = " telelelelele "
     end = "Dirección de correo electrónico:"
     needle = text[text.find(start) + len(start): text.find(end)]
+    needle = needle[:needle.find("Fax")]
+    rawphones = re.findall('\d+', needle)
+    fixedphones = []
+    for i in range(len(rawphones)):
+        if i%2 != 0 and i != 0:
+            fixedphones += [str(rawphones[i-1]) + "-" + str(rawphones[i])]
+    needle = ""
+    for i in fixedphones:
+        needle += " " + i
     print("\t\033[94mtelephone:\033[0m " + needle)
     return needle
 
@@ -777,7 +799,6 @@ def generate_Organizations_dictionary_product(productMatrix):
 
 def main():
     print("          _____          __  __    _______     _______ _______ ______ __  __ \n    /\   |  __ \   /\   |  \/  |  / ____\ \   / / ____|__   __|  ____|  \/  |\n   /  \  | |  | | /  \  | \  / | | (___  \ \_/ / (___    | |  | |__  | \  / |\n  / /\ \ | |  | |/ /\ \ | |\/| |  \___ \  \   / \___ \   | |  |  __| | |\/| |\n / ____ \| |__| / ____ \| |  | |  ____) |  | |  ____) |  | |  | |____| |  | |\n/_/    \_\_____/_/    \_\_|  |_| |_____/   |_| |_____/   |_|  |______|_|  |_|\n                    -Automatic Database Migration System-                    \n\n\n")
-
     #serviceMatrx = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo")
     #productMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/")
     path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/San Jose/AZMONT/SALVAESCALERAS/Capri/AZMONT S.A - Prod. Salvaescalera Capri.docx"
