@@ -38,6 +38,11 @@ def get_text_from(path):
     text = text.replace("Teléfono(s)", "telelelelele")
     text = text.replace("Teléfono (s) ", "telelelelele")
     text = text.replace("Teléfono(s) ", "telelelelele")
+    text = text.replace("telelelelele:", "telelelelele")
+    text = text.replace("Señale el tipo de oferente del producto de apoyo", " Señale el tipo de oferente del servicio de apoyo")
+    text = text.replace("Fax:", "Fax")
+    text = text.replace("fax:", "Fax")
+    text = text.replace("fax", "Fax")
     text = text.replace("\n" , " ")                            # removes all newline characters from text
     text = text.replace("\t" , " ")                            # replaces tabs with spaces
     text = text.replace("●" , "")                              # removes all bullets from text
@@ -66,6 +71,13 @@ def get_files_from(path):
                 if elm.endswith((".jpeg", ".jpg", ".png", ".gif", ".JPG")):
                     meedleList.append(join(abspath(path), elm))
             all.append(meedleList)
+    for list in all:
+        correct = False
+        for file in list:
+            if file.endswith((".docx", ".doc")):
+                correct = True
+        if not correct:
+            all.remove(list)
     return all
 
 
@@ -270,9 +282,18 @@ def get_org_web_product(text):
 
 
 def get_org_telephone_product(text):
-    start = " telelelelele: "
+    start = " telelelelele "
     end = "Dirección de correo electrónico:"
     needle = text[text.find(start) + len(start): text.find(end)]
+    needle = needle[:needle.find("Fax")]
+    rawphones = re.findall('\d+', needle)
+    fixedphones = []
+    for i in range(len(rawphones)):
+        if i%2 != 0 and i != 0:
+            fixedphones += [str(rawphones[i-1]) + "-" + str(rawphones[i])]
+    needle = ""
+    for i in fixedphones:
+        needle += " " + i
     print("\t\033[94mtelephone:\033[0m " + needle)
     return needle
 
@@ -689,7 +710,8 @@ def test_org_product_functions(text):
 
 
 def test_org_product(fileMatrx):
-    for i in range(len(fileMatrx)):
+    #for i in range(len(fileMatrx)):
+    for i in range(279):
         print(str(i) + "\t|\t" + fileMatrx[i][0])
         test_org_product_functions(get_text_from(fileMatrx[i][0]))
         print("_____________________________________________________________________________________________________________________")
@@ -706,12 +728,12 @@ def main():
     print("          _____          __  __    _______     _______ _______ ______ __  __ \n    /\   |  __ \   /\   |  \/  |  / ____\ \   / / ____|__   __|  ____|  \/  |\n   /  \  | |  | | /  \  | \  / | | (___  \ \_/ / (___    | |  | |__  | \  / |\n  / /\ \ | |  | |/ /\ \ | |\/| |  \___ \  \   / \___ \   | |  |  __| | |\/| |\n / ____ \| |__| / ____ \| |  | |  ____) |  | |  ____) |  | |  | |____| |  | |\n/_/    \_\_____/_/    \_\_|  |_| |_____/   |_| |_____/   |_|  |______|_|  |_|\n                    -Automatic Database Migration System-                    \n\n\n")
 
     serviceMatrx = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo")
-    productMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/")
+    productMatrix = get_files_from("/home/cipherlux/Dropbox/Inclutec/Migración/Informe Final CO - changed/Productos de apoyo")
     #path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/San Jose/AZMONT/SALVAESCALERAS/Capri/AZMONT S.A - Prod. Salvaescalera Capri.docx"
     #text = get_text_from(path)
 
+    test_org_product(productMatrix)
 
-    test_org_product(serviceMatrx)
 
 
 
