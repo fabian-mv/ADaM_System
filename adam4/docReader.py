@@ -9,7 +9,7 @@ import datetime
 import copy
 import pprint
 import docx2txt
-
+import csv
 from adam4 import urlmarker
 
 """
@@ -316,8 +316,8 @@ def get_org_socialnetworks_product(text):
                 if url.find(name):
                     new[name] = url
             dict.update(new)
-    print("\t\033[94msocialnetworks:\033[0m " + json.dumps(dict))
-    return json.dumps(dict)
+    print("\t\033[94msocialnetworks:\033[0m " + str(dict))
+    return dict
 
 
 def get_org_wazeAddress_product(text):
@@ -325,9 +325,8 @@ def get_org_wazeAddress_product(text):
     end = "Ubicación"
     needle = text[text.find(start) + len(start): text.find(end)]
     urls = re.findall(urlmarker.WEB_URL_REGEX, needle)
-    list = [str(url) for url in urls]
-    print("\t\033[94mwazeAddress:\033[0m " + json.dumps(list))
-    return json.dumps(urls)
+    print("\t\033[94mwazeAddress:\033[0m " + str(urls))
+    return urls
 
 
 def get_org_reaches_product(text):
@@ -756,40 +755,55 @@ def test_org_product(fileMatrx):
 #TODO hacer que esto sirva
 def generate_Organizations_dictionary_product(productMatrix):
     Organizations = []
-    printer = pprint.PrettyPrinter(indent=4 , width=80, depth=3)
+    printer = pprint.PrettyPrinter(indent=4 , width=500, depth=3)
     c = 1
+    org_ready = []
 
     for row in productMatrix:
         temp = {}
         text = get_text_from(row[0])
+        if get_org_name_product(text) not in org_ready:
+            org_ready.append(get_org_name_product(text))
+            temp["idPk"] = c
+            temp["dni"] = "&No brinda información&"
+            temp["name"] = "&" + get_org_name_product(text) + "&"
+            temp["email"] = "&" + get_org_email_product(text) + "&"
+            temp["web"] = "&" + get_org_web_product(text) + "&"
+            temp["telephone"] = "&" + get_org_telephone_product(text) + "&"
+            temp["legalRepresentative"] = "&No brinda información&"
+            temp["assembly"] = []
+            temp["socialNetworks"] = get_org_socialnetworks_product(text)
+            temp["wazeAddress"] = get_org_wazeAddress_product(text)
+            temp["schedule"] = "&n&"
+            temp["reaches"] = "&" + get_org_reaches_product(text) + "&"
+            temp["mision"] = "&" + get_org_mision_product(text) + "&"
+            temp["vision"] = "&" + get_org_vision_product(text) + "&"
+            temp["objetive"] = "&" + get_org_objective_product(text) + "&"
+            temp["dayOperations"] = {}
+            temp["isAproved"] = 1
+            temp["isChecked"] = 1
+            temp["isDeleted"] = 0
+            temp["organizationsTypesidPk"] = get_org_typesidPk_product(text)
+            c += 1
 
-        temp["idPk"] = c
-        temp["dni"] = "No brinda información"
-        temp["name"] = get_org_name_product(text)
-        temp["email"] = get_org_email_product(text)
-        temp["web"] = get_org_web_product(text)
-        temp["telephone"] = get_org_telephone_product(text)
-        temp["legalRepresentative"] = "No brinda información"
-        temp["assembly"] = []
-        temp["socialNetworks"] = get_org_socialnetworks_product(text)
-        temp["wazeAddress"] = get_org_socialnetworks_product(text)
-        temp["schedule"] = "n"
-        temp["reaches"] = get_org_reaches_product(text)
-        temp["mision"] = get_org_mision_product(text)
-        temp["vision"] = get_org_vision_product(text)
-        temp["objetive"] = get_org_objective_product(text)
-        temp["dayOperations"] = get_org_dayOperations_product(text)
-        temp["isAproved"] = 1
-        temp["isChecked"] = 1
-        temp["isDeleted"] = 0
-        temp["organizationsTypesidPk"] = get_org_typesidPk_product(text)
+            Organizations.append(copy.deepcopy(temp))
 
-        c += 1
-        Organizations.append(copy.deepcopy(temp))
+    print(Organizations)
 
-    printer.pprint(Organizations)
+    return Organizations
 
 
+def dic2csv(dictionaries):
+    cols_name = ["idPk", "dni" , "name" , "email" , "web" , "telephone" , "legalRepresentative" , "assembly" , "socialNetworks" , "wazeAddress" , "schedule" , "reaches" , "mision" , "vision" , "objetive" , "dayOperations" ,"isAproved" , "isChecked" , "isDeleted" , "organizationsTypesidPk"]
+    file = open("toExport.csv", "w")
+
+    with file:
+        csv.register_dialect("toMYSQL", delimiter=";")
+        writer = csv.DictWriter(file, fieldnames=cols_name, dialect="toMYSQL")
+        writer.writeheader()
+        for dict in dictionaries:
+            writer.writerow(dict)
+        file.close()
 
 
 
@@ -800,18 +814,18 @@ def generate_Organizations_dictionary_product(productMatrix):
 def main():
     print("          _____          __  __    _______     _______ _______ ______ __  __ \n    /\   |  __ \   /\   |  \/  |  / ____\ \   / / ____|__   __|  ____|  \/  |\n   /  \  | |  | | /  \  | \  / | | (___  \ \_/ / (___    | |  | |__  | \  / |\n  / /\ \ | |  | |/ /\ \ | |\/| |  \___ \  \   / \___ \   | |  |  __| | |\/| |\n / ____ \| |__| / ____ \| |  | |  ____) |  | |  ____) |  | |  | |____| |  | |\n/_/    \_\_____/_/    \_\_|  |_| |_____/   |_| |_____/   |_|  |______|_|  |_|\n                    -Automatic Database Migration System-                    \n\n\n")
     #serviceMatrx = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo")
-    #productMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/")
-    path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/San Jose/AZMONT/SALVAESCALERAS/Capri/AZMONT S.A - Prod. Salvaescalera Capri.docx"
-    text = get_text_from(path)
+    productMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/")
+    #path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/San Jose/AZMONT/SALVAESCALERAS/Capri/AZMONT S.A - Prod. Salvaescalera Capri.docx"
+    #text = get_text_from(path)
 
 
     #test_service(serviceMatrx)
     #test_product(productMatrix)
     #test_org_product(productMatrix)
 
-    get_org_typesidPk_product(text)
+    #get_org_typesidPk_product(text)
 
-    #generate_Organizations_dictionary_product(productMatrix)
+    dic2csv(generate_Organizations_dictionary_product(productMatrix))
 
 
 
