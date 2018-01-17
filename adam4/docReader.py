@@ -9,6 +9,7 @@ import datetime
 import copy
 import pprint
 import docx2txt
+import sys
 
 from adam4 import urlmarker
 
@@ -44,7 +45,8 @@ def get_text_from(path):
     text = text.replace("Teléfono (s) ", "telelelelele")
     text = text.replace("Teléfono(s) ", "telelelelele")
     text = text.replace("telelelelele:", "telelelelele")
-    text = text.replace("Señale el tipo de oferente del producto de apoyo", " Señale el tipo de oferente del servicio de apoyo")
+    #text = text.replace("Señale el tipo de oferente del producto de apoyo", " Señale el tipo de oferente del servicio de apoyo")
+    text = text.replace("Nombre del servicio de apoyo"," Nombre del producto de apoyo")
     text = text.replace("Fax:", "Fax")
     text = text.replace("fax:", "Fax")
     text = text.replace("fax", "Fax")
@@ -401,6 +403,7 @@ def get_org_typesidPk_product(text):
 
     else:
         print("\t\u001B[31mtypesidPk:\033[0m 1")
+        sys.exit(1)
         return 1
 
 
@@ -800,16 +803,16 @@ def generate_Organizations_dictionary_product(productMatrix):
 def main():
     print("          _____          __  __    _______     _______ _______ ______ __  __ \n    /\   |  __ \   /\   |  \/  |  / ____\ \   / / ____|__   __|  ____|  \/  |\n   /  \  | |  | | /  \  | \  / | | (___  \ \_/ / (___    | |  | |__  | \  / |\n  / /\ \ | |  | |/ /\ \ | |\/| |  \___ \  \   / \___ \   | |  |  __| | |\/| |\n / ____ \| |__| / ____ \| |  | |  ____) |  | |  ____) |  | |  | |____| |  | |\n/_/    \_\_____/_/    \_\_|  |_| |_____/   |_| |_____/   |_|  |______|_|  |_|\n                    -Automatic Database Migration System-                    \n\n\n")
     #serviceMatrx = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo")
-    #productMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/")
+    productMatrix = get_files_from("/home/cipherlux/Dropbox/Inclutec/Migración/Informe Final CO - changed/Productos de apoyo")
     path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/San Jose/AZMONT/SALVAESCALERAS/Capri/AZMONT S.A - Prod. Salvaescalera Capri.docx"
     text = get_text_from(path)
 
 
     #test_service(serviceMatrx)
     #test_product(productMatrix)
-    #test_org_product(productMatrix)
+    test_org_product(productMatrix)
 
-    get_org_typesidPk_product(text)
+    #get_org_typesidPk_product(text)
 
     #generate_Organizations_dictionary_product(productMatrix)
 
