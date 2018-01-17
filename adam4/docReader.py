@@ -38,6 +38,7 @@ def get_text_from(path):
         text = str(docx2txt.process(path))                         # gets text from a docx
     except:
         None
+    #PRODUCTS_ORG_REPLACEMENTS
     text = text.replace("Sí", "Si")                            # replaces characters
     text = text.replace("sí", "Si")                            # replaces characters
     text = text.replace("Observaciones :" , "Observaciones:")  # remove the extra space on "Observaciones" word
@@ -58,6 +59,41 @@ def get_text_from(path):
     text = text.replace("Nombre del ente que brinda el servicio de apoyo (institución, municipalidad, empresa u organización no gubernamental):", "Nombre del ente que brinda el producto de apoyo (institución, municipalidad, empresa u organización no gubernamental):")
     text = text.replace("4. Descripción del ente", "4. Descripción del ente que brinda el producto de apoyo")
     text = text.replace(" Características generales, uso, aplicaciones y existencia del producto de apoyo", "Ubicación")
+    #SERVICE_ORG_REPLACEMENTS
+    text = text.replace("Nombre del ente que brinda el servicio de apoyo:", "Nombre del ente que brinda el producto de apoyo (institución, municipalidad, empresa u organización no gubernamental):")
+    #PRODUCTS_ITEM_REPLACEMENTS
+    text = text.replace(
+        "Nombre del prod. de apoyo: Indique el nombre completo del servicio de apoyo que se brinda",
+        "Nombre del producto de apoyo: Indique el nombre completo del servicio de apoyo que se brinda")
+    text = text.replace(
+        "Nombre del producto de apoyo: Indique el nombre completo del producto de apoyo, como lo enuncia la entidad que lo brinda.",
+        "Nombre del producto de apoyo: Indique el nombre completo del servicio de apoyo que se brinda")
+    text = text.replace(
+        "Nombre del producto de apoyo: Indique el nombre completo del producto de apoyo como lo enuncia la entidad que lo brinda.",
+        "Nombre del producto de apoyo: Indique el nombre completo del servicio de apoyo que se brinda")
+    text = text.replace(
+        "fines:",
+        "Fines:")
+    text = text.replace(
+        "Fínes:",
+        "Fines:")
+    text = text.replace(
+        "fínes:",
+        "Fines:")
+    text = text.replace(
+        "fines",
+        "Fines:")
+    text = text.replace(
+        "Fínes",
+        "Fines:")
+    text = text.replace(
+        "fínes",
+        "Fines:")
+    text = text.replace(
+        "14. Clasificación del producto de apoyo",
+        "Para uso interno ")
+    text = text.replace("Observaciones: Consignar en este último apartado, algún detalle o característica del producto de apoyo, que no quede reflejado en los ítems anteriores de esta ficha.","Observaciones:")
+
     print("\033[94mTEXTO: \033[0m" + text)
     return text
 
@@ -179,14 +215,10 @@ def get_date():
 # ------------------------------------ITEMS------------------------------------ #
 
 def get_item_name_product(text):
-    start = "de apoyo que se brinda "
-    if text.find(start) == -1:
-        start = "de apoyo como lo enuncia la entidad que lo brinda."
-        if text.find(start) == -1:
-            start = "de apoyo, como lo enuncia la entidad que lo brinda."
-    end = "7. Uso y aplicaciones del producto de apoyo:"
+    start = "Nombre del producto de apoyo: Indique el nombre completo del servicio de apoyo que se brinda"
+    end = "7. Uso y aplicaciones del producto de apoyo"
     needle = text[text.find(start) + len(start): text.find(end)]
-    print("\t\033[94mName of product:\033[0m " + needle)
+    print("\t\033[94mName of item:\033[0m " + needle)
     return needle
 
 
@@ -207,17 +239,16 @@ def get_item_description(text):
     if text.find(start) == -1:
         print("\t\033[94mDescription of product/service:\033[0m -")
         return "-"
-    else:
-        end = "Misión:"
-        needle = text[text.find(start) + len(start): text.find(end)]
-        print("\t\033[94mDescription of product/service:\033[0m " + needle)
-        return needle
+    end = "Misión:"
+    needle = text[text.find(start) + len(start): text.find(end)]
+    print("\t\033[94mDescription of product/service:\033[0m " + needle)
+    return needle
 
 
 def get_item_observations(text):
     start = "Observaciones:"
     end = "Para uso interno "
-    needle = text[text.find(start) + len(start): text.find(end)]
+    needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
     print("\t\033[94mObservations:\033[0m " + needle)
     return needle
 
@@ -334,7 +365,7 @@ def get_org_wazeAddress_product(text):
 def get_org_reaches_product(text):
     start = "Fines:"
     end = "Misión:"
-    needle = text[text.find(start) + len(start): text.find(end)]
+    needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
     print("\t\033[94mreaches:\033[0m " + needle)
     return needle
 
@@ -352,7 +383,7 @@ def get_org_vision_product(text):
     end = "Objetivos:"
     if text.find(end) == -1:
         end = "Señale el tipo"
-    needle = text[text.find(start) + len(start): text.find(end)]
+    needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
     print("\t\033[94mvision:\033[0m " + needle)
     return needle
 
@@ -365,7 +396,8 @@ def get_org_objective_product(text):
     needle = needle.replace("5." , "")
     return needle
 
-
+# TODO: Adapt function to service documents.
+# TODO: Generate json version of data.
 def get_org_dayOperations_product(text):
     start = "de la semana que atienden para la obtención de productos de apoyo. "
     end = "Forma de atención:"
@@ -684,7 +716,7 @@ def test_item_product_functions(text):
     # organizationsIdFk = fkId
 
 
-def est_item_product(fileMatrx):
+def test_item_product(fileMatrx):
     for i in range(len(fileMatrx)):
         print(str(i) + "\t|\t" + fileMatrx[i][0])
         test_item_product_functions(get_text_from(fileMatrx[i][0]))
@@ -749,12 +781,6 @@ def test_org_product_functions(text):
 
 def test_org_product(fileMatrx):
     for i in range(len(fileMatrx)):
-        #TODO: (idPK) Check this files and repair them. (San Jose/Equipo_Montes_De_Oca)
-        #TODO: (Reaches) Check files and repair them. (APRONAGUE, Hosp. Trauma INS, CENAREC, CCSS)
-        #TODO: (Mision) Check this files and repair them. (APRONAGUE)
-        #TODO: (Vision) Check this files and repair them. (APRONAGUE)
-        #TODO: (Objectives) Check this files and repair them. (Hosp. Trauma INS, CENAREC)
-        #if i not in list(range(493, 555)) + list(range(724, 724+207)):
         print(str(i) + "\t|\t" + fileMatrx[i][0])
         test_org_product_functions(get_text_from(fileMatrx[i][0]))
         print("_____________________________________________________________________________________________________________________")
@@ -762,7 +788,6 @@ def test_org_product(fileMatrx):
 
 # ------------------------------------BUILDING------------------------------------ #
 
-#TODO hacer que esto sirva
 def generate_Organizations_dictionary_product(productMatrix):
     Organizations = []
     printer = pprint.PrettyPrinter(indent=4 , width=500, depth=3)
@@ -798,8 +823,6 @@ def generate_Organizations_dictionary_product(productMatrix):
 
             Organizations.append(copy.deepcopy(temp))
 
-    #print(Organizations)
-
     return Organizations
 
 
@@ -831,7 +854,7 @@ def dic2csv(dictionaries):
 
 def main():
     print("          _____          __  __    _______     _______ _______ ______ __  __ \n    /\   |  __ \   /\   |  \/  |  / ____\ \   / / ____|__   __|  ____|  \/  |\n   /  \  | |  | | /  \  | \  / | | (___  \ \_/ / (___    | |  | |__  | \  / |\n  / /\ \ | |  | |/ /\ \ | |\/| |  \___ \  \   / \___ \   | |  |  __| | |\/| |\n / ____ \| |__| / ____ \| |  | |  ____) |  | |  ____) |  | |  | |____| |  | |\n/_/    \_\_____/_/    \_\_|  |_| |_____/   |_| |_____/   |_|  |______|_|  |_|\n                    -Automatic Database Migration System-                    \n\n\n")
-    #serviceMatrx = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo")
+    #serviceMatrx = get_files_from("/home/cipherlux/Dropbox/Inclutec/Migración/Informe Final CO - changed/Servicios de apoyo")
     productMatrix = get_files_from("/home/cipherlux/Dropbox/Inclutec/Migración/Informe Final CO - changed/Productos de apoyo")
     #path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/San Jose/AZMONT/SALVAESCALERAS/Capri/AZMONT S.A - Prod. Salvaescalera Capri.docx"
     #text = get_text_from(path)
@@ -839,7 +862,8 @@ def main():
 
     #test_service(serviceMatrx)
     #test_product(productMatrix)
-    test_org_product(productMatrix)
+    #test_org_product(serviceMatrx)
+    test_item_product(productMatrix)
 
     #get_org_typesidPk_product(text)
     #dic2csv(list)
@@ -849,3 +873,18 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# ------------------------------------Problems with some product enterprises------------------------------------ #
+
+# TODO: (idPK) Check this files and repair them. (Equipo_Montes_De_Oca)
+# TODO: (Reaches) Check files and repair them. (APRONAGUE, Hosp. Trauma INS, CENAREC, CCSS)
+# TODO: (Mision) Check this files and repair them. (APRONAGUE)
+# TODO: (Vision) Check this files and repair them. (APRONAGUE)
+# TODO: (Objectives) Check this files and repair them. (Hosp. Trauma INS, CENAREC)
+# ------------------------------------Problems with some service enterprises------------------------------------ #
+# TODO: (email) Check this files and repair them. (Hospital San Rafael de Alajuela CCSS, Hospital de San Carlos CCSS, Hospital La Anexi__n CCSS, Hospital William Allen Taylor CCSS)
+# TODO: (website) Check this files and repair them. (FUNDACION SERVIO FLORES, Centro de Terapia de Lenguaje Semillitas de Dios, Centro Educativo Dr. Carlos S__enz Herrera, Asco. Fraternidad Cristiana PcD)
+# TODO: (wazeAddress) Check this files and repair them. (FUNDACION SERVIO FLORES)
+# TODO: (Mision) Check this files and repair them. (Centro de Terapia de Lenguaje Semillitas de Dios)
+# TODO: (Vision) Check this files and repair them. (Centro de Terapia de Lenguaje Semillitas de Dios)
+# ------------------------------------Problems with some item enterprises------------------------------------ #
