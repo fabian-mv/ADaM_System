@@ -8,7 +8,6 @@ from os.path import join, abspath , splitext
 import base64
 import datetime
 import copy
-import pprint
 import docx2txt
 import sys
 import csv
@@ -27,7 +26,7 @@ from adam4 import urlmarker
 
 #------------------------------------WORK FUNCTIONS------------------------------------#
 
-def get_text_from(path):
+def get_text_from(path , verbose):
     """Extract and format text from a docx file.
 
     Keyword arguments:
@@ -76,7 +75,7 @@ def get_text_from(path):
     text = text.replace("Localización del servicio de apoyo","7. Uso y aplicaciones del producto de apoyo")
     text = text.replace("7. Localización de la Organización","7. Uso y aplicaciones del producto de apoyo")
 
-    print("\033[94mTEXTO: \033[0m" + text)
+    print("\033[94mTEXTO: \033[0m" + text) if verbose else None
     return text
 
 
@@ -108,6 +107,7 @@ def get_files_from(path):
     return all
 
 
+# TODO hacer que esto sirva
 def encode_image(path):
     prefix = "data:image/" + splitext(path)[1][1:] + ";base64,"
 
@@ -306,92 +306,132 @@ def get_item_sex(text):
     print("\t\033[94msex:\033[0m " + str(count))
     return count
 
-
+#TODO HACER QUE SIRVA CON SERVICIOS
 # ------------------------------------ORGANIZATIONS------------------------------------ #
-#TODO ARREGLAR ESTA VARA (que sirva para servicios y ademas verificar que sea de  la organizacion y no del productio/servicio)
+
 def get_org_name_product(text):
     start = "Nombre del ente que brinda el producto de apoyo (institución, municipalidad, empresa u organización no gubernamental):"
     end = "4. Descripción del ente que brinda el producto de apoyo"
-    needle = text[text.find(start) + len(start): text.find(end)]
-    print("\t\033[94mname:\033[0m " + needle)
-    return needle
+    if text.find(start) != -1 and text.find(end) != -1:
+        needle = text[text.find(start) + len(start): text.find(end)]
+        print("\t\033[94mname:\033[0m " + needle)
+        return needle
+
+    else:
+        print("\t\u001B[31mname:\033[0m No brinda información")
+        return "No brinda información"
 
 
 def get_org_email_product(text):
     start = "Dirección de correo electrónico:"
     end = "Web del servicio:"
-    needle = text[text.find(start) + len(start): text.find(end)]
-    print("\t\033[94memail:\033[0m " + needle)
-    return needle
+    if text.find(start) != -1 and text.find(end) != -1:
+        needle = text[text.find(start) + len(start): text.find(end)]
+        print("\t\033[94memail:\033[0m " + needle)
+        return needle
+
+    else:
+        print("\t\u001B[31memail:\033[0m No brinda información")
+        return "No brinda información"
 
 
 def get_org_web_product(text):
     start = "Web del servicio:"
     end = "Redes sociales:"
-    needle = text[text.find(start) + len(start): text.find(end)]
-    print("\t\033[94mwebsite:\033[0m " + needle)
-    return needle
+    if text.find(start) != -1 and  text.find(start) != -1:
+        needle = text[text.find(start) + len(start): text.find(end)]
+        print("\t\033[94mweb:\033[0m " + needle)
+        return needle
+
+    else:
+        print("\t\u001B[31mweb:\033[0m No brinda información")
+        return "No brinda información"
 
 
 def get_org_telephone_product(text):
     start = " telelelelele "
     end = "Dirección de correo electrónico:"
-    needle = text[text.find(start) + len(start): text.find(end)]
-    needle = needle[:needle.find("Fax")]
-    rawphones = re.findall('\d+', needle)
-    fixedphones = []
-    for i in range(len(rawphones)):
-        if i%2 != 0 and i != 0:
-            fixedphones += [str(rawphones[i-1]) + "-" + str(rawphones[i])]
-    needle = ""
-    for i in fixedphones:
-        needle += " " + i
-    print("\t\033[94mtelephone:\033[0m " + needle)
-    return needle
+    if text.find(start) != -1 and text.find(end):
+        needle = text[text.find(start) + len(start): text.find(end)]
+        needle = needle[:needle.find("Fax")]
+        rawphones = re.findall('\d+', needle)
+        fixedphones = []
+        for i in range(len(rawphones)):
+            if i%2 != 0 and i != 0:
+                fixedphones += [str(rawphones[i-1]) + "-" + str(rawphones[i])]
+        needle = ""
+        for i in fixedphones:
+            needle += " " + i
+        print("\t\033[94mtelephone:\033[0m " + needle)
+        return needle
+
+    else:
+        print("\t\u001B[31mtelephone:\033[0m No brinda información")
+        return "No brinda información"
 
 
-def get_org_socialnetworks_product(text):
+def get_org_socialNetworks_product(text):
     start = "Redes sociales:"
     end = "Dirección waze:"
-    needle = text[text.find(start) + len(start): text.find(end)]
-    urls = re.findall(urlmarker.WEB_URL_REGEX, needle)
-    needle = needle.lower()
-    domains = ["facebook", "twitter", "instagram", "linkedin", "youtube"]
-    dict = {}
-    for name in domains:
-        if needle.find(name) != -1:
-            new = {name: ""}
-            for url in urls:
-                if url.find(name):
-                    new[name] = url
-            dict.update(new)
-    print("\t\033[94msocialnetworks:\033[0m " + str(dict))
-    return dict
+    if text.find(start) and text.find(end):
+        needle = text[text.find(start) + len(start): text.find(end)]
+        urls = re.findall(urlmarker.WEB_URL_REGEX, needle)
+        needle = needle.lower()
+        domains = ["facebook", "twitter", "instagram", "linkedin", "youtube"]
+        dict = {}
+        for name in domains:
+            if needle.find(name) != -1:
+                new = {name: ""}
+                for url in urls:
+                    if url.find(name):
+                        new[name] = url
+                dict.update(new)
+        print("\t\033[94msocialnetworks:\033[0m " + str(dict))
+        return dict
+
+    else:
+        print("\t\u001B[31msocialNetworks:\033[0m No brinda información")
+        return "No brinda información"
 
 
 def get_org_wazeAddress_product(text):
     start = "Dirección waze:"
     end = "Ubicación"
-    needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
-    urls = re.findall(urlmarker.WEB_URL_REGEX, needle)
-    print("\t\033[94mwazeAddress:\033[0m " + str(urls))
-    return urls
+    if text.find(start) != -1 and find_nth(text, end, 1) != -1:
+        needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
+        urls = re.findall(urlmarker.WEB_URL_REGEX, needle)
+        print("\t\033[94mwazeAddress:\033[0m " + str(urls))
+        return urls
+
+    else:
+        print("\t\u001B[31mwazeAddress:\033[0m No brinda información")
+        return "No brinda información"
 
 
 def get_org_reaches_product(text):
     start = "Fines:"
     end = "Misión:"
-    needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
-    print("\t\033[94mreaches:\033[0m " + needle)
-    return needle
+    if text.find(start) != -1 and  find_nth(text, end, 1) != -1:
+        needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
+        print("\t\033[94mreaches:\033[0m " + needle)
+        return needle
+
+    else:
+        print("\t\u001B[31mreaches:\033[0m No brinda información")
+        return "No brinda información"
 
 
 def get_org_mision_product(text):
     start = "Misión:"
     end = " Visión: "
-    needle = text[text.find(start) + len(start): text.find(end)]
-    print("\t\033[94mmision:\033[0m " + needle)
-    return needle
+    if text.find(start) != -1 and text.find(start) != -1:
+        needle = text[text.find(start) + len(start): text.find(end)]
+        print("\t\033[94mmision:\033[0m " + needle)
+        return needle
+
+    else:
+        print("\t\u001B[31mwazeAddress:\033[0m No brinda información")
+        return "No brinda información"
 
 
 def get_org_vision_product(text):
@@ -399,28 +439,43 @@ def get_org_vision_product(text):
     end = "Objetivos:"
     if text.find(end) == -1:
         end = "Señale el tipo"
-    needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
-    print("\t\033[94mvision:\033[0m " + needle)
-    return needle
+    if text.find(start) != -1 and find_nth(text, end, 1) != -1:
+        needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
+        print("\t\033[94mvision:\033[0m " + needle)
+        return needle
+
+    else:
+        print("\t\u001B[31mvision:\033[0m No brinda información")
+        return "No brinda información"
 
 
 def get_org_objective_product(text):
     start = " Objetivos: "
     end = " Señale el tipo de oferente del servicio de apoyo"
-    needle = text[text.find(start) + len(start): text.find(end)]
-    print("\t\033[94mobjective:\033[0m " + needle)
-    needle = needle.replace("5." , "")
-    return needle
+    if text.find(start) != -1 and text.find(end) != -1:
+        needle = text[text.find(start) + len(start): text.find(end)]
+        print("\t\033[94mobjective:\033[0m " + needle)
+        needle = needle.replace("5." , "")
+        return needle
 
-# TODO: Adapt function to service documents.
+    else:
+        print("\t\u001B[31mproduct:\033[0m No brinda información")
+        return "No brinda información"
+
+
 # TODO: Generate json version of data.
 def get_org_dayOperations_product(text):
     start = "de la semana que atienden para la obtención de productos de apoyo. "
     end = "Forma de atención:"
-    needle = text[text.find(start) + len(start): text.find(end)]
-    print("\t\033[94mdayOperations:\033[0m " + needle)
-    needle = needle.replace("13.", "")
-    return needle
+    if text.find(start) != -1 and text.find(end) != -1:
+        needle = text[text.find(start) + len(start): text.find(end)]
+        print("\t\033[94mdayOperations:\033[0m " + needle)
+        needle = needle.replace("13.", "")
+        return needle
+
+    else:
+        print("\t\u001B[31mdayOperations:\033[0m No brinda información")
+        return "No brinda información"
 
 
 def get_org_typesidPk_product(text):
@@ -451,9 +506,8 @@ def get_org_typesidPk_product(text):
         return 1
 
     else:
-        print("\t\u001B[31mtypesidPk:\033[0m 1")
-        return 1
-
+        print("\t\u001B[31mtypesidPk:\033[0m 5")
+        return 5
 
 # ------------------------------------SERVICES------------------------------------ #
 
@@ -676,7 +730,7 @@ def test_service_functions(text):
 def test_service(fileMatrx):
     for i in range(len(fileMatrx)):
         print(str(i) + "\t|\t" + fileMatrx[i][0])
-        test_service_functions(get_text_from(fileMatrx[i][0]))
+        test_service_functions(get_text_from(fileMatrx[i][0] , True))
         print("_____________________________________________________________________________________________________________________")
         print("")
 
@@ -703,7 +757,7 @@ def test_product_functions(text):
 def test_product(fileMatrx):
     for i in range(len(fileMatrx)):
         print(str(i) + "\t|\t" + fileMatrx[i][0])
-        test_product_functions(get_text_from(fileMatrx[i][0]))
+        test_product_functions(get_text_from(fileMatrx[i][0] , True))
         print("_____________________________________________________________________________________________________________________")
         print("")
 
@@ -758,7 +812,7 @@ def test_item_service_functions(text):
 def test_item_product(fileMatrx):
     for i in range(len(fileMatrx)):
         print(str(i) + "\t|\t" + fileMatrx[i][0])
-        test_item_product_functions(get_text_from(fileMatrx[i][0]))
+        test_item_product_functions(get_text_from(fileMatrx[i][0] , True))
         print("_____________________________________________________________________________________________________________________")
         print("")
 
@@ -766,7 +820,7 @@ def test_item_product(fileMatrx):
 def test_item_service(fileMatrx):
     for i in range(len(fileMatrx)):
         print(str(i) + "\t|\t" + fileMatrx[i][0])
-        test_item_service_functions(get_text_from(fileMatrx[i][0]))
+        test_item_service_functions(get_text_from(fileMatrx[i][0] , True))
         print("_____________________________________________________________________________________________________________________")
         print("")
 
@@ -780,7 +834,7 @@ def test_org_product_functions(text):
     get_org_telephone_product(text)
     # legalRepresentative = No brindaron informacion
     # assembly = []
-    get_org_socialnetworks_product(text)
+    get_org_socialNetworks_product(text)
     get_org_wazeAddress_product(text)
     # shedule = "-"
     get_org_reaches_product(text)
@@ -797,7 +851,7 @@ def test_org_product_functions(text):
 def test_org_product(fileMatrx):
     for i in range(len(fileMatrx)):
         print(str(i) + "\t|\t" + fileMatrx[i][0])
-        test_org_product_functions(get_text_from(fileMatrx[i][0]))
+        test_org_product_functions(get_text_from(fileMatrx[i][0] , True))
         print("_____________________________________________________________________________________________________________________")
         print("")
 
@@ -805,14 +859,15 @@ def test_org_product(fileMatrx):
 
 def generate_Organizations_dictionary_product(productMatrix):
     Organizations = []
-    printer = pprint.PrettyPrinter(indent=4 , width=500, depth=3)
     c = 1
     org_ready = []
 
     for row in productMatrix:
         temp = {}
-        text = get_text_from(row[0])
+        path = row[0]
+        text = get_text_from(path , False)
         if get_org_name_product(text) not in org_ready:
+            print(path)
             org_ready.append(get_org_name_product(text))
             temp["idPk"] = c
             temp["dni"] = "&No brinda información&"
@@ -822,7 +877,7 @@ def generate_Organizations_dictionary_product(productMatrix):
             temp["telephone"] = "&" + get_org_telephone_product(text) + "&"
             temp["legalRepresentative"] = "&No brinda información&"
             temp["assembly"] = []
-            temp["socialNetworks"] = get_org_socialnetworks_product(text)
+            temp["socialNetworks"] = get_org_socialNetworks_product(text)
             temp["wazeAddress"] = get_org_wazeAddress_product(text)
             temp["schedule"] = "&n&"
             temp["reaches"] = "&" + get_org_reaches_product(text) + "&"
@@ -869,8 +924,8 @@ def dic2csv(dictionaries):
 
 def main():
     print("          _____          __  __    _______     _______ _______ ______ __  __ \n    /\   |  __ \   /\   |  \/  |  / ____\ \   / / ____|__   __|  ____|  \/  |\n   /  \  | |  | | /  \  | \  / | | (___  \ \_/ / (___    | |  | |__  | \  / |\n  / /\ \ | |  | |/ /\ \ | |\/| |  \___ \  \   / \___ \   | |  |  __| | |\/| |\n / ____ \| |__| / ____ \| |  | |  ____) |  | |  ____) |  | |  | |____| |  | |\n/_/    \_\_____/_/    \_\_|  |_| |_____/   |_| |_____/   |_|  |______|_|  |_|\n                    -Automatic Database Migration System-                    \n\n\n")
-    serviceMatrx = get_files_from("/home/cipherlux/Dropbox/Inclutec/Migración/Informe Final CO - changed/Servicios de apoyo")
-    productMatrix = get_files_from("/home/cipherlux/Dropbox/Inclutec/Migración/Informe Final CO - changed/Productos de apoyo")
+    serviceMatrx = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo")
+    productMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/")
     #path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/San Jose/AZMONT/SALVAESCALERAS/Capri/AZMONT S.A - Prod. Salvaescalera Capri.docx"
     #text = get_text_from(path)
 
@@ -879,10 +934,15 @@ def main():
     #test_product(productMatrix)
     #test_org_product(serviceMatrx)
     #test_item_product(productMatrix)
-    test_item_service(serviceMatrx)
+    dic2csv(generate_Organizations_dictionary_product(serviceMatrx))
 
     #get_org_typesidPk_product(text)
     #dic2csv(list)
+
+
+#TODO /home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro Educativo Dr. Carlos S__enz Herrera/Terapia Ocupacional/Centro Educativo Dr. Carlos Sáenz Herrera- Terapia ocupacional_.docx
+# esa vara de arriba no tiene reaches, por alguna razón
+
 
 
 
@@ -891,7 +951,7 @@ if __name__ == "__main__":
     main()
 
 # ------------------------------------Problems with some product enterprises------------------------------------ #
-
+# TODO: verificar toda esta vara: (ya debería estar resuelta)
 # TODO: (idPK) Check this files and repair them. (Equipo_Montes_De_Oca)
 # TODO: (Reaches) Check files and repair them. (APRONAGUE, Hosp. Trauma INS, CENAREC, CCSS)
 # TODO: (Mision) Check this files and repair them. (APRONAGUE)
