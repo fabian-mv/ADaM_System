@@ -38,6 +38,9 @@ def get_text_from(path , verbose):
     except:
         None
     #PRODUCTS_ORG_REPLACEMENTS
+    text = text.replace("Asociación Centro de Integración Ocupacional y Servicios Afines: -ACIOSA-" , "Asociación Centro de Integración Ocupacional y Servicios Afines, ACIOSA")
+    text = text.replace("Asociación Centro de Integración Ocupacional y Servicios Afines -ACIOSA-", "Asociación Centro de Integración Ocupacional y Servicios Afines, ACIOSA")
+    text = text.replace("Fines:" , "Fines: ")
     text = text.replace("Sí", "Si")                            # replaces characters
     text = text.replace("sí", "Si")                            # replaces characters
     text = text.replace("Observaciones :" , "Observaciones:")  # remove the extra space on "Observaciones" word
@@ -58,7 +61,6 @@ def get_text_from(path , verbose):
     text = text.replace("Nombre del ente que brinda el servicio de apoyo (institución, municipalidad, empresa u organización no gubernamental):", "Nombre del ente que brinda el producto de apoyo (institución, municipalidad, empresa u organización no gubernamental):")
     text = text.replace("4. Descripción del ente", "4. Descripción del ente que brinda el producto de apoyo")
     text = text.replace(" Características generales, uso, aplicaciones y existencia del producto de apoyo", "Ubicación")
-    #SERVICE_ORG_REPLACEMENTS
     text = text.replace("Nombre del ente que brinda el servicio de apoyo:", "Nombre del ente que brinda el producto de apoyo (institución, municipalidad, empresa u organización no gubernamental):")
     #PRODUCTS_ITEM_REPLACEMENTS
     text = text.replace("Nombre del prod. de apoyo: Indique el nombre completo del servicio de apoyo que se brinda","Nombre del producto de apoyo: Indique el nombre completo del servicio de apoyo que se brinda")
@@ -107,12 +109,13 @@ def get_files_from(path):
     return all
 
 
-# TODO hacer que esto sirva
 def encode_image(path):
     prefix = "data:image/" + splitext(path)[1][1:] + ";base64,"
-
     with open(path, "rb") as image_file:
-        encodedIimage = base64.b64encode(image_file.read())
+        encodedImage = prefix + str(base64.b64encode(image_file.read())).replace("b'" , "").replace("'" , "")
+        print(encodedImage)
+        return encodedImage
+
 
 # ------------------------------------PRODUCTS------------------------------------ #
 
@@ -315,6 +318,11 @@ def get_org_name_product(text):
     if text.find(start) != -1 and text.find(end) != -1:
         needle = text[text.find(start) + len(start): text.find(end)]
         print("\t\033[94mname:\033[0m " + needle)
+        needle = needle.replace("\n", " ")  # removes all newline characters from text
+        needle = needle.replace("\t", " ")  # replaces tabs with spaces
+        needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
+        needle = needle.rstrip()
+        needle = needle.lstrip()
         return needle
 
     else:
@@ -327,8 +335,12 @@ def get_org_email_product(text):
     end = "Web del servicio:"
     if text.find(start) != -1 and text.find(end) != -1:
         needle = text[text.find(start) + len(start): text.find(end)]
-        print("\t\033[94memail:\033[0m " + needle)
-        return needle
+        if needle.replace(" " , "") == "":
+            print("\t\u001B[31memail:\033[0m No brinda información")
+            return "No brinda información"
+        else:
+            print("\t\033[94memail:\033[0m " + needle)
+            return needle
 
     else:
         print("\t\u001B[31memail:\033[0m No brinda información")
@@ -508,6 +520,159 @@ def get_org_typesidPk_product(text):
     else:
         print("\t\u001B[31mtypesidPk:\033[0m 5")
         return 5
+
+
+def get_org_name_service(text):
+    start = "Nombre del ente que brinda el producto de apoyo (institución, municipalidad, empresa u organización no gubernamental): "
+    end = "4. Descripción del ente que brinda el producto de apoyo"
+    if text.find(start) != -1 and text.find(end) != -1:
+        needle = text[text.find(start) + len(start): text.find(end)]
+        print("\t\033[94mname:\033[0m " + needle)
+        needle = needle.replace("\n", " ")  # removes all newline characters from text
+        needle = needle.replace("\t", " ")  # replaces tabs with spaces
+        needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
+        needle = needle.rstrip()
+        needle = needle.lstrip()
+        return needle
+
+    else:
+        print("\t\u001B[31mname:\033[0m No brinda información")
+        return "No brinda información"
+
+
+def get_org_email_service(text):
+    start = "Dirección de correo electrónico:"
+    end = "Web del servicio:"
+    if text.find(start) != -1 and text.find(end) != -1:
+        needle = text[text.find(start) + len(start): text.find(end)]
+        if needle.replace(" " , "") == "":
+            print("\t\u001B[31memail:\033[0m No brinda información")
+            return "No brinda información"
+        else:
+            print("\t\033[94memail:\033[0m " + needle)
+            return needle
+
+    else:
+        print("\t\u001B[31memail:\033[0m No brinda información")
+        return "No brinda información"
+
+
+def get_org_web_service(text):
+    start = "Web del servicio:"
+    end = "Redes sociales:"
+    if text.find(start) != -1 and text.find(start) != -1:
+        needle = text[text.find(start) + len(start): text.find(end)]
+        if needle.replace(" " , "") == "":
+            print("\t\u001B[31mweb:\033[0m No brinda información")
+            return "No brinda información"
+        else:
+            print("\t\033[94mweb:\033[0m " + needle)
+            return needle
+
+    else:
+        print("\t\u001B[31mweb:\033[0m No brinda información")
+        return "No brinda información"
+
+
+def get_org_telephone_service(text):
+    start = " telelelelele "
+    end = "Dirección de correo electrónico:"
+    if text.find(start) != -1 and text.find(end):
+        needle = text[text.find(start) + len(start): text.find(end)]
+        needle = needle[:needle.find("Fax")]
+        rawphones = re.findall('\d+', needle)
+        fixedphones = []
+        for i in range(len(rawphones)):
+            if i % 2 != 0 and i != 0:
+                fixedphones += [str(rawphones[i - 1]) + "-" + str(rawphones[i])]
+        needle = ""
+        for i in fixedphones:
+            needle += " " + i
+        if needle == " 24011200-3 7-4 7-29 0-7 9-10 3433966-84 4496942-14 4-8 1-2 2-1 1-3 4-1 0-8 065-2 63-393 0-9 88412257-8 2-3 10-3433966 4-84 4321847-8 10-7 00-4 00-7 00-3 00-10 12-13 14-15 24-7 7-4 7-3 24-7 16-17":
+            print("\t\033[94mtelephone:\033[0m 24011200")
+            return "24011200"
+
+        elif needle == " 24361001-3 7-4 7-29 0-7 9-10 008242-84 2287576-14 4-8 1-2 2-1 1-3 4-1 0-8 0-9 41516823-0 10-9 11431-8093 8-2 3-10 008242-4 84-2112481 8-10 7-00 4-00 7-00 3-00 10-12 13-14 15-24 7-7 4-7 3-24 7-16 17-18":
+            print("\t\033[94mtelephone:\033[0m 24361001")
+            return "24361001"
+
+        elif needle == " 2556-05":
+            print("\t\033[94mtelephone:\033[0m 2556-0516")
+            return "2556-0516"
+
+        elif needle == " 25581300-25561663 25568328-25560973 25581424-3 7-4 7-29 0-7 9-9 9039907-83 688387-16 4-4 5-3 4-1 0-8 0-69 24894-81 0-3 21009-50 9-8 2-3 9-903521 4-83 6861983-8 10-7 00-4 00-7 00-3 00-10 12-13 14-15 24-7 7-4 7-3 24-7 16-17":
+            print("\t\033[94mtelephone:\033[0m 25581300")
+            return "25581300"
+
+        elif needle == " 26858400-26858404 26858468-26858417 3-7 4-7 29-0 7-9 10-1484271 85-4561904 17-3 1-4 1-4 5-3 4-1 0-8 9-748 49-07 0-92 136-16202219 8-2 3-10 1484218-4 85-4539963 8-10 7-00 4-00 7-00 3-00 10-12 13-14 15-24 7-7 4-7 3-24 7-16 17-18":
+            print("\t\033[94mtelephone:\033[0m 26858400")
+            return "26858400"
+
+        else:
+            print("\t\033[94mtelephone:\033[0m " + needle)
+            return needle
+
+    else:
+        print("\t\u001B[31mtelephone:\033[0m No brinda información")
+        return "No brinda información"
+
+
+def get_org_socialNetworks_service(text):
+    start = "Redes sociales:"
+    end = "Dirección waze:"
+    if text.find(start) and text.find(end):
+        needle = text[text.find(start) + len(start): text.find(end)]
+        urls = re.findall(urlmarker.WEB_URL_REGEX, needle)
+        needle = needle.lower()
+        domains = ["facebook", "twitter", "instagram", "linkedin", "youtube"]
+        dict = {}
+        for name in domains:
+            if needle.find(name) != -1:
+                new = {name: ""}
+                for url in urls:
+                    if url.find(name):
+                        new[name] = url
+                dict.update(new)
+        print("\t\033[94msocialnetworks:\033[0m " + str(dict))
+        return dict
+
+    else:
+        print("\t\u001B[31msocialNetworks:\033[0m No brinda información")
+        return "No brinda información"
+
+
+def get_org_wazeAddress_service(text):
+    start = "Dirección waze:"
+    end = "Ubicación"
+    if text.find(start) != -1 and find_nth(text, end, 1) != -1:
+        needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
+        urls = re.findall(urlmarker.WEB_URL_REGEX, needle)
+        print("\t\033[94mwazeAddress:\033[0m " + str(urls))
+        return urls
+
+    else:
+        print("\t\u001B[31mwazeAddress:\033[0m No brinda información")
+        return "No brinda información"
+
+
+def get_org_reaches_service(text):
+    start = "Fines: "
+    end = "Misión:"
+    if text.find(start) != -1 and text.find(end) != -1:
+        needle = text[text.find(start) + len(start): text.find(end)]
+        if needle == "":
+            start = "Descripción del ente que brinda el producto de apoyo:"
+            end = "Uso y aplicaciones del producto de apoyo"
+            haystack = text[text.find(start) : text.find(end)]
+            needle = haystack[haystack.find("Fines: ") : haystack.find("Misión:")]
+
+        print("\t\033[94mreaches:\033[0m " + needle)
+        return needle
+
+    else:
+        print("\t\u001B[31mreaches:\033[0m No brinda información")
+        return "No brinda información"
+
 
 # ------------------------------------SERVICES------------------------------------ #
 
@@ -705,6 +870,8 @@ def get_service_attentionFrecuency(text):
     return result
 
 
+
+
 # ------------------------------------TESTING------------------------------------ #
 
 def test_service_functions(text):
@@ -855,9 +1022,40 @@ def test_org_product(fileMatrx):
         print("_____________________________________________________________________________________________________________________")
         print("")
 
+
+def test_org_service_functions(text):
+    # idPk += 1
+    # dni = 0
+    get_org_name_service(text)
+    get_org_email_service(text)
+    get_org_web_service(text)
+    get_org_telephone_service(text)
+    # legalRepresentative = No brindaron informacion
+    # assembly = []
+    get_org_socialNetworks_service(text)
+    get_org_wazeAddress_service(text)
+    # shedule = "-"
+    get_org_reaches_service(text)
+    #get_org_mision_service(text)
+    #get_org_vision_service(text)
+    #get_org_objective_service(text)
+    #get_org_dayOperations_service(text)
+    # isApproved = 1
+    # isChecked = 1
+    # isDeleted = 0
+    #get_org_typesidPk_service(text)
+
+
+def test_org_service(fileMatrx):
+    for i in range(len(fileMatrx)):
+        print(str(i) + "\t|\t" + fileMatrx[i][0])
+        test_org_service_functions(get_text_from(fileMatrx[i][0] , True))
+        print("_____________________________________________________________________________________________________________________")
+        print("")
+
 # ------------------------------------BUILDING------------------------------------ #
 
-def generate_Organizations_dictionary_product(productMatrix):
+def generate_Organizations_dictionary_product(productMatrix , serviceMatrix):
     Organizations = []
     c = 1
     org_ready = []
@@ -893,6 +1091,37 @@ def generate_Organizations_dictionary_product(productMatrix):
 
             Organizations.append(copy.deepcopy(temp))
 
+        for row in serviceMatrix:
+            temp = {}
+            path = row[0]
+            text = get_text_from(path, False)
+            if get_org_name_product(text) not in org_ready:
+                print(path)
+                org_ready.append(get_org_name_product(text))
+                temp["idPk"] = c
+                temp["dni"] = "&No brinda información&"
+                temp["name"] = "&" + get_org_name_product(text) + "&"
+                temp["email"] = "&" + get_org_email_product(text) + "&"
+                temp["web"] = "&" + get_org_web_product(text) + "&"
+                temp["telephone"] = "&" + get_org_telephone_product(text) + "&"
+                temp["legalRepresentative"] = "&No brinda información&"
+                temp["assembly"] = []
+                temp["socialNetworks"] = get_org_socialNetworks_product(text)
+                temp["wazeAddress"] = get_org_wazeAddress_product(text)
+                temp["schedule"] = "&n&"
+                temp["reaches"] = "&" + get_org_reaches_product(text) + "&"
+                temp["mision"] = "&" + get_org_mision_product(text) + "&"
+                temp["vision"] = "&" + get_org_vision_product(text) + "&"
+                temp["objetive"] = "&" + get_org_objective_product(text) + "&"
+                temp["dayOperations"] = {}
+                temp["isAproved"] = 1
+                temp["isChecked"] = 1
+                temp["isDeleted"] = 0
+                temp["organizationsTypesidPk"] = get_org_typesidPk_product(text)
+                c += 1
+
+                Organizations.append(copy.deepcopy(temp))
+
     return Organizations
 
 
@@ -915,33 +1144,23 @@ def dic2csv(dictionaries):
     file.write(old.replace("&", "\""))
     file.close()
 
-
-
-
-
-
 # ------------------------------------MAIN------------------------------------ #
 
 def main():
     print("          _____          __  __    _______     _______ _______ ______ __  __ \n    /\   |  __ \   /\   |  \/  |  / ____\ \   / / ____|__   __|  ____|  \/  |\n   /  \  | |  | | /  \  | \  / | | (___  \ \_/ / (___    | |  | |__  | \  / |\n  / /\ \ | |  | |/ /\ \ | |\/| |  \___ \  \   / \___ \   | |  |  __| | |\/| |\n / ____ \| |__| / ____ \| |  | |  ____) |  | |  ____) |  | |  | |____| |  | |\n/_/    \_\_____/_/    \_\_|  |_| |_____/   |_| |_____/   |_|  |______|_|  |_|\n                    -Automatic Database Migration System-                    \n\n\n")
     serviceMatrx = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo")
-    productMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/")
-    #path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/San Jose/AZMONT/SALVAESCALERAS/Capri/AZMONT S.A - Prod. Salvaescalera Capri.docx"
-    #text = get_text_from(path)
+    #productMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/")
+
+    #path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Grecia/Terapia fisica/Centro de educación especial Grecia-Terapia fisica_.docx"
+    #text = get_text_from(path , True)
+    #test_org_service_functions(text)
 
 
-    #test_service(serviceMatrx)
-    #test_product(productMatrix)
-    #test_org_product(serviceMatrx)
-    #test_item_product(productMatrix)
-    dic2csv(generate_Organizations_dictionary_product(serviceMatrx))
-
-    #get_org_typesidPk_product(text)
-    #dic2csv(list)
+    test_org_service(serviceMatrx)
 
 
-#TODO /home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro Educativo Dr. Carlos S__enz Herrera/Terapia Ocupacional/Centro Educativo Dr. Carlos Sáenz Herrera- Terapia ocupacional_.docx
-# esa vara de arriba no tiene reaches, por alguna razón
+
+## TODO AL FINAL: VERIFICAR QUE TODAS LAS FUNCIONES OBLIGATORIAS RETORNEN ALGO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 
