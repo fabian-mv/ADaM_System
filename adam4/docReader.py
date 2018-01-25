@@ -40,7 +40,7 @@ def get_text_from(path , verbose):
     #PRODUCTS_ORG_REPLACEMENTS
     text = text.replace("Asociación Centro de Integración Ocupacional y Servicios Afines: -ACIOSA-" , "Asociación Centro de Integración Ocupacional y Servicios Afines, ACIOSA")
     text = text.replace("Asociación Centro de Integración Ocupacional y Servicios Afines -ACIOSA-", "Asociación Centro de Integración Ocupacional y Servicios Afines, ACIOSA")
-    text = text.replace("Fines:" , "Fines: ")
+    text = text.replace(" Fines:" , " Fines: ")
     text = text.replace("Sí", "Si")                            # replaces characters
     text = text.replace("sí", "Si")                            # replaces characters
     text = text.replace("Observaciones :" , "Observaciones:")  # remove the extra space on "Observaciones" word
@@ -66,12 +66,12 @@ def get_text_from(path , verbose):
     text = text.replace("Nombre del prod. de apoyo: Indique el nombre completo del servicio de apoyo que se brinda","Nombre del producto de apoyo: Indique el nombre completo del servicio de apoyo que se brinda")
     text = text.replace("Nombre del producto de apoyo: Indique el nombre completo del producto de apoyo, como lo enuncia la entidad que lo brinda.","Nombre del producto de apoyo: Indique el nombre completo del servicio de apoyo que se brinda")
     text = text.replace("Nombre del producto de apoyo: Indique el nombre completo del producto de apoyo como lo enuncia la entidad que lo brinda.","Nombre del producto de apoyo: Indique el nombre completo del servicio de apoyo que se brinda")
-    text = text.replace("fines:","Fines:")
-    text = text.replace("Fínes:","Fines:")
-    text = text.replace("fínes:","Fines:")
-    text = text.replace("fines","Fines:")
-    text = text.replace("Fínes","Fines:")
-    text = text.replace("fínes","Fines:")
+    text = text.replace(" fines:","Fines:")
+    text = text.replace(" Fínes:","Fines:")
+    text = text.replace(" fínes:","Fines:")
+    text = text.replace(" fines","Fines:")
+    text = text.replace(" Fínes","Fines:")
+    text = text.replace(" fínes","Fines:")
     text = text.replace("14. Clasificación del producto de apoyo","Para uso interno ")
     text = text.replace("Observaciones: Consignar en este último apartado, algún detalle o característica del producto de apoyo, que no quede reflejado en los ítems anteriores de esta ficha.","Observaciones:")
     text = text.replace("Localización del servicio de apoyo","7. Uso y aplicaciones del producto de apoyo")
@@ -323,7 +323,12 @@ def get_org_name_product(text):
         needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
         needle = needle.rstrip()
         needle = needle.lstrip()
-        return needle
+        needle = needle.replace("\'" , "")
+        if needle == "" or needle == " " or needle == "\n" or needle == " \n":
+            print("\t\u001B[31mname:\033[0m No brinda información")
+            return "No brinda información"
+        else:
+            return needle
 
     else:
         print("\t\u001B[31mname:\033[0m No brinda información")
@@ -340,6 +345,7 @@ def get_org_email_product(text):
             return "No brinda información"
         else:
             print("\t\033[94memail:\033[0m " + needle)
+            needle = needle.replace("\"", "")
             return needle
 
     else:
@@ -353,6 +359,7 @@ def get_org_web_product(text):
     if text.find(start) != -1 and  text.find(start) != -1:
         needle = text[text.find(start) + len(start): text.find(end)]
         print("\t\033[94mweb:\033[0m " + needle)
+        needle = needle.replace("\"", "")
         return needle
 
     else:
@@ -375,6 +382,7 @@ def get_org_telephone_product(text):
         for i in fixedphones:
             needle += " " + i
         print("\t\033[94mtelephone:\033[0m " + needle)
+        needle = needle.replace("\"", "")
         return needle
 
     else:
@@ -426,6 +434,7 @@ def get_org_reaches_product(text):
     if text.find(start) != -1 and  find_nth(text, end, 1) != -1:
         needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
         print("\t\033[94mreaches:\033[0m " + needle)
+        needle = needle.replace("\"", "")
         return needle
 
     else:
@@ -439,6 +448,7 @@ def get_org_mision_product(text):
     if text.find(start) != -1 and text.find(start) != -1:
         needle = text[text.find(start) + len(start): text.find(end)]
         print("\t\033[94mmision:\033[0m " + needle)
+        needle = needle.replace("\"", "")
         return needle
 
     else:
@@ -454,6 +464,7 @@ def get_org_vision_product(text):
     if text.find(start) != -1 and find_nth(text, end, 1) != -1:
         needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
         print("\t\033[94mvision:\033[0m " + needle)
+        needle = needle.replace("\"", "")
         return needle
 
     else:
@@ -468,6 +479,7 @@ def get_org_objective_product(text):
         needle = text[text.find(start) + len(start): text.find(end)]
         print("\t\033[94mobjective:\033[0m " + needle)
         needle = needle.replace("5." , "")
+        needle = needle.replace("\"", "")
         return needle
 
     else:
@@ -483,6 +495,7 @@ def get_org_dayOperations_product(text):
         needle = text[text.find(start) + len(start): text.find(end)]
         print("\t\033[94mdayOperations:\033[0m " + needle)
         needle = needle.replace("13.", "")
+        needle = needle.replace("\"", "")
         return needle
 
     else:
@@ -527,13 +540,17 @@ def get_org_name_service(text):
     end = "4. Descripción del ente que brinda el producto de apoyo"
     if text.find(start) != -1 and text.find(end) != -1:
         needle = text[text.find(start) + len(start): text.find(end)]
-        print("\t\033[94mname:\033[0m " + needle)
         needle = needle.replace("\n", " ")  # removes all newline characters from text
         needle = needle.replace("\t", " ")  # replaces tabs with spaces
         needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
         needle = needle.rstrip()
         needle = needle.lstrip()
-        return needle
+        needle = needle.replace("\"", "")
+        if needle == "" or needle == " " or needle == "\n" or needle == " \n":
+            print("\t\u001B[31mname:\033[0m No brinda información")
+            return "No brinda información"
+        else:
+            return needle
 
     else:
         print("\t\u001B[31mname:\033[0m No brinda información")
@@ -550,6 +567,7 @@ def get_org_email_service(text):
             return "No brinda información"
         else:
             print("\t\033[94memail:\033[0m " + needle)
+            needle = needle.replace("\"", "")
             return needle
 
     else:
@@ -567,6 +585,7 @@ def get_org_web_service(text):
             return "No brinda información"
         else:
             print("\t\033[94mweb:\033[0m " + needle)
+            needle = needle.replace("\"", "")
             return needle
 
     else:
@@ -610,6 +629,7 @@ def get_org_telephone_service(text):
 
         else:
             print("\t\033[94mtelephone:\033[0m " + needle)
+            needle = needle.replace("\"", "")
             return needle
 
     else:
@@ -656,10 +676,12 @@ def get_org_wazeAddress_service(text):
 
 
 def get_org_reaches_service(text):
-    start = "Fines: "
+    haystack = text[text.find("Descripción del ente que brinda el producto de apoyo:"): text.find("oferente del servicio de apoyo")]
+
+    start = "Fines:"
     end = "Misión:"
-    if text.find(start) != -1 and text.find(end) != -1:
-        needle = text[text.find(start) + len(start): text.find(end)]
+    if haystack.find(start) != -1 and haystack.find(end) != -1:
+        needle = haystack[haystack.find(start) + len(start): haystack.find(end)]
         if needle == "":
             start = "Descripción del ente que brinda el producto de apoyo:"
             end = "Uso y aplicaciones del producto de apoyo"
@@ -667,12 +689,113 @@ def get_org_reaches_service(text):
             needle = haystack[haystack.find("Fines: ") : haystack.find("Misión:")]
 
         print("\t\033[94mreaches:\033[0m " + needle)
+        needle = needle.replace("\"", "")
         return needle
 
     else:
         print("\t\u001B[31mreaches:\033[0m No brinda información")
         return "No brinda información"
 
+
+def get_org_mision_service(text):
+    haystack = text[text.find("Descripción del ente que brinda el producto de apoyo:"): text.find("oferente del servicio de apoyo")]
+
+    start = "Misión:"
+    end = " Visión: "
+
+    if haystack.find(start) != -1 and haystack.find(start) != -1:
+        needle = haystack[haystack.find(start) + len(start): haystack.find(end)]
+        print("\t\033[94mmision:\033[0m " + needle)
+        needle = needle.replace("\"", "")
+        return needle
+
+    else:
+        print("\t\u001B[31mwazeAddress:\033[0m No brinda información")
+        return "No brinda información"
+
+
+def get_org_vision_service(text):
+    haystack = text[text.find("Descripción del ente que brinda el producto de apoyo:"): text.find("oferente del servicio de apoyo")]
+    start = " Visión: "
+    end = "Objetivos:"
+    if haystack.find(end) == -1:
+        end = "Señale el tipo"
+    if haystack.find(start) != -1 and find_nth(haystack, end, 1) != -1:
+        needle = haystack[haystack.find(start) + len(start): find_nth(haystack, end, 1)]
+        print("\t\033[94mvision:\033[0m " + needle)
+        needle = needle.replace("\"", "")
+        return needle
+
+    else:
+        print("\t\u001B[31mvision:\033[0m No brinda información")
+        return "No brinda información"
+
+
+def get_org_objective_service(text):
+    haystack = text[text.find("Descripción del ente que brinda el producto de apoyo:") : text.find("oferente del servicio de apoyo")]
+    haystack.replace(" Objetivo: " , " Objetivos: ")
+    start = "Objetivos:"
+    end = " Señale el tipo de"
+
+
+    if haystack.find(start) != -1 and haystack.find(end) != -1:
+        needle = haystack[haystack.find(start) + len(start): haystack.find(end)]
+        print("\t\033[94mobjective:\033[0m " + needle)
+        needle = needle.replace("5." , "")
+        needle.replace("Señale el tipo de" , "")
+        needle = needle.replace("\"", "")
+        return needle
+
+    else:
+        print("\t\u001B[31mobjective:\033[0m No brinda información")
+        return "No brinda información"
+
+
+def get_org_dayOperations_service(text):
+    start = "Horario (días por semana que está disponible)."
+    end = "Otra información de interés ("
+    if text.find(start) != -1 and text.find(end) != -1:
+        needle = text[text.find(start) + len(start): text.find(end)]
+        print("\t\033[94mdayOperations:\033[0m " + needle)
+        needle = needle.replace("13.", "")
+        needle = needle.replace("\"", "")
+        return needle
+
+    else:
+        print("\t\u001B[31mdayOperations:\033[0m No brinda información")
+        return "No brinda información"
+
+
+def get_org_typesidPk_service(text):
+    start = "Es Institución Pública: ("
+    mid = ") Municipalidad ("
+    mid1 = ") Es Empresa Privada: ("
+    mid2 = ") Es Organización no Gubernamental: ("
+    end = ") Nombre del producto de apoyo"
+    needle1 = text[text.find(start) + len(start): text.find(mid)]
+    needle2 = text[text.find(mid) + len(mid): text.find(mid1)]
+    needle3 = text[text.find(mid1) + len(mid1): text.find(mid2)]
+    needle4 = text[text.find(mid2) + len(mid2): text.find(end)]
+
+    if(needle1.replace(" " , "") == "x" or needle1.replace(" " , "") == "X"):
+        print("\t\033[94mtypesidPk:\033[0m 3")
+        return 3
+
+    elif(needle2.replace(" " , "") == "x" or needle2.replace(" " , "") == "X"):
+        print("\t\033[94mtypesidPk:\033[0m 2")
+        return 2
+
+    elif (needle3.replace(" ", "") == "x" or needle3.replace(" ", "") == "X"):
+        print("\t\033[94mtypesidPk:\033[0m 4")
+        return 4
+
+    elif (needle4.replace(" ", "") == "x" or needle4.replace(" ", "") == "X"):
+        print("\t\033[94mtypesidPk:\033[0m 1")
+        return 1
+
+    else:
+        print("\t\u001B[31mtypesidPk:\033[0m 5")
+        return 5
 
 # ------------------------------------SERVICES------------------------------------ #
 
@@ -1036,26 +1159,26 @@ def test_org_service_functions(text):
     get_org_wazeAddress_service(text)
     # shedule = "-"
     get_org_reaches_service(text)
-    #get_org_mision_service(text)
-    #get_org_vision_service(text)
-    #get_org_objective_service(text)
-    #get_org_dayOperations_service(text)
+    get_org_mision_service(text)
+    get_org_vision_service(text)
+    get_org_objective_service(text)
+    get_org_dayOperations_service(text)
     # isApproved = 1
     # isChecked = 1
     # isDeleted = 0
-    #get_org_typesidPk_service(text)
+    get_org_typesidPk_service(text)
 
 
 def test_org_service(fileMatrx):
     for i in range(len(fileMatrx)):
         print(str(i) + "\t|\t" + fileMatrx[i][0])
-        test_org_service_functions(get_text_from(fileMatrx[i][0] , True))
+        test_org_service_functions(get_text_from(fileMatrx[i][0] , False))
         print("_____________________________________________________________________________________________________________________")
         print("")
 
 # ------------------------------------BUILDING------------------------------------ #
 
-def generate_Organizations_dictionary_product(productMatrix , serviceMatrix):
+def generate_Organizations_dictionary(productMatrix , serviceMatrix):
     Organizations = []
     c = 1
     org_ready = []
@@ -1068,20 +1191,20 @@ def generate_Organizations_dictionary_product(productMatrix , serviceMatrix):
             print(path)
             org_ready.append(get_org_name_product(text))
             temp["idPk"] = c
-            temp["dni"] = "&No brinda información&"
-            temp["name"] = "&" + get_org_name_product(text) + "&"
-            temp["email"] = "&" + get_org_email_product(text) + "&"
-            temp["web"] = "&" + get_org_web_product(text) + "&"
-            temp["telephone"] = "&" + get_org_telephone_product(text) + "&"
-            temp["legalRepresentative"] = "&No brinda información&"
+            temp["dni"] = ">>No brinda información>>"
+            temp["name"] = ">>" + get_org_name_product(text) + ">>"
+            temp["email"] = ">>" + get_org_email_product(text) + ">>"
+            temp["web"] = ">>" + get_org_web_product(text) + ">>"
+            temp["telephone"] = ">>" + get_org_telephone_product(text) + ">>"
+            temp["legalRepresentative"] = ">>No brinda información>>"
             temp["assembly"] = []
             temp["socialNetworks"] = get_org_socialNetworks_product(text)
             temp["wazeAddress"] = get_org_wazeAddress_product(text)
-            temp["schedule"] = "&n&"
-            temp["reaches"] = "&" + get_org_reaches_product(text) + "&"
-            temp["mision"] = "&" + get_org_mision_product(text) + "&"
-            temp["vision"] = "&" + get_org_vision_product(text) + "&"
-            temp["objetive"] = "&" + get_org_objective_product(text) + "&"
+            temp["schedule"] = ">>n>>"
+            temp["reaches"] = ">>" + get_org_reaches_product(text) + ">>"
+            temp["mision"] = ">>" + get_org_mision_product(text) + ">>"
+            temp["vision"] = ">>" + get_org_vision_product(text) + ">>"
+            temp["objetive"] = ">>" + get_org_objective_product(text) + ">>"
             temp["dayOperations"] = {}
             temp["isAproved"] = 1
             temp["isChecked"] = 1
@@ -1091,36 +1214,36 @@ def generate_Organizations_dictionary_product(productMatrix , serviceMatrix):
 
             Organizations.append(copy.deepcopy(temp))
 
-        for row in serviceMatrix:
-            temp = {}
-            path = row[0]
-            text = get_text_from(path, False)
-            if get_org_name_product(text) not in org_ready:
-                print(path)
-                org_ready.append(get_org_name_product(text))
-                temp["idPk"] = c
-                temp["dni"] = "&No brinda información&"
-                temp["name"] = "&" + get_org_name_product(text) + "&"
-                temp["email"] = "&" + get_org_email_product(text) + "&"
-                temp["web"] = "&" + get_org_web_product(text) + "&"
-                temp["telephone"] = "&" + get_org_telephone_product(text) + "&"
-                temp["legalRepresentative"] = "&No brinda información&"
-                temp["assembly"] = []
-                temp["socialNetworks"] = get_org_socialNetworks_product(text)
-                temp["wazeAddress"] = get_org_wazeAddress_product(text)
-                temp["schedule"] = "&n&"
-                temp["reaches"] = "&" + get_org_reaches_product(text) + "&"
-                temp["mision"] = "&" + get_org_mision_product(text) + "&"
-                temp["vision"] = "&" + get_org_vision_product(text) + "&"
-                temp["objetive"] = "&" + get_org_objective_product(text) + "&"
-                temp["dayOperations"] = {}
-                temp["isAproved"] = 1
-                temp["isChecked"] = 1
-                temp["isDeleted"] = 0
-                temp["organizationsTypesidPk"] = get_org_typesidPk_product(text)
-                c += 1
+    for row in serviceMatrix:
+        temp = {}
+        path = row[0]
+        text = get_text_from(path, False)
+        if get_org_name_service(text) not in org_ready:
+            print(path)
+            org_ready.append(get_org_name_service(text))
+            temp["idPk"] = c
+            temp["dni"] = ">>No brinda información>>"
+            temp["name"] = ">>" + get_org_name_service(text) + ">>"
+            temp["email"] = ">>" + get_org_email_service(text) + ">>"
+            temp["web"] = ">>" + get_org_web_service(text) + ">>"
+            temp["telephone"] = ">>" + get_org_telephone_service(text) + ">>"
+            temp["legalRepresentative"] = ">>No brinda información>>"
+            temp["assembly"] = []
+            temp["socialNetworks"] = get_org_socialNetworks_service(text)
+            temp["wazeAddress"] = get_org_wazeAddress_service(text)
+            temp["schedule"] = ">>n>>"
+            temp["reaches"] = ">>" + get_org_reaches_service(text) + ">>"
+            temp["mision"] = ">>" + get_org_mision_service(text) + ">>"
+            temp["vision"] = ">>" + get_org_vision_service(text) + ">>"
+            temp["objetive"] = ">>" + get_org_objective_service(text) + ">>"
+            temp["dayOperations"] = {}
+            temp["isAproved"] = 1
+            temp["isChecked"] = 1
+            temp["isDeleted"] = 0
+            temp["organizationsTypesidPk"] = get_org_typesidPk_service(text)
+            c += 1
 
-                Organizations.append(copy.deepcopy(temp))
+            Organizations.append(copy.deepcopy(temp))
 
     return Organizations
 
@@ -1140,8 +1263,14 @@ def dic2csv(dictionaries):
     file = open("toExport.csv", "r")
     old = file.read()
     file.close()
+    new = old.replace(">>", "\"")
+    new = new.replace("\" ;\"" , "\";\"")
+    new = new.replace("\"; \"", "\";\"")
+    new = new.replace("\" ; \"", "\";\"")
+    new = new.replace("\"\";\"", "\";\"")
+    new = new.replace("\";\"\"", "\";\"")
     file = open("toExport.csv", "w")
-    file.write(old.replace("&", "\""))
+    file.write(new)
     file.close()
 
 # ------------------------------------MAIN------------------------------------ #
@@ -1149,18 +1278,22 @@ def dic2csv(dictionaries):
 def main():
     print("          _____          __  __    _______     _______ _______ ______ __  __ \n    /\   |  __ \   /\   |  \/  |  / ____\ \   / / ____|__   __|  ____|  \/  |\n   /  \  | |  | | /  \  | \  / | | (___  \ \_/ / (___    | |  | |__  | \  / |\n  / /\ \ | |  | |/ /\ \ | |\/| |  \___ \  \   / \___ \   | |  |  __| | |\/| |\n / ____ \| |__| / ____ \| |  | |  ____) |  | |  ____) |  | |  | |____| |  | |\n/_/    \_\_____/_/    \_\_|  |_| |_____/   |_| |_____/   |_|  |______|_|  |_|\n                    -Automatic Database Migration System-                    \n\n\n")
     serviceMatrx = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo")
-    #productMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/")
+    productMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/")
 
-    #path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Grecia/Terapia fisica/Centro de educación especial Grecia-Terapia fisica_.docx"
+    #path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Heredia/ACIOSA SANTO DOMINGO/serv. educativo/ACIOSA - Serv. Educativos.docx"
     #text = get_text_from(path , True)
     #test_org_service_functions(text)
 
+    #test_org_product(productMatrix)
+    #test_org_service(serviceMatrx)
 
-    test_org_service(serviceMatrx)
+
+    dic2csv(generate_Organizations_dictionary(productMatrix , serviceMatrx))
 
 
 
-## TODO AL FINAL: VERIFICAR QUE TODAS LAS FUNCIONES OBLIGATORIAS RETORNEN ALGO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+# TODO AL FINAL: VERIFICAR QUE TODAS LAS FUNCIONES OBLIGATORIAS RETORNEN ALGO QUE SEA DEL VALOR REQUERIDO POR SQL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 
@@ -1168,17 +1301,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# ------------------------------------Problems with some product enterprises------------------------------------ #
-# TODO: verificar toda esta vara: (ya debería estar resuelta)
-# TODO: (idPK) Check this files and repair them. (Equipo_Montes_De_Oca)
-# TODO: (Reaches) Check files and repair them. (APRONAGUE, Hosp. Trauma INS, CENAREC, CCSS)
-# TODO: (Mision) Check this files and repair them. (APRONAGUE)
-# TODO: (Vision) Check this files and repair them. (APRONAGUE)
-# TODO: (Objectives) Check this files and repair them. (Hosp. Trauma INS, CENAREC)
-# ------------------------------------Problems with some service enterprises------------------------------------ #
-# TODO: (email) Check this files and repair them. (Hospital San Rafael de Alajuela CCSS, Hospital de San Carlos CCSS, Hospital La Anexi__n CCSS, Hospital William Allen Taylor CCSS)
-# TODO: (website) Check this files and repair them. (FUNDACION SERVIO FLORES, Centro de Terapia de Lenguaje Semillitas de Dios, Centro Educativo Dr. Carlos S__enz Herrera, Asco. Fraternidad Cristiana PcD)
-# TODO: (wazeAddress) Check this files and repair them. (FUNDACION SERVIO FLORES)
-# TODO: (Mision) Check this files and repair them. (Centro de Terapia de Lenguaje Semillitas de Dios)
-# TODO: (Vision) Check this files and repair them. (Centro de Terapia de Lenguaje Semillitas de Dios)
