@@ -1,15 +1,12 @@
-import base64
-import datetime
-import json
 import re
-import string
+
 from os import walk
 from os.path import join, abspath , splitext
 import base64
 import datetime
 import copy
 import docx2txt
-import sys
+
 import csv
 from adam4 import urlmarker
 
@@ -205,6 +202,8 @@ def get_item_name(text):
         start = "Nombre del producto de apoyo:"
     end = "7. Uso y aplicaciones del producto de apoyo"
     needle = text[text.find(start) + len(start): text.find(end)]
+    if needle == "No brinda información":
+        needle = "Clinicas Audición"
     print("\t\033[94mName of item:\033[0m " + needle)
     return needle
 
@@ -309,7 +308,36 @@ def get_item_sex(text):
     print("\t\033[94msex:\033[0m " + str(count))
     return count
 
-#TODO HACER QUE SIRVA CON SERVICIOS
+
+def get_item_organizationidPk_service(text):
+    names = {'12' : 'Asociación Pro-Discapacidad San Pedro de Poás' , '41': 'Clinicas Audición', '62': 'Asociación Pro-Ayuda a la Persona con Discapacidad de Zarcero, Llano Bonito y San Antonio, APAMAR', '25': 'Municipalidad de Carrillo, Guanacaste', '74': 'Centro de educación especial Grecia', '53': 'Fundación Doctora Chinchilla de Reyes.', '31': 'Asociación Semillas de Esperanza Pro-Apoyo y Rehabilitación de Hojancha, Guanacaste.', '16': 'Ayudas Técnicas que entrega la CCSS como institución en cada uno de sus hospitales.', '7': 'Asociación Pro-Patronato Nacional de Ciegos.', '46': 'Asociación Atjala ( CAIPAD)', '24': 'Sistema de Accesibilidad Total S.A', '40': 'Clinica de Terapia Física María Goretti.', '17': 'Clínica Dinamarca', '63': 'Hospital de San Carlos - CCSS', '11': 'Centro Educativo Dr. Carlos Sáenz Herrera', '80': 'Asociación Centro de Integración Ocupacional y Servicios Afines, ACIOSA', '36': 'Asociación Fraternidad Cristiana de Personas con Discapacidad', '6': 'Sear Médica', '57': 'Fundación Servio Flores Arroyo', '60': 'Hospital San Rafael de Alajuela - CCSS', '18': 'JR Sánchez Audiología', '79': 'Asociación Centro de Formación Socio-Productivo para el Desarrollo de las Personas Discapacitadas.', '51': 'Hospital Carlos Luis Valverde Vega CCSS', '15': 'Centro Nacional de Recursos para la Educación Inclusiva -CENAREC-.', '39': 'Centro de Educación Especial de Turrialba', '37': 'Centro Educación Especial Carlos Luis Valle', '76': 'Asociación de Ayuda al Minusválido de San Carlos, AYUMISANCA.', '65': 'Asociación MORFAS (Miembros Organizados Fomentando Acciones Solidarias).', '78': 'Municipalidad de Alajuela', '70': 'Asociación Taller Protegido de Alajuela.', '64': 'Centro Especializado en Terapia del lenguaje, habla y voz', '81': 'Asociación Amigos del Grupo de Percusión-Inclusión -AAGRUPERI-', '75': 'Ministerio de Educación Pública: Centro de Enseñanza Especial Marta Saborío Fonseca, Alajuela', '10': 'Disprodorme S.A', '14': 'Asociación pro Hospital Nacional de Geriatría y Gerontología Dr. Raúl Blanco Cervantes, APRONAGE.', '61': 'Asociación Sarchiseña de Discapacitados, ASADIS', '19': 'Chupis Ortopédica', '47': 'Municipalidad de Cartago.', '67': 'Asociación de Transparencia.', '5': 'Ortopédica Garbanzo', '28': 'Asociación Guanacasteca de Discapacidad, Autonomía y Comunidad Inclusiva, AGUDACI.', '13': 'AZMONT S.A', '56': 'Asociación para la Promoción de la Salud Mental, APROSAM.', '77': 'Asociación Costarricense de Personas con Discapacidad Visual, ACOPEDIV', '52': 'Asociación para la Atención Integral de Personas Adultas con Discapacidad “El sol Brilla para Todos” CAIPAD', '1': 'Synapsis Medical, Tienda Ortopédica Y Equipo Medico', '21': 'Hospital del Trauma del INS y sus clínicas alrededor del país.', '72': 'Asociación Costarricense Pro- Ayuda al Epiléptico, ACOPE.', '55': 'Asociación Taller de Atención Integral y Capacitación, ATAICA.', '9': 'Empresa Brailler Inc. Costa Rica', '27': 'Asociación de Personas con Discapacidad -APEDI- GUANACASTE', '49': 'Asociación Pro niños con Parálisis Cerebral Cartago', '66': 'Asociación Pro-Personas con Discapacidad de Atenas -APRODISA-', '48': 'Asociación Costarricense de Artriticos', '73': 'Fundación Hogar Manos Abiertas.', '4': 'Asociación Costarricense de Distrofia Muscular, ACODIM.', '71': 'Centro de Terapia Asistida con Animales.', '69': 'Asociación Talita Cumi.', '42': 'Instituto Tecnológico de Costa Rica', '2': 'Asociación Central Pro-Ayuda de la Persona con Discapacidad de Palmares - APRADIS', '29': 'Hospital La Anexión - CCSS', '8': 'TifloproductosCR', '54': 'Asociación de Personas con Discapacidad de Upala, ADEDISUPA.', '43': 'Clínica Fisiosport', '23': 'Hospital Express', '26': 'Centro de Terapia de Lenguaje y Guarderia Semillitas de Dios', '58': 'Fundación Amor y Esperanza.', '33': 'Hospital William Allen Taylor - CCSS', '44': 'Asociación Seres de Luz', '30': 'Fundación Senderos de Oportunidades', '22': 'Equipo Médico Montes Oca', '38': 'Hospital Nacional Psiquiátrico - CCSS Roberto Chacón Paut', '20': 'Asociación Pro Centro Nacional de Rehabilitación, PROCENARE', '68': 'Municipalidad de San Carlos.', '3': 'Alquiler Médicos ByB', '45': 'Colegio Universitario de Cartago -CUC', '50': 'Asociación de Desarrollo Educativo de Paraíso -ASODEPA-', '35': 'Asociación de Apoyo a la Unidad de Rehabilitación Profesional de Turrialba.'}
+    needle = str(get_org_name_service(text))
+
+    if needle == "Hospital William Allen Taylor- CCSS":
+        needle = "Hospital William Allen Taylor - CCSS"
+
+    if needle == "Hospital William Allen Taylor, CCSS":
+        needle = "Hospital William Allen Taylor - CCSS"
+
+    if needle == "Chupis Ortopedica":
+        needle = "Chupis Ortopédica"
+
+    if needle == "Hospital San Rafael de Alajuela- CCSS":
+        needle = "Hospital San Rafael de Alajuela - CCSS"
+
+    if needle == "No brinda información":
+        needle = "Clinicas Audición"
+
+    for key , value in names.items():
+        value = str(value)
+        if value == needle:
+            print("\t\033[94morganizationsIdFk:\033[0m " + key)
+            return key
+
+    print("\t\u001B[31morganizationsIdFk:\033[0m ERROR")
+    return 100
+
+
 # ------------------------------------ORGANIZATIONS------------------------------------ #
 
 def get_org_name_product(text):
@@ -550,6 +578,7 @@ def get_org_name_service(text):
             print("\t\u001B[31mname:\033[0m No brinda información")
             return "No brinda información"
         else:
+            print("\t\033[94mname:\033[0m " + needle)
             return needle
 
     else:
@@ -1096,7 +1125,7 @@ def test_item_service_functions(text):
     # isAproved = 1
     # isChecked = 1
     # isDeleted = 0
-    # organizationsIdFk = fkId
+    get_item_organizationidPk_service(text)
 
 
 def test_item_product(fileMatrx):
@@ -1110,7 +1139,7 @@ def test_item_product(fileMatrx):
 def test_item_service(fileMatrx):
     for i in range(len(fileMatrx)):
         print(str(i) + "\t|\t" + fileMatrx[i][0])
-        test_item_service_functions(get_text_from(fileMatrx[i][0] , True))
+        test_item_service_functions(get_text_from(fileMatrx[i][0] , False))
         print("_____________________________________________________________________________________________________________________")
         print("")
 
@@ -1248,7 +1277,53 @@ def generate_Organizations_dictionary(productMatrix , serviceMatrix):
     return Organizations
 
 
-def dic2csv(dictionaries):
+def generate_Items_Services_and_Products_dictionary(productMatrix, serviceMatrix):
+    Items = []
+    Services = []
+    Products = []
+    i = 1
+    ready = []
+
+    for row in serviceMatrix:
+        temp = {}
+        path = row[0]
+        try:
+            image = row[1]
+        except:
+            image = "/home/fabian/Documents/repositories/adam_system/adam4/res/not-available-es.png"
+        text = get_text_from(path , False)
+        if get_item_name(text) not in ready:
+            print(path)
+            ready.append(get_item_name(text))
+            temp["idPk"] = i
+            temp["code"] = ">>No brinda información>>"
+            temp["name"] = ">>" + get_item_name(text) + ">>"
+            temp["description"] = ">>" + get_item_description_service(text) + ">>"
+            temp["observations"] = ">>" + get_item_observations_services(text) + ">>"
+            temp["image1"] = ">>imagen>>" # encode_image(image)
+            temp["image2"] = ">>imagen>>"
+            temp["image3"] = ">>imagen>>"
+            temp["visibility"] = 1
+            temp["isProduct"] = 0
+            temp["onDateUpdated"] = ">>n>>"
+            temp["onDateCreated"] = get_date()
+            temp["daysToOperations"] = get_date()
+            temp["typeDeficiency"] = ">>" + get_item_typeDeficiency(text) + ">>"
+            temp["age"] = {} # {"'age'" : str(get_item_age(text))}
+            temp["sex"] = 2
+            temp["isForPregnant"] = 1
+            temp["isApproved"] = 1
+            temp["isChecked"] = 1
+            temp["isDeleted"] = 0
+            temp["organizationsIdFk"] = get_item_organizationidPk_service(text)
+            i += 1
+
+            Items.append(copy.deepcopy(temp))
+
+    return Items
+
+
+def dic2csv_orgs(dictionaries):
     cols_name = ["idPk", "dni" , "name" , "email" , "web" , "telephone" , "legalRepresentative" , "assembly" , "socialNetworks" , "wazeAddress" , "schedule" , "reaches" , "mision" , "vision" , "objetive" , "dayOperations" ,"isAproved" , "isChecked" , "isDeleted" , "organizationsTypesidPk"]
     file = open("toExport.csv", "w")
 
@@ -1273,23 +1348,50 @@ def dic2csv(dictionaries):
     file.write(new)
     file.close()
 
+def dic2csv_items(dictionaries):
+    cols_name = ["idPk" , "code" , "name" , "description" , "observations" , "image1" , "image2" , "image3" , "visibility" , "isProduct" , "onDateUpdated" , "onDateCreated" , "daysToOperations" , "typeDeficiency" , "age" , "sex" , "isForPregnant" , "isApproved" , "isChecked" , "organizationsIdFk" , "isDeleted"]
+    file = open("toExport.csv", "w")
+
+    with file:
+        csv.register_dialect("toMYSQL", delimiter=";")
+        writer = csv.DictWriter(file, fieldnames=cols_name, dialect="toMYSQL")
+        writer.writeheader()
+        for dict in dictionaries:
+            writer.writerow(dict)
+        file.close()
+
+    file = open("toExport.csv", "r")
+    old = file.read()
+    file.close()
+    new = old.replace(">>", "\"")
+    new = new.replace("\" ;\"" , "\";\"")
+    new = new.replace("\"; \"", "\";\"")
+    new = new.replace("\" ; \"", "\";\"")
+    new = new.replace("\"\";\"", "\";\"")
+    new = new.replace("\";\"\"", "\";\"")
+    new = new.replace(" \";\"", "\";\"")
+    new = new.replace("\";\" ", "\";\"")
+    file = open("toExport.csv", "w")
+    file.write(new)
+    file.close()
+
 # ------------------------------------MAIN------------------------------------ #
 
 def main():
     print("          _____          __  __    _______     _______ _______ ______ __  __ \n    /\   |  __ \   /\   |  \/  |  / ____\ \   / / ____|__   __|  ____|  \/  |\n   /  \  | |  | | /  \  | \  / | | (___  \ \_/ / (___    | |  | |__  | \  / |\n  / /\ \ | |  | |/ /\ \ | |\/| |  \___ \  \   / \___ \   | |  |  __| | |\/| |\n / ____ \| |__| / ____ \| |  | |  ____) |  | |  ____) |  | |  | |____| |  | |\n/_/    \_\_____/_/    \_\_|  |_| |_____/   |_| |_____/   |_|  |______|_|  |_|\n                    -Automatic Database Migration System-                    \n\n\n")
-    serviceMatrx = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo")
+    serviceMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo")
     productMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/")
 
-    #path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Heredia/ACIOSA SANTO DOMINGO/serv. educativo/ACIOSA - Serv. Educativos.docx"
+    #path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Municipalidad Carrillo/Serv. Educativo/Municipalidad de Carillo - Serv. Educativo.docx"
     #text = get_text_from(path , True)
-    #test_org_service_functions(text)
 
-    #test_org_product(productMatrix)
-    #test_org_service(serviceMatrx)
+    #print(get_item_name(text))
+
+    dictionary = generate_Items_Services_and_Products_dictionary(productMatrix, serviceMatrix)
 
 
-    dic2csv(generate_Organizations_dictionary(productMatrix , serviceMatrx))
 
+    dic2csv_items(dictionary)
 
 
 
@@ -1301,3 +1403,22 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
