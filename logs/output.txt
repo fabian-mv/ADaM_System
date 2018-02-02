@@ -8,8 +8,9 @@
 
 
 
-0	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Municipalidad Carrillo/Serv. Educativo/Municipalidad de Carillo - Serv. Educativo.docx
- X 
+	Name of item:  Serv. Educativo: La biblioteca posee un programa, con cursos mejoramiento de motora fina, junto con la Trabajadora Social que busca mejorar la calidad de vida de la familia. 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Municipalidad Carrillo/Serv. Educativo/Municipalidad de Carillo - Serv. Educativo.docx
+	Name of item:  Serv. Educativo: La biblioteca posee un programa, con cursos mejoramiento de motora fina, junto con la Trabajadora Social que busca mejorar la calidad de vida de la familia. 
 	isPrivate: 0
 	cost: gratuito
 	objectives: Mejorar la calidad de vida de la persona con discapacidad y sus familias
@@ -24,10 +25,9 @@
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: - Semanal
-_____________________________________________________________________________________________________________________
-
-1	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Centro de Terapia de Lenguaje Semillitas de Dios/Psicología/Centro de Terapia de Lenguaje y Guarderia Semillitas de Dios-psicologia_.docx
- 
+	Name of item:  Psicología 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Centro de Terapia de Lenguaje Semillitas de Dios/Psicología/Centro de Terapia de Lenguaje y Guarderia Semillitas de Dios-psicologia_.docx
+	Name of item:  Psicología 
 	isPrivate: 1
 	cost: 
 	objectives: Brindar el servicio de terapia de lenguaje a niños que necesiten de este para mejorar su calidad de vida.
@@ -42,10 +42,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-2	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Centro de Terapia de Lenguaje Semillitas de Dios/Terapia de Lenguaje/Centro de Terapia de Lenguaje y Guarderia Semillitas de Dios. Terapia de lenguaje_.docx
- 
+	Name of item:  Terapia de Lenguaje 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Centro de Terapia de Lenguaje Semillitas de Dios/Terapia de Lenguaje/Centro de Terapia de Lenguaje y Guarderia Semillitas de Dios. Terapia de lenguaje_.docx
+	Name of item:  Terapia de Lenguaje 
 	isPrivate: 1
 	cost: 
 	objectives: Brindar el servicio de terapia de lenguaje a niños que necesiten de este para mejorar su calidad de vida.
@@ -60,10 +59,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-3	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Asociación de Personas con Discapacidad -APEDI- GUANACASTE/Serv. Apoyo Emocional/APEDI - Apoyo Emocional_.docx
- 
+	Name of item:  Asesoría Emocional 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Asociación de Personas con Discapacidad -APEDI- GUANACASTE/Serv. Apoyo Emocional/APEDI - Apoyo Emocional_.docx
+	Name of item:  Asesoría Emocional 
 	isPrivate: 1
 	cost: Gratis.
 	objectives: Poder ayudar a todas las personas con discapacidad y sus familias en la península de Nicoya y Santa Teresa, Guanacaste.
@@ -78,10 +76,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-4	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/AGUDACI/Serv. Asesoría Derechos PcD/AGUDACI - Asesoria de empoderamiento.docx
- 
+	Name of item:  Asesoría técnica sobre petición de ayudas o procedimientos estatales. 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/AGUDACI/Serv. Asesoría Derechos PcD/AGUDACI - Asesoria de empoderamiento.docx
+	Name of item:  Asesoría técnica sobre petición de ayudas o procedimientos estatales. 
 	isPrivate: 1
 	cost: Gratis
 	objectives: Permitir la independencia a las personas con discapacidad.
@@ -96,10 +93,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-5	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Hospital La Anexi__n CCSS/Ortopedía/Hospital La Anexión_ CCSS - Ortopedia.docx
- X 
+	Name of item:  Ortopédia. 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Hospital La Anexi__n CCSS/Ortopedía/Hospital La Anexión_ CCSS - Ortopedia.docx
+	Name of item:  Ortopédia. 
 	isPrivate: 0
 	cost: 
 	objectives: Mejorar la calidad de salud de los pacientes de consulta externa que necesiten el servicio médico en ortopedia.
@@ -114,10 +110,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-6	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Hospital La Anexi__n CCSS/Fisioterapia/Hospital La Anexión_ CCSS -  Fiosoterapia_.docx
- X 
+	Name of item:  Fisioterapia 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Hospital La Anexi__n CCSS/Fisioterapia/Hospital La Anexión_ CCSS -  Fiosoterapia_.docx
+	Name of item:  Fisioterapia 
 	isPrivate: 0
 	cost: 
 	objectives: Mejorar la calidad de salud de los pacientes de consulta externa que necesiten el servicio médico en fisioterapia.
@@ -132,10 +127,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-7	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Hospital La Anexi__n CCSS/Psiquiatría/Hospital La Anexión_ CCSS - Psiquiatría.docx
- X 
+	Name of item:  Psiquiatría 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Hospital La Anexi__n CCSS/Psiquiatría/Hospital La Anexión_ CCSS - Psiquiatría.docx
+	Name of item:  Psiquiatría 
 	isPrivate: 0
 	cost: 
 	objectives: Mejorar la calidad de salud de los pacientes de consulta externa que necesiten el servicio médico en psiquiatría.
@@ -150,10 +144,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-8	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Fundaci__n Senderos de Oportunidades/Serv. Terapia Física/Fundación Senderos Oportunidades - Terapia Física.docx
- 
+	Name of item:  Terapia Física 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Fundaci__n Senderos de Oportunidades/Serv. Terapia Física/Fundación Senderos Oportunidades - Terapia Física.docx
+	Name of item:  Terapia Física 
 	isPrivate: 1
 	cost: Gratis
 	objectives: Brindar terapia física gratuita a persona en situación de pobreza.
@@ -168,10 +161,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: - Semanal
-_____________________________________________________________________________________________________________________
-
-9	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Asociación. Semilla de Esperanza_ Hojancha/alquiler sillas ruedas/Asoc. Semillas Esperanza - Alquiler de sillas de ruedas.docx
- 
+	Name of item:  Alquiler sillas de ruedas. 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Asociación. Semilla de Esperanza_ Hojancha/alquiler sillas ruedas/Asoc. Semillas Esperanza - Alquiler de sillas de ruedas.docx
+	Name of item:  Alquiler sillas de ruedas. 
 	isPrivate: 1
 	cost: Desde ¢10 mil colones al mes, depende de la condición económica de la persona.
 	objectives: Permitir la independencia mejorar su capacidad motora.
@@ -186,10 +178,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-10	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Asociación. Semilla de Esperanza_ Hojancha/terapia ocupacional/Asoc. Semillas de Esperanza - Terapía Ocupacional.docx
- 
+	Name of item:  Terapia Ocupacional 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Asociación. Semilla de Esperanza_ Hojancha/terapia ocupacional/Asoc. Semillas de Esperanza - Terapía Ocupacional.docx
+	Name of item:  Terapia Ocupacional 
 	isPrivate: 1
 	cost: Cuota voluntaria para mantenimiento de la asociación
 	objectives: Permitir la independencia mejorar su capacidad motora e intelectual en desarrollo de actividades manuales.
@@ -204,46 +195,11 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-11	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Hospital William Allen Taylor CCSS/psiquiatría/Hospital William Allen Taylor_ CCSS - psiquiatría.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Mejorar la calidad de salud de los pacientes de consulta externa que necesiten el servicio médico en psiquiatría.
-	reaches: Brindar servicios de psiquiatría a pacientes que asisten al este hospital, para mejorar su calidad de salud de acuerdo a su necesidad en psiquiatría.
-	specificSupports: Psiquiatra en consulta externa o si están internados en el hospital.
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Psiquiatras Formación académica: Licenciados y doctores Experiencia: más de 10 años Otras destrezas:
-	cover: Cartago
-	requirements: Ser de Turrialba, estar asegurado con la CCSS o tener derecho al seguro por medio de un familiar, tener cédula o pasaporte vigente, Sacar cita en el hospital para este servicio consulta externa, indicada por el médico de su atención en la ventanilla respectiva.
-	accesibility: Si los reúne.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-12	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Hospital William Allen Taylor CCSS/ortopedía/Hospital William Allen Taylor_ CCSS - Ortopedia_.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Mejorar la calidad de salud de los pacientes de consulta externa que necesiten el servicio médico en ortopedia.
-	reaches: Brindar servicios de ortopedia a pacientes que asisten al este hospital, para mejorar su calidad de salud de acuerdo a su necesidad en ortopedia.
-	specificSupports: ortopedia en consulta externa o si están internados en el hospital.
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Médicos Ortopedistas Formación académica: Licenciados y doctores Experiencia: más de 10 años Otras destrezas:
-	cover: Cartago
-	requirements: Ser de la Zona de Cartago, estar asegurado con la CCSS o tener derecho al seguro por medio de un familiar, tener cédula o pasaporte vigente, Sacar cita en el hospital para este servicio consulta externa, indicada por el médico de su atención en la ventanilla respectiva.
-	accesibility: Si los reúne.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-13	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Hospital William Allen Taylor CCSS/audiometría/Hospital William Allen Taylor_ CCSS - audiometrias_.docx
- X 
+	Name of item:  Psiquiatría 
+	Name of item:  Ortopédia. 
+	Name of item:  Audiometrías 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Hospital William Allen Taylor CCSS/audiometría/Hospital William Allen Taylor_ CCSS - audiometrias_.docx
+	Name of item:  Audiometrías 
 	isPrivate: 0
 	cost: 
 	objectives: Mejorar la calidad de salud de los pacientes de consulta externa que necesiten el servicio médico en Audiometrías.
@@ -258,10 +214,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-14	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/ASOC. Unidad de Rehabilitación Profesional de Turrialba/serv. educativos/Asoc. de Apoyo a la Unidad de Rehabilitación Profesional de Turrialba (URP) - Serv. Educativos.docx
- X 
+	Name of item:  Serv. Educativos 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/ASOC. Unidad de Rehabilitación Profesional de Turrialba/serv. educativos/Asoc. de Apoyo a la Unidad de Rehabilitación Profesional de Turrialba (URP) - Serv. Educativos.docx
+	Name of item:  Serv. Educativos 
 	isPrivate: 0
 	cost: Pagan una mensualidad para alimentación y materiales, pero la mensualidad es relativa para cada uno de los usuarios, se hace un estudio socioeconómico para definir el monto.
 	objectives: Permitir a los usuarios poder tener conocimiento y generar independencia y autoempleo.
@@ -276,10 +231,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-15	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/ASOC. Unidad de Rehabilitación Profesional de Turrialba/Centro atención Integral/Asoc. de Apoyo a la Unidad de Rehabilitación Profesional de Turrialba (URP) - Centro Atención Integral.docx
- X 
+	Name of item:  Centro Atención Integral 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/ASOC. Unidad de Rehabilitación Profesional de Turrialba/Centro atención Integral/Asoc. de Apoyo a la Unidad de Rehabilitación Profesional de Turrialba (URP) - Centro Atención Integral.docx
+	Name of item:  Centro Atención Integral 
 	isPrivate: 0
 	cost: Pagan una mensualidad para alimentación y materiales, pero la mensualidad es relativa para cada uno de los usuarios, se hace un estudio socioeconómico para definir el monto.
 	objectives: Permitir a los usuarios poder tener conocimiento y generar independencia y autoempleo.
@@ -294,28 +248,10 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-16	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/ASOC. Unidad de Rehabilitación Profesional de Turrialba/Terapia Física/Asoc. de Apoyo a la Unidad de Rehabilitación Profesional de Turrialba (URP) - Terapía Física.docx
- X 
-	isPrivate: 0
-	cost: Pagan una mensualidad para alimentación y materiales, pero la mensualidad es relativa para cada uno de los usuarios, se hace un estudio socioeconómico para definir el monto.
-	objectives: Permitir a los usuarios poder tener una motriz fuerte.
-	reaches: Mejorar la calidad de vida a través de la terapia física.
-	specificSupports: Ejercicios en el lugar del centro y ejercicios para repetir en casa.
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Ocupación: Terapeuta Física Formación académica: Lic. Terapia Física Experiencia: Más de 5 años. Otras destrezas:
-	cover: Turrialba.
-	requirements: Se realiza un protocolo de ingreso para evaluar si el usuario puede ser parte del grupo y además se da un periodo de prueba para ver si el usuario aceptado logra adaptarse al grupo.
-	accesibility: Si poseen las condiciones.
-	others: Actualmente son 66 usuarios, por lo que se han hecho grupos de acuerdo a sus capacidades para aSi poder ir rotonda la terapia física, la cual la reciben un día a la semana de acuerdo a calendario establecido.
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-17	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Asco. Fraternidad Cristiana PcD/Capacitaciones/Asociación Fraternidad Cristiana de Personas con Discapacidad - Capacitaciones.docx
- X 
+	Name of item:  Terapia Física 
+	Name of item:  Capacitaciones 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Asco. Fraternidad Cristiana PcD/Capacitaciones/Asociación Fraternidad Cristiana de Personas con Discapacidad - Capacitaciones.docx
+	Name of item:  Capacitaciones 
 	isPrivate: 0
 	cost: es gratuito pero se recibe cuota voluntaria.
 	objectives: Brindar servicios de apoyo con capacitaciones a las personas con discapacidad que necesiten aprender y mejorar sus habilidades con cursos de computación, administración de archivos o manualidades.
@@ -330,28 +266,10 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: - Quincenal
-_____________________________________________________________________________________________________________________
-
-18	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Asco. Fraternidad Cristiana PcD/Terapia Física/Asociación Fraternidad Cristiana de Personas con Discapacidad - Terapia Fisica .docx
- X 
-	isPrivate: 0
-	cost: es gratuito pero se recibe cuota voluntaria.
-	objectives: Brindar servicios de apoyo en Terapia Física a las personas con discapacidad que necesiten de este servicio.
-	reaches: Apoyar a las personas con discapacidad del cantón de Oreamuno de Cartago y alrededores con terapia física para que mejoren su estado de salud y calidad de vida.
-	specificSupports: Terapia y rehabilitación Física
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Fisioterapuetas Formación académica: Licenciados Experiencia: más de 5 años Otras destrezas:
-	cover: Cartago
-	requirements: Tener alguna discapacidad y presentarse en la asociación para que le brinden el servicio de terapia física.
-	accesibility: Si los reúne, pero necesitan más y mejores recursos.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: - Semanal
-_____________________________________________________________________________________________________________________
-
-19	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro Educaci__n Especial Carlos Luis Valle/Terapia Ocupacional/Centro Educación Especial Carlos Luis Valle terapia ocupacional_.docx
- X 
+	Name of item:  Terapia Física 
+	Name of item:  Terapia ocupacional 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro Educaci__n Especial Carlos Luis Valle/Terapia Ocupacional/Centro Educación Especial Carlos Luis Valle terapia ocupacional_.docx
+	Name of item:  Terapia ocupacional 
 	isPrivate: 0
 	cost: 
 	objectives: ofrecer a la población con discapacidad de Cartago, servicios de apoyo para que mejoren sus destrezas, movilidad, aprendizaje y calidad de vida.
@@ -366,100 +284,14 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-20	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro Educaci__n Especial Carlos Luis Valle/Terapia Fisica/Centro Educación Especial Carlos Luis Valle terapia Fisica_.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: ofrecer a la población con discapacidad de Cartago, servicios de apoyo para que mejoren sus destrezas, movilidad, aprendizaje y calidad de vida.
-	reaches: Brindar servicios de apoyo a los niños y jóvenes con discapacidad del cantón de Cartago, para mejorar su calidad de vida.
-	specificSupports: Terapia Fisica
-	typeSupports: Grupales
-	responsabilityPerson: Ocupación: Profesores de Educación Especial Formación académica:Licenciados Experiencia: Más de 6 años Otras destrezas:
-	cover: Provincias: Cartago Cantones: Oreamuno y alrededores.
-	requirements: Matricularse en el centro educativo y presentar dictamen médico que indique su discapacidad y condición.
-	accesibility: Si es accesible.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-21	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro Educaci__n Especial Carlos Luis Valle/Terapia de Lengaje/Centro Educación Especial Carlos Luis Valle terapia de Lenguaje_.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: ofrecer a la población con discapacidad de Cartago, servicios de apoyo para que mejoren sus destrezas, movilidad, aprendizaje y calidad de vida.
-	reaches: Brindar servicios de apoyo a los niños y jóvenes con discapacidad del cantón de Cartago, para mejorar su calidad de vida.
-	specificSupports: Terapia de Lenguaje
-	typeSupports: Grupales
-	responsabilityPerson: Ocupación: Profesores de Educación Especial Formación académica:Licenciados Experiencia: Más de 6 años Otras destrezas:
-	cover: Provincias: Cartago Cantones: Oreamuno y alrededores.
-	requirements: Matricularse en el centro educativo y presentar dictamen médico que indique su discapacidad y condición.
-	accesibility: Si es accesible.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-22	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Hospital Psiquiatrico de Cartago CCSS/psiquiatría/Hospital psiquiatrico Cartago - Psiquiatría_.docx
- x 
-	isPrivate: 0
-	cost: 
-	objectives: Mejorar la calidad de vida mental de los pacientes con discapacidad mental por medio de sesiones de psicología.
-	reaches: Brinda un proceso de rehabilitación a aquellas personas que, como consecuencia de su trastorno mental precisan de atención, capacitación y seguimiento para adquirir la autonomía necesaria en los diferentes aspectos de la vida cotidiana para ser lo más independiente y autosuficiente que su patología les permite y, por tanto, mejorar su calidad de vida.
-	specificSupports: Consulta externa Psiquiatría
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Médicos especializados en psiquiatría y psicología Formación académica: Licenciados y doctores Experiencia: más de 10 años Otras destrezas:
-	cover: Cartago
-	requirements: Estar asegurado con la CCSS, Ser previamente valorado por uno de los médicos del hospital para tener un mejor estudio de su condición mental y los servicios que puede necesitar y medicación.
-	accesibility: Si, el hospital reúne todas las condiciones.
-	others: 
-	scheduleExtraoerdinary: 1
-	otherExtraordinaryAttention: - Servicio 24/7
-	attentionFrecuency: -Diario Semanal
-_____________________________________________________________________________________________________________________
-
-23	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Hospital Psiquiatrico de Cartago CCSS/psicologia/Hospital Psicquiatrico Cartago - psicologia_.docx
- x 
-	isPrivate: 0
-	cost: 
-	objectives: Mejorar la calidad de vida mental de los pacientes con discapacidad mental por medio de sesiones de psicología.
-	reaches: Brinda un proceso de rehabilitación a aquellas personas que, como consecuencia de su trastorno mental precisan de atención, capacitación y seguimiento para adquirir la autonomía necesaria en los diferentes aspectos de la vida cotidiana para ser lo más independiente y autosuficiente que su patología les permite y, por tanto, mejorar su calidad de vida.
-	specificSupports: Psicología
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Médicos especializados en psiquiatría y psicología Formación académica: Licenciados y doctores Experiencia: más de 10 años Otras destrezas:
-	cover: Cartago
-	requirements: Estar asegurado con la CCSS, Ser previamente valorado por uno de los médicos del hospital para tener un mejor estudio de su condición mental y los servicios que puede necesitar y medicación.
-	accesibility: Si, el hospital reúne todas las condiciones.
-	others: 
-	scheduleExtraoerdinary: 1
-	otherExtraordinaryAttention: - Servicio 24/7
-	attentionFrecuency: -Diario Semanal
-_____________________________________________________________________________________________________________________
-
-24	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Hospital Psiquiatrico de Cartago CCSS/terapia ocupacional/Hospita psiquiatrico de Cartago - Terapia Ocupacional_.docx
- x 
-	isPrivate: 0
-	cost: 
-	objectives: Su objetivo general es ofrecer servicios integrales en salud mental y atención en psiquiatría a la población con discapacidad mental de este cantón.
-	reaches: Brinda un proceso de rehabilitación a aquellas personas que, como consecuencia de su trastorno mental precisan de atención, capacitación y seguimiento para adquirir la autonomía necesaria en los diferentes aspectos de la vida cotidiana para ser lo más independiente y autosuficiente que su patología les permite y, por tanto, mejorar su calidad de vida.
-	specificSupports: Terapia Ocupacional
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Médicos especializados en psiquiatría y psicología, terapia ocupacional. Formación académica: Licenciados y doctores Experiencia: más de 10 años Otras destrezas:
-	cover: Cartago
-	requirements: Estar asegurado con la CCSS, Ser previamente valorado por uno de los médicos del hospital para tener un mejor estudio de su condición mental y los servicios que puede necesitar y medicación.
-	accesibility: Si, el hospital reúne todas las condiciones.
-	others: 
-	scheduleExtraoerdinary: 1
-	otherExtraordinaryAttention: - Servicio 24/7
-	attentionFrecuency: -Diario Semanal
-_____________________________________________________________________________________________________________________
-
-25	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro de Educaci__n Especial de Turrialba/NUTRICIÓN/Centro de Educación Especial de Turrialba-Nutrición_.docx
- X 
+	Name of item:  Terapia Física 
+	Name of item:  Terapia de Lenguaje 
+	Name of item:  Psiquiatría 
+	Name of item:  Psicología 
+	Name of item:  Terapia Ocupacional 
+	Name of item:  Nutrición 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro de Educaci__n Especial de Turrialba/NUTRICIÓN/Centro de Educación Especial de Turrialba-Nutrición_.docx
+	Name of item:  Nutrición 
 	isPrivate: 0
 	cost: ______________________
 	objectives: Dar atención educativa a población con discapacidad, mediante planes y programas del MEP y apoyos específicos.
@@ -474,10 +306,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-26	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro de Educaci__n Especial de Turrialba/TRABAJO SOCIAL/Centro de Educación Especial de Turrialba-Trabajo Social.docx
- X 
+	Name of item:  Trabajo Social 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro de Educaci__n Especial de Turrialba/TRABAJO SOCIAL/Centro de Educación Especial de Turrialba-Trabajo Social.docx
+	Name of item:  Trabajo Social 
 	isPrivate: 0
 	cost: ______________________
 	objectives: Dar atención educativa a población con discapacidad, mediante planes y programas del MEP y apoyos específicos.
@@ -492,28 +323,10 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-27	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro de Educaci__n Especial de Turrialba/TERAPIA DE LENGUAJE/Centro de Educación Especial de Turrialba-terapia de lenguaje_.docx
- X 
-	isPrivate: 0
-	cost: ______________________
-	objectives: Dar atención educativa a población con discapacidad, mediante planes y programas del MEP y apoyos específicos.
-	reaches: Brindar atención educativa a población con discapacidad desde el nacimiento hasta el ciclo diversificado de educación especial.
-	specificSupports: Terapia de Lenguaje
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Experiencia: Se cuenta con un amplio equipo profesional, la mayoría cuenta con una amplia experiencia profesional. Formación académica: La gran mayoría de los docentes cuentan con el grado de licenciatura y o maestría y todos los profesionales de servicios de apoyo cuentan con licenciatura. Ocupación actual: Educadores y Profesionales de servicio civil 2
-	cover: Provincias: Cartago Cantones: Turrialba, Jiménez y Siquirres
-	requirements: Los estudiantes deben contar con la autorización técnica de la Asesoría pedagógica de educación especial y tener menos de 22 años.
-	accesibility: Si cumple, posee rampas, batería de servicios adaptada, cambiadores para personas en sillas de ruedas, aceras, entre otros.
-	others: A los estudiantes se les brinda servicio de comedor, con apoyo profesional en nutrición, becas escolares y subsidios económicos, talleres y charlas para las familias, se trabaja bajo la modalidad de trabajo colaborativo con las familias. Además hay programas de hidroterapia, orientada al mejoramiento de los procesos educativos. Atención odontológica, hidroponía, cocina, manualidades.
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-28	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro de Educaci__n Especial de Turrialba/ODONTOLOGÍA/Centro de Educación Especial de Turrialba-odontología_.docx
- X 
+	Name of item:  Terapia de Lenguaje 
+	Name of item:  Odontología 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro de Educaci__n Especial de Turrialba/ODONTOLOGÍA/Centro de Educación Especial de Turrialba-odontología_.docx
+	Name of item:  Odontología 
 	isPrivate: 0
 	cost: ______________________
 	objectives: Dar atención educativa a población con discapacidad, mediante planes y programas del MEP y apoyos específicos.
@@ -528,82 +341,13 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-29	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro de Educaci__n Especial de Turrialba/TERAPIA OCUPACIONAL/Centro de Educación Especial de Turrialba-terapia Ocupacional.docx
- X 
-	isPrivate: 0
-	cost: ______________________
-	objectives: Dar atención educativa a población con discapacidad, mediante planes y programas del MEP y apoyos específicos.
-	reaches: Brindar atención educativa a población con discapacidad desde el nacimiento hasta el ciclo diversificado de educación especial.
-	specificSupports: Terapia Ocupacional
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Experiencia: Se cuenta con un amplio equipo profesional, la mayoría cuenta con una amplia experiencia profesional. Formación académica: La gran mayoría de los docentes cuentan con el grado de licenciatura y o maestría y todos los profesionales de servicios de apoyo cuentan con licenciatura. Ocupación actual: Educadores y Profesionales de servicio civil 2
-	cover: Provincias: Cartago Cantones: Turrialba, Jiménez y Siquirres
-	requirements: Los estudiantes deben contar con la autorización técnica de la Asesoría pedagógica de educación especial y tener menos de 22 años.
-	accesibility: Si cumple, posee rampas, batería de servicios adaptada, cambiadores para personas en sillas de ruedas, aceras, entre otros.
-	others: A los estudiantes se les brinda servicio de comedor, con apoyo profesional en nutrición, becas escolares y subsidios económicos, talleres y charlas para las familias, se trabaja bajo la modalidad de trabajo colaborativo con las familias. Además hay programas de hidroterapia, orientada al mejoramiento de los procesos educativos. Atención odontológica, hidroponía, cocina, manualidades.
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-30	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro de Educaci__n Especial de Turrialba/PSICOLOGÍA/Centro de Educación Especial de Turrialba-Psicología_.docx
- X 
-	isPrivate: 0
-	cost: ______________________
-	objectives: Dar atención educativa a población con discapacidad, mediante planes y programas del MEP y apoyos específicos.
-	reaches: Brindar atención educativa a población con discapacidad desde el nacimiento hasta el ciclo diversificado de educación especial.
-	specificSupports: Psicología
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Experiencia: Se cuenta con un amplio equipo profesional, la mayoría cuenta con una amplia experiencia profesional. Formación académica: La gran mayoría de los docentes cuentan con el grado de licenciatura y o maestría y todos los profesionales de servicios de apoyo cuentan con licenciatura. Ocupación actual: Educadores y Profesionales de servicio civil 2
-	cover: Provincias: Cartago Cantones: Turrialba, Jiménez y Siquirres
-	requirements: Los estudiantes deben contar con la autorización técnica de la Asesoría pedagógica de educación especial y tener menos de 22 años.
-	accesibility: Si cumple, posee rampas, batería de servicios adaptada, cambiadores para personas en sillas de ruedas, aceras, entre otros.
-	others: A los estudiantes se les brinda servicio de comedor, con apoyo profesional en nutrición, becas escolares y subsidios económicos, talleres y charlas para las familias, se trabaja bajo la modalidad de trabajo colaborativo con las familias. Además hay programas de hidroterapia, orientada al mejoramiento de los procesos educativos. Atención odontológica, hidroponía, cocina, manualidades.
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-31	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro de Educaci__n Especial de Turrialba/TERAPIA FISICA/Centro de Educación Especial de Turrialba-Terapia Fisica_.docx
- X 
-	isPrivate: 0
-	cost: ______________________
-	objectives: Dar atención educativa a población con discapacidad, mediante planes y programas del MEP y apoyos específicos.
-	reaches: Brindar atención educativa a población con discapacidad desde el nacimiento hasta el ciclo diversificado de educación especial.
-	specificSupports: Terapia Física
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Experiencia: Se cuenta con un amplio equipo profesional, la mayoría cuenta con una amplia experiencia profesional. Formación académica: La gran mayoría de los docentes cuentan con el grado de licenciatura y o maestría y todos los profesionales de servicios de apoyo cuentan con licenciatura. Ocupación actual: Educadores y Profesionales de servicio civil 2
-	cover: Provincias: Cartago Cantones: Turrialba, Jiménez y Siquirres
-	requirements: Los estudiantes deben contar con la autorización técnica de la Asesoría pedagógica de educación especial y tener menos de 22 años.
-	accesibility: Si cumple, posee rampas, batería de servicios adaptada, cambiadores para personas en sillas de ruedas, aceras, entre otros.
-	others: A los estudiantes se les brinda servicio de comedor, con apoyo profesional en nutrición, becas escolares y subsidios económicos, talleres y charlas para las familias, se trabaja bajo la modalidad de trabajo colaborativo con las familias. Además hay programas de hidroterapia, orientada al mejoramiento de los procesos educativos. Atención odontológica, hidroponía, cocina, manualidades.
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-32	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/TERAPIA FISICA MARIA GORETTI/Terapia Física/Clinica Terapia Fisica Maria Goretti_ Cartago - Terapia Física.docx
- 
-	isPrivate: 1
-	cost: De ¢15 mil a ¢20 mil (depende del requerimiento del paciente) tiempo/costo: 1 hora por terapia / ¢15.000.00 a ¢20.000 10.
-	objectives: Dar un servicio de atención en terapia física para el tratamiento y la prevención de la discapacidad..
-	reaches: Mejorar la calidad de vida de la persona que recibe el servicio de terapia física. Dar servicios de terapia física para la prevención y tratamiento de la discapacidad.
-	specificSupports: Atención terapéutica y física a las personas con lesiones en diversas áreas del cuerpo, que requieran los servicios que se brindan. Tratamientos: Antiestress Descontracturante Retorno Venoso Masajes: terapéutico, deportivo, artritis, linfáticos Tratamiento de fracturas, cervical, hernias.
-	typeSupports: No brinda información.
-	responsabilityPerson: Ocupación actual del personal responsable: Terapista Física Formación académica: Licenciada, incorporada al Colegio Médicos. Experiencia reconocida: La adquirida en la práctica laboral Destrezas adicionales: No hay. Otros de interés: No hay.
-	cover: Provincias: Cartago Cantones: Los de la Provincia de Cartago.
-	requirements: Requisitos: Ninguno. Accede cualquier persona.
-	accesibility: Si. La Clínica cuenta con las condiciones de infraestructura y equipo aptos para personas con discapacidad física y motora.
-	others: No hay
-	scheduleExtraoerdinary: 1
-	otherExtraordinaryAttention: -Página web Redes Sociales Correo Electronico
-	attentionFrecuency: -Diario Semanal
-_____________________________________________________________________________________________________________________
-
-33	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/CLINICA DE LA AUDICION/Audiolgia General/Clínicas de la Audición_ Cartago  - Servicio_ Audiología en general con fabricación de audífonos.docx
- 
+	Name of item:  Terapia Ocupacional 
+	Name of item:  Psicología 
+	Name of item:  Terapia Física 
+	Name of item:  Terapia Física 
+	Name of item:  Servicio de audiología en general con fabricación de audífonos. 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/CLINICA DE LA AUDICION/Audiolgia General/Clínicas de la Audición_ Cartago  - Servicio_ Audiología en general con fabricación de audífonos.docx
+	Name of item:  Servicio de audiología en general con fabricación de audífonos. 
 	isPrivate: 1
 	cost: 30.000 colones (audiometría) 45.000 colones (Si requiere un examen adicional) tiempo/costo: 1 hora / 30.000 colones o 45.000 colones 10.
 	objectives: Promover la salud auditiva en el paciente (usuario).
@@ -618,46 +362,11 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: -Página web Redes Sociales Correo Electronico
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-34	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro Educativo Dr. Carlos S__enz Herrera/Terapia Ocupacional/Centro Educativo Dr. Carlos Sáenz Herrera- Terapia ocupacional_.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: brindar servicios de apoyo educativo a los estudiantes de esta escuela, para que puedan salir adelante
-	reaches: Enseñar y educar a los niños con discapacidad de este centro con métodos que ellos puedan asimilar más fácil por su discapacidad.
-	specificSupports: Terapia Ocupacional
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Ocupación: Profesores de educación especial Formación académica: Licenciados Experiencia: más de 6 años Otras destrezas:
-	cover: Cartago
-	requirements: Matricularse en en centro educativo y presentar dictamen médico del hospital.
-	accesibility: si es accesible.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-35	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro Educativo Dr. Carlos S__enz Herrera/Terapia de lenguaje/Centro Educativo Dr. Carlos Sáenz Herrera terapia de Lenguaje_.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: brindar servicios de apoyo educativo a los estudiantes de esta escuela, para que puedan salir adelante
-	reaches: Enseñar y educar a los niños con discapacidad de este centro con métodos que ellos puedan asimilar más fácil por su discapacidad.
-	specificSupports: Terapia de Lenguaje
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Ocupación: Profesores de educación especial Formación académica: Licenciados Experiencia: más de 6 años Otras destrezas:
-	cover: Cartago
-	requirements: Matricularse en en centro educativo y presentar dictamen médico del hospital.
-	accesibility: si es accesible.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-36	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro Educativo Dr. Carlos S__enz Herrera/estimulacion temprana/Centro Educativo Dr. Carlos Sáenz Herrera- Estimulacion temprana_.docx
- X 
+	Name of item:  Terapia ocupacional 
+	Name of item:  Terapia de Lenguaje 
+	Name of item:  Estimulación Temprana 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro Educativo Dr. Carlos S__enz Herrera/estimulacion temprana/Centro Educativo Dr. Carlos Sáenz Herrera- Estimulacion temprana_.docx
+	Name of item:  Estimulación Temprana 
 	isPrivate: 0
 	cost: 
 	objectives: brindar servicios de apoyo educativo a los estudiantes de esta escuela, para que puedan salir adelante
@@ -672,10 +381,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-37	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro Educativo Dr. Carlos S__enz Herrera/LESCO/Centro Educativo Dr. Carlos Sáenz Herrera- Lesco_.docx
- X 
+	Name of item:  Enseñanza de Lesco 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Centro Educativo Dr. Carlos S__enz Herrera/LESCO/Centro Educativo Dr. Carlos Sáenz Herrera- Lesco_.docx
+	Name of item:  Enseñanza de Lesco 
 	isPrivate: 0
 	cost: 
 	objectives: brindar servicios de apoyo educativo a los estudiantes de esta escuela, para que puedan salir adelante
@@ -690,10 +398,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-38	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/CLINICA FISIOSPORT/Terapia Física/Clinica Fisiosport_ Cartago  Servicio_ Terapia Física y Rehabilitación.docx
- 
+	Name of item:  Terapia Física y Rehabilitación 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/CLINICA FISIOSPORT/Terapia Física/Clinica Fisiosport_ Cartago  Servicio_ Terapia Física y Rehabilitación.docx
+	Name of item:  Terapia Física y Rehabilitación 
 	isPrivate: 1
 	cost: De ¢15 mil a ¢30 mil El costo, depende del tratamiento que requiera el paciente
 	objectives: Lograr que la persona usuaria del servicio, tenga mejor condición de salud y superar la situación que le afecta.
@@ -708,10 +415,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: - Redes Sociales Correo Electronico Servicio 24/7
 	attentionFrecuency: -Diario Semanal
-_____________________________________________________________________________________________________________________
-
-39	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Asociaci__n Seres de Luz/Serv. Educación Especial/Asoc. Seres Luz - Servic. Educativos.docx
- 
+	Name of item:  Serv. Educativos (Manualidades para la independencia) 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Asociaci__n Seres de Luz/Serv. Educación Especial/Asoc. Seres Luz - Servic. Educativos.docx
+	Name of item:  Serv. Educativos (Manualidades para la independencia) 
 	isPrivate: 1
 	cost: Cuota ¢20 mil por usuario
 	objectives: Mejorar la calidad de vida a través de las manualidades.
@@ -726,10 +432,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-40	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/COLEGIO UNIVERSITARIO DE CARTAGO/adecuación curricular/Colegio Universitario de Cartago- Adecuaciones._.docx
- X 
+	Name of item:  Adecuación Curricular No Significativa 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/COLEGIO UNIVERSITARIO DE CARTAGO/adecuación curricular/Colegio Universitario de Cartago- Adecuaciones._.docx
+	Name of item:  Adecuación Curricular No Significativa 
 	isPrivate: 0
 	cost: Gratuito
 	objectives: Mejorar la manera de aprendizaje de los estudiantes con discapacidad de este centro educativo por medio de una adecuación curricular no significativa
@@ -744,10 +449,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-41	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/COLEGIO UNIVERSITARIO DE CARTAGO/Materiales didacticos/Colegio Universitario de cartago- Apoyos didacticos.docx
- X 
+	Name of item:  Apoyos Didácticos 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/COLEGIO UNIVERSITARIO DE CARTAGO/Materiales didacticos/Colegio Universitario de cartago- Apoyos didacticos.docx
+	Name of item:  Apoyos Didácticos 
 	isPrivate: 0
 	cost: Gratuito
 	objectives: Mejorar la manera de aprendizaje de los estudiantes con discapacidad de este centro educativo por medio de una apoyos didácticos de acuerdo a su discapacidad
@@ -762,10 +466,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-42	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/ASOC ATJALA/Terapia Física/ATJALA - Ser. Terapia Fisica.docx
- 
+	Name of item:  Serv. Terapia Física 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/ASOC ATJALA/Terapia Física/ATJALA - Ser. Terapia Fisica.docx
+	Name of item:  Serv. Terapia Física 
 	isPrivate: 1
 	cost: ¢15 mil por mes por usuario si no tienen beca y ¢30 mil por mes por usuario si tienen beca del estado.
 	objectives: Mejorar la calidad de vida de nuestros asociados a través de la educación para que aSi se genere independencia.
@@ -780,10 +483,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-43	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/ASOC ATJALA/centro atención integral/Copia de ATJALA - Centro atención integral.docx
- 
+	Name of item:  Centro atención integral. 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/ASOC ATJALA/centro atención integral/Copia de ATJALA - Centro atención integral.docx
+	Name of item:  Centro atención integral. 
 	isPrivate: 1
 	cost: ¢15 mil por mes por usuario si no tienen beca y ¢30 mil por mes por usuario si tienen beca del estado.
 	objectives: Mejorar la calidad de vida de nuestros asociados a través de la educación para que aSi se genere independencia.
@@ -798,10 +500,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-44	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/ASOC ATJALA/Serv. Educativos/ATJALA - Serv. Educativos.docx
- 
+	Name of item:  Serv. educativos 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/ASOC ATJALA/Serv. Educativos/ATJALA - Serv. Educativos.docx
+	Name of item:  Serv. educativos 
 	isPrivate: 1
 	cost: ¢15 mil por mes por usuario si no tienen beca y ¢30 mil por mes por usuario si tienen beca del estado.
 	objectives: Mejorar la calidad de vida de nuestros asociados a través de la educación para que aSi se genere independencia.
@@ -816,10 +517,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-45	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Municipalidad CARTAGO/Apoyo Económico/Municipalidad de Cartago - Serv. Apoyo economico_.docx
- X 
+	Name of item:  Presupuesto para apoyar ONG’S que atienden personas con discapacidad en el Cantón. 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Municipalidad CARTAGO/Apoyo Económico/Municipalidad de Cartago - Serv. Apoyo economico_.docx
+	Name of item:  Presupuesto para apoyar ONG’S que atienden personas con discapacidad en el Cantón. 
 	isPrivate: 0
 	cost: No tiene
 	objectives: Brindar apoyo por medio de donaciones económicas a las ONG´s para personas con discapacidad del cantón.
@@ -834,10 +534,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-46	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Asociaci__n Costarricense de Artriticos/Serv. Ocupacionales/Asoc. Costarricense de Artriticos - Serv. Oucpacionales_ Manualidades.docx
- 
+	Name of item:  Serv. Educativos: Manualidades. 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/Asociaci__n Costarricense de Artriticos/Serv. Ocupacionales/Asoc. Costarricense de Artriticos - Serv. Oucpacionales_ Manualidades.docx
+	Name of item:  Serv. Educativos: Manualidades. 
 	isPrivate: 1
 	cost: Mensualidad para ser socio: ¢2.200 x mes, y los cursos de manualidades van desde ¢5 mil por mes aproximadamente para materiales.
 	objectives: Mejorar la calidad de vida a través del recreo y esparcimiento.
@@ -852,64 +551,12 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-47	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/ASOC PRO NIÑOS PARALISIS CEREBRAL/serv. terapia lenguaje/Asociación Pro-niños con Parálisis Cerebral - Terapia Lenguaje.docx
- 
-	isPrivate: 1
-	cost: Cuota asociado mensual ¢15.500 (si el asociado requiere de una terapia adicional como Terapia de Física cobran ¢9.000 adicionales por mes).
-	objectives: Mejorar el habla de la persona.
-	reaches: Mejorar el habla de la persona.
-	specificSupports: Terapia Lenguaje según severidad de la parálisis. Se enseña a los padres o familiares ejercicios especiales para que repitan en casa.
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Terapeuta de Lenguaje Formación académica: Lic. Terapia de Lenguaje Experiencia: 6 años de exp. Otras destrezas: No posee.
-	cover: Nacional
-	requirements: Para cada paciente se le realiza una evaluación neuro-evolutiva, la cual indica sus niveles y porcentajes de discapacidad. Una vez comprobados los resultados y la necesidad de atención, se procede a solicitar ante la Junta Directiva, la incorporación del paciente a la Asociación; acompañado de un formulario de información general lleno, los documentos expedidos por los entes de salud y médicos y las fotocopias de identificación de él y de los encargados. Una vez conocidos los deberes y derechos, que como asociado corresponde, en caso de ser aprobada la solicitud por la Junta Directiva, se abre un expediente, con toda la documentación respectiva y se incorpora a un horario según corresponda para su atención, aportando una cuota mensual de ₡10.000 (colones), la cual cubre los derechos de los servicios y otros que se le ofrecen.
-	accesibility: Si poseen las condiciones.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-48	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/ASOC PRO NIÑOS PARALISIS CEREBRAL/serv. Terapia Física/Asociación Pro-niños con Parálisis Cerebral - Terapia Fisica.docx
- 
-	isPrivate: 1
-	cost: Cuota asociado mensual ¢15.500 (si el asociado requiere de una terapia adicional como Terapia de Lenguaje se cobran ¢9.000 adicionales por mes).
-	objectives: Mejorar la movilidad de la persona.
-	reaches: Mejorar la movilidad de la persona.
-	specificSupports: Terapia Física según severidad de la parálisis. Se enseña a los padres o familiares ejercicios especiales para que repitan en casa.
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Terapeuta Física Formación académica: Lic. Terapia Física Experiencia: 16 años de exp. Otras destrezas: No posee.
-	cover: Nacional
-	requirements: Para cada paciente se le realiza una evaluación neuro-evolutiva, la cual indica sus niveles y porcentajes de discapacidad. Una vez comprobados los resultados y la necesidad de atención, se procede a solicitar ante la Junta Directiva, la incorporación del paciente a la Asociación; acompañado de un formulario de información general lleno, los documentos expedidos por los entes de salud y médicos y las fotocopias de identificación de él y de los encargados. Una vez conocidos los deberes y derechos, que como asociado corresponde, en caso de ser aprobada la solicitud por la Junta Directiva, se abre un expediente, con toda la documentación respectiva y se incorpora a un horario según corresponda para su atención, aportando una cuota mensual de ₡10.000 (colones), la cual cubre los derechos de los servicios y otros que se le ofrecen.
-	accesibility: Si poseen las condiciones.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-49	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/ASODEPA/CENTRO ATENCION INTEGRAL/ASODEPA - Centro de Atención Integral.docx
- X 
-	isPrivate: 0
-	cost: Los usuarios pagan una cuota voluntaria, la cual se establece según estudio socioeconómico por cada usuario, esta cuota es para comprar materiales y alimentación (cuota voluntaria).
-	objectives: Mejorar capacidades y habilidades blandas de las Personas con Discapacidad adultas de Paraíso a través de un CAIPAD, aSi como la administración de un programa de cuido, donde habitan personas con discapacidad, denominado Hogar Grupal.
-	reaches: Brindar un servicio social y ocupacional a personas con discapacidad adultas, a través del Caipad, el cual se especializa en mejorar sus capacidades y habilidades blandas. Dar un lugar donde habitar la persona con discapacidad adulta en el Hogar Grupal, cuya administración es de la Asociación, lo demás es del CONAPDIS
-	specificSupports: Educación especial, Terapia Física, Terapia Ocupacional y además se administra un Hogar grupal, en el cual viven algunos usuarios que han calificado por su alto nivel de independencia y capacidades.
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Ocupación: Profesora educación especial Formación académica: Lic. Educación Especial. Experiencia: Más de 5 años. Otras destrezas:
-	cover: Paraíso Cartago
-	requirements: Con discapacidad motriz, intelectual no severa, visual, auditiva. Se realiza un protocolo de ingreso para analizar si el usuario podrá adaptarse al grupo.
-	accesibility: Si poseen.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-50	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/ASODEPA/SERV. EDUCATIVOS/ASODEPA - Serv. Educativos.docx
- X 
+	Name of item:  Terapia de Lenguaje 
+	Name of item:  Terapia Física 
+	Name of item:  Centro Atención Integral 
+	Name of item:  Serv. Educativos. 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/ASODEPA/SERV. EDUCATIVOS/ASODEPA - Serv. Educativos.docx
+	Name of item:  Serv. Educativos. 
 	isPrivate: 0
 	cost: Los usuarios pagan una cuota voluntaria, la cual se establece según estudio socioeconómico por cada usuario, esta cuota es para comprar materiales y alimentación (cuota voluntaria).
 	objectives: Mejorar capacidades y habilidades blandas de las Personas con Discapacidad adultas de Paraíso a través de un CAIPAD, aSi como la administración de un programa de cuido, donde habitan personas con discapacidad, denominado Hogar Grupal.
@@ -924,64 +571,12 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-51	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/ASODEPA/TERAPIA OCUPACIONAL/ASODEPA - Terapia Ocupacional.docx
- X 
-	isPrivate: 0
-	cost: Los usuarios pagan una cuota voluntaria, la cual se establece según estudio socioeconómico por cada usuario, esta cuota es para comprar materiales y alimentación (cuota voluntaria).
-	objectives: Mejorar capacidades y habilidades blandas de las Personas con Discapacidad adultas de Paraíso a través de un CAIPAD, aSi como la administración de un programa de cuido, donde habitan personas con discapacidad, denominado Hogar Grupal.
-	reaches: Brindar un servicio social y ocupacional a personas con discapacidad adultas, a través del Caipad, el cual se especializa en mejorar sus capacidades y habilidades blandas. Dar un lugar donde habitar la persona con discapacidad adulta en el Hogar Grupal, cuya administración es de la Asociación, lo demás es del CONAPDIS
-	specificSupports: Actividades personalizadas, alto grado de conocimiento.
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Ocupación: Terapia Ocupacional Formación académica: Master Terapia Ocupacional. Experiencia: 5 años. Otras destrezas:
-	cover: Paraíso Cartago
-	requirements: Con discapacidad motriz, intelectual no severa, visual, auditiva. Se realiza un protocolo de ingreso para analizar si el usuario podrá adaptarse al grupo.
-	accesibility: Si poseen.
-	others: Estos profesionales, los paga el MEP a través del convenio que existe del CAIPAD.
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-52	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Cartago/ASODEPA/TERAPIA FISICA/ASODEPA - Terapia Física.docx
- X 
-	isPrivate: 0
-	cost: Los usuarios pagan una cuota voluntaria, la cual se establece según estudio socioeconómico por cada usuario, esta cuota es para comprar materiales y alimentación (cuota voluntaria).
-	objectives: Mejorar capacidades y habilidades blandas de las Personas con Discapacidad adultas de Paraíso a través de un CAIPAD, aSi como la administración de un programa de cuido, donde habitan personas con discapacidad, denominado Hogar Grupal.
-	reaches: Brindar un servicio social y ocupacional a personas con discapacidad adultas, a través del Caipad, el cual se especializa en mejorar sus capacidades y habilidades blandas. Dar un lugar donde habitar la persona con discapacidad adulta en el Hogar Grupal, cuya administración es de la Asociación, lo demás es del CONAPDIS
-	specificSupports: Gimnasio, ejercicio personales.
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Ocupación: Terapia Física Formación académica: Lic. Terapia Física. Experiencia: 4 años. Otras destrezas:
-	cover: Paraíso Cartago
-	requirements: Con discapacidad motriz, intelectual no severa, visual, auditiva. Se realiza un protocolo de ingreso para analizar si el usuario podrá adaptarse al grupo.
-	accesibility: Si poseen.
-	others: Estos profesionales, los paga el MEP a través del convenio que existe del CAIPAD.
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-53	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Hospital Carlos Luis Valverde Vega CCSS/Fisioterapia/Hospital Carlos Luis Valverde Vega CCSS fisoterapia_.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Mejorar la calidad de salud de los pacientes de consulta externa que necesiten el servicio médico en fisioterapia.
-	reaches: Brindar servicios de fisioterapia por medio de consulta externa a pacientes que asisten al este hospital, para mejorar su calidad de salud de acuerdo a su necesidad en fisioterapia.
-	specificSupports: Fisioterapia en consulta externa
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Médicos fisioterapeutas Formación académica: Licenciados Experiencia: más de 10 años Otras destrezas:
-	cover: San Ramón
-	requirements: Ser de la Zona de San Ramón, estar asegurado con la CCSS o tener derecho al seguro por medio de un familiar, tener cédula o pasaporte vigente, Sacar cita en el hospital para este servicio consulta externa, indicada por el médico de su atención en la ventanilla respectiva.
-	accesibility: Si los reúne.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-54	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Hospital Carlos Luis Valverde Vega CCSS/Audiometría/Hospital Carlos Luis Valverde Vega CCSS Audiometría_.docx
- X 
+	Name of item:  Terapia Ocupacional 
+	Name of item:  Terapia Física 
+	Name of item:  Fisioterapia 
+	Name of item:  Audiometría 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Hospital Carlos Luis Valverde Vega CCSS/Audiometría/Hospital Carlos Luis Valverde Vega CCSS Audiometría_.docx
+	Name of item:  Audiometría 
 	isPrivate: 0
 	cost: 
 	objectives: Mejorar la calidad de salud de los pacientes de consulta externa que necesiten el servicio médico en Audiometría.
@@ -996,82 +591,13 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-55	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/EL SOL BRILLA PARA TODOS/Terapia Ocupacional/Asoc. El brilla para todos - Serv. Terapia Ocupacional.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Fortalecer habilidades y destrezas de las personas con discapacidad y educación especial.
-	reaches: Fortalecer habilidades y destrezas de las personas con discapacidad y educación especial.
-	specificSupports: Fortalecimiento de habilidades y destrezas, vida social, manejo del dinero, higiene del hogar, etc.
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Ocupación: Docente de Educación Especial / Administradora. Formación académica: Lic. Educación Especial Experiencia: 10 años. Otras destrezas:
-	typeSupports: No brinda información.
-	requirements: Ser vecino del cantón, ser mayor de 21 años, tener discapacidad relacionada con Retardo Mental o bien intelectual.
-	accesibility: Si poseen.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-56	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/EL SOL BRILLA PARA TODOS/Centro Atención Integral/Asoc. El Sol Brilla para Todos - Centro Atención Integral.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Fortalecer habilidades y destrezas de las personas con discapacidad y educación especial.
-	reaches: Fortalecer habilidades y destrezas de las personas con discapacidad y educación especial.
-	specificSupports: Atención de Personas Adultas con Discapacidad en Educación Especial, Terapia Ocupacional para el fortalecimiento de habilidades y destrezas, área económica.
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Ocupación: Docente de Educación Especial / Administradora. Formación académica: Lic. Educación Especial Experiencia: 10 años. Otras destrezas:
-	typeSupports: No brinda información.
-	requirements: Ser vecino del cantón, ser mayor de 21 años, tener discapacidad relacionada con Retardo Mental o bien intelectual.
-	accesibility: Si poseen.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-57	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/EL SOL BRILLA PARA TODOS/Serv. Educativos/Asoc. El Sol Brilla para Todos - Serv. Educativos.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Fortalecer habilidades y destrezas de las personas con discapacidad y educación especial.
-	reaches: Fortalecer habilidades y destrezas de las personas con discapacidad y educación especial.
-	specificSupports: Atención de Personas Adultas con Discapacidad en Educación Especial, para el fortalecimiento de habilidades y destrezas, área económica.
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Ocupación: Docente de Educación Especial / Administradora. Formación académica: Lic. Educación Especial Experiencia: 10 años. Otras destrezas: NOTA: El grupo está conformada por dos profesores en educación especial, Licenciados, con más de 10 años de experiencia cada uno, los cuales son pagados por el MEP, no obstante, hay un profesor de actividades culturales que es pagado por la Asoc, el cual da clases los martes y jueves de 8 am a 3 pm.
-	typeSupports: No brinda información.
-	requirements: Ser vecino del cantón, ser mayor de 21 años, tener discapacidad relacionada con Retardo Mental o bien intelectual.
-	accesibility: Si poseen.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-58	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/FUNDACHIRE/Serv. Terapia Física/Fundación Doctora Chinchilla de Reyes - Serv. Terapia Fisica.docx
- X 
-	isPrivate: 0
-	cost: Gratis
-	objectives: Atención profesional.
-	reaches: Brindar la posibilidad de mejora de calidad de vida de la PcD de la zona norte.
-	specificSupports: Terapia Física y rehabilitación motora.
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Terapeuta Formación académica: Lic. Terapia Física Experiencia: 6 años Otras destrezas:
-	cover: San Carlos
-	requirements: Ser vecina de la zona, tener una discapacidad o bien ser familiar de la persona.
-	accesibility: Si posee.
-	others: Visitan a las personas con discapacidad en sus domicilios para dar el apoyo que requieren.
-	scheduleExtraoerdinary: 1
-	otherExtraordinaryAttention: - Servicio 24/7
-	attentionFrecuency: - Semanal
-_____________________________________________________________________________________________________________________
-
-59	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/FUNDACHIRE/Serv. Consulta Legal/Fundación Doctora Chinchilla de Reyes - Serv. Apoyo Legal.docx
- X 
+	Name of item:  Terapia Ocupacional 
+	Name of item:  Centro Atención Integral 
+	Name of item:  Serv. Educativos 
+	Name of item:  Serv. Terapia Física 
+	Name of item:  Serv. Apoyo Legal 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/FUNDACHIRE/Serv. Consulta Legal/Fundación Doctora Chinchilla de Reyes - Serv. Apoyo Legal.docx
+	Name of item:  Serv. Apoyo Legal 
 	isPrivate: 0
 	cost: Gratis
 	objectives: Apoyo con Asesoría Legal y Defensa de los Derechos Humanos de las personas con discapacidad. Atención profesional interdisciplinaria.
@@ -1086,28 +612,10 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: - Servicio 24/7
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-60	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ASOC PERSONAS CON DISCAPACIDAD UPALA/Terapia Ocupacional/Asoc. PcD Upala - Terapia Ocupacional.docx
- X 
-	isPrivate: 0
-	cost: Gratis
-	objectives: Brindar un servicio de calidad a las personas con discapacidad y sus familiares, promoviendo actividades para una mejor calidad de vida.
-	reaches: Haber incrementado la igualdad de oportunidades a la población con discapacidad al resto de la población.
-	specificSupports: Estimulación sensorial, aprendizaje de hidroponia, como hacer cosas con material reciclado (se trabaja en conjunto con el prof. artes industriales).
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Educador Formación académica: Lic. Educación con énfasis artes industriales Experiencia: 10 años. Otras destrezas:
-	cover: Upala
-	requirements: Mayor de edad, presentar epicrisis o certificación del CONAPDIS.
-	accesibility: Si poseen las condiciones.
-	others: Actualmente hay 57 beneficiarios.
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-61	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ASOC PERSONAS CON DISCAPACIDAD UPALA/Centro Atención Integral/Asoc. PcD Upala - Centro Atención Integral.docx
- X 
+	Name of item:  Terapia Ocupacional 
+	Name of item:  Centro de Atención Integral 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ASOC PERSONAS CON DISCAPACIDAD UPALA/Centro Atención Integral/Asoc. PcD Upala - Centro Atención Integral.docx
+	Name of item:  Centro de Atención Integral 
 	isPrivate: 0
 	cost: Gratis
 	objectives: Brindar un servicio de calidad a las personas con discapacidad y sus familiares, promoviendo actividades para una mejor calidad de vida.
@@ -1122,46 +630,11 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-62	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ASOC PERSONAS CON DISCAPACIDAD UPALA/Terapia Fisica/Asoc. PcD Upala - Terapia Física.docx
- X 
-	isPrivate: 0
-	cost: Gratis
-	objectives: Brindar un servicio de calidad a las personas con discapacidad y sus familiares, promoviendo actividades para una mejor calidad de vida.
-	reaches: Haber incrementado la igualdad de oportunidades a la población con discapacidad al resto de la población.
-	specificSupports: Gimnasio, entrenamiento personal, estimulación muscular.
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Terapeuta Formación académica: Lic. Terapia Física Experiencia: 8 años Otras destrezas:
-	cover: Upala
-	requirements: Mayor de edad, presentar epicrisis o certificación del CONAPDIS. Se hace un protocolo de ingreso para saber si el usuario podrá adaptarse al grupo.
-	accesibility: Si poseen las condiciones.
-	others: Actualmente hay 57 beneficiarios.
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-63	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ASOC PERSONAS CON DISCAPACIDAD UPALA/Serv. Educativos/Asoc. PcD Upala - Serv. Educativos.docx
- X 
-	isPrivate: 0
-	cost: Gratis
-	objectives: Brindar un servicio de calidad a las personas con discapacidad y sus familiares, promoviendo actividades para una mejor calidad de vida.
-	reaches: Haber incrementado la igualdad de oportunidades a la población con discapacidad al resto de la población.
-	specificSupports: Lecto escritura, matemáticas básicas, higiene del hogar y personal, estimulación sensorial, aprendizaje de hidroponia, como hacer cosas con material reciclado (se trabaja en conjunto con el prof. artes industriales).
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Educador Formación académica: Lic. Educación Especial Experiencia: 8 años. Otras destrezas:
-	cover: Upala
-	requirements: Mayor de edad, presentar epicrisis o certificación del CONAPDIS. Se aplica un protocolo de ingreso para valorar si la persona puede pertenecer al grupo de trabajo, luego se aplica un periodo pos ingreso para evaluar su adaptación.
-	accesibility: Si poseen las condiciones.
-	others: Actualmente hay 57 beneficiarios.
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-64	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ATAICA GRECIA/Serv. Educativos/ATAICA - Centro Educativo.docx
- X 
+	Name of item:  Terapia Física 
+	Name of item:  Serv. Educativos 
+	Name of item:  Centro educativo - Educación especial curricular. 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ATAICA GRECIA/Serv. Educativos/ATAICA - Centro Educativo.docx
+	Name of item:  Centro educativo - Educación especial curricular. 
 	isPrivate: 0
 	cost: 
 	objectives: Atender curricularmente con talleres de capacitación a personas con discapacidad de Grecia.
@@ -1176,10 +649,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: - Semanal
-_____________________________________________________________________________________________________________________
-
-65	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APRADIS/serv. asistencia económica/APRADIS - Serv. Asistencia Económica.docx
- 
+	Name of item:  Servicio asistencia económica para pacientes en fase terminal 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APRADIS/serv. asistencia económica/APRADIS - Serv. Asistencia Económica.docx
+	Name of item:  Servicio asistencia económica para pacientes en fase terminal 
 	isPrivate: 1
 	cost: Gratis
 	objectives: Permitir mejorar la calidad de vida de la persona con discapacidad.
@@ -1194,10 +666,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: -Página web Redes Sociales
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-66	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APRADIS/serv. alquiler de equipo/sillas ruedas/APRADIS - Serv. Alquiler de Sillas de Ruedas.docx
- 
+	Name of item:  Servicio alquiler o préstamo de sillas ruedas no ortopedicas. 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APRADIS/serv. alquiler de equipo/sillas ruedas/APRADIS - Serv. Alquiler de Sillas de Ruedas.docx
+	Name of item:  Servicio alquiler o préstamo de sillas ruedas no ortopedicas. 
 	isPrivate: 1
 	cost: Gratis (en caso de ser préstamo) o bien alquilado por cuota voluntaria.
 	objectives: Permitir mejorar la calidad de vida de la persona con discapacidad.
@@ -1212,10 +683,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: -Página web Redes Sociales
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-67	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APRADIS/serv. alquiler de equipo/andaderas/APRADIS - Serv. Alquiler de Andaderas_.docx
- 
+	Name of item:  Serv. Alquiler de Andaderas 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APRADIS/serv. alquiler de equipo/andaderas/APRADIS - Serv. Alquiler de Andaderas_.docx
+	Name of item:  Serv. Alquiler de Andaderas 
 	isPrivate: 1
 	cost: Gratis (en caso de ser préstamo) o bien alquilado por cuota voluntaria.
 	objectives: Permitir mejorar la calidad de vida de la persona con discapacidad.
@@ -1230,10 +700,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: -Página web Redes Sociales
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-68	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APRADIS/serv. alquiler de equipo/camas hospitalarias/APRADIS - Serv. Alquiler de Camas Hospitalarias.docx
- 
+	Name of item:  Servicio alquiler o préstamo de Camas Hospitalarias. 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APRADIS/serv. alquiler de equipo/camas hospitalarias/APRADIS - Serv. Alquiler de Camas Hospitalarias.docx
+	Name of item:  Servicio alquiler o préstamo de Camas Hospitalarias. 
 	isPrivate: 1
 	cost: Gratis (en caso de ser préstamo) o bien alquilado por cuota voluntaria.
 	objectives: Permitir mejorar la calidad de vida de la persona con discapacidad.
@@ -1248,10 +717,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: -Página web Redes Sociales
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-69	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APRADIS/serv. alquiler de equipo/Muletas/APRADIS - Serv. Alquiler de Muletas.docx
- 
+	Name of item:  Serv. Alquiler de Muletas 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APRADIS/serv. alquiler de equipo/Muletas/APRADIS - Serv. Alquiler de Muletas.docx
+	Name of item:  Serv. Alquiler de Muletas 
 	isPrivate: 1
 	cost: Gratis (en caso de ser préstamo) o bien alquilado por cuota voluntaria.
 	objectives: Permitir mejorar la calidad de vida de la persona con discapacidad.
@@ -1266,10 +734,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: -Página web Redes Sociales
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-70	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APROSAM/Serv. Terapia  Ocupacional/APROSAM - Serv. Terapia Ocupacional.docx
- X 
+	Name of item:  Serv. Terapia Ocupacional 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APROSAM/Serv. Terapia  Ocupacional/APROSAM - Serv. Terapia Ocupacional.docx
+	Name of item:  Serv. Terapia Ocupacional 
 	isPrivate: 0
 	cost: aportan cuota voluntaria, 5000 colones
 	objectives: Brindar terapia ocupacional a personas con discapacidad del Cantón de Palmares.
@@ -1284,10 +751,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-71	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APROSAM/CASA HOGAR/APROSAM - Casa Hogar Comunitario.docx
- x 
+	Name of item:  Casa Hogar Comunitario 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APROSAM/CASA HOGAR/APROSAM - Casa Hogar Comunitario.docx
+	Name of item:  Casa Hogar Comunitario 
 	isPrivate: 0
 	cost: No tiene
 	objectives: Brindar terapia ocupacional a personas con discapacidad del Cantón de Palmares.
@@ -1302,82 +768,13 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-72	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/FUNDACION SERVIO FLORES/Terapia Ocupacional/Fundación Servio Flores - Terapia Ocupacional.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Brindar servicios de Terapia Ocupacional a las personas adultas con discapacidad Intelectual.
-	reaches: Ser un centro de atención para las personas adultas con alguna discapacidad intelectual que le pueda brindar terapia ocupacional para que ellos mejoren sus habilidades y destrezas.
-	specificSupports: Terapia Ocupacional: Vida social, vida independiente, proyecto de artes para emprender. Se trabaja con talleres de cómo repostería entre otros.
-	typeSupports: Grupales
-	responsabilityPerson: Ocupación: Administradora Formación académica: Lic. Terapeuta Ocupacional Experiencia: 30 años Otras destrezas:
-	cover: San José, Alajuela y Heredia
-	requirements: Mayores de 21 años, presentar epicrisis y llevar una evaluación por el CAIPAD.
-	accesibility: Si los reúne.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-73	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/FUNDACION SERVIO FLORES/Centro Atención Integral/Fundación Servio Flores - Centro Atención Integral.docx
- X 
-	isPrivate: 0
-	cost: Se cobra una cuota voluntaria, según la posibilidades de cada familia
-	objectives: Brindar servicios de Terapia Ocupacional y de educación curricular a las personas adultas con discapacidad Intelectual.
-	reaches: Ser un centro de atención para las personas adultas con alguna discapacidad intelectual que le pueda brindar terapia ocupacional para que ellos mejoren sus habilidades y destrezas.
-	specificSupports: Académico curricular, objetivos del MEP, matemáticas básicas, leer y escribir, además Terapia Ocupacional.
-	typeSupports: Grupales
-	responsabilityPerson: Ocupación: Administradora Formación académica: Lic. Terapeuta ocupacional Experiencia: 30 años Otras destrezas:
-	cover: San José, Alajuela y Heredia
-	requirements: Mayores de 21 años, presentar epicrisis y llevar una evaluación por el CAIPAD.
-	accesibility: Si los reúne.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-74	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/FUNDACION SERVIO FLORES/Serv. Educativos/Fundación Servio Flores - Serv. Educativos.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Brindar servicios de Serv. Educativos a las personas adultas con discapacidad Intelectual.
-	reaches: Ser un centro de atención para las personas adultas con alguna discapacidad intelectual que le pueda brindar terapia ocupacional para que ellos mejoren sus habilidades y destrezas.
-	specificSupports: Académico curricular, objetivos del MEP, matemáticas básicas, leer y escribir.
-	typeSupports: Grupales
-	responsabilityPerson: Ocupación: Administradora Formación académica: Lic. Terapeuta ocupacional Experiencia: 30 años Otras destrezas:
-	cover: San José, Alajuela y Heredia
-	requirements: Mayores de 21 años, presentar epicrisis y llevar una evaluación por el CAIPAD.
-	accesibility: Si los reúne.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-75	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/FUNDAE/Terapia Ocupacional/FUNDAE - Serv. Terapia Ocupacional.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Atención integral de las personas con discapacidad de San Carlos.
-	reaches: Atención integral de las personas con discapacidad de San Carlos.
-	specificSupports: Manualidades, Higiene personal y de la casa, vida social, manejo del dinero.
-	typeSupports: Grupales
-	responsabilityPerson: Ocupación: Prof. Terapia Ocupacional. Formación académica: Lic. Terapia Ocupacional Experiencia: Más de 7 años. Otras destrezas:
-	cover: San Carlos
-	requirements: Ser vecino de la zona de San Carlos, presentar epicrisis y carta dirigida a la junta para solicitar la ayuda necesaria. Se hace un protocolo de ingreso para saber si la persona puede pertenecer al grupo de trabajo.
-	accesibility: Si posee las condiciones.
-	others: Tienen apoyo estatal de la Junta de Protección Social, IMAS y del Ministerio de Educación Pública. Además aceptan donaciones voluntarias de empresa privada de la zona.
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-76	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/FUNDAE/Serv. Apoyo Emocional/FUNDAE - Serv. Apoyo Emocional.docx
- 
+	Name of item:  Terapia Ocupacional 
+	Name of item:  Centro Atención Integral 
+	Name of item:  Serv. Educativos 
+	Name of item:  Serv. Terapia Ocupacional 
+	Name of item:  Serv. Apoyo Emocional 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/FUNDAE/Serv. Apoyo Emocional/FUNDAE - Serv. Apoyo Emocional.docx
+	Name of item:  Serv. Apoyo Emocional 
 	isPrivate: 1
 	cost: Gratis para la persona que lo necesita, se aceptan donación voluntarias.
 	objectives: Atención integral de las personas con discapacidad de San Carlos.
@@ -1392,28 +789,10 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-77	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/FUNDAE/Serv. Terapia Física/FUNDAE - Serv. Terapia Física.docx
- 
-	isPrivate: 1
-	cost: Gratis para la persona que lo necesita, se aceptan donación voluntarias.
-	objectives: Atención integral de las personas con discapacidad de San Carlos.
-	reaches: Atención integral de las personas con discapacidad de San Carlos.
-	specificSupports: Psicología, terapia física y ocupacional.
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Fisicoterapeuta Formación académica: Lic. Terapía Fisica Experiencia: Más de 5 años. Otras destrezas:
-	cover: San Carlos
-	requirements: Ser vecino de la zona de San Carlos, presentar epicrisis y carta dirigida a la junta para solicitar la ayuda necesaria.
-	accesibility: Si posee las condiciones.
-	others: Tienen apoyo estatal de la Junta de Protección Social, IMAS y del Ministerio de Educación Pública. Además aceptan donaciones voluntarias de empresa privada de la zona.
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-78	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/FUNDAE/Equinoterapia/FUNDAE - Serv. Equinoterapia.docx
- 
+	Name of item:  Terapia Física 
+	Name of item:  Serv. Equinoterapia 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/FUNDAE/Equinoterapia/FUNDAE - Serv. Equinoterapia.docx
+	Name of item:  Serv. Equinoterapia 
 	isPrivate: 1
 	cost: Gratis para la persona que lo necesita, se aceptan donación voluntarias.
 	objectives: Atención integral de las personas con discapacidad de San Carlos.
@@ -1428,100 +807,14 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: - Semanal
-_____________________________________________________________________________________________________________________
-
-79	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Hospital San Rafael de Alajuela CCSS/audiometrias/Hospital San Rafael de Alajuela_CCSS - Audiometrías_.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Mejorar la calidad de salud de los pacientes de consulta externa que necesiten el servicio médico en Audiometrías.
-	reaches: Brindar servicios de Audiometrías a pacientes que asisten al este hospital, para mejorar su calidad de salud de acuerdo a su necesidad en Audiometrías.
-	specificSupports: Audiometrías en consulta externa o si están internados en el hospital.
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Especialistas en Audiometrías. Formación académica: Licenciados y doctores Experiencia: más de 10 años Otras destrezas:
-	cover: Provincias: Alajuela Cantones: Todos
-	requirements: Ser de la Zona deAlajuela, estar asegurado con la CCSS o tener derecho al seguro por medio de un familiar, tener cédula o pasaporte vigente, Sacar cita en el hospital para este servicio consulta externa, indicada por el médico de su atención en la ventanilla respectiva.
-	accesibility: Si los reúne.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-80	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Hospital San Rafael de Alajuela CCSS/terapia fisica/Hospital San Rafael de Alajuela_CCSS - Terapia Física.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Mejorar la calidad de salud de los pacientes de consulta externa que necesiten el servicio médico en fisioterapia.
-	reaches: Brindar servicios de fisioterapia por medio de consulta externa a pacientes que asisten al este hospital, para mejorar su calidad de salud de acuerdo a su necesidad en fisioterapia.
-	specificSupports: Fisioterapia en consulta externa
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Fiosterapeutas Formación académica: Licenciados Experiencia: más de 10 años Otras destrezas:
-	cover: Provincias: Alajuela Cantones: Alajuela todos los cantones
-	requirements: Ser de Alajuela, estar asegurado con la CCSS o tener derecho al seguro por medio de un familiar, tener cédula o pasaporte vigente, Sacar cita en el hospital para este servicio consulta externa, indicada por el médico de su atención en la ventanilla respectiva.
-	accesibility: Si los reúne.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-81	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Hospital San Rafael de Alajuela CCSS/psiquiatria/Hospital San Rafael de Alajuela_CCSS - psiquiatría_.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Mejorar la calidad de salud de los pacientes de consulta externa que necesiten el servicio médico en psiquiatría.
-	reaches: Brindar servicios de psiquiatría a pacientes que asisten al este hospital, para mejorar su calidad de salud de acuerdo a su necesidad en psiquiatría.
-	specificSupports: Psiquiatra en consulta externa o si están internados en el hospital.
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Psiquiatras Formación académica: Licenciados y doctores Experiencia: más de 10 años Otras destrezas:
-	cover: Alajuela
-	requirements: Ser de Alajuela, estar asegurado con la CCSS o tener derecho al seguro por medio de un familiar, tener cédula o pasaporte vigente, Sacar cita en el hospital para este servicio consulta externa, indicada por el médico de su atención en la ventanilla respectiva.
-	accesibility: Si los reúne.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-82	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Hospital San Rafael de Alajuela CCSS/ortopedia/Hospital San Rafael de Alajuela_CCSS - ortopedia_.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Mejorar la calidad de salud de los pacientes de consulta externa que necesiten el servicio médico en ortopedia.
-	reaches: Brindar servicios de ortopedia a pacientes que asisten al este hospital, para mejorar su calidad de salud de acuerdo a su necesidad en ortopedia.
-	specificSupports: ortopedia en consulta externa o si están internados en el hospital.
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Médicos Ortopedistas Formación académica: Licenciados y doctores Experiencia: más de 10 años Otras destrezas:
-	cover: Alajuela
-	requirements: Ser de la Zona de Alajuela, estar asegurado con la CCSS o tener derecho al seguro por medio de un familiar, tener cédula o pasaporte vigente, Sacar cita en el hospital para este servicio consulta externa, indicada por el médico de su atención en la ventanilla respectiva.
-	accesibility: Si los reúne.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-83	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ASADIS/Centro Atención Integral/ASADIS - Centro Atención Integral.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Que las personas usuarias del CAIPAD - ASADIS, potencialicen sus capacidades, para poder obtener equidad en la sociedad y tener calidad de vida.
-	reaches: Potencializar el desarrollo integral de los usuarios del CAIPAD.
-	specificSupports: Terapia Física, Terapia Ocupacional, Educación Especial.
-	typeSupports: Grupales
-	responsabilityPerson: Ocupación: Educadora Formación académica: Lic. Educación Especial Experiencia: Más de 5 años. Otras destrezas:
-	cover: Sarchí
-	requirements: Ser de la zona de Sarchí, tener edad mínima 21 años, y presentar epicrisis o certificación de la enfermedad por parte del CONAPDIS.
-	accesibility: Si cumple.
-	others: La información aquí recolectada es el resumen de información extraída de la página de Facebook y de información brindada con anterioridad el 18 de julio del 2017.
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-84	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APAMAR/serv. educativos/APAMAR - Serv. Educativos.docx
- X 
+	Name of item:  Audiometrías 
+	Name of item:  Fisioterapia 
+	Name of item:  Psiquiatría 
+	Name of item:  Ortopédia. 
+	Name of item:  Centro Atención Integral 
+	Name of item:  Centro de atención integral 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APAMAR/serv. educativos/APAMAR - Serv. Educativos.docx
+	Name of item:  Centro de atención integral 
 	isPrivate: 0
 	cost: 
 	objectives: Mejorar la calidad de vida de nuestros asociados a través de la educación y empoderamiento personal.
@@ -1536,118 +829,15 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-85	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APAMAR/Centro Atención Integral/APAMAR - Centro de Atención Integral.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Mejorar la calidad de vida de nuestros asociados a través de la educación y terapia física.
-	reaches: Mejorar la calidad de vida de nuestros asociados a través de la educación y terapia física.
-	specificSupports: Lecto-escritura, matemáticas básicas, manualidades y terapia física.
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Ocupación: Educadora Formación académica: Lic. Educación especial. Experiencia: Más de 5 años. Otras destrezas:
-	cover: Zarcero
-	requirements: Epicrisis médica y ser vecino de la zona.
-	accesibility: Si cumple con las condiciones.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-86	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APAMAR/Terapia Fisica/APAMAR - Terapia Física.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Mejorar la calidad de vida de nuestros asociados a través de la educación y terapia física.
-	reaches: Mejorar la calidad de vida de nuestros asociados a través de la educación y terapia física.
-	specificSupports: Sesión en piscina (hidroterapia), además electroterapia.
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Ocupación: Terapeuta Física. Formación académica: Lic. Terapia Física. Experiencia: Más de 3 años. Otras destrezas:
-	cover: Zarcero
-	requirements: Epicrisis médica y ser vecino de la zona, valoración de la terapeuta.
-	accesibility: Si cumple con las condiciones.
-	others: La asociación venden servicios privados al público en general en Terapia Física, clases de aquafitness y clases de natación. Los días sábados. La asociación paga por sus propios medios los servicios de la terapeuta física.
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: - Semanal
-_____________________________________________________________________________________________________________________
-
-87	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Hospital de San Carlos CCSS/Fisioterapia/Hospital San Rafael de Alajuela_CCSS - fisioterapia_.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Mejorar la calidad de salud de los pacientes de consulta externa que necesiten el servicio médico en fisioterapia.
-	reaches: Brindar servicios de fisioterapia por medio de consulta externa a pacientes que asisten al este hospital, para mejorar su calidad de salud de acuerdo a su necesidad en fisioterapia.
-	specificSupports: Fisioterapia en consulta externa
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Fiosterapeutas Formación académica: Licenciados Experiencia: más de 10 años Otras destrezas:
-	cover: Provincias: Alajuela Cantones: San Carlos
-	requirements: Ser de la Zona de San Carlos, estar asegurado con la CCSS o tener derecho al seguro por medio de un familiar, tener cédula o pasaporte vigente, Sacar cita en el hospital para este servicio consulta externa, indicada por el médico de su atención en la ventanilla respectiva.
-	accesibility: Si los reúne.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-88	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Hospital de San Carlos CCSS/Audiometría/Hospital San Rafael de Alajuela_CCSS - audiometrías_.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Mejorar la calidad de salud de los pacientes de consulta externa que necesiten el servicio médico en Audiometrías.
-	reaches: Brindar servicios de Audiometrías a pacientes que asisten al este hospital, para mejorar su calidad de salud de acuerdo a su necesidad en Audiometrías.
-	specificSupports: Audiometrías en consulta externa o si están internados en el hospital.
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Especialistas en Audiometrías. Formación académica: Licenciados y doctores Experiencia: más de 10 años Otras destrezas:
-	cover: Provincias: Alajuela Cantones: San Carlos
-	requirements: Ser de la Zona de San Carlos, estar asegurado con la CCSS o tener derecho al seguro por medio de un familiar, tener cédula o pasaporte vigente, Sacar cita en el hospital para este servicio consulta externa, indicada por el médico de su atención en la ventanilla respectiva.
-	accesibility: Si los reúne.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-89	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Hospital de San Carlos CCSS/psiquiatria/Hospital San Rafael de Alajuela_CCSS - psiquiatría.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Mejorar la calidad de salud de los pacientes de consulta externa que necesiten el servicio médico en psiquiatría.
-	reaches: Brindar servicios de psiquiatría a pacientes que asisten al este hospital, para mejorar su calidad de salud de acuerdo a su necesidad en psiquiatría.
-	specificSupports: Psiquiatra en consulta externa o si están internados en el hospital.
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Psiquiatras Formación académica: Licenciados y doctores Experiencia: más de 10 años Otras destrezas:
-	cover: Provincias: Alajuela Cantones: San Carlos
-	requirements: Ser de la Zona de San Carlos, estar asegurado con la CCSS o tener derecho al seguro por medio de un familiar, tener cédula o pasaporte vigente, Sacar cita en el hospital para este servicio consulta externa, indicada por el médico de su atención en la ventanilla respectiva.
-	accesibility: Si los reúne.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-90	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Hospital de San Carlos CCSS/ortopedia/Hospital San Rafael de Alajuela_CCSS - Ortopedia_.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Mejorar la calidad de salud de los pacientes de consulta externa que necesiten el servicio médico en ortopedia.
-	reaches: Brindar servicios de ortopedia a pacientes que asisten al este hospital, para mejorar su calidad de salud de acuerdo a su necesidad en ortopedia.
-	specificSupports: ortopedia en consulta externa o si están internados en el hospital.
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Médicos Ortopedistas Formación académica: Licenciados y doctores Experiencia: más de 10 años Otras destrezas:
-	cover: Provincias: Alajuela Cantones: San Carlos
-	requirements: Ser de la Zona de San Carlos, estar asegurado con la CCSS o tener derecho al seguro por medio de un familiar, tener cédula o pasaporte vigente, Sacar cita en el hospital para este servicio consulta externa, indicada por el médico de su atención en la ventanilla respectiva.
-	accesibility: Si los reúne.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-91	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro de Lenguaje MPG/Terapia Lenguaje_ Habla y Voz MPG.docx
- 
+	Name of item:  Centro de atención integral 
+	Name of item:  Terapia Física 
+	Name of item:  Fisioterapia 
+	Name of item:  Audiometrías 
+	Name of item:  Psiquiatría 
+	Name of item:  Ortopédia. 
+	Name of item:  Terapia del lenguaje, habla y voz 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro de Lenguaje MPG/Terapia Lenguaje_ Habla y Voz MPG.docx
+	Name of item:  Terapia del lenguaje, habla y voz 
 	isPrivate: 1
 	cost: ¢25.000 Evaluación, Historial clínico, Diagnóstico e Informe ¢17.000 Intervención Terapéutica
 	objectives: Ofrecer servicio de talleres para niños o padres de familia, con el fin de que se estimulen todas las áreas previas a la comunicación.
@@ -1662,28 +852,10 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: - Redes Sociales Correo Electronico Servicio 24/7
 	attentionFrecuency: - Semanal Quincenal
-_____________________________________________________________________________________________________________________
-
-92	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ASOMORFAS/Serv. Apoyo Emocional/ASOMORFAS - Serv. Apoyo Emocional.docx
- 
-	isPrivate: 1
-	cost: Gratis (se aceptan cuotas voluntarias).
-	objectives: Mejorar la calidad de vida de las PcD en el país.
-	reaches: Dar apoyo emocional a padres en situación de duelo.
-	specificSupports: Experiencias vivenciales.
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Ocupación: Miembro de la junta directiva de la asoc. Formación académica: Bachiller Educación Media. Experiencia: Más de 3 años Otras destrezas:
-	cover: San Ramón.
-	requirements: Ser familiar o persona interesadas en el tema de discapacidad.
-	accesibility: Si posee.
-	others: 
-	scheduleExtraoerdinary: 1
-	otherExtraordinaryAttention: - Servicio 24/7
-	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-93	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ASOMORFAS/Serv. Capacitaciones/Asoc. Morfas - Serv. Capacitacion.docx
- 
+	Name of item:  Serv. Apoyo Emocional 
+	Name of item:  Serv. Capacitación 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ASOMORFAS/Serv. Capacitaciones/Asoc. Morfas - Serv. Capacitacion.docx
+	Name of item:  Serv. Capacitación 
 	isPrivate: 1
 	cost: Gratis (se aceptan cuotas voluntarias).
 	objectives: Mejorar la calidad de vida de las PcD en el país.
@@ -1698,10 +870,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: - Servicio 24/7
 	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-94	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APRODISA/serv. ocupacionales/APRODISA - Serv. Ocupacionales.docx
- X 
+	Name of item:  Serv. Educación Especial 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APRODISA/serv. ocupacionales/APRODISA - Serv. Ocupacionales.docx
+	Name of item:  Serv. Educación Especial 
 	isPrivate: 0
 	cost: 
 	objectives: Mejorar la calidad de vida de nuestros asociados a través de la educación para que aSi generar independencia y autoempleo.
@@ -1716,46 +887,11 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-95	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APRODISA/centro atención integral/APRODISA - Centro Atención Integral.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Mejorar la calidad de vida de nuestros asociados a través de la educación para que aSi generar independencia y autoempleo.
-	reaches: Mejorar la calidad de vida de nuestros asociados a través de la educación para que aSi generar independencia y autoempleo.
-	specificSupports: Manualidades, artes plásticas, artes industriales, educación especial, terapia ocupacional, terapia física.
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Ocupación: Educadora con recargo en dirección académica Formación académica: Lic. en Educación. Experiencia: 2 años de experiencia. Otras destrezas:
-	cover: Atenas
-	requirements: De los 21 a los 66 años máximo, con todo tipo de discapacidad: múltiple, retardo mental, sordera y otras discapacidades.
-	accesibility: Si poseen las condiciones.
-	others: Actualmente hay 40 usuarios,
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-96	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/APRODISA/serv. educacion especial/APRODISA - Serv. Educativos.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Mejorar la calidad de vida de nuestros asociados a través de la educación para que aSi generar independencia y autoempleo.
-	reaches: Mejorar la calidad de vida de nuestros asociados a través de la educación para que aSi generar independencia y autoempleo.
-	specificSupports: Formación académica en lecto-escritura, saber leer, escribir y matemáticas básicas. ASi como Higiene personal, manejo del dinero, vida social.
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Ocupación: Hay 2 profesionales: Una Lic en Educación especial y una Educadora para el hogar Formación académica: La primera es Lic. En Educación Especial y la otra Bachiller en Educación. Experiencia: 3 años de experiencia. Otras destrezas:
-	cover: Atenas
-	requirements: De los 21 a los 66 años máximo, con todo tipo de discapacidad: múltiple, retardo mental, sordera y otras discapacidades.
-	accesibility: Si poseen las condiciones.
-	others: Actualmente hay 40 usuarios,
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-97	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ASOTRANSPARENCIA/Serv. Canalización Fondos Públicos/ASOTRANSPARENCIA - Serv. Canalización de recursos.docx
- 
+	Name of item:  Centro Atención Integral 
+	Name of item:  Serv. Educación Especial 
+	Name of item:  Serv. Gestión y canalización de fondos para proyecto de bien social. 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ASOTRANSPARENCIA/Serv. Canalización Fondos Públicos/ASOTRANSPARENCIA - Serv. Canalización de recursos.docx
+	Name of item:  Serv. Gestión y canalización de fondos para proyecto de bien social. 
 	isPrivate: 1
 	cost: Gratis
 	objectives: Canalizar y ejecutar fondos asignados para proyectos de bien social, asegurando transparencia.
@@ -1770,10 +906,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: - Semanal
-_____________________________________________________________________________________________________________________
-
-98	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Municipalidad SAN CARLOS/Serv. Capacitaciones/Munic. San Carlos - Serv. Capacitaciones_.docx
- X 
+	Name of item:  Capacitaciones a personas, entidades privadas o públicas en el cantón. 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Municipalidad SAN CARLOS/Serv. Capacitaciones/Munic. San Carlos - Serv. Capacitaciones_.docx
+	Name of item:  Capacitaciones a personas, entidades privadas o públicas en el cantón. 
 	isPrivate: 0
 	cost: gratis
 	objectives: Brindar capacitaciones a caipad, instituciones, escuelas, centros de cuido etc, para informar sobre el tema de discapacidad y sensibilizar a las personas e informarlas sobre temas de apoyo emocional y psicológicos.
@@ -1788,10 +923,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: - Semanal
-_____________________________________________________________________________________________________________________
-
-99	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Municipalidad SAN CARLOS/Serv. Formación/Munic. Carlos - Formación Humana._.docx
- X 
+	Name of item:  Formación Humana 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Municipalidad SAN CARLOS/Serv. Formación/Munic. Carlos - Formación Humana._.docx
+	Name of item:  Formación Humana 
 	isPrivate: 0
 	cost: gratis
 	objectives: Mejorar la calidad de vida de mujeres en necesidades emocionales que sufren de algún maltrato o discapacidad, a que puedan ejercer alguna actividad que les ayude a entretenerse, como elaboración de artesanías, escritura, actividades en cómputo, dibujo, etc.
@@ -1806,10 +940,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: - Semanal
-_____________________________________________________________________________________________________________________
-
-100	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Alquiler M__dicos ByB/Alquiler equipo médico/servicio sanitario portátil/Alquiler Médicos ByB - Servicio Sanitario Portatil.docx
- 
+	Name of item:  Alquiler Médicos ByB - Servicio Sanitario Portatil 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Alquiler M__dicos ByB/Alquiler equipo médico/servicio sanitario portátil/Alquiler Médicos ByB - Servicio Sanitario Portatil.docx
+	Name of item:  Alquiler Médicos ByB - Servicio Sanitario Portatil 
 	isPrivate: 1
 	cost: 4 mil colones
 	objectives: Brindar equipo medico en alquiler para beneficio de personas de escasos recursos económicos
@@ -1824,10 +957,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: - Servicio 24/7
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-101	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Alquiler M__dicos ByB/Alquiler equipo médico/silla baño/Alquiler Médicos ByB - Silla Baño.docx
- 
+	Name of item:  Alquiler Médicos ByB - Silla Baño 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Alquiler M__dicos ByB/Alquiler equipo médico/silla baño/Alquiler Médicos ByB - Silla Baño.docx
+	Name of item:  Alquiler Médicos ByB - Silla Baño 
 	isPrivate: 1
 	cost: 4 mil colones
 	objectives: Brindar equipo medico en alquiler para beneficio de personas de escasos recursos económicos
@@ -1842,10 +974,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: - Servicio 24/7
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-102	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Alquiler M__dicos ByB/Alquiler equipo médico/andaderas/Alquiler Médicos ByB - Andaderas.docx
- 
+	Name of item:  Alquiler Médicos ByB - Andaderas 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Alquiler M__dicos ByB/Alquiler equipo médico/andaderas/Alquiler Médicos ByB - Andaderas.docx
+	Name of item:  Alquiler Médicos ByB - Andaderas 
 	isPrivate: 1
 	cost: 4 mil colones
 	objectives: Brindar equipo medico en alquiler para beneficio de personas de escasos recursos económicos
@@ -1860,10 +991,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: - Servicio 24/7
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-103	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Alquiler M__dicos ByB/Alquiler equipo médico/Cama Hospitalaria/Alquiler Médicos ByB - Cama Hospitalaria.docx
- 
+	Name of item:  Alquiler Médicos ByB - Cama Hospitalaria 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Alquiler M__dicos ByB/Alquiler equipo médico/Cama Hospitalaria/Alquiler Médicos ByB - Cama Hospitalaria.docx
+	Name of item:  Alquiler Médicos ByB - Cama Hospitalaria 
 	isPrivate: 1
 	cost: 17 mil colones
 	objectives: Brindar equipo medico en alquiler para beneficio de personas de escasos recursos económicos
@@ -1878,10 +1008,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: - Servicio 24/7
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-104	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Alquiler M__dicos ByB/Alquiler equipo médico/Sillas Ruedas/Alquiler Médicos ByB - Sillas Ruedas.docx
- 
+	Name of item:  Alquiler Médicos ByB - Sillas Ruedas 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Alquiler M__dicos ByB/Alquiler equipo médico/Sillas Ruedas/Alquiler Médicos ByB - Sillas Ruedas.docx
+	Name of item:  Alquiler Médicos ByB - Sillas Ruedas 
 	isPrivate: 1
 	cost: 4 mil colones
 	objectives: Brindar equipo medico en alquiler para beneficio de personas de escasos recursos económicos
@@ -1896,10 +1025,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: - Servicio 24/7
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-105	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Alquiler M__dicos ByB/Alquiler equipo médico/Muletas/Alquiler Médicos ByB - Muletas.docx
- 
+	Name of item:  Alquiler Médicos ByB - Muletas 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Alquiler M__dicos ByB/Alquiler equipo médico/Muletas/Alquiler Médicos ByB - Muletas.docx
+	Name of item:  Alquiler Médicos ByB - Muletas 
 	isPrivate: 1
 	cost: 3 mil colones
 	objectives: Brindar equipo medico en alquiler para beneficio de personas de escasos recursos económicos
@@ -1914,136 +1042,16 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: - Servicio 24/7
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-106	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ASOC TALITA CUMI/Terapia Ocupacional/Asoc. Talita Cumi - Terapia Ocupacional.docx
- X 
-	isPrivate: 0
-	cost: No hay
-	objectives: Ofrecer a las personas con discapacidad mayores de 21 años, una alternativa de dedicación personal, social, ocupacional y productiva que le permita potenciar su desarrollo integral, autonomía personal.
-	reaches: Promover, desarrollar a las personas en condición de discapacidad y sus familiares.
-	specificSupports: Higiene Personal, Manejo del dinero, vida independiente, emprendedurismo: Taller de Hidroponia
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Ocupación: Terapia Ocupacional Formación académica: Licenciada Experiencia: más 5 años Otras destrezas:
-	cover: Naranjo
-	requirements: Ser vecino del cantón, mayor de edad, dictamen médico o certificación del CONAPDIS, pasar por una evaluación del equipo técnico del CAIPAD.
-	accesibility: Si posee.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-107	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ASOC TALITA CUMI/Centro Atención Integral/Asoc. Talita Cumi - Centro Atencion Integral.docx
- X 
-	isPrivate: 0
-	cost: No hay
-	objectives: Ofrecer a las personas con discapacidad mayores de 21 años, una alternativa de dedicación personal, social, ocupacional y productiva que le permita potenciar su desarrollo integral, autonomía personal.
-	reaches: Promover, desarrollar a las personas en condición de discapacidad y sus familiares.
-	specificSupports: Educación especial, Terapia Ocupacional.
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Ocupación: Educación Especial y terapia Ocupacional Formación académica: Licenciados Experiencia: más 15 años Otras destrezas:
-	cover: Naranjo
-	requirements: Ser vecino del cantón, mayor de edad, dictamen médico o certificación del CONAPDIS, pasar por una evaluación del equipo técnico del CAIPAD.
-	accesibility: Si posee.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-108	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ASOC TALITA CUMI/Terapia Física/TalitaCumi Terapia Fisica_.docx
- 
-	isPrivate: 1
-	cost: 9000 colones solo terapia física
-	objectives: Ofrecer Servicios de Terapia Física a las personas que necesiten de esta.
-	reaches: Promover, desarrollar a las personas en condición de discapacidad y sus familiares.
-	specificSupports: Educación especial, estimulación con Terapia Física, Ocupacional.
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Fisoterapeuta Formación académica: Licenciada Experiencia: más 15 años Otras destrezas:
-	cover: Naranjo y alrededores
-	requirements: Ser vecino del cantón, mayor de edad, mostrar epicrisis o certificación del CONAPDIS, pasar por una evaluación del equipo técnico del CAIPAD.
-	accesibility: Si posee.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-109	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ASOC TALITA CUMI/Serv. Educativos/Asoc. Talita Cumi - Serv. Educativos.docx
- X 
-	isPrivate: 0
-	cost: No hay
-	objectives: Ofrecer a las personas con discapacidad mayores de 21 años, una alternativa de dedicación personal, social, ocupacional y productiva que le permita potenciar su desarrollo integral, autonomía personal.
-	reaches: Promover, desarrollar a las personas en condición de discapacidad y sus familiares.
-	specificSupports: Alfabeto, matemáticas básicas, vida en hogar, vida independiente, artes plásticas, artes industriales.
-	typeSupports: Individuales y grupales
-	responsabilityPerson: Ocupación: Profesor educación especial Formación académica: Licenciada Experiencia: más 8 años Otras destrezas:
-	cover: Naranjo
-	requirements: Ser vecino del cantón, mayor de edad, dictamen médico o certificación del CONAPDIS, pasar por una evaluación del equipo técnico del CAIPAD.
-	accesibility: Si posee.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-110	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/TALLER PROTEGIDO/Serv. Terapia Ocupacional/Asoc. Taller Protegido - Serv. Terapia Ocupacional.docx
- 
-	isPrivate: 1
-	cost: Gratis para el usuario.
-	objectives: Rehabilitar y readaptar social, laboral, y económica a personas con discapacidad física y mental.
-	reaches: Rehabilitar y readaptar social, laboral, y económica a personas con discapacidad física y mental.
-	specificSupports: Formación académica y capacitación en educación formal y oficios.
-	typeSupports: Grupales
-	responsabilityPerson: Ocupación: Terapeuta Ocupacional. Formación académica: Lic. Terapia Ocupacional. Experiencia: Más de 3 años. Otras destrezas:
-	cover: Alajuela
-	requirements: Traer epicrisis, ser vecino de la zona o poseer medio de transporte, brindar información personal y familiar para poder examinar el caso en junta directiva. Se realiza un protocolo de ingreso para hacer la evaluación si la persona puede adaptarse o no al grupo.
-	accesibility: Si posee.
-	others: Este servicio se da por medio de una donación de serv. profesionales que paga directamente la Municipalidad de Alajuela.
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-111	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/TALLER PROTEGIDO/Centro Atención Integral/Asoc. Taller Protegido - Centro Atención Integral.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Rehabilitar y readaptar social, laboral, y económica a personas con discapacidad física y mental.
-	reaches: Rehabilitar y readaptar social, laboral, y económica a personas con discapacidad física y mental.
-	specificSupports: Formación académica y capacitación en educación formal y oficios.
-	typeSupports: Grupales
-	responsabilityPerson: Ocupación: Profesora recargo dirección educación especial Formación académica: Lic. Educación Especial Experiencia: Más de 8 años. Otras destrezas:
-	cover: Alajuela
-	requirements: Traer epicrisis, ser vecino de la zona o poseer medio de transporte, brindar información personal y familiar para poder examinar el caso en junta directiva. Se realiza un protocolo de ingreso para hacer la evaluación si la persona puede adaptarse o no al grupo.
-	accesibility: 
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-112	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/TALLER PROTEGIDO/Serv. Educativos/Asoc. Taller Protegido Serv. Educativos.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Rehabilitar y readaptar social, laboral, y económica a personas con discapacidad física y mental.
-	reaches: Rehabilitar y readaptar social, laboral, y económica a personas con discapacidad física y mental.
-	specificSupports: Formación académica y capacitación en educación formal y oficios.
-	typeSupports: Grupales
-	responsabilityPerson: Ocupación: Profesora recargo dirección educación especial Formación académica: Lic. Educación Especial Experiencia: Más de 8 años. Otras destrezas: El grupo de profesores están conformados, por dos Lic. en educación especial y dos profesores Lic. para educación del hogar y artes industriales, estos los paga el MEP a través del convenio Programa CAIPAD.
-	cover: Alajuela
-	requirements: Traer epicrisis, ser vecino de la zona o poseer medio de transporte, brindar información personal y familiar para poder examinar el caso en junta directiva. Se realiza un protocolo de ingreso para hacer la evaluación si la persona puede adaptarse o no al grupo.
-	accesibility: 
-	others: Hay 50 personas usuarias actualmente. Los cuales llevan talleres de: Repostería, Hidroponia y Limpieza.
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-113	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Animales Equinoterapia/Terapia asistida con animales/Animales Equinoterapia Costa Rica.docx
- 
+	Name of item:  Terapia Ocupacional 
+	Name of item:  Centro Atención Integral 
+	Name of item:  Centro Atención Integral 
+	Name of item:  Serv. Educativos 
+	Name of item:  Serv. Educativos 
+	Name of item:  Centro Atención Integral 
+	Name of item:  Serv. Educativos 
+	Name of item:  Animales Equinoterapia - Animales Equinoterapia Costa Rica. 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Animales Equinoterapia/Terapia asistida con animales/Animales Equinoterapia Costa Rica.docx
+	Name of item:  Animales Equinoterapia - Animales Equinoterapia Costa Rica. 
 	isPrivate: 1
 	cost: Varia de acuerdo a la valoración y tiempo de trabajo que el paciente lo requiera.
 	objectives: Mejorar la capacidad de movilización en las personas no videntes a la hora de trabajar con perros guías, y en cuanto personas con discapacidad cognitiva, poder brindarles un mejor desarrollo social y personal a través de la terapia de contacto con el animal.
@@ -2058,10 +1066,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: - Semanal
-_____________________________________________________________________________________________________________________
-
-114	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ACOPE/Asistencia Médica/ACOPE - Asistencia Médica.docx
- 
+	Name of item:  Asistencia Médica Gratuita 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ACOPE/Asistencia Médica/ACOPE - Asistencia Médica.docx
+	Name of item:  Asistencia Médica Gratuita 
 	isPrivate: 1
 	cost: Gratis a las personas, se aceptan ayudas voluntarias.
 	objectives: Ayudar al paciente a mejorar su calidad de vida.
@@ -2076,10 +1083,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: - Semanal
-_____________________________________________________________________________________________________________________
-
-115	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/FUNDACI__N HOGAR MANOS ABIERTAS ALAJUELA/Terapia Física/Fundación Manos Abiertas - Terapia Física.docx
- 
+	Name of item:  Terapia Física. 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/FUNDACI__N HOGAR MANOS ABIERTAS ALAJUELA/Terapia Física/Fundación Manos Abiertas - Terapia Física.docx
+	Name of item:  Terapia Física. 
 	isPrivate: 1
 	cost: Gratis para el usuario que pertenece al hogar.
 	objectives: Acoger con prioridad a las personas con discapacidad más abandonadas y necesitadas. Brindar un hogar permanente a la población recibida en nuestros hogares
@@ -2094,10 +1100,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-116	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/FUNDACI__N HOGAR MANOS ABIERTAS ALAJUELA/Educación Especial/Fundación Manos Abiertas - Educación Especial.docx
- X 
+	Name of item:  Educación Especial 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/FUNDACI__N HOGAR MANOS ABIERTAS ALAJUELA/Educación Especial/Fundación Manos Abiertas - Educación Especial.docx
+	Name of item:  Educación Especial 
 	isPrivate: 0
 	cost: Gratis para el usuario que pertenece al hogar.
 	objectives: Acoger con prioridad a las personas con discapacidad más abandonadas y necesitadas. Brindar un hogar permanente a la población recibida en nuestros hogares
@@ -2112,10 +1117,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-117	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/FUNDACI__N HOGAR MANOS ABIERTAS ALAJUELA/Serv. Hogar de Cuido/Fundación Manos Abiertas - Serv. Hogar Cuido.docx
- 
+	Name of item:  Hogar de cuido para personas con parálisis cerebral en situación de abandono 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/FUNDACI__N HOGAR MANOS ABIERTAS ALAJUELA/Serv. Hogar de Cuido/Fundación Manos Abiertas - Serv. Hogar Cuido.docx
+	Name of item:  Hogar de cuido para personas con parálisis cerebral en situación de abandono 
 	isPrivate: 1
 	cost: Gratis para el usuario, se aceptan donaciones privadas.
 	objectives: Acoger con prioridad a las personas con discapacidad más abandonadas y necesitadas . Brindar un hogar permanente a la población recibida en nuestros hogares
@@ -2130,10 +1134,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-118	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Grecia/educacion para le hogar/Centro de educacion especial Grecia-Ed.para le hogar_.docx
- X 
+	Name of item:  Educación para el Hogar 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Grecia/educacion para le hogar/Centro de educacion especial Grecia-Ed.para le hogar_.docx
+	Name of item:  Educación para el Hogar 
 	isPrivate: 0
 	cost: 
 	objectives: apoyar a nuestros estudiantes con necesidades especiales, brindándoles servicios de apoyo adecuados a su estado de salud y condición especial.
@@ -2148,10 +1151,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-119	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Grecia/artes industriales/Centro de Educación Especial Grecia- Artes Industriales_.docx
- X 
+	Name of item:  Artes Industriales 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Grecia/artes industriales/Centro de Educación Especial Grecia- Artes Industriales_.docx
+	Name of item:  Artes Industriales 
 	isPrivate: 0
 	cost: 
 	objectives: apoyar a nuestros estudiantes con necesidades especiales, brindándoles servicios de apoyo adecuados a su estado de salud y condición especial.
@@ -2166,10 +1168,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-120	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Grecia/Educaci__n musical/Centro de educación especial Grecia-Ed. Musical_.docx
- X 
+	Name of item:  Educación Musical 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Grecia/Educaci__n musical/Centro de educación especial Grecia-Ed. Musical_.docx
+	Name of item:  Educación Musical 
 	isPrivate: 0
 	cost: 
 	objectives: apoyar a nuestros estudiantes con necesidades especiales, brindándoles servicios de apoyo adecuados a su estado de salud y condición especial.
@@ -2184,10 +1185,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-121	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Grecia/educacion fisica/Centro de educación Especial Grecia-Ed. Fisica.docx
- X 
+	Name of item:  Educación Física 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Grecia/educacion fisica/Centro de educación Especial Grecia-Ed. Fisica.docx
+	Name of item:  Educación Física 
 	isPrivate: 0
 	cost: 
 	objectives: apoyar a nuestros estudiantes con necesidades especiales, brindándoles servicios de apoyo adecuados a su estado de salud y condición especial.
@@ -2202,10 +1202,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-122	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Grecia/artes plasticas/Centro de educacion especial Grecia- Artes plasticas_.docx
- X 
+	Name of item:  Artes Plásticas 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Grecia/artes plasticas/Centro de educacion especial Grecia- Artes plasticas_.docx
+	Name of item:  Artes Plásticas 
 	isPrivate: 0
 	cost: 
 	objectives: apoyar a nuestros estudiantes con necesidades especiales, brindándoles servicios de apoyo adecuados a su estado de salud y condición especial.
@@ -2220,10 +1219,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-123	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Grecia/Terapia fisica/Centro de educación especial Grecia-Terapia fisica_.docx
- X 
+	Name of item:  Terapia física 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Grecia/Terapia fisica/Centro de educación especial Grecia-Terapia fisica_.docx
+	Name of item:  Terapia física 
 	isPrivate: 0
 	cost: 
 	objectives: apoyar a nuestros estudiantes con necesidades especiales, brindándoles servicios de apoyo adecuados a su estado de salud y condición especial.
@@ -2238,10 +1236,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-124	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Grecia/terapia de lenguaje/Centro de educacion especial Grecia-Lenguaje_.docx
- X 
+	Name of item:  Terapia de lenguaje 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Grecia/terapia de lenguaje/Centro de educacion especial Grecia-Lenguaje_.docx
+	Name of item:  Terapia de lenguaje 
 	isPrivate: 0
 	cost: 
 	objectives: apoyar a nuestros estudiantes con necesidades especiales, brindándoles servicios de apoyo adecuados a su estado de salud y condición especial.
@@ -2256,10 +1253,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-125	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Alajuela/Terapía Fisica/Centro Educación Especial Alajuela - Terapia Física.docx
- x 
+	Name of item: : Terapia Física 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Alajuela/Terapía Fisica/Centro Educación Especial Alajuela - Terapia Física.docx
+	Name of item: : Terapia Física 
 	isPrivate: 0
 	cost: ______________________
 	objectives: Facilitar a la población estudiantil servicios educativos de calidad que potencialicen sus capacidades individuales y estilos de aprendizaje; enfocados a este proceso, donde se implemente una organización eficiente que garantice el funcionamiento óptimo de los servicios y las acciones relacionadas con la gestión administrativa. Ofrecer orientación y apoyo a las familias de la comunidad educativa, para promover el desempeño del estudiante en los contextos en los que se desenvuelve.
@@ -2274,10 +1270,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-126	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Alajuela/Estimulación temprana/Centro Educación Especial Alajuela - Estimulación Temprana.docx
- x 
+	Name of item: : Estimulación Temprana 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Alajuela/Estimulación temprana/Centro Educación Especial Alajuela - Estimulación Temprana.docx
+	Name of item: : Estimulación Temprana 
 	isPrivate: 0
 	cost: ______________________
 	objectives: Facilitar a la población estudiantil servicios educativos de calidad que potencialicen sus capacidades individuales y estilos de aprendizaje; enfocados a este proceso, donde se implemente una organización eficiente que garantice el funcionamiento óptimo de los servicios y las acciones relacionadas con la gestión administrativa. Ofrecer orientación y apoyo a las familias de la comunidad educativa, para promover el desempeño del estudiante en los contextos en los que se desenvuelve.
@@ -2292,10 +1287,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-127	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Alajuela/Música/Centro Educación Especial Alajuela - Música.docx
- x 
+	Name of item: : Música 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Alajuela/Música/Centro Educación Especial Alajuela - Música.docx
+	Name of item: : Música 
 	isPrivate: 0
 	cost: ______________________
 	objectives: Facilitar a la población estudiantil servicios educativos de calidad que potencialicen sus capacidades individuales y estilos de aprendizaje; enfocados a este proceso, donde se implemente una organización eficiente que garantice el funcionamiento óptimo de los servicios y las acciones relacionadas con la gestión administrativa. Ofrecer orientación y apoyo a las familias de la comunidad educativa, para promover el desempeño del estudiante en los contextos en los que se desenvuelve.
@@ -2310,10 +1304,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-128	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Alajuela/Artes Plásticas/Educación Especial Alajuela - Artes Plásticas.docx
- x 
+	Name of item: : Artes Plásticas 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Alajuela/Artes Plásticas/Educación Especial Alajuela - Artes Plásticas.docx
+	Name of item: : Artes Plásticas 
 	isPrivate: 0
 	cost: ______________________
 	objectives: Facilitar a la población estudiantil servicios educativos de calidad que potencialicen sus capacidades individuales y estilos de aprendizaje; enfocados a este proceso, donde se implemente una organización eficiente que garantice el funcionamiento óptimo de los servicios y las acciones relacionadas con la gestión administrativa. Ofrecer orientación y apoyo a las familias de la comunidad educativa, para promover el desempeño del estudiante en los contextos en los que se desenvuelve.
@@ -2328,10 +1321,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-129	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Alajuela/Educación Física/Centro Educación Especial Alajuela - Educación Física.docx
- x 
+	Name of item: : Educación Física 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Alajuela/Educación Física/Centro Educación Especial Alajuela - Educación Física.docx
+	Name of item: : Educación Física 
 	isPrivate: 0
 	cost: ______________________
 	objectives: Facilitar a la población estudiantil servicios educativos de calidad que potencialicen sus capacidades individuales y estilos de aprendizaje; enfocados a este proceso, donde se implemente una organización eficiente que garantice el funcionamiento óptimo de los servicios y las acciones relacionadas con la gestión administrativa. Ofrecer orientación y apoyo a las familias de la comunidad educativa, para promover el desempeño del estudiante en los contextos en los que se desenvuelve.
@@ -2346,10 +1338,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-130	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Alajuela/Terapia Lenguaje/Centro Educación Especial Alajuela - Terapía Lenguaje.docx
- x 
+	Name of item: : Terapía Lenguaje 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Alajuela/Terapia Lenguaje/Centro Educación Especial Alajuela - Terapía Lenguaje.docx
+	Name of item: : Terapía Lenguaje 
 	isPrivate: 0
 	cost: ______________________
 	objectives: Facilitar a la población estudiantil servicios educativos de calidad que potencialicen sus capacidades individuales y estilos de aprendizaje; enfocados a este proceso, donde se implemente una organización eficiente que garantice el funcionamiento óptimo de los servicios y las acciones relacionadas con la gestión administrativa. Ofrecer orientación y apoyo a las familias de la comunidad educativa, para promover el desempeño del estudiante en los contextos en los que se desenvuelve.
@@ -2364,10 +1355,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-131	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Alajuela/Artes Industriales/Centro Educación Especial Alajuela - Artes Industriales.docx
- x 
+	Name of item: : Artes Industriales 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Alajuela/Artes Industriales/Centro Educación Especial Alajuela - Artes Industriales.docx
+	Name of item: : Artes Industriales 
 	isPrivate: 0
 	cost: ______________________
 	objectives: Facilitar a la población estudiantil servicios educativos de calidad que potencialicen sus capacidades individuales y estilos de aprendizaje; enfocados a este proceso, donde se implemente una organización eficiente que garantice el funcionamiento óptimo de los servicios y las acciones relacionadas con la gestión administrativa. Ofrecer orientación y apoyo a las familias de la comunidad educativa, para promover el desempeño del estudiante en los contextos en los que se desenvuelve.
@@ -2382,10 +1372,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-132	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Alajuela/Psicología/Centro Educación Especial Alajuela - Psicología.docx
- x 
+	Name of item: : Psicología 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Alajuela/Psicología/Centro Educación Especial Alajuela - Psicología.docx
+	Name of item: : Psicología 
 	isPrivate: 0
 	cost: ______________________
 	objectives: Facilitar a la población estudiantil servicios educativos de calidad que potencialicen sus capacidades individuales y estilos de aprendizaje; enfocados a este proceso, donde se implemente una organización eficiente que garantice el funcionamiento óptimo de los servicios y las acciones relacionadas con la gestión administrativa. Ofrecer orientación y apoyo a las familias de la comunidad educativa, para promover el desempeño del estudiante en los contextos en los que se desenvuelve.
@@ -2400,10 +1389,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-133	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Alajuela/Educación Especial/Centro Educación Especial Alajuela - Educación Especial.docx
- x 
+	Name of item: : Educación Especial 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Centro Educaci__n Especial Alajuela/Educación Especial/Centro Educación Especial Alajuela - Educación Especial.docx
+	Name of item: : Educación Especial 
 	isPrivate: 0
 	cost: ______________________
 	objectives: Facilitar a la población estudiantil servicios educativos de calidad que potencialicen sus capacidades individuales y estilos de aprendizaje; enfocados a este proceso, donde se implemente una organización eficiente que garantice el funcionamiento óptimo de los servicios y las acciones relacionadas con la gestión administrativa. Ofrecer orientación y apoyo a las familias de la comunidad educativa, para promover el desempeño del estudiante en los contextos en los que se desenvuelve.
@@ -2418,10 +1406,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-134	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ASOC PRO DISCAPACIDAD POAS/Serv. Apoyo Económico/Asociación Pro-Discapacidad San Pedro de Poás - Serv. Apoyo economico.docx
- 
+	Name of item:  Serv. Apoyo Económico 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ASOC PRO DISCAPACIDAD POAS/Serv. Apoyo Económico/Asociación Pro-Discapacidad San Pedro de Poás - Serv. Apoyo economico.docx
+	Name of item:  Serv. Apoyo Económico 
 	isPrivate: 1
 	cost: Gratis (se aceptan cuotas voluntarias o cuotas representativas)
 	objectives: Dotación de apoyo económico para recibir atención médica, en la búsqueda de una mejor calidad de vida de las personas con discapacidad del Cantón de Poás.
@@ -2436,64 +1423,12 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: - Servicio 24/7
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-135	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/AYUMISANCA/Terapia Ocupacional/AYUMISANCA - Serv. Terapia Ocupacional.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Ofrecer acciones que conduzcan al desarrollo de las habilidades sociales, cognitivas y psicomotrices, procurando independencia personal y la inserción laboral.
-	reaches: 
-	specificSupports: Higiene personal, independencia social, cómo hacer cosas solos.
-	typeSupports: Individuales
-	responsabilityPerson: 1 Lic. en Terapia Ocupacional, con 6 años de experiencia, que enseña independencia personal.
-	cover: San Carlos.
-	requirements: Ser vecino de la zona, mayor de 21 años, con dictamen médico o certificación del CONAPDIS que la persona posee retardo mental, luego se aplica el proceso de ingreso.
-	accesibility: Si posee condiciones.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-136	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/AYUMISANCA/centro atención integral/AYUMISANCA - Centro Atención Integral.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Ofrecer acciones que conduzcan al desarrollo de las habilidades sociales, cognitivas y psicomotrices, procurando independencia personal y la inserción laboral.
-	reaches: 
-	specificSupports: servicios de apoyo para la integración social, laboral y educativa para personas con discapacidad.
-	typeSupports: Individuales
-	responsabilityPerson: Hay 7 profesores en total, todos pagados por el MEP. 2 profesores Licenciados en educación especial, con 8 años de experiencia combinada, las cuales le enseñan alfabeto y matemáticas. 2 profesores Lic. en educación para el hogar, con 5 años de experiencia combinada, que se encargan de enseñarles vida social y vida en familia, manejo del dinero, etc. 1 Lic. en Terapia Ocupacional, con 6 años de experiencia combinada, que enseña independencia personal. 2 Lic. en Artes industriales, con más de 10 años de experiencia combinada, les enseñan ebanistería, creación de muebles, etc.
-	cover: San Carlos.
-	requirements: Ser vecino de la zona, mayor de 21 años, con dictamen médico o certificación del CONAPDIS que la persona posee retardo mental, luego se aplica el proceso de ingreso.
-	accesibility: Si posee condiciones.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-137	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/AYUMISANCA/Serv. Educativos/AYUMISANCA - Serv. Educativos.docx
- X 
-	isPrivate: 0
-	cost: 
-	objectives: Ofrecer acciones que conduzcan al desarrollo de las habilidades sociales, cognitivas y psicomotrices, procurando independencia personal y la inserción laboral.
-	reaches: 
-	specificSupports: Alfabetización, matemáticas básicas, vida social, manejo del dinero, independencia social.
-	typeSupports: Individuales
-	responsabilityPerson: Hay 4 profesores en total, todos pagados por el MEP. 2 profesores Licenciados en educación especial, con 8 años de experiencia combinada, las cuales le enseñan alfabeto y matemáticas. 2 profesores Lic. en educación para el hogar, con 5 años de experiencia combinada, que se encargan de enseñarles vida social y vida en familia, manejo del dinero, etc.
-	cover: San Carlos.
-	requirements: Ser vecino de la zona, mayor de 21 años, con dictamen médico o certificación del CONAPDIS que la persona posee retardo mental, luego se aplica el proceso de ingreso.
-	accesibility: Si posee condiciones.
-	others: 
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-138	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/AYUMISANCA/Taller Ebanistería/AYUMISANCA - Taller Ebanistería.docx
- X 
+	Name of item:  Terapia Ocupacional 
+	Name of item:  Centro Atención Integral 
+	Name of item:  Serv. Educativos 
+	Name of item:  Taller Ebanistería 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/AYUMISANCA/Taller Ebanistería/AYUMISANCA - Taller Ebanistería.docx
+	Name of item:  Taller Ebanistería 
 	isPrivate: 0
 	cost: 
 	objectives: Ofrecer acciones que conduzcan al desarrollo de las habilidades sociales, cognitivas y psicomotrices, procurando independencia personal y la inserción laboral.
@@ -2508,10 +1443,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-139	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ACOPEDIV/Serv. Asesoría Legal/ACOPEDIV - Serv. Asesoria Legal.docx
- 
+	Name of item:  Serv. Asesoría Legal 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ACOPEDIV/Serv. Asesoría Legal/ACOPEDIV - Serv. Asesoria Legal.docx
+	Name of item:  Serv. Asesoría Legal 
 	isPrivate: 1
 	cost: Gratis, se aceptan cuotas voluntarias.
 	objectives: Dar charla abierta al público sobre la ceguera y los derechos que existen en el estado de costa Rica.
@@ -2526,10 +1460,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: - Redes Sociales Servicio 24/7
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-140	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Municipalidad ALAJUELA/Serv. Apoyo Económico/Municipalidad de Alajuela_.docx
- x 
+	Name of item:  Apoyo Económico a las asociaciones vinculadas con el Tema de Discapacidad. 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/Municipalidad ALAJUELA/Serv. Apoyo Económico/Municipalidad de Alajuela_.docx
+	Name of item:  Apoyo Económico a las asociaciones vinculadas con el Tema de Discapacidad. 
 	isPrivate: 0
 	cost: 
 	objectives: Apoyar económicamente a las asociaciones, ONG´s (Caipad) relacionadas con el tema de discapacidad, para aSi también de esta manera contribuir a la comunidad con discapacidad del cantón de Alajuela una forma de ayuda para que puedan mejorar su calidad de vida al asistir a los Caipad o asociaciones.
@@ -2544,10 +1477,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -
-_____________________________________________________________________________________________________________________
-
-141	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Heredia/ACEFOPAVAS/serv. educativo/ACEFOPAVAS - Servicios educativos.docx
- X 
+	Name of item:  Servicios Educativos 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Heredia/ACEFOPAVAS/serv. educativo/ACEFOPAVAS - Servicios educativos.docx
+	Name of item:  Servicios Educativos 
 	isPrivate: 0
 	cost: Las personas con discapacidad pagan una mensualidad de 15 mil colones para materiales y una matrícula de 10 mil colones anual para mantenimiento. Adicional los asociados pagan 5 mil colones por mes.
 	objectives: Trabajar por medio de Terapia Ocupacional para estimular a las personas adultas con discapacidad.
@@ -2562,28 +1494,10 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-142	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Heredia/ACEFOPAVAS/serv. ocupacional/ACEFOPAVAS - Servicios ocupacionales.docx
- X 
-	isPrivate: 0
-	cost: Las personas con discapacidad pagan una mensualidad de 15 mil colones para materiales y una matrícula de 10 mil colones anual para mantenimiento. Adicional los asociados pagan 5 mil colones por mes.
-	objectives: Trabajar por medio de Terapia Ocupacional para estimular a las personas adultas con discapacidad.
-	reaches: Mejorar la calidad de vida a través de la terapia ocupacional, talleres, etc.
-	specificSupports: Profesores de educación de especial y artes industriales (se hacen manualidades, trabajan en agricultura e hidroponía, tiene un pequeño centro de reciclaje, hacen maquilas entre otras actividades).
-	typeSupports: Individuales
-	responsabilityPerson: Ocupación: Profesor de artes industriales Formación académica: Bachillerato de Ciencias Educación Experiencia: 8 años de trabajar en la asociación. Otras destrezas: Piscicultor y tecnología pesquera, técnicos de artes de pesca
-	cover: Heredia y San José
-	requirements: Ser mayores de 21 años. Tener un diagnóstico o epicrisis de la discapacidad. Deben movilizarse de forma independiente. Los asociados pagan 5 mil colones por mes para ser socios.
-	accesibility: Si reúne las condiciones.
-	others: Se trabaja todo el año lectivo según el plan del MEP, y se dan a los grupos herramientas de trabajo acuerdo a la capacidad de motora fina.
-	scheduleExtraoerdinary: 0
-	otherExtraordinaryAttention: No brinda información
-	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-143	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Heredia/ACIOSA SANTO DOMINGO/serv. educativo/ACIOSA - Serv. Educativos.docx
- X 
+	Name of item:  Servicios Educativos 
+	Name of item:  Servicios educativos. 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Heredia/ACIOSA SANTO DOMINGO/serv. educativo/ACIOSA - Serv. Educativos.docx
+	Name of item:  Servicios educativos. 
 	isPrivate: 0
 	cost: Cuotas fijas para paseos mensuales, alimentación y materiales (Al momento de la entrevista no brindaron el costo actual de la cuota).
 	objectives: Mejorar la calidad de vida a través del cuido y preparación a través de terapia ocupacional y artes industriales o manualidades para permitir la independencia.
@@ -2598,10 +1512,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-144	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Heredia/ACIOSA SANTO DOMINGO/centro de atención integral/ACIOSA - Centro de Atención Integral.docx
- X 
+	Name of item:  Centro Diurno de Atención Integral 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Heredia/ACIOSA SANTO DOMINGO/centro de atención integral/ACIOSA - Centro de Atención Integral.docx
+	Name of item:  Centro Diurno de Atención Integral 
 	isPrivate: 0
 	cost: Cuotas fijas para paseos mensuales, alimentación y materiales (Al momento de la entrevista no brindaron el costo actual de la cuota).
 	objectives: Mejorar la calidad de vida a través del cuido y preparación a través de terapia ocupacional y artes industriales o manualidades para permitir la independencia.
@@ -2616,10 +1529,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-145	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Heredia/ACIOSA SANTO DOMINGO/serv. ocupacional/ACIOSA - Serv. Ocupacionales.docx
- X 
+	Name of item:  Servicios ocupacionales. 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Heredia/ACIOSA SANTO DOMINGO/serv. ocupacional/ACIOSA - Serv. Ocupacionales.docx
+	Name of item:  Servicios ocupacionales. 
 	isPrivate: 0
 	cost: Cuotas fijas para paseos mensuales, alimentación y materiales (Al momento de la entrevista no brindaron el costo actual de la cuota).
 	objectives: Mejorar la calidad de vida a través del cuido y preparación a través de terapia ocupacional y artes industriales o manualidades para permitir la independencia.
@@ -2634,10 +1546,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-
-146	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Heredia/ACODIM/Prestamo de equipo/alquiler camas ortopédicas/ACODIM - Alquiler camas ortopedicas.docx
- X 
+	Name of item:  Ser. alquiler camas ortopedicas 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Heredia/ACODIM/Prestamo de equipo/alquiler camas ortopédicas/ACODIM - Alquiler camas ortopedicas.docx
+	Name of item:  Ser. alquiler camas ortopedicas 
 	isPrivate: 0
 	cost: Gratis
 	objectives: Permitir mejorar la calidad de vida del asociado.
@@ -2652,10 +1563,9 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 0
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: - Semanal
-_____________________________________________________________________________________________________________________
-
-147	|	/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Heredia/AAGRUPERI/Servicios Ocupacionales de Recreo/AAGRUPERI - Serv. Ocupacionales de Recreo.docx
- 
+	Name of item:  Serv. Ocupacionales de Recreo 
+/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Heredia/AAGRUPERI/Servicios Ocupacionales de Recreo/AAGRUPERI - Serv. Ocupacionales de Recreo.docx
+	Name of item:  Serv. Ocupacionales de Recreo 
 	isPrivate: 1
 	cost: Gratis
 	objectives: Desarrollar y fortalecer de habilidades y destrezas de las personas con discapacidad, mediante: terapia ocupacional, arte, deporte, recreación, cultura, educación.
@@ -2670,5 +1580,3 @@ ________________________________________________________________________________
 	scheduleExtraoerdinary: 1
 	otherExtraordinaryAttention: No brinda información
 	attentionFrecuency: -Diario
-_____________________________________________________________________________________________________________________
-

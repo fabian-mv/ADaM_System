@@ -920,6 +920,8 @@ def get_service_cost(text):
     needle = needle.replace("\'", "")
     needle = needle.replace("'", "")
     needle = needle.replace("\"", "")
+    if needle == "" or needle == "-":
+        needle = "No brinda información."
     print("\t\033[94mcost:\033[0m " + needle)
     return needle
 
@@ -937,6 +939,8 @@ def get_service_objectives(text):
     needle = needle.replace("\'", "")
     needle = needle.replace("'", "")
     needle = needle.replace("\"", "")
+    if needle == "" or needle == "-":
+        needle = "No brinda información."
     print("\t\033[94mobjectives:\033[0m " + needle)
     return needle
 
@@ -954,6 +958,8 @@ def get_service_reaches(text):
     needle = needle.replace("\'", "")
     needle = needle.replace("'", "")
     needle = needle.replace("\"", "")
+    if needle == "" or needle == "-":
+        needle = "No brinda información."
     print("\t\033[94mreaches:\033[0m " + needle)
     return needle
 
@@ -971,6 +977,8 @@ def get_service_specificSupports(text):
     needle = needle.replace("\'", "")
     needle = needle.replace("'", "")
     needle = needle.replace("\"", "")
+    if needle == "" or needle == "-":
+        needle = "No brinda información."
     print("\t\033[94mspecificSupports:\033[0m " + needle)
     return needle
 
@@ -1009,6 +1017,8 @@ def get_service_daysToOperations(text):
     needle = needle.replace("\'", "")
     needle = needle.replace("'", "")
     needle = needle.replace("\"", "")
+    if needle == "" or needle == "-":
+        needle = "No brinda información."
     print("\t\033[94mdaysToOperations:\033[0m " + needle)
     return needle
 
@@ -1025,6 +1035,8 @@ def get_service_responsabilityPerson(text):
     needle = needle.replace("\'", "")
     needle = needle.replace("'", "")
     needle = needle.replace("\"", "")
+    if needle == "" or needle == "-":
+        needle = "No brinda información."
     print("\t\033[94mresponsabilityPerson:\033[0m " + needle)
     return needle
 
@@ -1070,6 +1082,8 @@ def get_service_requirements(text):
     needle = needle.replace("\'", "")
     needle = needle.replace("'", "")
     needle = needle.replace("\"", "")
+    if needle == "" or needle == "-":
+        needle = "No brinda información."
     print("\t\033[94mrequirements:\033[0m " + needle)
     return needle
 
@@ -1086,6 +1100,8 @@ def get_service_accesibility(text):
     needle = needle.replace("\'", "")
     needle = needle.replace("'", "")
     needle = needle.replace("\"", "")
+    if needle == "" or needle == "-":
+        needle = "No brinda información."
     print("\t\033[94maccesibility:\033[0m " + needle)
     return needle
 
@@ -1102,6 +1118,8 @@ def get_service_others(text):
     needle = needle.replace("\'", "")
     needle = needle.replace("'", "")
     needle = needle.replace("\"", "")
+    if needle == "" or needle == "-":
+        needle = "No brinda información."
     print("\t\033[94mothers:\033[0m " + needle)
     return needle
 
@@ -1140,8 +1158,8 @@ def get_service_otherExtraordinaryAttention(text):
     if needle3.replace(" ", "") == "x" or needle3.replace(" ", "") == "X":
         result += " Servicio 24/7"
 
-    if result == "-":
-        result = "No brinda información"
+    if needle == "" or needle == "-":
+        needle = "No brinda información."
 
     print("\t\033[94motherExtraordinaryAttention:\033[0m " + result)
     return result
@@ -1165,6 +1183,8 @@ def get_service_attentionFrecuency(text):
     if needle2.replace(" ", "") == "x" or needle2.replace(" ", "") == "X":
         result += " Quincenal"
 
+    if needle == "" or needle == "-":
+        needle = "No brinda información."
     print("\t\033[94mattentionFrecuency:\033[0m " + result)
     return result
 
