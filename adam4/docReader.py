@@ -205,6 +205,14 @@ def get_item_name(text):
     if needle == "No brinda información":
         needle = "Clinicas Audición"
     print("\t\033[94mName of item:\033[0m " + needle)
+    needle = needle.replace("\n", " ")  # removes all newline characters from text
+    needle = needle.replace("\t", " ")  # replaces tabs with spaces
+    needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
+    needle = needle.rstrip()
+    needle = needle.lstrip()
+    needle = needle.replace("\'", "")
+    needle = needle.replace("'", "")
+    needle = needle.replace("\"", "")
     return needle
 
 
@@ -217,6 +225,14 @@ def get_item_name_service(text):
     end = "Localización del servicio de apoyo:"
     needle = text[text.find(start) + len(start): text.find(end)]
     print("\t\033[94mName of service:\033[0m " + needle)
+    needle = needle.replace("\n", " ")
+    needle = needle.replace("\t", " ")
+    needle = re.sub(' +', ' ', needle)
+    needle = needle.rstrip()
+    needle = needle.lstrip()
+    needle = needle.replace("\'", "")
+    needle = needle.replace("'", "")
+    needle = needle.replace("\"", "")
     return needle
 
 
@@ -230,6 +246,14 @@ def get_item_description_products(text):
         end = "Objetivos"
     needle = text[find_nth(text, start, 1) + len(start): text.find(end)]
     print("\t\033[94mDescription of product/service:\033[0m " + needle)
+    needle = needle.replace("\n", " ")  # removes all newline characters from text
+    needle = needle.replace("\t", " ")  # replaces tabs with spaces
+    needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
+    needle = needle.rstrip()
+    needle = needle.lstrip()
+    needle = needle.replace("\'", "")
+    needle = needle.replace("'", "")
+    needle = needle.replace("\"", "")
     return needle
 
 
@@ -243,6 +267,14 @@ def get_item_description_service(text):
         end = "Objetivos"
     needle = text[find_nth(text, start, 1) + len(start): text.find(end)]
     print("\t\033[94mDescription of product/service:\033[0m " + needle)
+    needle = needle.replace("\n", " ")  # removes all newline characters from text
+    needle = needle.replace("\t", " ")  # replaces tabs with spaces
+    needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
+    needle = needle.rstrip()
+    needle = needle.lstrip()
+    needle = needle.replace("\'", "")
+    needle = needle.replace("'", "")
+    needle = needle.replace("\"", "")
     return needle
 
 
@@ -251,6 +283,14 @@ def get_item_observations_products(text):
     end = "Para uso interno "
     needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
     print("\t\033[94mObservations:\033[0m " + needle)
+    needle = needle.replace("\n", " ")  # removes all newline characters from text
+    needle = needle.replace("\t", " ")  # replaces tabs with spaces
+    needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
+    needle = needle.rstrip()
+    needle = needle.lstrip()
+    needle = needle.replace("\'", "")
+    needle = needle.replace("'", "")
+    needle = needle.replace("\"", "")
     return needle
 
 
@@ -261,6 +301,14 @@ def get_item_observations_services(text):
         end = "."
     needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
     print("\t\033[94mObservations:\033[0m " + needle)
+    needle = needle.replace("\n", " ")  # removes all newline characters from text
+    needle = needle.replace("\t", " ")  # replaces tabs with spaces
+    needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
+    needle = needle.rstrip()
+    needle = needle.lstrip()
+    needle = needle.replace("\'", "")
+    needle = needle.replace("'", "")
+    needle = needle.replace("\"", "")
     return needle
 
 def get_item_typeDeficiency(text):
@@ -270,6 +318,14 @@ def get_item_typeDeficiency(text):
         end = "15. Horario del servicio"
     needle = text[text.find(start) + len(start): text.find(end)]
     print("\t\033[94mtypeDeficiency:\033[0m " + needle)
+    needle = needle.replace("\n", " ")  # removes all newline characters from text
+    needle = needle.replace("\t", " ")  # replaces tabs with spaces
+    needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
+    needle = needle.rstrip()
+    needle = needle.lstrip()
+    needle = needle.replace("\'", "")
+    needle = needle.replace("'", "")
+    needle = needle.replace("\"", "")
     return needle
 
 
@@ -277,11 +333,19 @@ def get_item_age(text):
     start = "Grupo etario (edad):"
     if text.find(start) == -1:
         print("\t\033[94mage:\033[0m " + "-")
-        return "-"
+        return {"age":"No brinda información."}
     end = "Tipo de discapacidad:"
     needle = text[text.find(start) + len(start): text.find(end)]
-    print("\t\033[94mage:\033[0m " + needle)
-    return needle
+    needle = needle.replace("\n", " ")  # removes all newline characters from text
+    needle = needle.replace("\t", " ")  # replaces tabs with spaces
+    needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
+    needle = needle.rstrip()
+    needle = needle.lstrip()
+    needle = needle.replace("\'", "")
+    needle = needle.replace("'", "")
+    needle = needle.replace("\"", "")
+    print("\t\033[94mage:\033[0m " + str({'age' : str(needle)}))
+    return {"age" : str(needle)}
 
 
 def get_item_sex(text):
@@ -352,6 +416,8 @@ def get_org_name_product(text):
         needle = needle.rstrip()
         needle = needle.lstrip()
         needle = needle.replace("\'" , "")
+        needle = needle.replace("'", "")
+        needle = needle.replace("\"" , "")
         if needle == "" or needle == " " or needle == "\n" or needle == " \n":
             print("\t\u001B[31mname:\033[0m No brinda información")
             return "No brinda información"
@@ -844,6 +910,14 @@ def get_service_cost(text):
     start = ") Costo del servicio: "
     end = "Tiempo/costo:"
     needle = text[text.find(start) + len(start): text.find(end)]
+    needle = needle.replace("\n", " ")
+    needle = needle.replace("\t", " ")
+    needle = re.sub(' +', ' ', needle)
+    needle = needle.rstrip()
+    needle = needle.lstrip()
+    needle = needle.replace("\'", "")
+    needle = needle.replace("'", "")
+    needle = needle.replace("\"", "")
     print("\t\033[94mcost:\033[0m " + needle)
     return needle
 
@@ -852,6 +926,14 @@ def get_service_objectives(text):
     start = "Objetivos: "
     end = " Apoyos específicos que brinda: "
     needle = text[find_nth(text , start , 2) + len(start): text.find(end)]
+    needle = needle.replace("\n", " ")
+    needle = needle.replace("\t", " ")
+    needle = re.sub(' +', ' ', needle)
+    needle = needle.rstrip()
+    needle = needle.lstrip()
+    needle = needle.replace("\'", "")
+    needle = needle.replace("'", "")
+    needle = needle.replace("\"", "")
     print("\t\033[94mobjectives:\033[0m " + needle)
     return needle
 
@@ -860,6 +942,14 @@ def get_service_reaches(text):
     start = "Descripción del servicio: Fines: "
     end = " Objetivos: "
     needle = text[text.find(start) + len(start): find_nth(text , end , 2)]
+    needle = needle.replace("\n", " ")
+    needle = needle.replace("\t", " ")
+    needle = re.sub(' +', ' ', needle)
+    needle = needle.rstrip()
+    needle = needle.lstrip()
+    needle = needle.replace("\'", "")
+    needle = needle.replace("'", "")
+    needle = needle.replace("\"", "")
     print("\t\033[94mreaches:\033[0m " + needle)
     return needle
 
@@ -868,6 +958,14 @@ def get_service_specificSupports(text):
     start = "Apoyos específicos que brinda: "
     end = " Tipo de apoyos: Individuales: ("
     needle = text[text.find(start) + len(start): text.find(end)]
+    needle = needle.replace("\n", " ")
+    needle = needle.replace("\t", " ")
+    needle = re.sub(' +', ' ', needle)
+    needle = needle.rstrip()
+    needle = needle.lstrip()
+    needle = needle.replace("\'", "")
+    needle = needle.replace("'", "")
+    needle = needle.replace("\"", "")
     print("\t\033[94mspecificSupports:\033[0m " + needle)
     return needle
 
@@ -890,23 +988,38 @@ def get_service_typeSupports(text):
         print("\t\033[94mtypeSupports:\033[0m Grupales")
         return "Grupales"
     else:
-        print("\t\033[94mtypeSupports:\033[0m -")
-        return "-"
+        print("\t\033[94mtypeSupports:\033[0m No brinda información.")
+        return "No brinda información."
 
 
 def get_service_daysToOperations(text):
     start = ") Disponibilidad: "
     end = "Otra información de interés (describa si son actividades, programas o proyectos u otros)"
     needle = text[text.find(start) + len(start): text.find(end)]
+    needle = needle.replace("\n", " ")
+    needle = needle.replace("\t", " ")
+    needle = re.sub(' +', ' ', needle)
+    needle = needle.rstrip()
+    needle = needle.lstrip()
+    needle = needle.replace("\'", "")
+    needle = needle.replace("'", "")
+    needle = needle.replace("\"", "")
     print("\t\033[94mdaysToOperations:\033[0m " + needle)
     return needle
-    #TODO generar json
 
 
 def get_service_responsabilityPerson(text):
     start = "Información sobre la persona encargada y/o el equipo de trabajo que brinda el servicio de apoyo (refiérase a ocupación del personal responsable, formación académica, experiencia reconocida, destrezas adicionales y otros de interés):"
     end = "12. Cobertura del servicio de apoyo:"
     needle = text[text.find(start) + len(start): text.find(end)]
+    needle = needle.replace("\n", " ")
+    needle = needle.replace("\t", " ")
+    needle = re.sub(' +', ' ', needle)
+    needle = needle.rstrip()
+    needle = needle.lstrip()
+    needle = needle.replace("\'", "")
+    needle = needle.replace("'", "")
+    needle = needle.replace("\"", "")
     print("\t\033[94mresponsabilityPerson:\033[0m " + needle)
     return needle
 
@@ -935,13 +1048,22 @@ def get_service_cover(text):
         print("\t\033[94mcover:\033[0m " + needle3)
         return needle3
     else:
-        return "-"
+        print("\t\033[94mtypeSupports:\033[0m No brinda información.")
+        return "No brinda información."
 
 
 def get_service_requirements(text):
     start = "Condiciones para acceder al servicio: Especifique los requisitos que se requieren para acceder al servicio. "
     end = " 14. Perfil de la persona usuaria:"
     needle = text[text.find(start) + len(start): text.find(end)]
+    needle = needle.replace("\n", " ")
+    needle = needle.replace("\t", " ")
+    needle = re.sub(' +', ' ', needle)
+    needle = needle.rstrip()
+    needle = needle.lstrip()
+    needle = needle.replace("\'", "")
+    needle = needle.replace("'", "")
+    needle = needle.replace("\"", "")
     print("\t\033[94mrequirements:\033[0m " + needle)
     return needle
 
@@ -950,6 +1072,14 @@ def get_service_accesibility(text):
     start = "17. Accesibilidad: Mencione si el servicio de atención reúne condiciones de accesibilidad según la normativa vigente. "
     end = "18. Observaciones:"
     needle = text[text.find(start) + len(start): text.find(end)]
+    needle = needle.replace("\n", " ")
+    needle = needle.replace("\t", " ")
+    needle = re.sub(' +', ' ', needle)
+    needle = needle.rstrip()
+    needle = needle.lstrip()
+    needle = needle.replace("\'", "")
+    needle = needle.replace("'", "")
+    needle = needle.replace("\"", "")
     print("\t\033[94maccesibility:\033[0m " + needle)
     return needle
 
@@ -958,6 +1088,14 @@ def get_service_others(text):
     start = "Observaciones: Indique aquí información que considere importante, detalle características del servicio que no queden reflejadas en los ítems anteriores."
     end = "Para uso interno"
     needle = text[text.find(start) + len(start): text.find(end)]
+    needle = needle.replace("\n", " ")
+    needle = needle.replace("\t", " ")
+    needle = re.sub(' +', ' ', needle)
+    needle = needle.rstrip()
+    needle = needle.lstrip()
+    needle = needle.replace("\'", "")
+    needle = needle.replace("'", "")
+    needle = needle.replace("\"", "")
     print("\t\033[94mothers:\033[0m " + needle)
     return needle
 
@@ -1043,7 +1181,7 @@ def test_service_functions(text):
     get_service_scheduleExtraoerdinary(text)
     get_service_otherExtraordinaryAttention(text)
     get_service_attentionFrecuency(text)
-    # items_idPk = fkId
+    # item idFk
 
 
 def test_service(fileMatrx):
@@ -1102,7 +1240,7 @@ def test_item_product_functions(text):
     # isAproved = 1
     # isChecked = 1
     # isDeleted = 0
-    # organizationsIdFk = fkId
+    get_item_organizationidPk_service(text)
 
 def test_item_service_functions(text):
     # idPk += 1
@@ -1131,7 +1269,7 @@ def test_item_service_functions(text):
 def test_item_product(fileMatrx):
     for i in range(len(fileMatrx)):
         print(str(i) + "\t|\t" + fileMatrx[i][0])
-        test_item_product_functions(get_text_from(fileMatrx[i][0] , True))
+        test_item_product_functions(get_text_from(fileMatrx[i][0] , False))
         print("_____________________________________________________________________________________________________________________")
         print("")
 
@@ -1300,16 +1438,16 @@ def generate_Items_Services_and_Products_dictionary(productMatrix, serviceMatrix
             temp["name"] = ">>" + get_item_name(text) + ">>"
             temp["description"] = ">>" + get_item_description_service(text) + ">>"
             temp["observations"] = ">>" + get_item_observations_services(text) + ">>"
-            temp["image1"] = ">>imagen>>" # encode_image(image)
+            temp["image1"] = encode_image("/home/fabian/Documents/repositories/adam_system/adam4/res/not-available-es.png")
             temp["image2"] = ">>imagen>>"
             temp["image3"] = ">>imagen>>"
             temp["visibility"] = 1
             temp["isProduct"] = 0
-            temp["onDateUpdated"] = ">>n>>"
+            temp["onDateUpdated"] = get_date()
             temp["onDateCreated"] = get_date()
-            temp["daysToOperations"] = get_date()
+            temp["daysToOperations"] = {}
             temp["typeDeficiency"] = ">>" + get_item_typeDeficiency(text) + ">>"
-            temp["age"] = {} # {"'age'" : str(get_item_age(text))}
+            temp["age"] = get_item_age(text)
             temp["sex"] = 2
             temp["isForPregnant"] = 1
             temp["isApproved"] = 1
@@ -1321,6 +1459,78 @@ def generate_Items_Services_and_Products_dictionary(productMatrix, serviceMatrix
             Items.append(copy.deepcopy(temp))
 
     return Items
+
+
+def generate_Products_dictionary(productMatrix, serviceMatrix):
+    Products = []
+    i = 1
+    ready = []
+
+    for row in productMatrix:
+        temp = {}
+        path = row[0]
+        text = get_text_from(path , False)
+        if get_item_name(text) not in ready:
+            print(path)
+            ready.append(get_item_name(text))
+            temp["idPk"] = i
+            temp["cost"] = get_product_cost(text)
+            temp["warranty"] = ">>No brinda información>>"
+            temp["inStock"] = get_product_instock(text)
+            temp["timeDelevery"] = ">>" + get_product_timeDelivery(text) + ">>"
+            temp["warrantyImported"] = ">>No brinda información>>"
+            temp["usefulLife"] = get_product_usefulLife(text)
+            temp["spareParts"] = ">>No brinda información>>"
+            temp["primaryFunctionalities"] = get_product_primaryFuncionalities(text)
+            temp["secondlyFunctionalities"] = ">>No brinda información>>"
+            temp["brand"] = get_product_brand(text)
+            temp["model"] = ">>No brinda información>>"
+            temp["height"] = ">>No brinda información>>"
+            temp["width"] = ">>No brinda información>>"
+            temp["deep"] = ">>No brinda información>>"
+            temp["weight"] = ">>No brinda información>>"
+            temp["Items_idPk"] = 1
+            i += 1
+
+            Products.append(copy.deepcopy(temp))
+
+    return Products
+
+
+def generate_Services_dictionary(productMatrix, serviceMatrix):
+    Services = []
+    i = 1
+    ready = []
+
+    for row in serviceMatrix:
+        temp = {}
+        path = row[0]
+        text = get_text_from(path , False)
+        if get_item_name(text) not in ready:
+            print(path)
+            ready.append(get_item_name(text))
+            temp["idPk"] = i
+            temp["isPrivate"] = get_service_isPrivate(text)
+            temp["cost"] =  ">>" + get_service_cost(text) + ">>"
+            temp["objectives"] = ">>" + get_service_objectives(text) + ">>"
+            temp["reaches"] = ">>" + get_service_reaches(text) + ">>"
+            temp["specificSupports"] = ">>" + get_service_specificSupports(text)  + ">>"
+            temp["typeSupports"] = ">>" + get_service_typeSupports(text) + ">>"
+            temp["daysToOperations"] = {}
+            temp["responsabilityPerson"] = ">>" + get_service_responsabilityPerson(text) + ">>"
+            temp["cover"] = ">>" + get_service_cover(text) + ">>"
+            temp["requirements"] = ">>" + get_service_requirements(text) + ">>"
+            temp["accesibility"] = ">>" + get_service_accesibility(text) + ">>"
+            temp["others"] = ">>" + get_service_others(text) + ">>"
+            temp["scheduleExtraordinary"] = get_service_scheduleExtraoerdinary(text)
+            temp["otherExtraordinaryAttention"] = ">>" + get_service_otherExtraordinaryAttention(text) + ">>"
+            temp["attentionFrecuency"] = ">>" + get_service_attentionFrecuency(text) + ">>"
+            temp["Items_idPk"] = 1
+            i += 1
+
+            Services.append(copy.deepcopy(temp))
+
+    return Services
 
 
 def dic2csv_orgs(dictionaries):
@@ -1349,7 +1559,7 @@ def dic2csv_orgs(dictionaries):
     file.close()
 
 def dic2csv_items(dictionaries):
-    cols_name = ["idPk" , "code" , "name" , "description" , "observations" , "image1" , "image2" , "image3" , "visibility" , "isProduct" , "onDateUpdated" , "onDateCreated" , "daysToOperations" , "typeDeficiency" , "age" , "sex" , "isForPregnant" , "isApproved" , "isChecked" , "organizationsIdFk" , "isDeleted"]
+    cols_name = ["idPk" , "code" , "name" , "description" , "observations" , "image1" , "image2" , "image3" , "visibility" , "isProduct" , "onDateUpdated" , "onDateCreated" , "daysToOperations" , "typeDeficiency" , "age" , "sex" , "isForPregnant" , "isApproved" , "isChecked" , "isDeleted" , "organizationsIdFk"]
     file = open("toExport.csv", "w")
 
     with file:
@@ -1364,7 +1574,31 @@ def dic2csv_items(dictionaries):
     old = file.read()
     file.close()
     new = old.replace(">>", "\"")
-    new = new.replace("\" ;\"" , "\";\"")
+    new = new.replace("{'age': '" , "{\"'age'\": \"'")
+    new = new.replace("'}" , "'\"}")
+    file = open("toExport.csv", "w")
+    file.write(new)
+    file.close()
+
+
+
+def dic2csv_products(dictionaries):
+    cols_name = ["idPk", "cost", "warranty", "inStock", "timeDelevery", "warrantyImported", "usefulLife", "spareParts","primaryFunctionalities", "secondlyFunctionalities", "brand", "model", "height", "width", "deep", "weight","Items_idPk"]
+    file = open("toExport.csv", "w")
+
+    with file:
+        csv.register_dialect("toMYSQL", delimiter=";")
+        writer = csv.DictWriter(file, fieldnames=cols_name, dialect="toMYSQL")
+        writer.writeheader()
+        for dict in dictionaries:
+            writer.writerow(dict)
+        file.close()
+
+    file = open("toExport.csv", "r")
+    old = file.read()
+    file.close()
+    new = old.replace(">>", "\"")
+    new = new.replace("\" ;\"", "\";\"")
     new = new.replace("\"; \"", "\";\"")
     new = new.replace("\" ; \"", "\";\"")
     new = new.replace("\"\";\"", "\";\"")
@@ -1374,6 +1608,38 @@ def dic2csv_items(dictionaries):
     file = open("toExport.csv", "w")
     file.write(new)
     file.close()
+
+
+
+def dic2csv_services(dictionaries):
+    cols_name = ["idPk", "isPrivate", "cost", "objectives", "reaches", "specificSupports", "typeSupports", "daysToOperations",
+     "responsabilityPerson", "cover", "requirements", "accesibility", "others", "scheduleExtraordinary",
+     "otherExtraordinaryAttention", "attentionFrecuency", "Items_idPk"]
+    file = open("toExport.csv", "w")
+
+    with file:
+        csv.register_dialect("toMYSQL", delimiter=";")
+        writer = csv.DictWriter(file, fieldnames=cols_name, dialect="toMYSQL")
+        writer.writeheader()
+        for dict in dictionaries:
+            writer.writerow(dict)
+        file.close()
+
+    file = open("toExport.csv", "r")
+    old = file.read()
+    file.close()
+    new = old.replace(">>", "\"")
+    new = new.replace("\" ;\"", "\";\"")
+    new = new.replace("\"; \"", "\";\"")
+    new = new.replace("\" ; \"", "\";\"")
+    new = new.replace("\"\";\"", "\";\"")
+    new = new.replace("\";\"\"", "\";\"")
+    new = new.replace(" \";\"", "\";\"")
+    new = new.replace("\";\" ", "\";\"")
+    file = open("toExport.csv", "w")
+    file.write(new)
+    file.close()
+
 
 # ------------------------------------MAIN------------------------------------ #
 
@@ -1387,15 +1653,13 @@ def main():
 
     #print(get_item_name(text))
 
-    dictionary = generate_Items_Services_and_Products_dictionary(productMatrix, serviceMatrix)
+    # dictionary = generate_Items_Services_and_Products_dictionary(productMatrix, serviceMatrix)
+    #
+    # dic2csv_items(dictionary)
+
+    test_service(serviceMatrix)
 
 
-
-    dic2csv_items(dictionary)
-
-
-
-# TODO AL FINAL: VERIFICAR QUE TODAS LAS FUNCIONES OBLIGATORIAS RETORNEN ALGO QUE SEA DEL VALOR REQUERIDO POR SQL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 
