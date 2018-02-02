@@ -895,9 +895,10 @@ def get_org_typesidPk_service(text):
 # ------------------------------------SERVICES------------------------------------ #
 
 def get_service_isPrivate(text):
-    start = "Costo: Indique si es un servicio público, privado y el costo del mismo en términos de tiempo / costo. Servicio público ("
+    haystack = text[text.find(" privado y el costo del mismo en t") : text.find("Descripción del servicio")]
+    start = "Servicio público ("
     end = ") Servicio privado ("
-    needle = text[text.find(start) + len(start): text.find(end) + 1]
+    needle = haystack[haystack.find(start) + len(start) : haystack.find(end)]
     if needle.replace(" " , "") == "X" or needle.replace(" " , "") == "x":
         print("\t\033[94misPrivate:\033[0m 0")
         return 0
@@ -907,9 +908,10 @@ def get_service_isPrivate(text):
 
 
 def get_service_cost(text):
+    haystack = text[text.find("Costo: Indique si es un ") : text.find("Descripción del servicio")]
     start = ") Costo del servicio: "
     end = "Tiempo/costo:"
-    needle = text[text.find(start) + len(start): text.find(end)]
+    needle = haystack[haystack.find(start) + len(start): haystack.find(end)]
     needle = needle.replace("\n", " ")
     needle = needle.replace("\t", " ")
     needle = re.sub(' +', ' ', needle)
@@ -923,9 +925,10 @@ def get_service_cost(text):
 
 
 def get_service_objectives(text):
+    haystack = text[text.find("Descripción del servicio") : text.find("Información sobre la persona encargada")]
     start = "Objetivos: "
     end = " Apoyos específicos que brinda: "
-    needle = text[find_nth(text , start , 2) + len(start): text.find(end)]
+    needle = haystack[haystack.find(start) + len(start): haystack.find(end)]
     needle = needle.replace("\n", " ")
     needle = needle.replace("\t", " ")
     needle = re.sub(' +', ' ', needle)
@@ -939,9 +942,10 @@ def get_service_objectives(text):
 
 
 def get_service_reaches(text):
+    haystack = text[text.find("Descripción del servicio"): text.find("Información sobre la persona encargada")]
     start = "Descripción del servicio: Fines: "
     end = " Objetivos: "
-    needle = text[text.find(start) + len(start): find_nth(text , end , 2)]
+    needle = haystack[haystack.find(start) + len(start): haystack.find(end)]
     needle = needle.replace("\n", " ")
     needle = needle.replace("\t", " ")
     needle = re.sub(' +', ' ', needle)
@@ -955,9 +959,10 @@ def get_service_reaches(text):
 
 
 def get_service_specificSupports(text):
+    haystack = text[text.find("Descripción del servicio") : text.find("Información sobre la persona encargada y/o")]
     start = "Apoyos específicos que brinda: "
-    end = " Tipo de apoyos: Individuales: ("
-    needle = text[text.find(start) + len(start): text.find(end)]
+    end = " Tipo de apoyo"
+    needle = haystack[haystack.find(start) + len(start): haystack.find(end)]
     needle = needle.replace("\n", " ")
     needle = needle.replace("\t", " ")
     needle = re.sub(' +', ' ', needle)
@@ -1025,13 +1030,14 @@ def get_service_responsabilityPerson(text):
 
 
 def get_service_cover(text):
+    haystack = text[text.find("Cobertura del servicio de apoyo") : text.find("Condiciones para acceder al servicio")]
     start = "Cobertura del servicio de apoyo: Nacional: ("
     mid1 = ") Provincias (si no es cobertura nacional), describir las provincias: "
     mid2 = " Cantones (describir qué cantones cubre el servicio de apoyo): "
     end = " Se brinda de manera telef"
-    needle1 = text[text.find(start) + len(start): text.find(mid1)]
-    needle2 = text[text.find(mid1) + len(mid1): text.find(mid2)]
-    needle3 = text[text.find(mid2) + len(mid2): text.find(end)]
+    needle1 = haystack[haystack.find(start) + len(start): haystack.find(mid1)]
+    needle2 = haystack[haystack.find(mid1) + len(mid1): haystack.find(mid2)]
+    needle3 = haystack[haystack.find(mid2) + len(mid2): haystack.find(end)]
 
     if needle1.replace(" " , "") == "x" or needle1.replace(" " , "") == "X":
         print("\t\033[94mcover:\033[0m Nacional")
@@ -1044,7 +1050,7 @@ def get_service_cover(text):
         print("\t\033[94mcover:\033[0m " + needle2)
         return needle2
 
-    if needle3 != "":
+    if needle3 != "" and len(needle3) < 50:
         print("\t\033[94mcover:\033[0m " + needle3)
         return needle3
     else:
@@ -1134,6 +1140,9 @@ def get_service_otherExtraordinaryAttention(text):
     if needle3.replace(" ", "") == "x" or needle3.replace(" ", "") == "X":
         result += " Servicio 24/7"
 
+    if result == "-":
+        result = "No brinda información"
+
     print("\t\033[94motherExtraordinaryAttention:\033[0m " + result)
     return result
 
@@ -1172,7 +1181,7 @@ def test_service_functions(text):
     get_service_reaches(text)
     get_service_specificSupports(text)
     get_service_typeSupports(text)
-    get_service_daysToOperations(text)
+    # get_service_daysToOperations(text)
     get_service_responsabilityPerson(text)
     get_service_cover(text)
     get_service_requirements(text)
@@ -1187,7 +1196,7 @@ def test_service_functions(text):
 def test_service(fileMatrx):
     for i in range(len(fileMatrx)):
         print(str(i) + "\t|\t" + fileMatrx[i][0])
-        test_service_functions(get_text_from(fileMatrx[i][0] , True))
+        test_service_functions(get_text_from(fileMatrx[i][0] , False))
         print("_____________________________________________________________________________________________________________________")
         print("")
 
@@ -1598,13 +1607,6 @@ def dic2csv_products(dictionaries):
     old = file.read()
     file.close()
     new = old.replace(">>", "\"")
-    new = new.replace("\" ;\"", "\";\"")
-    new = new.replace("\"; \"", "\";\"")
-    new = new.replace("\" ; \"", "\";\"")
-    new = new.replace("\"\";\"", "\";\"")
-    new = new.replace("\";\"\"", "\";\"")
-    new = new.replace(" \";\"", "\";\"")
-    new = new.replace("\";\" ", "\";\"")
     file = open("toExport.csv", "w")
     file.write(new)
     file.close()
@@ -1629,13 +1631,6 @@ def dic2csv_services(dictionaries):
     old = file.read()
     file.close()
     new = old.replace(">>", "\"")
-    new = new.replace("\" ;\"", "\";\"")
-    new = new.replace("\"; \"", "\";\"")
-    new = new.replace("\" ; \"", "\";\"")
-    new = new.replace("\"\";\"", "\";\"")
-    new = new.replace("\";\"\"", "\";\"")
-    new = new.replace(" \";\"", "\";\"")
-    new = new.replace("\";\" ", "\";\"")
     file = open("toExport.csv", "w")
     file.write(new)
     file.close()
@@ -1648,16 +1643,13 @@ def main():
     serviceMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo")
     productMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/")
 
-    #path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/Municipalidad Carrillo/Serv. Educativo/Municipalidad de Carillo - Serv. Educativo.docx"
+    #path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ASOC PERSONAS CON DISCAPACIDAD UPALA/Centro Atención Integral/Asoc. PcD Upala - Centro Atención Integral.docx"
     #text = get_text_from(path , True)
 
-    #print(get_item_name(text))
+    #print(text)
 
-    # dictionary = generate_Items_Services_and_Products_dictionary(productMatrix, serviceMatrix)
-    #
-    # dic2csv_items(dictionary)
-
-    test_service(serviceMatrix)
+    dictionary = generate_Services_dictionary(productMatrix, serviceMatrix)
+    dic2csv_services(dictionary)
 
 
 
