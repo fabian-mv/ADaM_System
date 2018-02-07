@@ -145,9 +145,13 @@ def get_product_instock(text):
 
 
 def get_product_timeDelivery(text):
-    start = "Tiempo de duración del trámite de importación: "
+    start = "Tiempo de duración del trámite de importación"
     end = " La garantía es igual"
+    if text.find(start) == -1:
+        start = "Tiempo de duración del trámite de fabricación"
     needle = text[text.find(start) + len(start): text.find(end)]
+    needle = needle.replace(": " , "")
+    needle = needle.replace(":", "")
     print("\t\033[94mtimeDelivery:\033[0m " + needle)
     return needle
 
@@ -184,6 +188,10 @@ def get_product_brand(text):
     start = "Marca(s):"
     if text.find(start) == -1:
         start = "Marca (s):"
+
+    if text.find(start) == -1:
+        print("\t\033[94mbrand:\033[0m No brinda información")
+        return "No brinda información."
     end = " Garantía:"
     needle = text[text.find(start) + len(start): text.find(end)]
     print("\t\033[94mbrand:\033[0m " + needle)
@@ -216,24 +224,24 @@ def get_item_name(text):
     return needle
 
 
-def get_item_name_service(text):
-    start = "de apoyo que se brinda "
-    if text.find(start) == -1:
-        start = "de apoyo como lo enuncia la entidad que lo brinda."
-        if text.find(start) == -1:
-            start = "de apoyo, como lo enuncia la entidad que lo brinda."
-    end = "Localización del servicio de apoyo:"
-    needle = text[text.find(start) + len(start): text.find(end)]
-    print("\t\033[94mName of service:\033[0m " + needle)
-    needle = needle.replace("\n", " ")
-    needle = needle.replace("\t", " ")
-    needle = re.sub(' +', ' ', needle)
-    needle = needle.rstrip()
-    needle = needle.lstrip()
-    needle = needle.replace("\'", "")
-    needle = needle.replace("'", "")
-    needle = needle.replace("\"", "")
-    return needle
+# def get_item_name_service(text):
+#     start = "de apoyo que se brinda "
+#     if text.find(start) == -1:
+#         start = "de apoyo como lo enuncia la entidad que lo brinda."
+#         if text.find(start) == -1:
+#             start = "de apoyo, como lo enuncia la entidad que lo brinda."
+#     end = "Localización del servicio de apoyo:"
+#     needle = text[text.find(start) + len(start): text.find(end)]
+#     print("\t\033[94mName of service:\033[0m " + needle)
+#     needle = needle.replace("\n", " ")
+#     needle = needle.replace("\t", " ")
+#     needle = re.sub(' +', ' ', needle)
+#     needle = needle.rstrip()
+#     needle = needle.lstrip()
+#     needle = needle.replace("\'", "")
+#     needle = needle.replace("'", "")
+#     needle = needle.replace("\"", "")
+#     return needle
 
 
 def get_item_description_products(text):
@@ -409,7 +417,6 @@ def get_org_name_product(text):
     end = "4. Descripción del ente que brinda el producto de apoyo"
     if text.find(start) != -1 and text.find(end) != -1:
         needle = text[text.find(start) + len(start): text.find(end)]
-        print("\t\033[94mname:\033[0m " + needle)
         needle = needle.replace("\n", " ")  # removes all newline characters from text
         needle = needle.replace("\t", " ")  # replaces tabs with spaces
         needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
@@ -418,14 +425,15 @@ def get_org_name_product(text):
         needle = needle.replace("\'" , "")
         needle = needle.replace("'", "")
         needle = needle.replace("\"" , "")
+       # print("\t\033[94mname:\033[0m " + needle)
         if needle == "" or needle == " " or needle == "\n" or needle == " \n":
-            print("\t\u001B[31mname:\033[0m No brinda información")
+            #print("\t\u001B[31mname:\033[0m No brinda información")
             return "No brinda información"
         else:
             return needle
 
     else:
-        print("\t\u001B[31mname:\033[0m No brinda información")
+        #print("\t\u001B[31mname:\033[0m No brinda información")
         return "No brinda información"
 
 
@@ -434,6 +442,14 @@ def get_org_email_product(text):
     end = "Web del servicio:"
     if text.find(start) != -1 and text.find(end) != -1:
         needle = text[text.find(start) + len(start): text.find(end)]
+        needle = needle.replace("\n", " ")  # removes all newline characters from text
+        needle = needle.replace("\t", " ")  # replaces tabs with spaces
+        needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
+        needle = needle.rstrip()
+        needle = needle.lstrip()
+        needle = needle.replace("\'" , "")
+        needle = needle.replace("'", "")
+        needle = needle.replace("\"" , "")
         if needle.replace(" " , "") == "":
             print("\t\u001B[31memail:\033[0m No brinda información")
             return "No brinda información"
@@ -452,6 +468,14 @@ def get_org_web_product(text):
     end = "Redes sociales:"
     if text.find(start) != -1 and  text.find(start) != -1:
         needle = text[text.find(start) + len(start): text.find(end)]
+        needle = needle.replace("\n", " ")  # removes all newline characters from text
+        needle = needle.replace("\t", " ")  # replaces tabs with spaces
+        needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
+        needle = needle.rstrip()
+        needle = needle.lstrip()
+        needle = needle.replace("\'" , "")
+        needle = needle.replace("'", "")
+        needle = needle.replace("\"" , "")
         print("\t\033[94mweb:\033[0m " + needle)
         needle = needle.replace("\"", "")
         return needle
@@ -513,6 +537,14 @@ def get_org_wazeAddress_product(text):
     end = "Ubicación"
     if text.find(start) != -1 and find_nth(text, end, 1) != -1:
         needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
+        needle = needle.replace("\n", " ")  # removes all newline characters from text
+        needle = needle.replace("\t", " ")  # replaces tabs with spaces
+        needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
+        needle = needle.rstrip()
+        needle = needle.lstrip()
+        needle = needle.replace("\'" , "")
+        needle = needle.replace("'", "")
+        needle = needle.replace("\"" , "")
         urls = re.findall(urlmarker.WEB_URL_REGEX, needle)
         print("\t\033[94mwazeAddress:\033[0m " + str(urls))
         return urls
@@ -527,8 +559,15 @@ def get_org_reaches_product(text):
     end = "Misión:"
     if text.find(start) != -1 and  find_nth(text, end, 1) != -1:
         needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
+        needle = needle.replace("\n", " ")  # removes all newline characters from text
+        needle = needle.replace("\t", " ")  # replaces tabs with spaces
+        needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
+        needle = needle.rstrip()
+        needle = needle.lstrip()
+        needle = needle.replace("\'" , "")
+        needle = needle.replace("'", "")
+        needle = needle.replace("\"" , "")
         print("\t\033[94mreaches:\033[0m " + needle)
-        needle = needle.replace("\"", "")
         return needle
 
     else:
@@ -541,8 +580,15 @@ def get_org_mision_product(text):
     end = " Visión: "
     if text.find(start) != -1 and text.find(start) != -1:
         needle = text[text.find(start) + len(start): text.find(end)]
+        needle = needle.replace("\n", " ")  # removes all newline characters from text
+        needle = needle.replace("\t", " ")  # replaces tabs with spaces
+        needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
+        needle = needle.rstrip()
+        needle = needle.lstrip()
+        needle = needle.replace("\'" , "")
+        needle = needle.replace("'", "")
+        needle = needle.replace("\"" , "")
         print("\t\033[94mmision:\033[0m " + needle)
-        needle = needle.replace("\"", "")
         return needle
 
     else:
@@ -557,8 +603,15 @@ def get_org_vision_product(text):
         end = "Señale el tipo"
     if text.find(start) != -1 and find_nth(text, end, 1) != -1:
         needle = text[text.find(start) + len(start): find_nth(text, end, 1)]
+        needle = needle.replace("\n", " ")  # removes all newline characters from text
+        needle = needle.replace("\t", " ")  # replaces tabs with spaces
+        needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
+        needle = needle.rstrip()
+        needle = needle.lstrip()
+        needle = needle.replace("\'" , "")
+        needle = needle.replace("'", "")
+        needle = needle.replace("\"" , "")
         print("\t\033[94mvision:\033[0m " + needle)
-        needle = needle.replace("\"", "")
         return needle
 
     else:
@@ -571,9 +624,16 @@ def get_org_objective_product(text):
     end = " Señale el tipo de oferente del servicio de apoyo"
     if text.find(start) != -1 and text.find(end) != -1:
         needle = text[text.find(start) + len(start): text.find(end)]
-        print("\t\033[94mobjective:\033[0m " + needle)
+        needle = needle.replace("\n", " ")  # removes all newline characters from text
+        needle = needle.replace("\t", " ")  # replaces tabs with spaces
+        needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
+        needle = needle.rstrip()
+        needle = needle.lstrip()
+        needle = needle.replace("\'" , "")
+        needle = needle.replace("'", "")
+        needle = needle.replace("\"" , "")
         needle = needle.replace("5." , "")
-        needle = needle.replace("\"", "")
+        print("\t\033[94mobjective:\033[0m " + needle)
         return needle
 
     else:
@@ -587,10 +647,18 @@ def get_org_dayOperations_product(text):
     end = "Forma de atención:"
     if text.find(start) != -1 and text.find(end) != -1:
         needle = text[text.find(start) + len(start): text.find(end)]
+        needle = needle.replace("\n", " ")  # removes all newline characters from text
+        needle = needle.replace("\t", " ")  # replaces tabs with spaces
+        needle = re.sub(' +', ' ', needle)  # removes all repeated whitespace from text
+        needle = needle.rstrip()
+        needle = needle.lstrip()
+        needle = needle.replace("\'" , "")
+        needle = needle.replace("'", "")
+        needle = needle.replace("\"" , "")
         print("\t\033[94mdayOperations:\033[0m " + needle)
         needle = needle.replace("13.", "")
-        needle = needle.replace("\"", "")
         return needle
+
 
     else:
         print("\t\u001B[31mdayOperations:\033[0m No brinda información")
@@ -1189,6 +1257,247 @@ def get_service_attentionFrecuency(text):
     return result
 
 
+def get_service_orgIdFk(text):
+    names = {'53': 'Alquiler Médicos ByB - Servicio Sanitario Portatil', '43': 'Casa Hogar Comunitario', '40': 'Servicio alquiler o préstamo de Camas Hospitalarias.', '3': 'Terapia de Lenguaje', '78': ': Psicología', '10': 'Alquiler sillas de ruedas.', '84': 'Servicios Educativos', '74': ': Artes Plásticas', '20': 'Servicio de audiología en general con fabricación de audífonos.', '54': 'Alquiler Médicos ByB - Silla Baño', '86': 'Centro Diurno de Atención Integral', '48': 'Serv. Capacitación', '82': 'Serv. Asesoría Legal', '26': 'Apoyos Didácticos', '44': 'Serv. Apoyo Emocional', '23': 'Terapia Física y Rehabilitación', '17': 'Nutrición', '36': 'Centro educativo - Educación especial curricular.', '80': 'Serv. Apoyo Económico', '33': 'Audiometría', '65': 'Artes Industriales', '49': 'Serv. Educación Especial', '55': 'Alquiler Médicos ByB - Andaderas', '14': 'Centro Atención Integral', '88': 'Ser. alquiler camas ortopedicas', '46': 'Centro de atención integral', '61': 'Terapia Física.', '66': 'Educación Musical', '63': 'Hogar de cuido para personas con parálisis cerebral en situación de abandono', '58': 'Alquiler Médicos ByB - Muletas', '70': 'Terapia de lenguaje', '87': 'Servicios ocupacionales.', '19': 'Odontología', '71': ': Terapia Física', '81': 'Taller Ebanistería', '1': 'Serv. Educativo: La biblioteca posee un programa, con cursos mejoramiento de motora fina, junto con la Trabajadora Social que busca mejorar la calidad de vida de la familia.', '16': 'Terapia ocupacional', '38': 'Servicio alquiler o préstamo de sillas ruedas no ortopedicas.', '75': ': Educación Física', '47': 'Terapia del lenguaje, habla y voz', '34': 'Serv. Apoyo Legal', '62': 'Educación Especial', '72': ': Estimulación Temprana', '35': 'Centro de Atención Integral', '57': 'Alquiler Médicos ByB - Sillas Ruedas', '59': 'Animales Equinoterapia - Animales Equinoterapia Costa Rica.', '50': 'Serv. Gestión y canalización de fondos para proyecto de bien social.', '89': 'Serv. Ocupacionales de Recreo', '22': 'Enseñanza de Lesco', '79': ': Educación Especial', '12': 'Audiometrías', '30': 'Presupuesto para apoyar ONG’S que atienden personas con discapacidad en el Cantón.', '64': 'Educación para el Hogar', '56': 'Alquiler Médicos ByB - Cama Hospitalaria', '9': 'Terapia Física', '73': ': Música', '77': ': Artes Industriales', '32': 'Serv. Educativos.', '25': 'Adecuación Curricular No Significativa', '51': 'Capacitaciones a personas, entidades privadas o públicas en el cantón.', '13': 'Serv. Educativos', '42': 'Serv. Terapia Ocupacional', '15': 'Capacitaciones', '18': 'Trabajo Social', '39': 'Serv. Alquiler de Andaderas', '6': 'Ortopédia.', '5': 'Asesoría técnica sobre petición de ayudas o procedimientos estatales.', '45': 'Serv. Equinoterapia', '85': 'Servicios educativos.', '52': 'Formación Humana', '11': 'Terapia Ocupacional', '29': 'Serv. educativos', '8': 'Psiquiatría', '2': 'Psicología', '21': 'Estimulación Temprana', '4': 'Asesoría Emocional', '83': 'Apoyo Económico a las asociaciones vinculadas con el Tema de Discapacidad.', '24': 'Serv. Educativos (Manualidades para la independencia)', '68': 'Artes Plásticas', '60': 'Asistencia Médica Gratuita', '41': 'Serv. Alquiler de Muletas', '69': 'Terapia física', '31': 'Serv. Educativos: Manualidades.', '76': ': Terapía Lenguaje', '37': 'Servicio asistencia económica para pacientes en fase terminal', '27': 'Serv. Terapia Física', '7': 'Fisioterapia', '67': 'Educación Física', '28': 'Centro atención integral.'}
+    needle = str(get_item_name(text))
+    print(needle)
+    for key, value in names.items():
+        value = str(value)
+        if value == needle:
+            print("\t\033[94morganizationsIdFk:\033[0m " + key)
+            return key
+
+    print("\t\u001B[31morganizationsIdFk:\033[0m ERROR")
+    return 100
+
+
+# ------------------------------------REGIONS------------------------------------ #
+
+def get_region_product(text): # TODO esta es la vara mas ineficiente del mundo
+    if text.find("Localización del servicio de apoyo") == -1:
+        haystack = text[text.find("Indique los siguientes datos del lugar donde se ubica"): text.find("Redes sociales")]
+    else:
+        haystack = text[text.find("Localización del servicio de apoyo") : text.find("Redes sociales")]
+    start = "Provincia:"
+    mid = "Cantón:"
+    mid2 = "Distrito:"
+    end = "Dirección exacta"
+
+    provincia = haystack[haystack.find(start) + len(start): haystack.find(mid)]
+    canton = haystack[haystack.find(mid) + len(mid): haystack.find(mid2)]
+    distrito = haystack[haystack.find(mid2) + len(mid2): haystack.find(end)]
+
+    provincia = provincia.replace("\n", " ")
+    provincia = provincia.replace("\t", " ")
+    provincia = re.sub(' +', ' ', provincia)
+    provincia = provincia.rstrip()
+    provincia = provincia.lstrip()
+    provincia = provincia.replace("\'", "")
+    provincia = provincia.replace("'", "")
+    provincia = provincia.replace("\"", "")
+    provincia = provincia.replace(".", "")
+    if provincia == "":
+        provincia = "No brinda información."
+
+    canton = canton.replace("\n", " ")
+    canton = canton.replace("\t", " ")
+    canton = re.sub(' +', ' ', canton)
+    canton = canton.rstrip()
+    canton = canton.lstrip()
+    canton = canton.replace("\'", "")
+    canton = canton.replace("'", "")
+    canton = canton.replace("\"", "")
+    canton = canton.replace(".", "")
+    if canton == "":
+        canton = "No brinda información."
+
+    distrito = distrito.replace("\n", " ")
+    distrito = distrito.replace("\t", " ")
+    distrito = re.sub(' +', ' ', distrito)
+    distrito = distrito.rstrip()
+    distrito = distrito.lstrip()
+    distrito = distrito.replace("\'", "")
+    distrito = distrito.replace("'", "")
+    distrito = distrito.replace("\"", "")
+    distrito = distrito.replace(".", "")
+    if distrito == "":
+        distrito = "No brinda información."
+
+    if haystack.find(start) == -1:
+        provincia = "No brinda información."
+
+    if haystack.find(mid) == -1:
+        canton = "No brinda información."
+
+    if haystack.find(mid2) == -1:
+        distrito = "No brinda información."
+
+    print("\t\033[94mProvincia:\033[0m " + provincia + " \033[94mCantón:\033[0m " + canton + " \033[94mDistrito:\033[0m " + distrito)
+    return str(provincia + "|" + canton + "|" + distrito)
+
+
+def get_region_service(text): # TODO esta es la vara mas ineficiente del mundo
+    haystack = ""
+    if text.find("Localización del servicio de apoyo") == -1:
+        haystack = text[text.find("Indique los siguientes datos del lugar donde se ubica"): text.find("Redes sociales")]
+    else:
+        haystack = text[text.find("Localización del servicio de apoyo") : text.find("Redes sociales")]
+
+
+
+    start = "Provincia:"
+    mid = "Cantón:"
+    mid2 = "Distrito:"
+    end = "Dirección exacta"
+
+    provincia = haystack[haystack.find(start) + len(start): haystack.find(mid)]
+    canton = haystack[haystack.find(mid) + len(mid): haystack.find(mid2)]
+    distrito = haystack[haystack.find(mid2) + len(mid2): haystack.find(end)]
+
+    provincia = provincia.replace("\n", " ")
+    provincia = provincia.replace("\t", " ")
+    provincia = re.sub(' +', ' ', provincia)
+    provincia = provincia.rstrip()
+    provincia = provincia.lstrip()
+    provincia = provincia.replace("\'", "")
+    provincia = provincia.replace("'", "")
+    provincia = provincia.replace("\"", "")
+    provincia = provincia.replace(".", "")
+    if provincia == "" or provincia == "-":
+        provincia = "No brinda información."
+
+    canton = canton.replace("\n", " ")
+    canton = canton.replace("\t", " ")
+    canton = re.sub(' +', ' ', canton)
+    canton = canton.rstrip()
+    canton = canton.lstrip()
+    canton = canton.replace("\'", "")
+    canton = canton.replace("'", "")
+    canton = canton.replace("\"", "")
+    canton = canton.replace(".", "")
+    if canton == "" or canton == "-":
+        canton = "No brinda información."
+
+    distrito = distrito.replace("\n", " ")
+    distrito = distrito.replace("\t", " ")
+    distrito = re.sub(' +', ' ', distrito)
+    distrito = distrito.rstrip()
+    distrito = distrito.lstrip()
+    distrito = distrito.replace("\'", "")
+    distrito = distrito.replace("'", "")
+    distrito = distrito.replace("\"", "")
+    distrito = distrito.replace(".", "")
+    if distrito == "" or distrito == "-":
+        distrito = "No brinda información."
+
+    if haystack.find(start) == -1:
+        provincia = "No brinda información."
+
+    if haystack.find(mid) == -1:
+        canton = "No brinda información."
+
+    if haystack.find(mid2) == -1:
+        distrito = "No brinda información."
+
+        print(
+            "\t\033[94mProvincia:\033[0m " + provincia + " \033[94mCantón:\033[0m " + canton + " \033[94mDistrito:\033[0m " + distrito)
+    return str(provincia + "|" + canton + "|" + distrito)
+
+
+def build_region_product(text):
+    return get_org_name_product(text) + "|" + get_region_product(text)
+
+
+def build_region_service(text):
+    return get_org_name_service(text) + "|" + get_region_service(text)
+
+
+def generate_region_superString(serviceMatrix , productMatrix):
+    superString = ""
+    ready = []
+    for i in range(len(serviceMatrix)):
+        path = serviceMatrix[i][0]
+        print(path)
+        text = get_text_from(path , False)
+        orgName = get_org_name_service(text)
+
+        if orgName not in ready:
+            superString = superString + str(build_region_service(text) + "+")
+            ready = ready + [orgName]
+
+    for i in range(len(productMatrix)):
+        path = productMatrix[i][0]
+        print(path)
+        text = get_text_from(path , False)
+        orgName = get_org_name_product(text)
+
+        if orgName not in ready:
+            superString = superString + str(build_region_product(text) + "+")
+            ready = ready + [orgName]
+
+    print(superString)
+    return superString
+
+
+# ------------------------------------ADDRESS------------------------------------ #
+
+def get_address(text): # TODO esta es la vara mas ineficiente del mundo
+    haystack = ""
+    if text.find("Localización del servicio de apoyo") == -1:
+        haystack = text[text.find("Indique los siguientes datos del lugar donde se ubica"): text.find("Redes sociales")]
+    else:
+        haystack = text[text.find("Localización del servicio de apoyo") : text.find("Redes sociales")]
+
+    start = "Dirección exacta:"
+    end = "telelelelele"
+
+    needle = haystack[haystack.find(start) + len(start): haystack.find(end)]
+    needle = needle.replace("\n", " ")
+    needle = needle.replace("\t", " ")
+    needle = re.sub(' +', ' ', needle)
+    needle = needle.rstrip()
+    needle = needle.lstrip()
+    needle = needle.replace("\'", "")
+    needle = needle.replace("'", "")
+    needle = needle.replace("\"", "")
+
+    if haystack.find(start) == -1:
+        needle = "No brinda información."
+
+    print("\t\033[94mAddress:\033[0m " + needle)
+    return str(needle)
+
+
+def build_address_product(text):
+    return get_org_name_product(text) + "|" + get_address(text)
+
+
+def build_address_service(text):
+    return get_org_name_service(text) + "|" + get_address(text)
+
+
+def generate_address_superString(serviceMatrix , productMatrix):
+    superString = ""
+    ready = []
+    for i in range(len(serviceMatrix)):
+        text = get_text_from(serviceMatrix[i][0] , False)
+        orgName = get_org_name_service(text)
+
+        if orgName not in ready:
+            superString = superString + str(build_address_service(text) + "+")
+            ready = ready + [orgName]
+
+    for i in range(len(productMatrix)):
+        text = get_text_from(productMatrix[i][0], False)
+        orgName = get_org_name_product(text)
+
+        if orgName not in ready:
+            superString = superString + str(build_address_product(text) + "+")
+            ready = ready + [orgName]
+
+    print(superString)
+    return superString
+
 
 
 # ------------------------------------TESTING------------------------------------ #
@@ -1210,7 +1519,7 @@ def test_service_functions(text):
     get_service_scheduleExtraoerdinary(text)
     get_service_otherExtraordinaryAttention(text)
     get_service_attentionFrecuency(text)
-    # item idFk
+    get_service_orgIdFk(text)
 
 
 def test_service(fileMatrx):
@@ -1243,7 +1552,7 @@ def test_product_functions(text):
 def test_product(fileMatrx):
     for i in range(len(fileMatrx)):
         print(str(i) + "\t|\t" + fileMatrx[i][0])
-        test_product_functions(get_text_from(fileMatrx[i][0] , True))
+        test_product_functions(get_text_from(fileMatrx[i][0] , False))
         print("_____________________________________________________________________________________________________________________")
         print("")
 
@@ -1337,7 +1646,7 @@ def test_org_product_functions(text):
 def test_org_product(fileMatrx):
     for i in range(len(fileMatrx)):
         print(str(i) + "\t|\t" + fileMatrx[i][0])
-        test_org_product_functions(get_text_from(fileMatrx[i][0] , True))
+        test_org_product_functions(get_text_from(fileMatrx[i][0] , False))
         print("_____________________________________________________________________________________________________________________")
         print("")
 
@@ -1554,7 +1863,7 @@ def generate_Services_dictionary(productMatrix, serviceMatrix):
             temp["scheduleExtraordinary"] = get_service_scheduleExtraoerdinary(text)
             temp["otherExtraordinaryAttention"] = ">>" + get_service_otherExtraordinaryAttention(text) + ">>"
             temp["attentionFrecuency"] = ">>" + get_service_attentionFrecuency(text) + ">>"
-            temp["Items_idPk"] = 1
+            temp["Items_idPk"] = get_service_orgIdFk(text)
             i += 1
 
             Services.append(copy.deepcopy(temp))
@@ -1656,6 +1965,7 @@ def dic2csv_services(dictionaries):
     file.close()
 
 
+
 # ------------------------------------MAIN------------------------------------ #
 
 def main():
@@ -1663,13 +1973,20 @@ def main():
     serviceMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo")
     productMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/")
 
-    #path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ASOC PERSONAS CON DISCAPACIDAD UPALA/Centro Atención Integral/Asoc. PcD Upala - Centro Atención Integral.docx"
+    #path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/AGUDACI/Serv. Asesoría Derechos PcD/AGUDACI - Asesoria de empoderamiento.docx"
     #text = get_text_from(path , True)
 
-    #print(text)
+    # print(text)
 
-    dictionary = generate_Services_dictionary(productMatrix, serviceMatrix)
-    dic2csv_services(dictionary)
+    #generate_Products_dictionary(productMatrix)
+
+    test_service(serviceMatrix)
+    test_product(productMatrix)
+
+
+
+    #dictionary = generate_Services_dictionary(productMatrix, serviceMatrix)
+    #dic2csv_services(dictionary)
 
 
 

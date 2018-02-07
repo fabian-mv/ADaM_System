@@ -1,7 +1,7 @@
-archivo = open("/home/fabian/Desktop/namesOnly (copy).csv", "r+")
+archivo = open("/home/fabian/Desktop/ORGnames.csv", "r+")
 contenido = archivo.read()
 archivo.close()
-contenido
+
 
 
 names = []
@@ -15,10 +15,10 @@ for char in contenido:
 
 
 
-archivo = open("/home/fabian/Desktop/namesOnly (another copy).csv", "r+")
+archivo = open("/home/fabian/Desktop/ORGnumbers.csv", "r+")
 contenido = archivo.read()
 archivo.close()
-contenido
+
 
 
 
