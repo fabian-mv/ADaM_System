@@ -180,6 +180,8 @@ def get_product_primaryFuncionalities(text):
     start = "Funciones: "
     end = " Usos:"
     needle = text[text.find(start) + len(start): text.find(end)]
+    needle.replace("\"" , "")
+    needle.replace("\'", "")
     print("\t\033[94mprimaryFuncionalities:\033[0m " + needle)
     return needle
 
@@ -200,6 +202,20 @@ def get_product_brand(text):
 
 def get_date():
     return str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+
+
+def get_product_orgIdFk(text):
+    names = {'53': 'Alquiler Médicos ByB - Servicio Sanitario Portatil', '43': 'Casa Hogar Comunitario', '40': 'Servicio alquiler o préstamo de Camas Hospitalarias.', '3': 'Terapia de Lenguaje', '78': ': Psicología', '10': 'Alquiler sillas de ruedas.', '84': 'Servicios Educativos', '74': ': Artes Plásticas', '20': 'Servicio de audiología en general con fabricación de audífonos.', '54': 'Alquiler Médicos ByB - Silla Baño', '86': 'Centro Diurno de Atención Integral', '48': 'Serv. Capacitación', '82': 'Serv. Asesoría Legal', '26': 'Apoyos Didácticos', '44': 'Serv. Apoyo Emocional', '23': 'Terapia Física y Rehabilitación', '17': 'Nutrición', '36': 'Centro educativo - Educación especial curricular.', '80': 'Serv. Apoyo Económico', '33': 'Audiometría', '65': 'Artes Industriales', '49': 'Serv. Educación Especial', '55': 'Alquiler Médicos ByB - Andaderas', '14': 'Centro Atención Integral', '88': 'Ser. alquiler camas ortopedicas', '46': 'Centro de atención integral', '61': 'Terapia Física.', '66': 'Educación Musical', '63': 'Hogar de cuido para personas con parálisis cerebral en situación de abandono', '58': 'Alquiler Médicos ByB - Muletas', '70': 'Terapia de lenguaje', '87': 'Servicios ocupacionales.', '19': 'Odontología', '71': ': Terapia Física', '81': 'Taller Ebanistería', '1': 'Serv. Educativo: La biblioteca posee un programa, con cursos mejoramiento de motora fina, junto con la Trabajadora Social que busca mejorar la calidad de vida de la familia.', '16': 'Terapia ocupacional', '38': 'Servicio alquiler o préstamo de sillas ruedas no ortopedicas.', '75': ': Educación Física', '47': 'Terapia del lenguaje, habla y voz', '34': 'Serv. Apoyo Legal', '62': 'Educación Especial', '72': ': Estimulación Temprana', '35': 'Centro de Atención Integral', '57': 'Alquiler Médicos ByB - Sillas Ruedas', '59': 'Animales Equinoterapia - Animales Equinoterapia Costa Rica.', '50': 'Serv. Gestión y canalización de fondos para proyecto de bien social.', '89': 'Serv. Ocupacionales de Recreo', '22': 'Enseñanza de Lesco', '79': ': Educación Especial', '12': 'Audiometrías', '30': 'Presupuesto para apoyar ONG’S que atienden personas con discapacidad en el Cantón.', '64': 'Educación para el Hogar', '56': 'Alquiler Médicos ByB - Cama Hospitalaria', '9': 'Terapia Física', '73': ': Música', '77': ': Artes Industriales', '32': 'Serv. Educativos.', '25': 'Adecuación Curricular No Significativa', '51': 'Capacitaciones a personas, entidades privadas o públicas en el cantón.', '13': 'Serv. Educativos', '42': 'Serv. Terapia Ocupacional', '15': 'Capacitaciones', '18': 'Trabajo Social', '39': 'Serv. Alquiler de Andaderas', '6': 'Ortopédia.', '5': 'Asesoría técnica sobre petición de ayudas o procedimientos estatales.', '45': 'Serv. Equinoterapia', '85': 'Servicios educativos.', '52': 'Formación Humana', '11': 'Terapia Ocupacional', '29': 'Serv. educativos', '8': 'Psiquiatría', '2': 'Psicología', '21': 'Estimulación Temprana', '4': 'Asesoría Emocional', '83': 'Apoyo Económico a las asociaciones vinculadas con el Tema de Discapacidad.', '24': 'Serv. Educativos (Manualidades para la independencia)', '68': 'Artes Plásticas', '60': 'Asistencia Médica Gratuita', '41': 'Serv. Alquiler de Muletas', '69': 'Terapia física', '31': 'Serv. Educativos: Manualidades.', '76': ': Terapía Lenguaje', '37': 'Servicio asistencia económica para pacientes en fase terminal', '27': 'Serv. Terapia Física', '7': 'Fisioterapia', '67': 'Educación Física', '28': 'Centro atención integral.'}
+    needle = str(get_org_name_product(text))
+    print(needle)
+    for key, value in names.items():
+        value = str(value)
+        if value == needle:
+            print("\t\033[94morganizationsIdFk:\033[0m " + key)
+            return key
+
+    print("\t\u001B[31morganizationsIdFk:\033[0m ERROR")
+    return 100
 
 
 # ------------------------------------ITEMS------------------------------------ #
@@ -427,9 +443,21 @@ def get_org_name_product(text):
         needle = needle.replace("\"" , "")
        # print("\t\033[94mname:\033[0m " + needle)
         if needle == "" or needle == " " or needle == "\n" or needle == " \n":
-            #print("\t\u001B[31mname:\033[0m No brinda información")
+            print("\t\u001B[31mname:\033[0m No brinda información")
             return "No brinda información"
         else:
+            if needle == "Hospital William Allen Taylor- CCSS" or needle == "Hospital William Allen Taylor, CCSS":
+                needle = "Hospital William Allen Taylor - CCSS"
+
+            if needle == "Chupis Ortopedica":
+                needle = "Chupis Ortopédica"
+
+            if needle == "No brinda información":
+                needle = "Clínicas de la Audición"
+
+            if needle == "Hospital San Rafael de Alajuela- CCSS":
+                needle = "Hospital San Rafael de Alajuela - CCSS"
+
             return needle
 
     else:
@@ -525,11 +553,11 @@ def get_org_socialNetworks_product(text):
                         new[name] = url
                 dict.update(new)
         print("\t\033[94msocialnetworks:\033[0m " + str(dict))
-        return dict
+        return str(dict).replace("{'facebook': '" , "[{\"'facebook'\": \"").replace("'}" , "\"}]")
 
     else:
         print("\t\u001B[31msocialNetworks:\033[0m No brinda información")
-        return "No brinda información"
+        return [{}]
 
 
 def get_org_wazeAddress_product(text):
@@ -547,7 +575,7 @@ def get_org_wazeAddress_product(text):
         needle = needle.replace("\"" , "")
         urls = re.findall(urlmarker.WEB_URL_REGEX, needle)
         print("\t\033[94mwazeAddress:\033[0m " + str(urls))
-        return urls
+        return str(urls).replace("['" , "[\"'").replace("']" , "'\"]")
 
     else:
         print("\t\u001B[31mwazeAddress:\033[0m No brinda información")
@@ -712,6 +740,18 @@ def get_org_name_service(text):
             print("\t\u001B[31mname:\033[0m No brinda información")
             return "No brinda información"
         else:
+            if needle == "Hospital William Allen Taylor- CCSS" or needle == "Hospital William Allen Taylor, CCSS":
+                needle = "Hospital William Allen Taylor - CCSS"
+
+            if needle == "Chupis Ortopedica":
+                needle = "Chupis Ortopédica"
+
+            if needle == "No brinda información":
+                needle = "Clínicas de la Audición"
+
+            if needle == "Hospital San Rafael de Alajuela- CCSS":
+                needle = "Hospital San Rafael de Alajuela - CCSS"
+
             print("\t\033[94mname:\033[0m " + needle)
             return needle
 
@@ -1257,6 +1297,169 @@ def get_service_attentionFrecuency(text):
     return result
 
 
+def get_service_classification(text):
+    haystack = text[text.find("MIDEPLAN") : text.find("Indique si es un servicio público, privado")]
+
+    print(haystack)
+
+    needle_social = "Social y de Lucha contra la Pobreza: ("
+    needle_ambiente = ") Ambiente, Energìa y Telecomunicaciones: ("
+    needle_gubernamental = ") Coordinación Gubernamental: ("
+    needle_salud = ") Salud: ("
+    needle_financiero = ") Financiero: ("
+    needle_educativo = ") Educativo: ("
+    needle_productivo = ") Productivo: ("
+    needle_monetario = ") Política Monetaria y Supervisión Financiera: ("
+    needle_infraestructura = ") Infraestructura y Transporte: ("
+    needle_delito = ") Seguridad Ciudadana y Prevención del Delito: ("
+    needle_municipal = ") Municipal: ("
+    needle_trabajo = ") Trabajo y Seguridad Social: ("
+    needle_turismo = ") Turismo: ("
+    needle_cultural = ") Cultural: ("
+    needle_politica = ") Política Exterior: ("
+    needle_comercio = ") Comercio Exterior: ("
+    needle_tecnologia = ") Tecnología: ("
+
+    end = ") Costo"
+
+    social = haystack[haystack.find(needle_social) + len(needle_social): haystack.find(needle_ambiente)].replace(" " , "").replace("X" , "x")
+    ambiente = haystack[haystack.find(needle_ambiente) + len(needle_ambiente): haystack.find(needle_gubernamental)].replace(" " , "").replace("X" , "x")
+    gubernamental = haystack[haystack.find(needle_gubernamental) + len(needle_gubernamental): haystack.find(needle_salud)].replace(" " , "").replace("X" , "x")
+    salud = haystack[haystack.find(needle_salud) + len(needle_salud): haystack.find(needle_financiero)].replace(" " , "").replace("X" , "x")
+    financiero = haystack[haystack.find(needle_financiero) + len(needle_financiero): haystack.find(needle_educativo)].replace(" " , "").replace("X" , "x")
+    educativo = haystack[haystack.find(needle_educativo) + len(needle_educativo): haystack.find(needle_productivo)].replace(" " , "").replace("X" , "x")
+    productivo = haystack[haystack.find(needle_productivo) + len(needle_productivo): haystack.find(needle_monetario)].replace(" " , "").replace("X" , "x")
+    monetario = haystack[haystack.find(needle_monetario) + len(needle_monetario): haystack.find(needle_infraestructura)].replace(" " , "").replace("X" , "x")
+    infraestructura = haystack[haystack.find(needle_infraestructura) + len(needle_infraestructura): haystack.find(needle_delito)].replace(" " , "").replace("X" , "x")
+    delito = haystack[haystack.find(needle_delito) + len(needle_delito): haystack.find(needle_municipal)].replace(" " , "").replace("X" , "x")
+    municipal = haystack[haystack.find(needle_municipal) + len(needle_municipal): haystack.find(needle_trabajo)].replace(" " , "").replace("X" , "x")
+    trabajo = haystack[haystack.find(needle_trabajo) + len(needle_trabajo): haystack.find(needle_turismo)].replace(" " , "").replace("X" , "x")
+    turismo = haystack[haystack.find(needle_turismo) + len(needle_turismo): haystack.find(needle_cultural)].replace(" " , "").replace("X" , "x")
+    cultural = haystack[haystack.find(needle_cultural) + len(needle_cultural): haystack.find(needle_politica)].replace(" " , "").replace("X" , "x")
+    politica = haystack[haystack.find(needle_politica) + len(needle_politica): haystack.find(needle_comercio)].replace(" " , "").replace("X" , "x")
+    comercio = haystack[haystack.find(needle_comercio) + len(needle_comercio): haystack.find(needle_tecnologia)].replace(" " , "").replace("X" , "x")
+    tecnologia = haystack[haystack.find(needle_tecnologia) + len(needle_tecnologia): haystack.find(end)].replace(" " , "").replace("X" , "x")
+
+    print(social , ambiente , gubernamental , salud , financiero , educativo , productivo , monetario , infraestructura , delito , municipal , trabajo , turismo , cultural , politica , comercio , tecnologia)
+
+    sectors = []
+
+    if social == "x":
+        sectors.append(1)
+    if ambiente == "x":
+        sectors.append(2)
+    if gubernamental == "x":
+        sectors.append(3)
+    if salud == "x":
+        sectors.append(4)
+    if financiero == "x":
+        sectors.append(5)
+    if educativo == "x":
+        sectors.append(6)
+    if productivo == "x":
+        sectors.append(7)
+    if monetario == "x":
+        sectors.append(8)
+    if infraestructura == "x":
+        sectors.append(9)
+    if delito == "x":
+        sectors.append(10)
+    if municipal == "x":
+        sectors.append(11)
+    if trabajo == "x":
+        sectors.append(12)
+    if turismo == "x":
+        sectors.append(13)
+    if cultural == "x":
+        sectors.append(14)
+    if politica == "x":
+        sectors.append(15)
+    if comercio == "x":
+        sectors.append(16)
+    if tecnologia == "x":
+        sectors.append(17)
+
+    print(sectors)
+
+    return sectors
+
+
+def generate_sectorClassifications_line(text):
+    line = ""
+    names = {'53': 'Alquiler Médicos ByB - Servicio Sanitario Portatil', '43': 'Casa Hogar Comunitario',
+             '40': 'Servicio alquiler o préstamo de Camas Hospitalarias.', '3': 'Terapia de Lenguaje',
+             '78': ': Psicología', '10': 'Alquiler sillas de ruedas.', '84': 'Servicios Educativos',
+             '74': ': Artes Plásticas', '20': 'Servicio de audiología en general con fabricación de audífonos.',
+             '54': 'Alquiler Médicos ByB - Silla Baño', '86': 'Centro Diurno de Atención Integral',
+             '48': 'Serv. Capacitación', '82': 'Serv. Asesoría Legal', '26': 'Apoyos Didácticos',
+             '44': 'Serv. Apoyo Emocional', '23': 'Terapia Física y Rehabilitación', '17': 'Nutrición',
+             '36': 'Centro educativo - Educación especial curricular.', '80': 'Serv. Apoyo Económico',
+             '33': 'Audiometría', '65': 'Artes Industriales', '49': 'Serv. Educación Especial',
+             '55': 'Alquiler Médicos ByB - Andaderas', '14': 'Centro Atención Integral',
+             '88': 'Ser. alquiler camas ortopedicas', '46': 'Centro de atención integral', '61': 'Terapia Física.',
+             '66': 'Educación Musical',
+             '63': 'Hogar de cuido para personas con parálisis cerebral en situación de abandono',
+             '58': 'Alquiler Médicos ByB - Muletas', '70': 'Terapia de lenguaje', '87': 'Servicios ocupacionales.',
+             '19': 'Odontología', '71': ': Terapia Física', '81': 'Taller Ebanistería',
+             '1': 'Serv. Educativo: La biblioteca posee un programa, con cursos mejoramiento de motora fina, junto con la Trabajadora Social que busca mejorar la calidad de vida de la familia.',
+             '16': 'Terapia ocupacional', '38': 'Servicio alquiler o préstamo de sillas ruedas no ortopedicas.',
+             '75': ': Educación Física', '47': 'Terapia del lenguaje, habla y voz', '34': 'Serv. Apoyo Legal',
+             '62': 'Educación Especial', '72': ': Estimulación Temprana', '35': 'Centro de Atención Integral',
+             '57': 'Alquiler Médicos ByB - Sillas Ruedas',
+             '59': 'Animales Equinoterapia - Animales Equinoterapia Costa Rica.',
+             '50': 'Serv. Gestión y canalización de fondos para proyecto de bien social.',
+             '89': 'Serv. Ocupacionales de Recreo', '22': 'Enseñanza de Lesco', '79': ': Educación Especial',
+             '12': 'Audiometrías',
+             '30': 'Presupuesto para apoyar ONG’S que atienden personas con discapacidad en el Cantón.',
+             '64': 'Educación para el Hogar', '56': 'Alquiler Médicos ByB - Cama Hospitalaria', '9': 'Terapia Física',
+             '73': ': Música', '77': ': Artes Industriales', '32': 'Serv. Educativos.',
+             '25': 'Adecuación Curricular No Significativa',
+             '51': 'Capacitaciones a personas, entidades privadas o públicas en el cantón.', '13': 'Serv. Educativos',
+             '42': 'Serv. Terapia Ocupacional', '15': 'Capacitaciones', '18': 'Trabajo Social',
+             '39': 'Serv. Alquiler de Andaderas', '6': 'Ortopédia.',
+             '5': 'Asesoría técnica sobre petición de ayudas o procedimientos estatales.', '45': 'Serv. Equinoterapia',
+             '85': 'Servicios educativos.', '52': 'Formación Humana', '11': 'Terapia Ocupacional',
+             '29': 'Serv. educativos', '8': 'Psiquiatría', '2': 'Psicología', '21': 'Estimulación Temprana',
+             '4': 'Asesoría Emocional',
+             '83': 'Apoyo Económico a las asociaciones vinculadas con el Tema de Discapacidad.',
+             '24': 'Serv. Educativos (Manualidades para la independencia)', '68': 'Artes Plásticas',
+             '60': 'Asistencia Médica Gratuita', '41': 'Serv. Alquiler de Muletas', '69': 'Terapia física',
+             '31': 'Serv. Educativos: Manualidades.', '76': ': Terapía Lenguaje',
+             '37': 'Servicio asistencia económica para pacientes en fase terminal', '27': 'Serv. Terapia Física',
+             '7': 'Fisioterapia', '67': 'Educación Física', '28': 'Centro atención integral.'}
+
+    item_name = get_item_name(text)
+
+    classifications = get_service_classification(text)
+
+    for key, value in names.items():
+        value = str(value)
+        if value == item_name:
+            if classifications != []:
+                for classification in classifications:
+                    line = str(line + str(key) + "|" + str(classification) + "+")
+
+            else:
+                line = str(line + str(key) + "|18+")
+
+    print(line)
+    return line
+
+
+def generate_classification_superString(serviceMatrix):
+    superString = ""
+    for i in range(len(serviceMatrix)):
+        path = serviceMatrix[i][0]
+        print(path)
+        text = get_text_from(path , False)
+
+        superString = superString + generate_sectorClassifications_line(text)
+
+
+    print(superString)
+    return superString
+
+
 def get_service_orgIdFk(text):
     names = {'53': 'Alquiler Médicos ByB - Servicio Sanitario Portatil', '43': 'Casa Hogar Comunitario', '40': 'Servicio alquiler o préstamo de Camas Hospitalarias.', '3': 'Terapia de Lenguaje', '78': ': Psicología', '10': 'Alquiler sillas de ruedas.', '84': 'Servicios Educativos', '74': ': Artes Plásticas', '20': 'Servicio de audiología en general con fabricación de audífonos.', '54': 'Alquiler Médicos ByB - Silla Baño', '86': 'Centro Diurno de Atención Integral', '48': 'Serv. Capacitación', '82': 'Serv. Asesoría Legal', '26': 'Apoyos Didácticos', '44': 'Serv. Apoyo Emocional', '23': 'Terapia Física y Rehabilitación', '17': 'Nutrición', '36': 'Centro educativo - Educación especial curricular.', '80': 'Serv. Apoyo Económico', '33': 'Audiometría', '65': 'Artes Industriales', '49': 'Serv. Educación Especial', '55': 'Alquiler Médicos ByB - Andaderas', '14': 'Centro Atención Integral', '88': 'Ser. alquiler camas ortopedicas', '46': 'Centro de atención integral', '61': 'Terapia Física.', '66': 'Educación Musical', '63': 'Hogar de cuido para personas con parálisis cerebral en situación de abandono', '58': 'Alquiler Médicos ByB - Muletas', '70': 'Terapia de lenguaje', '87': 'Servicios ocupacionales.', '19': 'Odontología', '71': ': Terapia Física', '81': 'Taller Ebanistería', '1': 'Serv. Educativo: La biblioteca posee un programa, con cursos mejoramiento de motora fina, junto con la Trabajadora Social que busca mejorar la calidad de vida de la familia.', '16': 'Terapia ocupacional', '38': 'Servicio alquiler o préstamo de sillas ruedas no ortopedicas.', '75': ': Educación Física', '47': 'Terapia del lenguaje, habla y voz', '34': 'Serv. Apoyo Legal', '62': 'Educación Especial', '72': ': Estimulación Temprana', '35': 'Centro de Atención Integral', '57': 'Alquiler Médicos ByB - Sillas Ruedas', '59': 'Animales Equinoterapia - Animales Equinoterapia Costa Rica.', '50': 'Serv. Gestión y canalización de fondos para proyecto de bien social.', '89': 'Serv. Ocupacionales de Recreo', '22': 'Enseñanza de Lesco', '79': ': Educación Especial', '12': 'Audiometrías', '30': 'Presupuesto para apoyar ONG’S que atienden personas con discapacidad en el Cantón.', '64': 'Educación para el Hogar', '56': 'Alquiler Médicos ByB - Cama Hospitalaria', '9': 'Terapia Física', '73': ': Música', '77': ': Artes Industriales', '32': 'Serv. Educativos.', '25': 'Adecuación Curricular No Significativa', '51': 'Capacitaciones a personas, entidades privadas o públicas en el cantón.', '13': 'Serv. Educativos', '42': 'Serv. Terapia Ocupacional', '15': 'Capacitaciones', '18': 'Trabajo Social', '39': 'Serv. Alquiler de Andaderas', '6': 'Ortopédia.', '5': 'Asesoría técnica sobre petición de ayudas o procedimientos estatales.', '45': 'Serv. Equinoterapia', '85': 'Servicios educativos.', '52': 'Formación Humana', '11': 'Terapia Ocupacional', '29': 'Serv. educativos', '8': 'Psiquiatría', '2': 'Psicología', '21': 'Estimulación Temprana', '4': 'Asesoría Emocional', '83': 'Apoyo Económico a las asociaciones vinculadas con el Tema de Discapacidad.', '24': 'Serv. Educativos (Manualidades para la independencia)', '68': 'Artes Plásticas', '60': 'Asistencia Médica Gratuita', '41': 'Serv. Alquiler de Muletas', '69': 'Terapia física', '31': 'Serv. Educativos: Manualidades.', '76': ': Terapía Lenguaje', '37': 'Servicio asistencia económica para pacientes en fase terminal', '27': 'Serv. Terapia Física', '7': 'Fisioterapia', '67': 'Educación Física', '28': 'Centro atención integral.'}
     needle = str(get_item_name(text))
@@ -1437,6 +1640,17 @@ def generate_region_superString(serviceMatrix , productMatrix):
 
     print(superString)
     return superString
+
+
+def check_iso_services(serviceMatrix):
+    for i in range(len(serviceMatrix)):
+        path = serviceMatrix[i][0]
+        text = get_text_from(path , True)
+        if text.find(" iso ") != -1:
+            print(text[text.find(" iso ") + 3: ])
+
+        if text.find(" ISO ") != -1:
+            print(text[text.find(" ISO ") + 3:])
 
 
 # ------------------------------------ADDRESS------------------------------------ #
@@ -1753,10 +1967,8 @@ def generate_Organizations_dictionary(productMatrix , serviceMatrix):
     return Organizations
 
 
-def generate_Items_Services_and_Products_dictionary(productMatrix, serviceMatrix):
+def generate_Items_Services_dictionary(serviceMatrix):
     Items = []
-    Services = []
-    Products = []
     i = 1
     ready = []
 
@@ -1799,7 +2011,7 @@ def generate_Items_Services_and_Products_dictionary(productMatrix, serviceMatrix
     return Items
 
 
-def generate_Products_dictionary(productMatrix, serviceMatrix):
+def generate_Products_dictionary(productMatrix):
     Products = []
     i = 1
     ready = []
@@ -1812,22 +2024,22 @@ def generate_Products_dictionary(productMatrix, serviceMatrix):
             print(path)
             ready.append(get_item_name(text))
             temp["idPk"] = i
-            temp["cost"] = get_product_cost(text)
+            temp["cost"] = ">>" + get_product_cost(text) + ">>"
             temp["warranty"] = ">>No brinda información>>"
             temp["inStock"] = get_product_instock(text)
             temp["timeDelevery"] = ">>" + get_product_timeDelivery(text) + ">>"
             temp["warrantyImported"] = ">>No brinda información>>"
-            temp["usefulLife"] = get_product_usefulLife(text)
+            temp["usefulLife"] = ">>" + get_product_usefulLife(text) + ">>"
             temp["spareParts"] = ">>No brinda información>>"
-            temp["primaryFunctionalities"] = get_product_primaryFuncionalities(text)
+            temp["primaryFunctionalities"] = ">>" + get_product_primaryFuncionalities(text) + ">>"
             temp["secondlyFunctionalities"] = ">>No brinda información>>"
-            temp["brand"] = get_product_brand(text)
+            temp["brand"] = ">>" + get_product_brand(text) + ">>"
             temp["model"] = ">>No brinda información>>"
             temp["height"] = ">>No brinda información>>"
             temp["width"] = ">>No brinda información>>"
             temp["deep"] = ">>No brinda información>>"
             temp["weight"] = ">>No brinda información>>"
-            temp["Items_idPk"] = 1
+            temp["Items_idPk"] = get_product_orgIdFk(text)
             i += 1
 
             Products.append(copy.deepcopy(temp))
@@ -1835,7 +2047,7 @@ def generate_Products_dictionary(productMatrix, serviceMatrix):
     return Products
 
 
-def generate_Services_dictionary(productMatrix, serviceMatrix):
+def generate_Services_dictionary(serviceMatrix):
     Services = []
     i = 1
     ready = []
@@ -1871,6 +2083,73 @@ def generate_Services_dictionary(productMatrix, serviceMatrix):
     return Services
 
 
+def generate_dictionaries(serviceMatrix , productMatrix):
+    itemCounter = 1
+    prodCounter = 1
+    serviceCounter = 1
+    orgCounter = {'44': 'Asociación Pro niños con Parálisis Cerebral Cartago', '33': 'Centro Educación Especial Carlos Luis Valle', '47': 'Asociación para la Atención Integral de Personas Adultas con Discapacidad “El sol Brilla para Todos” CAIPAD', '68': 'Fundación Hogar Manos Abiertas.', '19': 'Hospital Express', '2': 'Asociación Central Pro-Ayuda de la Persona con Discapacidad de Palmares - APRADIS', '76': 'Asociación Amigos del Grupo de Percusión-Inclusión -AAGRUPERI-', '25': 'Hospital La Anexión - CCSS', '27': 'Asociación Semillas de Esperanza Pro-Apoyo y Rehabilitación de Hojancha, Guanacaste.', '15': 'Ayudas Técnicas que entrega la CCSS como institución en cada uno de sus hospitales.', '55': 'Hospital San Rafael de Alajuela - CCSS', '37': 'Instituto Tecnológico de Costa Rica', '36': 'Clínicas de la Audición', '18': 'Equipo Médico Montes Oca', '39': 'Asociación Seres de Luz', '60': 'Asociación MORFAS (Miembros Organizados Fomentando Acciones Solidarias).', '58': 'Hospital de San Carlos - CCSS', '3': 'Alquiler Médicos ByB', '10': 'Disprodorme S.A', '32': 'Asociación Fraternidad Cristiana de Personas con Discapacidad', '17': 'Hospital del Trauma del INS y sus clínicas alrededor del país.', '43': 'Asociación Costarricense de Artriticos', '49': 'Asociación de Personas con Discapacidad de Upala, ADEDISUPA.', '26': 'Fundación Senderos de Oportunidades', '70': 'Ministerio de Educación Pública: Centro de Enseñanza Especial Marta Saborío Fonseca, Alajuela', '46': 'Hospital Carlos Luis Valverde Vega CCSS', '62': 'Asociación de Transparencia.', '71': 'Asociación de Ayuda al Minusválido de San Carlos, AYUMISANCA.', '8': 'TifloproductosCR', '65': 'Asociación Taller Protegido de Alajuela.', '69': 'Centro de educación especial Grecia', '54': 'Centro de Educación Especial de Turrialba', '1': 'Synapsis Medical, Tienda Ortopédica Y Equipo Medico', '40': 'Colegio Universitario de Cartago -CUC', '64': 'Asociación Talita Cumi.', '73': 'Municipalidad de Alajuela', '50': 'Asociación Taller de Atención Integral y Capacitación, ATAICA.', '38': 'Clínica Fisiosport', '75': 'Asociación Centro de Integración Ocupacional y Servicios Afines, ACIOSA', '48': 'Fundación Doctora Chinchilla de Reyes.', '31': 'Asociación de Apoyo a la Unidad de Rehabilitación Profesional de Turrialba.', '16': 'Clínica Dinamarca', '21': 'Municipalidad de Carrillo, Guanacaste', '29': 'AZMONT S.A', '67': 'Asociación Costarricense Pro- Ayuda al Epiléptico, ACOPE.', '42': 'Municipalidad de Cartago.', '52': 'Fundación Servio Flores Arroyo', '6': 'Sear Médica', '35': 'Clinica de Terapia Física María Goretti.', '5': 'Ortopédica Garbanzo', '23': 'Asociación de Personas con Discapacidad -APEDI- GUANACASTE', '4': 'Asociación Costarricense de Distrofia Muscular, ACODIM.', '56': 'Asociación Sarchiseña de Discapacitados, ASADIS', '41': 'Asociación Atjala ( CAIPAD)', '7': 'Asociación Pro-Patronato Nacional de Ciegos.', '57': 'Asociación Pro-Ayuda a la Persona con Discapacidad de Zarcero, Llano Bonito y San Antonio, APAMAR', '61': 'Asociación Pro-Personas con Discapacidad de Atenas -APRODISA-', '74': 'Asociación Centro de Formación Socio-Productivo para el Desarrollo de las Personas Discapacitadas.', '14': 'Centro Nacional de Recursos para la Educación Inclusiva -CENAREC-.', '51': 'Asociación para la Promoción de la Salud Mental, APROSAM.', '24': 'Asociación Guanacasteca de Discapacidad, Autonomía y Comunidad Inclusiva, AGUDACI.', '53': 'Fundación Amor y Esperanza.', '12': 'Asociación pro Hospital Nacional de Geriatría y Gerontología Dr. Raúl Blanco Cervantes, APRONAGE.', '11': 'Centro Educativo Dr. Carlos Sáenz Herrera', '59': 'Centro Especializado en Terapia del lenguaje, habla y voz', '13': 'JR Sánchez Audiología', '45': 'Asociación de Desarrollo Educativo de Paraíso -ASODEPA-', '22': 'Centro de Terapia de Lenguaje y Guarderia Semillitas de Dios', '34': 'Hospital Nacional Psiquiátrico - CCSS Roberto Chacón Paut', '66': 'Centro de Terapia Asistida con Animales.', '9': 'Empresa Brailler Inc. Costa Rica', '30': 'Chupis Ortopédica', '28': 'Hospital William Allen Taylor - CCSS', '20': 'Sistema de Accesibilidad Total S.A', '63': 'Municipalidad de San Carlos.', '72': 'Asociación Costarricense de Personas con Discapacidad Visual, ACOPEDIV'}
+
+    items = []
+    products = []
+    services = []
+
+    orgRDY = []
+
+    for row in serviceMatrix:
+        path = row[0]
+        try:
+            image = row[1]
+        except:
+            image = "/home/fabian/Documents/repositories/adam_system/adam4/res/not-available-es.png"
+
+        text = get_text_from(path , False)
+
+        service = {}
+        item = {}
+
+        service["idPk"] = serviceCounter
+        service["isPrivate"] = get_service_isPrivate(text)
+        service["cost"] = ">>" + get_service_cost(text) + ">>"
+        service["objectives"] = ">>" + get_service_objectives(text) + ">>"
+        service["reaches"] = ">>" + get_service_reaches(text) + ">>"
+        service["specificSupports"] = ">>" + get_service_specificSupports(text) + ">>"
+        service["typeSupports"] = ">>" + get_service_typeSupports(text) + ">>"
+        service["daysToOperations"] = {}
+        service["responsabilityPerson"] = ">>" + get_service_responsabilityPerson(text) + ">>"
+        service["cover"] = ">>" + get_service_cover(text) + ">>"
+        service["requirements"] = ">>" + get_service_requirements(text) + ">>"
+        service["accesibility"] = ">>" + get_service_accesibility(text) + ">>"
+        service["others"] = ">>" + get_service_others(text) + ">>"
+        service["scheduleExtraordinary"] = get_service_scheduleExtraoerdinary(text)
+        service["otherExtraordinaryAttention"] = ">>" + get_service_otherExtraordinaryAttention(text) + ">>"
+        service["attentionFrecuency"] = ">>" + get_service_attentionFrecuency(text) + ">>"
+        service["items_idPk"] = itemCounter
+
+        services.append(copy.deepcopy(service))
+        serviceCounter += 1
+
+
+
+
+
+
+
+
+
+    for row in productMatrix:
+        path = row[0]
+        try:
+            image = row[1]
+        except:
+            image = "/home/fabian/Documents/repositories/adam_system/adam4/res/not-available-es.png"
+
+        text = get_text_from(path , False)
+
+        product = {}
+        item = {}
+        org = {}
+
+
 def dic2csv_orgs(dictionaries):
     cols_name = ["idPk", "dni" , "name" , "email" , "web" , "telephone" , "legalRepresentative" , "assembly" , "socialNetworks" , "wazeAddress" , "schedule" , "reaches" , "mision" , "vision" , "objetive" , "dayOperations" ,"isAproved" , "isChecked" , "isDeleted" , "organizationsTypesidPk"]
     file = open("toExport.csv", "w")
@@ -1887,11 +2166,6 @@ def dic2csv_orgs(dictionaries):
     old = file.read()
     file.close()
     new = old.replace(">>", "\"")
-    new = new.replace("\" ;\"" , "\";\"")
-    new = new.replace("\"; \"", "\";\"")
-    new = new.replace("\" ; \"", "\";\"")
-    new = new.replace("\"\";\"", "\";\"")
-    new = new.replace("\";\"\"", "\";\"")
     file = open("toExport.csv", "w")
     file.write(new)
     file.close()
@@ -1936,6 +2210,9 @@ def dic2csv_products(dictionaries):
     old = file.read()
     file.close()
     new = old.replace(">>", "\"")
+    new = new.replace(";\"\";" , ";\"No brinda información\";")
+    new = new.replace(";\"\"", ";\"")
+    new = new.replace("\"\";", "\";")
     file = open("toExport.csv", "w")
     file.write(new)
     file.close()
@@ -1973,15 +2250,17 @@ def main():
     serviceMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo")
     productMatrix = get_files_from("/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Productos de apoyo/")
 
-    #path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Guanacaste/AGUDACI/Serv. Asesoría Derechos PcD/AGUDACI - Asesoria de empoderamiento.docx"
-    #text = get_text_from(path , True)
+    # path = "/home/fabian/Documents/repositories/catalog-migration/datosPorMigrar/Informe Final CO - changed/Servicios de apoyo/Alajuela/ATAICA GRECIA/Serv. Educativos/ATAICA - Centro Educativo.docx"
+    # text = get_text_from(path , True)
 
     # print(text)
 
-    #generate_Products_dictionary(productMatrix)
+    dictionary = generate_Organizations_dictionary(productMatrix , serviceMatrix)
 
-    test_service(serviceMatrix)
-    test_product(productMatrix)
+    dic2csv_orgs(dictionary)
+
+
+
 
 
 

@@ -1,0 +1,12 @@
+32;"Hospital William Allen Taylor- CCSS"
+33;"Hospital William Allen Taylor - CCSS" DEJAMOS ESTE
+34;"Hospital William Allen Taylor, CCSS"
+
+19;"Chupis Ortopédica" DEJAMOS ESTE
+19;"Chupis Ortopedica"
+
+41;Clínicas de la Audición DEJAMOS ESTE
+41;"No brinda información"
+
+59;"Hospital San Rafael de Alajuela- CCSS"
+60;"Hospital San Rafael de Alajuela - CCSS" DEJAMOS ESTE
