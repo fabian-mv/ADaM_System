@@ -1815,7 +1815,7 @@ def test_item_service_functions(text):
     # isAproved = 1
     # isChecked = 1
     # isDeleted = 0
-    get_item_organizationidPk_service(text)
+    get_organization_idFk_product(text)
 
 
 def test_item_product(fileMatrx):
@@ -2085,9 +2085,8 @@ def generate_Services_dictionary(serviceMatrix):
 
 def generate_dictionaries(serviceMatrix , productMatrix):
     itemCounter = 1
-    prodCounter = 1
+    productCounter = 1
     serviceCounter = 1
-    orgCounter = {'44': 'Asociación Pro niños con Parálisis Cerebral Cartago', '33': 'Centro Educación Especial Carlos Luis Valle', '47': 'Asociación para la Atención Integral de Personas Adultas con Discapacidad “El sol Brilla para Todos” CAIPAD', '68': 'Fundación Hogar Manos Abiertas.', '19': 'Hospital Express', '2': 'Asociación Central Pro-Ayuda de la Persona con Discapacidad de Palmares - APRADIS', '76': 'Asociación Amigos del Grupo de Percusión-Inclusión -AAGRUPERI-', '25': 'Hospital La Anexión - CCSS', '27': 'Asociación Semillas de Esperanza Pro-Apoyo y Rehabilitación de Hojancha, Guanacaste.', '15': 'Ayudas Técnicas que entrega la CCSS como institución en cada uno de sus hospitales.', '55': 'Hospital San Rafael de Alajuela - CCSS', '37': 'Instituto Tecnológico de Costa Rica', '36': 'Clínicas de la Audición', '18': 'Equipo Médico Montes Oca', '39': 'Asociación Seres de Luz', '60': 'Asociación MORFAS (Miembros Organizados Fomentando Acciones Solidarias).', '58': 'Hospital de San Carlos - CCSS', '3': 'Alquiler Médicos ByB', '10': 'Disprodorme S.A', '32': 'Asociación Fraternidad Cristiana de Personas con Discapacidad', '17': 'Hospital del Trauma del INS y sus clínicas alrededor del país.', '43': 'Asociación Costarricense de Artriticos', '49': 'Asociación de Personas con Discapacidad de Upala, ADEDISUPA.', '26': 'Fundación Senderos de Oportunidades', '70': 'Ministerio de Educación Pública: Centro de Enseñanza Especial Marta Saborío Fonseca, Alajuela', '46': 'Hospital Carlos Luis Valverde Vega CCSS', '62': 'Asociación de Transparencia.', '71': 'Asociación de Ayuda al Minusválido de San Carlos, AYUMISANCA.', '8': 'TifloproductosCR', '65': 'Asociación Taller Protegido de Alajuela.', '69': 'Centro de educación especial Grecia', '54': 'Centro de Educación Especial de Turrialba', '1': 'Synapsis Medical, Tienda Ortopédica Y Equipo Medico', '40': 'Colegio Universitario de Cartago -CUC', '64': 'Asociación Talita Cumi.', '73': 'Municipalidad de Alajuela', '50': 'Asociación Taller de Atención Integral y Capacitación, ATAICA.', '38': 'Clínica Fisiosport', '75': 'Asociación Centro de Integración Ocupacional y Servicios Afines, ACIOSA', '48': 'Fundación Doctora Chinchilla de Reyes.', '31': 'Asociación de Apoyo a la Unidad de Rehabilitación Profesional de Turrialba.', '16': 'Clínica Dinamarca', '21': 'Municipalidad de Carrillo, Guanacaste', '29': 'AZMONT S.A', '67': 'Asociación Costarricense Pro- Ayuda al Epiléptico, ACOPE.', '42': 'Municipalidad de Cartago.', '52': 'Fundación Servio Flores Arroyo', '6': 'Sear Médica', '35': 'Clinica de Terapia Física María Goretti.', '5': 'Ortopédica Garbanzo', '23': 'Asociación de Personas con Discapacidad -APEDI- GUANACASTE', '4': 'Asociación Costarricense de Distrofia Muscular, ACODIM.', '56': 'Asociación Sarchiseña de Discapacitados, ASADIS', '41': 'Asociación Atjala ( CAIPAD)', '7': 'Asociación Pro-Patronato Nacional de Ciegos.', '57': 'Asociación Pro-Ayuda a la Persona con Discapacidad de Zarcero, Llano Bonito y San Antonio, APAMAR', '61': 'Asociación Pro-Personas con Discapacidad de Atenas -APRODISA-', '74': 'Asociación Centro de Formación Socio-Productivo para el Desarrollo de las Personas Discapacitadas.', '14': 'Centro Nacional de Recursos para la Educación Inclusiva -CENAREC-.', '51': 'Asociación para la Promoción de la Salud Mental, APROSAM.', '24': 'Asociación Guanacasteca de Discapacidad, Autonomía y Comunidad Inclusiva, AGUDACI.', '53': 'Fundación Amor y Esperanza.', '12': 'Asociación pro Hospital Nacional de Geriatría y Gerontología Dr. Raúl Blanco Cervantes, APRONAGE.', '11': 'Centro Educativo Dr. Carlos Sáenz Herrera', '59': 'Centro Especializado en Terapia del lenguaje, habla y voz', '13': 'JR Sánchez Audiología', '45': 'Asociación de Desarrollo Educativo de Paraíso -ASODEPA-', '22': 'Centro de Terapia de Lenguaje y Guarderia Semillitas de Dios', '34': 'Hospital Nacional Psiquiátrico - CCSS Roberto Chacón Paut', '66': 'Centro de Terapia Asistida con Animales.', '9': 'Empresa Brailler Inc. Costa Rica', '30': 'Chupis Ortopédica', '28': 'Hospital William Allen Taylor - CCSS', '20': 'Sistema de Accesibilidad Total S.A', '63': 'Municipalidad de San Carlos.', '72': 'Asociación Costarricense de Personas con Discapacidad Visual, ACOPEDIV'}
 
     items = []
     products = []
@@ -2123,16 +2122,36 @@ def generate_dictionaries(serviceMatrix , productMatrix):
         service["scheduleExtraordinary"] = get_service_scheduleExtraoerdinary(text)
         service["otherExtraordinaryAttention"] = ">>" + get_service_otherExtraordinaryAttention(text) + ">>"
         service["attentionFrecuency"] = ">>" + get_service_attentionFrecuency(text) + ">>"
-        service["items_idPk"] = itemCounter
+        service["Items_idPk"] = itemCounter
 
         services.append(copy.deepcopy(service))
         serviceCounter += 1
 
 
+        item["idPk"] = itemCounter
+        item["code"] = ">>No brinda información>>"
+        item["name"] = ">>" + get_item_name(text) + ">>"
+        item["description"] = ">>" + get_item_description_service(text) + ">>"
+        item["observations"] = ">>" + get_item_observations_services(text) + ">>"
+        item["image1"] = ">>imagen>>" # encode_image("/home/fabian/Documents/repositories/adam_system/adam4/res/not-available-es.png")
+        item["image2"] = ">>imagen>>"
+        item["image3"] = ">>imagen>>"
+        item["visibility"] = 1
+        item["isProduct"] = 0
+        item["onDateUpdated"] = get_date()
+        item["onDateCreated"] = get_date()
+        item["daysToOperations"] = {}
+        item["typeDeficiency"] = ">>" + get_item_typeDeficiency(text) + ">>"
+        item["age"] = get_item_age(text)
+        item["sex"] = 2
+        item["isForPregnant"] = 1
+        item["isApproved"] = 1
+        item["isChecked"] = 1
+        item["isDeleted"] = 0
+        item["organizationsIdFk"] = get_organization_idFk_service(text)
 
-
-
-
+        items.append(copy.deepcopy(item))
+        itemCounter += 1
 
 
 
@@ -2147,12 +2166,202 @@ def generate_dictionaries(serviceMatrix , productMatrix):
 
         product = {}
         item = {}
-        org = {}
+
+        product["idPk"] = productCounter
+        product["cost"] = ">>" + get_product_cost(text) + ">>"
+        product["warranty"] = ">>No brinda información>>"
+        product["inStock"] = get_product_instock(text)
+        product["timeDelevery"] = ">>" + get_product_timeDelivery(text) + ">>"
+        product["warrantyImported"] = ">>No brinda información>>"
+        product["usefulLife"] = ">>" + get_product_usefulLife(text) + ">>"
+        product["spareParts"] = ">>No brinda información>>"
+        product["primaryFunctionalities"] = ">>" + get_product_primaryFuncionalities(text) + ">>"
+        product["secondlyFunctionalities"] = ">>No brinda información>>"
+        product["brand"] = ">>" + get_product_brand(text) + ">>"
+        product["model"] = ">>No brinda información>>"
+        product["height"] = ">>No brinda información>>"
+        product["width"] = ">>No brinda información>>"
+        product["deep"] = ">>No brinda información>>"
+        product["weight"] = ">>No brinda información>>"
+        product["Items_idPk"] = itemCounter
+
+        products.append(copy.deepcopy(product))
+        productCounter += 1
+
+
+        item["idPk"] = itemCounter
+        item["code"] = ">>No brinda información>>"
+        item["name"] = ">>" + get_item_name(text) + ">>"
+        item["description"] = ">>" + get_item_description_products(text) + ">>"
+        item["observations"] = ">>" + get_item_observations_products(text) + ">>"
+        item["image1"] = ">>imagen>>" # encode_image("/home/fabian/Documents/repositories/adam_system/adam4/res/not-available-es.png")
+        item["image2"] = ">>imagen>>"
+        item["image3"] = ">>imagen>>"
+        item["visibility"] = 1
+        item["isProduct"] = 0
+        item["onDateUpdated"] = get_date()
+        item["onDateCreated"] = get_date()
+        item["daysToOperations"] = {}
+        item["typeDeficiency"] = ">>" + get_item_typeDeficiency(text) + ">>"
+        item["age"] = get_item_age(text)
+        item["sex"] = 2
+        item["isForPregnant"] = 1
+        item["isApproved"] = 1
+        item["isChecked"] = 1
+        item["isDeleted"] = 0
+        item["organizationsIdFk"] = get_organization_idFk_product(text)
+
+        items.append(copy.deepcopy(item))
+        itemCounter += 1
+
+    print("Total items: " + str(itemCounter) + "\tTotal products: " + str(productCounter) + "\tTotal services: " + str(serviceCounter))
+
+    return [items , products , services]
+
+
+
+def get_organization_idFk_service(text):
+    orgCounter = {'44': 'Asociación Pro niños con Parálisis Cerebral Cartago',
+                  '33': 'Centro Educación Especial Carlos Luis Valle',
+                  '47': 'Asociación para la Atención Integral de Personas Adultas con Discapacidad “El sol Brilla para Todos” CAIPAD',
+                  '68': 'Fundación Hogar Manos Abiertas.', '19': 'Hospital Express',
+                  '2': 'Asociación Central Pro-Ayuda de la Persona con Discapacidad de Palmares - APRADIS',
+                  '76': 'Asociación Amigos del Grupo de Percusión-Inclusión -AAGRUPERI-',
+                  '25': 'Hospital La Anexión - CCSS',
+                  '27': 'Asociación Semillas de Esperanza Pro-Apoyo y Rehabilitación de Hojancha, Guanacaste.',
+                  '15': 'Ayudas Técnicas que entrega la CCSS como institución en cada uno de sus hospitales.',
+                  '55': 'Hospital San Rafael de Alajuela - CCSS', '37': 'Instituto Tecnológico de Costa Rica',
+                  '36': 'Clínicas de la Audición', '18': 'Equipo Médico Montes Oca', '39': 'Asociación Seres de Luz',
+                  '60': 'Asociación MORFAS (Miembros Organizados Fomentando Acciones Solidarias).',
+                  '58': 'Hospital de San Carlos - CCSS', '3': 'Alquiler Médicos ByB', '10': 'Disprodorme S.A',
+                  '32': 'Asociación Fraternidad Cristiana de Personas con Discapacidad',
+                  '17': 'Hospital del Trauma del INS y sus clínicas alrededor del país.',
+                  '43': 'Asociación Costarricense de Artriticos',
+                  '49': 'Asociación de Personas con Discapacidad de Upala, ADEDISUPA.',
+                  '26': 'Fundación Senderos de Oportunidades',
+                  '70': 'Ministerio de Educación Pública: Centro de Enseñanza Especial Marta Saborío Fonseca, Alajuela',
+                  '46': 'Hospital Carlos Luis Valverde Vega CCSS', '62': 'Asociación de Transparencia.',
+                  '71': 'Asociación de Ayuda al Minusválido de San Carlos, AYUMISANCA.', '8': 'TifloproductosCR',
+                  '65': 'Asociación Taller Protegido de Alajuela.', '69': 'Centro de educación especial Grecia',
+                  '54': 'Centro de Educación Especial de Turrialba',
+                  '1': 'Synapsis Medical, Tienda Ortopédica Y Equipo Medico',
+                  '40': 'Colegio Universitario de Cartago -CUC', '64': 'Asociación Talita Cumi.',
+                  '73': 'Municipalidad de Alajuela',
+                  '50': 'Asociación Taller de Atención Integral y Capacitación, ATAICA.', '38': 'Clínica Fisiosport',
+                  '75': 'Asociación Centro de Integración Ocupacional y Servicios Afines, ACIOSA',
+                  '48': 'Fundación Doctora Chinchilla de Reyes.',
+                  '31': 'Asociación de Apoyo a la Unidad de Rehabilitación Profesional de Turrialba.',
+                  '16': 'Clínica Dinamarca', '21': 'Municipalidad de Carrillo, Guanacaste', '29': 'AZMONT S.A',
+                  '67': 'Asociación Costarricense Pro- Ayuda al Epiléptico, ACOPE.', '42': 'Municipalidad de Cartago.',
+                  '52': 'Fundación Servio Flores Arroyo', '6': 'Sear Médica',
+                  '35': 'Clinica de Terapia Física María Goretti.', '5': 'Ortopédica Garbanzo',
+                  '23': 'Asociación de Personas con Discapacidad -APEDI- GUANACASTE',
+                  '4': 'Asociación Costarricense de Distrofia Muscular, ACODIM.',
+                  '56': 'Asociación Sarchiseña de Discapacitados, ASADIS', '41': 'Asociación Atjala ( CAIPAD)',
+                  '7': 'Asociación Pro-Patronato Nacional de Ciegos.',
+                  '57': 'Asociación Pro-Ayuda a la Persona con Discapacidad de Zarcero, Llano Bonito y San Antonio, APAMAR',
+                  '61': 'Asociación Pro-Personas con Discapacidad de Atenas -APRODISA-',
+                  '74': 'Asociación Centro de Formación Socio-Productivo para el Desarrollo de las Personas Discapacitadas.',
+                  '14': 'Centro Nacional de Recursos para la Educación Inclusiva -CENAREC-.',
+                  '51': 'Asociación para la Promoción de la Salud Mental, APROSAM.',
+                  '24': 'Asociación Guanacasteca de Discapacidad, Autonomía y Comunidad Inclusiva, AGUDACI.',
+                  '53': 'Fundación Amor y Esperanza.',
+                  '12': 'Asociación pro Hospital Nacional de Geriatría y Gerontología Dr. Raúl Blanco Cervantes, APRONAGE.',
+                  '11': 'Centro Educativo Dr. Carlos Sáenz Herrera',
+                  '59': 'Centro Especializado en Terapia del lenguaje, habla y voz', '13': 'JR Sánchez Audiología',
+                  '45': 'Asociación de Desarrollo Educativo de Paraíso -ASODEPA-',
+                  '22': 'Centro de Terapia de Lenguaje y Guarderia Semillitas de Dios',
+                  '34': 'Hospital Nacional Psiquiátrico - CCSS Roberto Chacón Paut',
+                  '66': 'Centro de Terapia Asistida con Animales.', '9': 'Empresa Brailler Inc. Costa Rica',
+                  '30': 'Chupis Ortopédica', '28': 'Hospital William Allen Taylor - CCSS',
+                  '20': 'Sistema de Accesibilidad Total S.A', '63': 'Municipalidad de San Carlos.',
+                  '72': 'Asociación Costarricense de Personas con Discapacidad Visual, ACOPEDIV'}
+
+    name = get_org_name_service(text)
+
+    for key , value in orgCounter.items():
+        value = str(value)
+        if value == name:
+            print("\t\033[94morganizationsIdFk:\033[0m " + key)
+            return key
+
+    print("\t\u001B[31morganizationsIdFk:\033[0m ERROR -----------------------------------------------------------------------------------------------")
+    return 100
+
+
+def get_organization_idFk_product(text):
+    orgCounter = {'44': 'Asociación Pro niños con Parálisis Cerebral Cartago',
+                  '33': 'Centro Educación Especial Carlos Luis Valle',
+                  '47': 'Asociación para la Atención Integral de Personas Adultas con Discapacidad “El sol Brilla para Todos” CAIPAD',
+                  '68': 'Fundación Hogar Manos Abiertas.', '19': 'Hospital Express',
+                  '2': 'Asociación Central Pro-Ayuda de la Persona con Discapacidad de Palmares - APRADIS',
+                  '76': 'Asociación Amigos del Grupo de Percusión-Inclusión -AAGRUPERI-',
+                  '25': 'Hospital La Anexión - CCSS',
+                  '27': 'Asociación Semillas de Esperanza Pro-Apoyo y Rehabilitación de Hojancha, Guanacaste.',
+                  '15': 'Ayudas Técnicas que entrega la CCSS como institución en cada uno de sus hospitales.',
+                  '55': 'Hospital San Rafael de Alajuela - CCSS', '37': 'Instituto Tecnológico de Costa Rica',
+                  '36': 'Clínicas de la Audición', '18': 'Equipo Médico Montes Oca', '39': 'Asociación Seres de Luz',
+                  '60': 'Asociación MORFAS (Miembros Organizados Fomentando Acciones Solidarias).',
+                  '58': 'Hospital de San Carlos - CCSS', '3': 'Alquiler Médicos ByB', '10': 'Disprodorme S.A',
+                  '32': 'Asociación Fraternidad Cristiana de Personas con Discapacidad',
+                  '17': 'Hospital del Trauma del INS y sus clínicas alrededor del país.',
+                  '43': 'Asociación Costarricense de Artriticos',
+                  '49': 'Asociación de Personas con Discapacidad de Upala, ADEDISUPA.',
+                  '26': 'Fundación Senderos de Oportunidades',
+                  '70': 'Ministerio de Educación Pública: Centro de Enseñanza Especial Marta Saborío Fonseca, Alajuela',
+                  '46': 'Hospital Carlos Luis Valverde Vega CCSS', '62': 'Asociación de Transparencia.',
+                  '71': 'Asociación de Ayuda al Minusválido de San Carlos, AYUMISANCA.', '8': 'TifloproductosCR',
+                  '65': 'Asociación Taller Protegido de Alajuela.', '69': 'Centro de educación especial Grecia',
+                  '54': 'Centro de Educación Especial de Turrialba',
+                  '1': 'Synapsis Medical, Tienda Ortopédica Y Equipo Medico',
+                  '40': 'Colegio Universitario de Cartago -CUC', '64': 'Asociación Talita Cumi.',
+                  '73': 'Municipalidad de Alajuela',
+                  '50': 'Asociación Taller de Atención Integral y Capacitación, ATAICA.', '38': 'Clínica Fisiosport',
+                  '75': 'Asociación Centro de Integración Ocupacional y Servicios Afines, ACIOSA',
+                  '48': 'Fundación Doctora Chinchilla de Reyes.',
+                  '31': 'Asociación de Apoyo a la Unidad de Rehabilitación Profesional de Turrialba.',
+                  '16': 'Clínica Dinamarca', '21': 'Municipalidad de Carrillo, Guanacaste', '29': 'AZMONT S.A',
+                  '67': 'Asociación Costarricense Pro- Ayuda al Epiléptico, ACOPE.', '42': 'Municipalidad de Cartago.',
+                  '52': 'Fundación Servio Flores Arroyo', '6': 'Sear Médica',
+                  '35': 'Clinica de Terapia Física María Goretti.', '5': 'Ortopédica Garbanzo',
+                  '23': 'Asociación de Personas con Discapacidad -APEDI- GUANACASTE',
+                  '4': 'Asociación Costarricense de Distrofia Muscular, ACODIM.',
+                  '56': 'Asociación Sarchiseña de Discapacitados, ASADIS', '41': 'Asociación Atjala ( CAIPAD)',
+                  '7': 'Asociación Pro-Patronato Nacional de Ciegos.',
+                  '57': 'Asociación Pro-Ayuda a la Persona con Discapacidad de Zarcero, Llano Bonito y San Antonio, APAMAR',
+                  '61': 'Asociación Pro-Personas con Discapacidad de Atenas -APRODISA-',
+                  '74': 'Asociación Centro de Formación Socio-Productivo para el Desarrollo de las Personas Discapacitadas.',
+                  '14': 'Centro Nacional de Recursos para la Educación Inclusiva -CENAREC-.',
+                  '51': 'Asociación para la Promoción de la Salud Mental, APROSAM.',
+                  '24': 'Asociación Guanacasteca de Discapacidad, Autonomía y Comunidad Inclusiva, AGUDACI.',
+                  '53': 'Fundación Amor y Esperanza.',
+                  '12': 'Asociación pro Hospital Nacional de Geriatría y Gerontología Dr. Raúl Blanco Cervantes, APRONAGE.',
+                  '11': 'Centro Educativo Dr. Carlos Sáenz Herrera',
+                  '59': 'Centro Especializado en Terapia del lenguaje, habla y voz', '13': 'JR Sánchez Audiología',
+                  '45': 'Asociación de Desarrollo Educativo de Paraíso -ASODEPA-',
+                  '22': 'Centro de Terapia de Lenguaje y Guarderia Semillitas de Dios',
+                  '34': 'Hospital Nacional Psiquiátrico - CCSS Roberto Chacón Paut',
+                  '66': 'Centro de Terapia Asistida con Animales.', '9': 'Empresa Brailler Inc. Costa Rica',
+                  '30': 'Chupis Ortopédica', '28': 'Hospital William Allen Taylor - CCSS',
+                  '20': 'Sistema de Accesibilidad Total S.A', '63': 'Municipalidad de San Carlos.',
+                  '72': 'Asociación Costarricense de Personas con Discapacidad Visual, ACOPEDIV'}
+
+    name = get_org_name_product(text)
+
+    for key , value in orgCounter.items():
+        value = str(value)
+        if value == name:
+            print("\t\033[94morganizationsIdFk:\033[0m " + key)
+            return key
+
+    print("\t\u001B[31morganizationsIdFk:\033[0m ERROR -----------------------------------------------------------------------------------------------")
+    return 100
+
 
 
 def dic2csv_orgs(dictionaries):
     cols_name = ["idPk", "dni" , "name" , "email" , "web" , "telephone" , "legalRepresentative" , "assembly" , "socialNetworks" , "wazeAddress" , "schedule" , "reaches" , "mision" , "vision" , "objetive" , "dayOperations" ,"isAproved" , "isChecked" , "isDeleted" , "organizationsTypesidPk"]
-    file = open("toExport.csv", "w")
+    file = open("orgs.csv", "w")
 
     with file:
         csv.register_dialect("toMYSQL", delimiter=";")
@@ -2162,17 +2371,17 @@ def dic2csv_orgs(dictionaries):
             writer.writerow(dict)
         file.close()
 
-    file = open("toExport.csv", "r")
+    file = open("orgs.csv", "r")
     old = file.read()
     file.close()
     new = old.replace(">>", "\"")
-    file = open("toExport.csv", "w")
+    file = open("orgs.csv", "w")
     file.write(new)
     file.close()
 
 def dic2csv_items(dictionaries):
     cols_name = ["idPk" , "code" , "name" , "description" , "observations" , "image1" , "image2" , "image3" , "visibility" , "isProduct" , "onDateUpdated" , "onDateCreated" , "daysToOperations" , "typeDeficiency" , "age" , "sex" , "isForPregnant" , "isApproved" , "isChecked" , "isDeleted" , "organizationsIdFk"]
-    file = open("toExport.csv", "w")
+    file = open("items.csv", "w")
 
     with file:
         csv.register_dialect("toMYSQL", delimiter=";")
@@ -2182,13 +2391,13 @@ def dic2csv_items(dictionaries):
             writer.writerow(dict)
         file.close()
 
-    file = open("toExport.csv", "r")
+    file = open("items.csv", "r")
     old = file.read()
     file.close()
     new = old.replace(">>", "\"")
     new = new.replace("{'age': '" , "{\"'age'\": \"'")
     new = new.replace("'}" , "'\"}")
-    file = open("toExport.csv", "w")
+    file = open("items.csv", "w")
     file.write(new)
     file.close()
 
@@ -2196,7 +2405,7 @@ def dic2csv_items(dictionaries):
 
 def dic2csv_products(dictionaries):
     cols_name = ["idPk", "cost", "warranty", "inStock", "timeDelevery", "warrantyImported", "usefulLife", "spareParts","primaryFunctionalities", "secondlyFunctionalities", "brand", "model", "height", "width", "deep", "weight","Items_idPk"]
-    file = open("toExport.csv", "w")
+    file = open("products.csv", "w")
 
     with file:
         csv.register_dialect("toMYSQL", delimiter=";")
@@ -2206,14 +2415,14 @@ def dic2csv_products(dictionaries):
             writer.writerow(dict)
         file.close()
 
-    file = open("toExport.csv", "r")
+    file = open("products.csv", "r")
     old = file.read()
     file.close()
     new = old.replace(">>", "\"")
     new = new.replace(";\"\";" , ";\"No brinda información\";")
     new = new.replace(";\"\"", ";\"")
     new = new.replace("\"\";", "\";")
-    file = open("toExport.csv", "w")
+    file = open("products.csv", "w")
     file.write(new)
     file.close()
 
@@ -2223,7 +2432,7 @@ def dic2csv_services(dictionaries):
     cols_name = ["idPk", "isPrivate", "cost", "objectives", "reaches", "specificSupports", "typeSupports", "daysToOperations",
      "responsabilityPerson", "cover", "requirements", "accesibility", "others", "scheduleExtraordinary",
      "otherExtraordinaryAttention", "attentionFrecuency", "Items_idPk"]
-    file = open("toExport.csv", "w")
+    file = open("services.csv", "w")
 
     with file:
         csv.register_dialect("toMYSQL", delimiter=";")
@@ -2233,11 +2442,11 @@ def dic2csv_services(dictionaries):
             writer.writerow(dict)
         file.close()
 
-    file = open("toExport.csv", "r")
+    file = open("services.csv", "r")
     old = file.read()
     file.close()
     new = old.replace(">>", "\"")
-    file = open("toExport.csv", "w")
+    file = open("services.csv", "w")
     file.write(new)
     file.close()
 
@@ -2255,10 +2464,19 @@ def main():
 
     # print(text)
 
-    dictionary = generate_Organizations_dictionary(productMatrix , serviceMatrix)
+    # dictionary = generate_Organizations_dictionary(productMatrix , serviceMatrix)
+    #
+    # dic2csv_orgs(dictionary)
 
-    dic2csv_orgs(dictionary)
+    dictionaries = generate_dictionaries(serviceMatrix , productMatrix)
 
+    items = dictionaries[0]
+    products = dictionaries[1]
+    services = dictionaries[2]
+
+    dic2csv_items(items)
+    dic2csv_products(products)
+    dic2csv_services(services)
 
 
 
