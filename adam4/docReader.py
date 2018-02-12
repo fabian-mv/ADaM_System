@@ -278,7 +278,11 @@ def get_item_description_products(text):
     needle = needle.replace("\'", "")
     needle = needle.replace("'", "")
     needle = needle.replace("\"", "")
-    return needle
+    if needle != "":
+        return needle
+
+    else:
+        return "No brinda información."
 
 
 def get_item_description_service(text):
@@ -299,7 +303,11 @@ def get_item_description_service(text):
     needle = needle.replace("\'", "")
     needle = needle.replace("'", "")
     needle = needle.replace("\"", "")
-    return needle
+    if needle != "":
+        return needle
+
+    else:
+        return "No brinda información."
 
 
 def get_item_observations_products(text):
@@ -315,7 +323,11 @@ def get_item_observations_products(text):
     needle = needle.replace("\'", "")
     needle = needle.replace("'", "")
     needle = needle.replace("\"", "")
-    return needle
+    if needle != "":
+        return needle
+
+    else:
+        return "No brinda información."
 
 
 def get_item_observations_services(text):
@@ -333,7 +345,12 @@ def get_item_observations_services(text):
     needle = needle.replace("\'", "")
     needle = needle.replace("'", "")
     needle = needle.replace("\"", "")
-    return needle
+    if needle != "":
+        return needle
+
+    else:
+        return "No brinda información."
+
 
 def get_item_typeDeficiency(text):
     start = "Tipo de discapacidad:"
@@ -350,7 +367,11 @@ def get_item_typeDeficiency(text):
     needle = needle.replace("\'", "")
     needle = needle.replace("'", "")
     needle = needle.replace("\"", "")
-    return needle
+    if needle != "":
+        return needle
+
+    else:
+        return "No brinda información."
 
 
 def get_item_age(text):
@@ -2133,9 +2154,9 @@ def generate_dictionaries(serviceMatrix , productMatrix):
         item["name"] = ">>" + get_item_name(text) + ">>"
         item["description"] = ">>" + get_item_description_service(text) + ">>"
         item["observations"] = ">>" + get_item_observations_services(text) + ">>"
-        item["image1"] = ">>imagen>>" # encode_image("/home/fabian/Documents/repositories/adam_system/adam4/res/not-available-es.png")
-        item["image2"] = ">>imagen>>"
-        item["image3"] = ">>imagen>>"
+        item["image1"] = "imagen" # encode_image("/home/fabian/Documents/repositories/adam_system/adam4/res/not-available-es.png")
+        item["image2"] = "imagen"
+        item["image3"] = "imagen"
         item["visibility"] = 1
         item["isProduct"] = 0
         item["onDateUpdated"] = get_date()
@@ -2475,8 +2496,8 @@ def main():
     services = dictionaries[2]
 
     dic2csv_items(items)
-    dic2csv_products(products)
-    dic2csv_services(services)
+    #dic2csv_products(products)
+    #dic2csv_services(services)
 
 
 
