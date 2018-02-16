@@ -1,4 +1,4 @@
-archivo = open("/home/fabian/Documents/repositories/adam_system/BAKCUP/NAMES", "r+")
+archivo = open("/home/fabian/Documents/repositories/adam_system/adam4/names.csv", "r+")
 contenido = archivo.read()
 archivo.close()
 
@@ -15,7 +15,7 @@ for char in contenido:
 
 
 
-archivo = open("/home/fabian/Documents/repositories/adam_system/BAKCUP/NUMBERS", "r+")
+archivo = open("/home/fabian/Documents/repositories/adam_system/adam4/numbers.csv", "r+")
 contenido = archivo.read()
 archivo.close()
 
