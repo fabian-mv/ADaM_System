@@ -67,6 +67,10 @@ def generate_superhaystack(text , verbose=True):
     superhaystack = superhaystack.replace(header , "")
 
 
+    print("\u001B[36mRemoving page numbers...\u001B[0m", end='', flush=True)
+    re.sub()
+
+
     if verbose:
         print("\u001B[32;1m\tDone. Generated superhsytack:\u001B[0m")
         print(superhaystack)
@@ -82,7 +86,8 @@ def main():
     print("\n    _____  _____  ____  _                       _       _             \n   |_   _|/ ____|/ __ \| |                     | |     | |            \n     | | | (___ | |  | | |_ _ __ __ _ _ __  ___| | __ _| |_ ___  _ __ \n     | |  \___ \| |  | | __| '__/ _` | '_ \/ __| |/ _` | __/ _ \| '__|\n    _| |_ ____) | |__| | |_| | | (_| | | | \__ \ | (_| | || (_) | |   \n   |_____|_____/ \____/ \__|_|  \__,_|_| |_|___/_|\__,_|\__\___/|_|   \n                  -ISO999:2016 PDF to JSON translator-                    \n\n\n")
 
     document_as_string = rectify_string( encode_bytes( analyze_pdf("/home/fabian/Documents/repositories/adam_system/adam4/UNE-EN_ISO_9999=2017.pdf" , False) , False) , False)
-    generate_superhaystack(document_as_string , False)
+    generate_superhaystack(document_as_string , True)
+
 
 
 
