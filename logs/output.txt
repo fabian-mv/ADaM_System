@@ -12,4 +12,12 @@
 Analyzing document...Done.
 Encoding bytes...Done.
 Rectifying string...Done.
-Generating Superhaystack...Removing head and tail...Removing headers and footers...Done.
+Generating Superhaystack...Removing head and tail...Removing headers and footers...Removing page numbers...Done.
+Done. Retrieved next subclass:
+04 03
+
+Productos de apoyo para respiración
+Done. Class code is:
+4
+Done. Subclass code is:
+3
