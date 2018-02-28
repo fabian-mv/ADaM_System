@@ -53,7 +53,7 @@ def generate_superhaystack(text , verbose=False):
     print("\u001B[36mGenerating Superhaystack...\u001B[0m" , end='' , flush=True)
 
     print("\u001B[36mRemoving head and tail...\u001B[0m" , end='' , flush=True)
-    head = text.find("Clasificación a dos niveles. Clases y subclases\n") + 49
+    head = text.find("Cuando existen normas de producto aplicables, su terminología se utiliza en esta norma internacional") + 128
     tail = text.find("Miembros de ISO 9999 en la familia OMS de clasificaciones internacionales")
 
     superhaystack = text[head:tail]
@@ -69,11 +69,21 @@ def generate_superhaystack(text , verbose=False):
     superhaystack = superhaystack.replace(header , "")
     superhaystack = superhaystack.replace(footer , "")
 
+    split_haystack = superhaystack.splitlines(True)
+    unsplit_haystack_parts = []
+    for line in split_haystack:
+        if "véase" not in line:
+            unsplit_haystack_parts.append(line)
+
+    superhaystack = "".join(unsplit_haystack_parts)
+
     print("\u001B[36mRemoving page numbers...\u001B[0m", end='', flush=True)
     superhaystack.replace("", "")
     superhaystack = re.sub('-\s\d{1,3}\s-' , "" , superhaystack)
     superhaystack = re.sub('\n+', "\n\n", superhaystack)
 
+    superhaystack = superhaystack.strip()
+    superhaystack = "\n99\n\n" + superhaystack + "\n\n99\n"
 
     if verbose:
         print("\u001B[32;1mDone. Generated superhsytack:\u001B[0m")
@@ -89,31 +99,39 @@ def clean_string(string , verbose=False):
     string = re.sub(' +', ' ', string)
     string = string.strip()
 
-    if verbose:
-        print("\u001B[32;1mDone. Generated clean string:\u001B[0m")
-        print(string)
+    print_result("String cleaned", string, verbose)
     return string
 
 
+def get_next_item(haystack , verbose=False):
+    match = re.findall('(?P<code>\n\d{2}\s?\d{0,2}\s?\d{0,2}\n)' , haystack , re.DOTALL)
+    start = match[0]
+    end = match[1]
+
+    item = haystack[haystack.find(start) : haystack.find(end) + len(end)]
+
+    print_result("Item retreived" , item , verbose)
+    return item
+
 def get_next_subclass(haystack, verbose=False):
+    # TODO: mejorar esto. hay que usar grupos de expresiones regulares, en vez de tener una dirt_subclass y luego una clean_subclass
+    # TODO: este metodo está obsoleto
     match = re.search('\d{2}\s\d{2}\n+.+\n+\d{2}\s\d{2}', haystack)
     dirty_subclass = match.group(0)
 
     clean_sublass = re.sub('\n+\d{2}\s\d{2}\n*' , '' , dirty_subclass)
 
-    if verbose:
-        print("\u001B[32;1mDone. Retrieved next subclass:\u001B[0m")
-        print(clean_sublass)
+    print_result("Subclass retreived", clean_sublass, verbose)
     return clean_sublass
 
 
-def delete_next_subclass(haystack , subclass , verbose=False):
-    index = haystack.find(subclass)
+def delete_next_item(haystack, item, verbose=False):
+    index = haystack.find(item)
+    item = re.sub('\n\d{2}\s?\d{0,2}\s?\d{0,2}\n' , "" , item[::-1] , count=1)[::-1]
     if index != -1:
-        haystack = haystack[index + len(subclass):]
-        if verbose:
-            print("\u001B[32;1mDone. Deleted subclass from haystack. Haystack is now:\u001B[0m")
-            print(haystack)
+        haystack = haystack[index + len(item):]
+
+        print_result("Next item deleted. Haystack updated", haystack , verbose)
         return haystack
     else:
         print("\u001B[31mError: couldn't find subclass.\u001B[0m")
@@ -125,10 +143,7 @@ def get_class_code_from_subclass(subclass , as_string=False , verbose=False):
     if as_string:
         class_code = str(class_code)
 
-    if verbose:
-        print("\u001B[32;1mDone. Class code is:\u001B[0m")
-        print(class_code)
-
+    print_result("Class code retrieved", class_code, verbose)
     return class_code
 
 
@@ -138,11 +153,38 @@ def get_subclass_code_from_subclass(subclass , as_string=False , verbose=False):
     if as_string:
         subclass_code = str(subclass_code)
 
-    if verbose:
-        print("\u001B[32;1mDone. Subclass code is:\u001B[0m")
-        print(subclass_code)
-
+    print_result("Subclass code retrieved", subclass_code, verbose)
     return subclass_code
+
+
+def get_subclass_name_from_subclass(subclass , verbose=False):
+    match = re.search('\n+(?P<subclass_name>.+\n*.*)', subclass)
+    subclass_name = match.group('subclass_name')
+
+    print_result("Subclass name retrieved" , subclass_name , verbose)
+
+    return subclass_name
+
+
+def print_result(title , result , verbose):
+    if verbose:
+        separator_len = 80
+
+        title_len = separator_len - len(title)
+        title_padding = int(title_len/2)
+
+        for i in range(title_padding):
+            title = "=" + title + "="
+
+        print("\u001B[32;1m"+title+"\u001B[0m")
+        print(str(result))
+        for i in range(separator_len):
+            print("\u001B[32;1m=\u001B[0m" , end="")
+        print("")
+
+
+
+
 
 
 
@@ -154,14 +196,19 @@ def main():
     print("\n    _____  _____  ____  _                       _       _             \n   |_   _|/ ____|/ __ \| |                     | |     | |            \n     | | | (___ | |  | | |_ _ __ __ _ _ __  ___| | __ _| |_ ___  _ __ \n     | |  \___ \| |  | | __| '__/ _` | '_ \/ __| |/ _` | __/ _ \| '__|\n    _| |_ ____) | |__| | |_| | | (_| | | | \__ \ | (_| | || (_) | |   \n   |_____|_____/ \____/ \__|_|  \__,_|_| |_|___/_|\__,_|\__\___/|_|   \n                  -ISO999:2016 PDF to JSON translator-                    \n\n\n")
 
     document_as_string = rectify_document_as_string(encode_bytes(analyze_pdf("/home/fabian/Documents/repositories/adam_system/adam4/UNE-EN_ISO_9999=2017.pdf")))
-    superhaystack = generate_superhaystack(document_as_string)
-
-    subclass = get_next_subclass(superhaystack , verbose=True)
-
-    class_code = get_class_code_from_subclass(subclass , verbose=True)
-
-    subclass_code = get_subclass_code_from_subclass(subclass,verbose=True)
-
+    superhaystack = generate_superhaystack(document_as_string , verbose=True)
+    # item = get_next_item(superhaystack , True)
+    # superhaystack = delete_next_item(superhaystack , item)
+    # item = get_next_item(superhaystack, True)
+    # superhaystack = delete_next_item(superhaystack, item)
+    # item = get_next_item(superhaystack, True)
+    # superhaystack = delete_next_item(superhaystack, item)
+    # item = get_next_item(superhaystack, True)
+    # superhaystack = delete_next_item(superhaystack, item)
+    # item = get_next_item(superhaystack, True)
+    # superhaystack = delete_next_item(superhaystack, item)
+    # item = get_next_item(superhaystack, True)
+    # superhaystack = delete_next_item(superhaystack, item)
 
 
 if __name__ == "__main__":

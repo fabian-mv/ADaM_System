@@ -4,18 +4,25 @@ import re
 
 
 def process_row(row):
-    dirty_text = row["abstract"]
+        if 'abstract' in row:
+            dirty_text = row["abstract"]
 
-    dirty_text = dirty_text.replace("… ", "")
-    dirty_text = dirty_text.replace("\n", " ")
-    dirty_text = dirty_text.replace("\t", " ")
-    dirty_text = dirty_text.rstrip()
-    dirty_text = dirty_text.lstrip()
-    clean_text = re.sub(' +', ' ', dirty_text)
+            dirty_text = dirty_text.replace("… ", "")
+            dirty_text = dirty_text.replace("\n", " ")
+            dirty_text = dirty_text.replace("\t", " ")
+            dirty_text = dirty_text.rstrip()
+            dirty_text = dirty_text.lstrip()
+            clean_text = re.sub(' +', ' ', dirty_text)
 
-    row["abstract"] = clean_text
+            row["abstract"] = clean_text
 
-    return row
+        if 'eprint' in row:
+            dirty_link = row['eprint']
+            clean_link = dirty_link.replace("https://scholar.google.com" , "")
+
+            row['eprint'] = clean_link
+
+        return row
 
 
 def build_super_dict():
@@ -35,9 +42,10 @@ def build_super_dict():
             clean_row = process_row(row)
 
             print(clean_row)
-            writer.writerow(clean_row)
+            if clean_row is not None:
+                writer.writerow(clean_row)
 
-            if counter >= 200:
+            if counter >= 50:
                 break
             else:
                 counter = counter + 1
