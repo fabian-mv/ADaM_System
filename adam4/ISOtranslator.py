@@ -1,6 +1,7 @@
 import textract
 import traceback
 import re
+import json
 
 
 # ------------------------------------STRING ANALYSIS------------------------------------ #
@@ -34,7 +35,7 @@ def encode_bytes(bytes , verbose=False):
 
 
 def rectify_document_as_string(string, verbose=False):
-    print("\u001B[36mRectifying string...\u001B[0m" , end='' , flush=True)
+    print("\u001B[36mRectifying string...\u001B[0m", end='', flush=True)
 
     string = string.replace("\t", " ")
     string = re.sub(' +', ' ', string)
@@ -56,6 +57,7 @@ def generate_superhaystack(text , verbose=False):
     head = text.find("Cuando existen normas de producto aplicables, su terminología se utiliza en esta norma internacional") + 128
     tail = text.find("Miembros de ISO 9999 en la familia OMS de clasificaciones internacionales")
 
+    # superhaystack = text#
     superhaystack = text[head:tail]
 
     print("\u001B[36mRemoving headers and footers...\u001B[0m", end='', flush=True)
@@ -83,7 +85,7 @@ def generate_superhaystack(text , verbose=False):
     superhaystack = re.sub('\n+', "\n\n", superhaystack)
 
     superhaystack = superhaystack.strip()
-    superhaystack = "\n99\n\n" + superhaystack + "\n\n99\n"
+    # superhaystack = "\n99\n\n" + superhaystack + "\n\n99\n"
 
     if verbose:
         print("\u001B[32;1mDone. Generated superhsytack:\u001B[0m")
@@ -186,6 +188,91 @@ def print_result(title , result , verbose):
 
 
 
+# =======================================================================================
+
+                                # TEMPPORAL
+
+
+def get_class_and_subclass_codes_from_item(item):
+    match = re.find('(?P<class>\d{2} )(?P<subclass>\d{2}\n)' , item)
+    class_code = match.group('class')
+    subclass_code = match.group('subclass')
+
+    print("\tclass: " + class_code + "\n\tsubclass: " + subclass_code)
+
+    return [class_code , subclass_code]
+
+
+def get_subclass_name_from_item(item):
+    match = re.find('\n\n(?P<subclass>.+)\n', item)
+    subclass_name = match.group('subclass')
+
+    print("\tsubclass: " + subclass_name)
+
+    return subclass_name
+
+
+def generate_list_from_string(text):
+    matches = re.findall('\d{2}\n\n.+' , text)
+    codes = []
+    names = []
+    print(matches)
+    for result in matches:
+        result_match = re.search('(?P<code>\d{2})\n\n(?P<name>.+)' , result)
+        code = result_match.group('code')
+        name = result_match.group('name')
+        codes.append(code)
+        names.append(name)
+
+    print(codes)
+    print(names)
+    return [codes , names]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# =======================================================================================
+
 
 
 
@@ -195,20 +282,62 @@ def print_result(title , result , verbose):
 def main():
     print("\n    _____  _____  ____  _                       _       _             \n   |_   _|/ ____|/ __ \| |                     | |     | |            \n     | | | (___ | |  | | |_ _ __ __ _ _ __  ___| | __ _| |_ ___  _ __ \n     | |  \___ \| |  | | __| '__/ _` | '_ \/ __| |/ _` | __/ _ \| '__|\n    _| |_ ____) | |__| | |_| | | (_| | | | \__ \ | (_| | || (_) | |   \n   |_____|_____/ \____/ \__|_|  \__,_|_| |_|___/_|\__,_|\__\___/|_|   \n                  -ISO999:2016 PDF to JSON translator-                    \n\n\n")
 
-    document_as_string = rectify_document_as_string(encode_bytes(analyze_pdf("/home/fabian/Documents/repositories/adam_system/adam4/UNE-EN_ISO_9999=2017.pdf")))
-    superhaystack = generate_superhaystack(document_as_string , verbose=True)
-    # item = get_next_item(superhaystack , True)
-    # superhaystack = delete_next_item(superhaystack , item)
-    # item = get_next_item(superhaystack, True)
-    # superhaystack = delete_next_item(superhaystack, item)
-    # item = get_next_item(superhaystack, True)
-    # superhaystack = delete_next_item(superhaystack, item)
-    # item = get_next_item(superhaystack, True)
-    # superhaystack = delete_next_item(superhaystack, item)
-    # item = get_next_item(superhaystack, True)
-    # superhaystack = delete_next_item(superhaystack, item)
-    # item = get_next_item(superhaystack, True)
-    # superhaystack = delete_next_item(superhaystack, item)
+    # document_as_string = rectify_document_as_string(encode_bytes(analyze_pdf("/home/fabian/Documents/repos/ADaM_System/adam4/UNE-EN_ISO_9999=2017.pdf")))
+    # superhaystack = generate_superhaystack(document_as_string)
+
+    file = open("/home/fabian/Documents/repos/ADaM_System/adam4/res/subclases.txt" , 'r')
+    subclasses_from_file = file.read()
+    file.close()
+
+    file = open("/home/fabian/Documents/repos/ADaM_System/adam4/res/clases.txt", 'r')
+    classes_from_file = file.read()
+    file.close()
+
+    json_list = []
+    division_as_dict = {}
+    division_as_dict['division_id'] = 0o01
+    division_as_dict['division_name'] = "Div name"
+    division_as_json = json.dumps(division_as_dict)
+    class_lists = generate_list_from_string(classes_from_file)
+    for classs in class_lists:
+        class_code = classs[0]
+        class_name = classs[1]
+
+        classs_as_dict = {}
+        classs_as_dict['class_id'] = class_code
+        classs_as_dict['class_name'] = class_name
+
+        subclasses = []
+        subclass_list = generate_list_from_string(subclasses_from_file)
+        for subclass in subclass_list:
+            subclass_code = subclass[0]
+            subclass_name = subclass[1]
+
+            subclasss_as_dict = {}
+            subclasss_as_dict['subclass_id'] = subclass_code
+            subclasss_as_dict['subclass_name'] = subclass_name
+            subclasss_as_dict['divisions'] = [division_as_json , division_as_json , division_as_json]
+
+            subclass_as_json = json.dumps(subclasss_as_dict)
+            subclasses.append(subclass_as_json)
+
+        classs_as_dict['subclass'] = subclasses
+
+        classs_as_json = json.dumps(classs_as_dict)
+        json_list.append(classs_as_json)
+
+    iso_as_dict = {}
+    all_classes = []
+    for json in json_list:
+        all_classes.append(json)
+
+    iso_as_dict['2016'] = all_classes
+
+    with open('iso-999-2016.json', 'w') as outfile:
+        json.dump(iso_as_dict, outfile)
+
+
+
 
 
 if __name__ == "__main__":

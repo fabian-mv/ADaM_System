@@ -1,0 +1,527 @@
+04 03
+
+Productos de apoyo para respiración
+
+04 06
+
+Productos de apoyo para terapia circulatoria
+
+04 08
+
+Productos de apoyo para estimular el control y la conciencia corporal
+
+04 09
+
+Productos de apoyo para fototerapia
+
+04 15
+
+Productos de apoyo para diálisis
+
+04 19
+
+Productos de apoyo para administrar medicamentos
+
+04 22
+
+Equipo de esterilización
+
+04 24
+
+Equipos y materiales para pruebas físicas, fisiológicas y bioquímicas
+
+04 25
+
+Equipos y materiales para evaluación cognitiva
+
+04 26
+
+Productos de apoyo para terapia cognitiva
+
+04 27
+
+Estimuladores
+
+04 30
+
+Productos de apoyo para el tratamiento por medio del frío y del calor
+
+04 33
+
+Productos de apoyo destinados a preservar la integridad de los tejidos
+
+04 36
+
+Productos de apoyo para el entrenamiento de la percepción
+
+04 45
+
+Productos de apoyo para tracción de la columna vertebral
+
+04 48
+
+Equipo para el entrenamiento del movimiento, la fuerza y el equilibrio
+
+04 49
+
+Productos para el cuidado de heridas
+
+05 03
+
+Productos de apoyo para la terapia de comunicación y el aprendizaje de la comunicación
+
+05 06
+
+Productos de apoyo para el entrenamiento/aprendizaje en comunicación alternativa y aumentativa
+
+05 09
+
+Productos de apoyo para el entrenamiento/aprendizaje de la continencia
+
+05 12
+
+Productos de apoyo para el entrenamiento de las capacidades cognitivas
+
+05 15
+
+Productos de apoyo para el entrenamiento/aprendizaje de funciones básicas
+
+05 18
+
+Productos de apoyo para la formación de temas de educación
+
+05 24
+
+Productos de apoyo para la formación artística
+
+05 27
+
+Productos de apoyo para el entrenamiento/aprendizaje de habilidades sociales
+
+05 30
+
+Productos de apoyo para el entrenamiento en el control de dispositivos de entrada y manipulación de productos y mercancías
+
+05 33
+
+Productos de apoyo para el aprendizaje de actividades de la vida diaria
+
+05 36
+
+Productos de apoyo para el entrenamiento del cambio y mantenimiento de la postura corporal
+
+06 03
+
+Órtesis craneales y raquídeas
+
+06 04
+
+Órtesis abdominales
+
+06 06
+
+Órtesis de miembro superior
+
+06 12
+
+Órtesis de miembro inferior
+
+06 15
+
+Estimuladores funcionales neuromusculares y sistemas ortésicos híbridos
+
+06 18
+
+Prótesis de miembro superior
+
+06 24
+
+Prótesis de miembro inferior
+
+06 30
+
+Prótesis distintas a las prótesis de miembros
+
+09 03
+
+Ropa y calzado
+
+09 06
+
+Productos de apoyo usados sobre el cuerpo para protegerlo
+
+09 07
+
+Productos de apoyo para la estabilización del cuerpo
+
+09 09
+
+Productos de apoyo para vestirse y desvestirse
+
+09 12
+
+Productos de apoyo para funciones de aseo (evacuación)
+
+09 15
+
+Productos de apoyo para traqueotomía
+
+09 18
+
+Productos de apoyo para ostomía
+
+09 21
+
+Productos para la protección y limpieza de la piel
+
+09 24
+
+Canalizadores de orina
+
+09 27
+
+Productos de apoyo para la recogida de orina y de heces
+
+09 30
+
+Productos de apoyo para la absorción de orina y heces
+
+09 31
+
+Productos de apoyo para prevenir escapes involuntarios de orina o de heces
+
+09 32
+
+Productos de apoyo para la gestión de la menstruación
+
+09 33
+
+Productos de apoyo para lavarse, bañarse y ducharse
+
+09 36
+
+Productos de apoyo para manicura y pedicura
+
+09 39
+
+Productos de apoyo para el cuidado del cabello
+
+09 42
+
+Productos de apoyo para el cuidado dental
+
+09 45
+
+Productos de apoyo para el cuidado facial
+
+09 54
+
+Productos de apoyo para actividades sexuales
+
+12 03
+
+Productos de apoyo para caminar, manejados por un brazo
+
+12 06
+
+Productos de apoyo para caminar, manejados por ambos brazos
+
+12 07
+
+Accesorios de los productos de apoyo para caminar
+
+12 10
+
+Coches, furgonetas y camiones
+
+12 11
+
+Vehículos para el transporte colectivo
+
+12 12
+
+Accesorios y adaptaciones para vehículos
+
+12 16
+
+Motocicletas y ciclomotores
+
+12 17
+
+Diversos vehículos motorizados
+
+12 18
+
+Ciclos
+
+12 22
+
+Sillas de ruedas de manuales
+
+12 23
+
+Sillas de ruedas de motorizadas
+
+12 24
+
+Accesorios para sillas de ruedas
+
+12 27
+
+Diversos vehículos de propulsión humana
+
+12 31
+
+Productos de apoyo para el cambio de postura corporal
+
+12 36
+
+Productos de apoyo para la elevación de personas
+
+12 39
+
+Productos de apoyo para orientación
+
+15 03
+
+Productos de apoyo para preparar comida y bebida
+
+15 06
+
+Productos de apoyo para lavar la vajilla
+
+15 09
+
+Productos de apoyo para comer y beber
+
+15 12
+
+Productos de apoyo para la limpieza de la casa
+
+15 15
+
+Productos de apoyo para confeccionar y mantener tejidos para uso doméstico
+
+15 18
+
+Productos de apoyo para jardinería y cuidado del césped para uso doméstico
+
+18 03
+
+Mesas
+
+18 06
+
+Equipos para iluminación
+
+18 09
+
+Mobiliario para sentarse
+
+18 10
+
+Accesorios de mobiliario para sentarse
+
+18 12
+
+Camas y equipo de cama
+
+18 15
+
+Productos de apoyo para ajustar la altura del mobiliario
+
+18 18
+
+Pasamanos y barras de apoyo
+
+18 21
+
+Dispositivos para abrir y cerrar verjas, puertas, ventanas y cortinas
+
+18 24
+
+Elementos de construcción en viviendas y otros locales
+
+18 30
+
+Productos de apoyo para accesibilidad vertical
+
+18 33
+
+Equipos de seguridad para viviendas y otros locales
+
+18 36
+
+Muebles para almacenamiento
+
+22 03
+
+Productos de apoyo para la visión
+
+22 06
+
+Productos de apoyo para la audición
+
+22 09
+
+Productos de apoyo para la producción vocal
+
+22 12
+
+Productos de apoyo para dibujo y escritura
+
+22 15
+
+Productos de apoyo para cálculo
+
+22 18
+
+Productos de apoyo para grabar, reproducir y presentar información sonora y visual
+
+22 21
+
+Productos de apoyo para comunicación cara a cara
+
+22 24
+
+Productos de apoyo para el uso del teléfono y de la mensajería telemática
+
+22 27
+
+Productos de apoyo para emitir alarmas, indicar, recordar y señalar
+
+22 30
+
+Productos de apoyo para la lectura
+
+22 33
+
+Ordenadores y terminales
+
+22 36
+
+Dispositivos de entrada para ordenadores
+
+22 39
+
+Dispositivos de salida para ordenadores
+
+22 42
+
+Dispositivos interactivos para ordenadores
+
+24 06
+
+Productos de apoyo para manipular recipientes
+
+24 09
+
+Productos de apoyo para accionar y controlar dispositivos
+
+24 13
+
+Productos de apoyo para controlar a distancia
+
+24 18
+
+Productos de apoyo para compensar o sustituir la función del brazo, de la mano o de los dedos, o combinación de estas funciones
+
+24 21
+
+Productos de apoyo para alcanzar a distancia
+
+24 24
+
+Productos de apoyo para colocación
+
+24 27
+
+Productos de apoyo para fijación
+
+24 36
+
+Productos de apoyo para llevar y transportar
+
+24 39
+
+Recipientes para almacenamiento de objetos
+
+27 03
+
+Productos de apoyo para la mejora del ambiente/entorno
+
+27 06
+
+Instrumentos de medida
+
+28 03
+
+Mobiliario y elementos de mobiliario para lugares de trabajo
+
+28 06
+
+Productos de apoyo para transportar objetos en lugares de trabajo
+
+28 09
+
+Productos de apoyo para elevar y reposicionar objetos en lugares de trabajo
+
+28 12
+
+Productos de apoyo para fijar, alcanzar y agarrar objetos en lugares de trabajo
+
+28 15
+
+Máquinas y herramientas de uso en lugares de trabajo
+
+28 18
+
+Dispositivos para análisis y control en lugares de trabajo
+
+28 21
+
+Productos de apoyo para la administración de la oficina, el almacenamiento y la gestión de la información en el trabajo
+
+28 24
+
+Productos de apoyo para la protección de la salud y la seguridad en lugares de trabajo
+
+28 27
+
+Productos de apoyo para la evaluación laboral y la formación profesional
+
+30 03
+
+Productos de apoyo para jugar
+
+30 09
+
+Productos de apoyo para el deporte
+
+30 12
+
+Productos de apoyo para tocar y componer música
+
+30 15
+
+Productos de apoyo para realizar fotos, películas y vídeos
+
+30 18
+
+Herramientas, materiales y equipo para manualidades
+
+30 24
+
+Productos de apoyo para la caza y la pesca
+
+30 27
+
+Productos de apoyo para acampar e ir en caravana
+
+30 30
+
+Productos de apoyo para fumar
+
+30 34
+
+Productos de apoyo para el cuidado de animales

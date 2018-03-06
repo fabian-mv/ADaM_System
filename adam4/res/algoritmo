@@ -1,0 +1,23 @@
+crea lista de jsons
+crea division default
+para cada clase en clases
+	crea json vacio
+	agarra nombre de clase
+	agarra codigo de clase
+	mete nombre y codigo en el json vacio
+	crea lista vacia de subclases
+	para cada subclase en sublcases
+		crea json vacio
+		agarra codigo de subclase
+		agarra nombre de subclase
+		si ese codigo es igual al de la clase
+			mete ese codigo al json vacio
+			mete nombre de esa subclase al json vacio
+		mete division default
+		elimina esa subclase
+	mete la lista vacia al json
+	mete esa clase a lista de jsons
+	elimina clase
+
+		
+
