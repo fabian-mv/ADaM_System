@@ -1,7 +1,7 @@
 import textract
 import traceback
 import re
-import json
+import json as superjson
 
 
 # ------------------------------------STRING ANALYSIS------------------------------------ #
@@ -214,19 +214,14 @@ def get_subclass_name_from_item(item):
 
 def generate_list_from_string(text):
     matches = re.findall('\d{2}\n\n.+' , text)
-    codes = []
-    names = []
-    print(matches)
+    results = {}
     for result in matches:
         result_match = re.search('(?P<code>\d{2})\n\n(?P<name>.+)' , result)
         code = result_match.group('code')
         name = result_match.group('name')
-        codes.append(code)
-        names.append(name)
+        results[code] = name
 
-    print(codes)
-    print(names)
-    return [codes , names]
+    return results
 
 
 
@@ -295,35 +290,38 @@ def main():
 
     json_list = []
     division_as_dict = {}
-    division_as_dict['division_id'] = 0o01
-    division_as_dict['division_name'] = "Div name"
-    division_as_json = json.dumps(division_as_dict)
+    division_as_dict["division_id"] = 0o01
+    division_as_dict["division_name"] = "Div name"
+    division_as_json = superjson.dumps(division_as_dict)
     class_lists = generate_list_from_string(classes_from_file)
-    for classs in class_lists:
-        class_code = classs[0]
-        class_name = classs[1]
+    # todo: cambiar esto a diccionarios para que sea mas facil
+    for code1 , name1 in class_lists:
+        class_code = code1
+        class_name = name1
 
         classs_as_dict = {}
-        classs_as_dict['class_id'] = class_code
-        classs_as_dict['class_name'] = class_name
+        classs_as_dict["class_id"] = int(class_code)
+        classs_as_dict["class_name"] = str(class_name)
 
         subclasses = []
         subclass_list = generate_list_from_string(subclasses_from_file)
-        for subclass in subclass_list:
-            subclass_code = subclass[0]
-            subclass_name = subclass[1]
-
+        # todo: cambiar esto a diccionarios para que sea mas facil
+        for code2 , name2 in subclass_list:
+            subclass_code = code2
+            subclass_name = name2
+            print("estoy aqui")
+            print(subclass_code)
             subclasss_as_dict = {}
-            subclasss_as_dict['subclass_id'] = subclass_code
-            subclasss_as_dict['subclass_name'] = subclass_name
-            subclasss_as_dict['divisions'] = [division_as_json , division_as_json , division_as_json]
+            subclasss_as_dict["subclass_id"] = int(subclass_code)
+            subclasss_as_dict["subclass_name"] = str(subclass_name)
+            subclasss_as_dict["divisions"] = [division_as_json , division_as_json , division_as_json]
 
-            subclass_as_json = json.dumps(subclasss_as_dict)
+            subclass_as_json = superjson.dumps(subclasss_as_dict)
             subclasses.append(subclass_as_json)
 
-        classs_as_dict['subclass'] = subclasses
+        classs_as_dict["subclass"] = subclasses
 
-        classs_as_json = json.dumps(classs_as_dict)
+        classs_as_json = superjson.dumps(classs_as_dict)
         json_list.append(classs_as_json)
 
     iso_as_dict = {}
@@ -331,10 +329,10 @@ def main():
     for json in json_list:
         all_classes.append(json)
 
-    iso_as_dict['2016'] = all_classes
+    iso_as_dict["2016"] = all_classes
 
-    with open('iso-999-2016.json', 'w') as outfile:
-        json.dump(iso_as_dict, outfile)
+    with open("iso-999-2016.json", 'w') as outfile:
+        superjson.dump(iso_as_dict, outfile)
 
 
 

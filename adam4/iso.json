@@ -1,0 +1,1389 @@
+{
+	"2016" : [
+		{
+			"class_id" : 04 ,
+			"class_name" : "Productos de apoyo para la medición, soporte, entrenamiento o sustitución de funciones corporales" ,
+			"subclass" : [
+				{
+					"subclass_id" : 03 ,
+					"subclass_name" : "Productos de apoyo para respiración" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 06 ,
+					"subclass_name" : "Productos de apoyo para terapia circulatoria" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 08 ,
+					"subclass_name" : "Productos de apoyo para estimular el control y la conciencia corporal" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 09 ,
+					"subclass_name" : "Productos de apoyo para fototerapia" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 15 ,
+					"subclass_name" : "Productos de apoyo para diálisis" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 19 ,
+					"subclass_name" : "Productos de apoyo para administrar medicamentos" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 22 ,
+					"subclass_name" : "Equipo de esterilización" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 24 ,
+					"subclass_name" : "Equipos y materiales para pruebas físicas, fisiológicas y bioquímicas" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 25 ,
+					"subclass_name" : "Equipos y materiales para evaluación cognitiva" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 26 ,
+					"subclass_name" : "Productos de apoyo para terapia cognitiva" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 27 ,
+					"subclass_name" : "Estimuladores" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 30 ,
+					"subclass_name" : "Productos de apoyo para el tratamiento por medio del frío y del calor" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 33 ,
+					"subclass_name" : "Productos de apoyo destinados a preservar la integridad de los tejidos" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 36 ,
+					"subclass_name" : "Productos de apoyo para el entrenamiento de la percepción" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+							{
+					"subclass_id" : 45 ,
+					"subclass_name" : "Productos de apoyo para tracción de la columna vertebral" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 48 ,
+					"subclass_name" : "Equipo para el entrenamiento del movimiento, la fuerza y el equilibrio" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 49 ,
+					"subclass_name" : "Productos para el cuidado de heridas" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				}
+			]
+		} ,
+		{
+			"class_id" : 05 ,
+			"class_name" : "Productos de apoyo para la capacitación/aprendizaje de habilidades" ,
+			"subclass" : [
+				{
+					"subclass_id" : 03 ,
+					"subclass_name" : "Productos de apoyo para la terapia de comunicación y el aprendizaje de la comunicación" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 06 ,
+					"subclass_name" : "Productos de apoyo para el entrenamiento/aprendizaje en comunicación alternativa y aumentativa" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 09 ,
+					"subclass_name" : "Productos de apoyo para el entrenamiento/aprendizaje de la continencia" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 12 ,
+					"subclass_name" : "Productos de apoyo para el entrenamiento de las capacidades cognitivas" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 15 ,
+					"subclass_name" : "Productos de apoyo para el entrenamiento/aprendizaje de funciones básicas" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 18 ,
+					"subclass_name" : "Productos de apoyo para la formación de temas de educación" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 24 ,
+					"subclass_name" : "Productos de apoyo para la formación artística" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 27 ,
+					"subclass_name" : "Productos de apoyo para el entrenamiento/aprendizaje de habilidades sociales" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 30 ,
+					"subclass_name" : "Productos de apoyo para el entrenamiento en el control de dispositivos de entrada y manipulación de productos y mercancías" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 33 ,
+					"subclass_name" : "Productos de apoyo para el aprendizaje de actividades de la vida diaria" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 36 ,
+					"subclass_name" : "Productos de apoyo para el entrenamiento del cambio y mantenimiento de la postura corporal" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				}
+			]
+		} ,
+		{
+			"class_id" : 06 ,
+			"class_name" : "Productos de apoyo unidos al cuerpo para dar soporte a funciones neuromusculoesqueléticas o relacionadas con el movimiento (órtesis) y sustitución de estructuras anatómicas (prótesis)" ,
+			"subclass" : [
+				{
+					"subclass_id" : 03 ,
+					"subclass_name" : "Órtesis craneales y raquídeas" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 04 ,
+					"subclass_name" : "Órtesis abdominales" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 06 ,
+					"subclass_name" : "Órtesis de miembro superior" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 12 ,
+					"subclass_name" : "Órtesis de miembro inferior" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 15 ,
+					"subclass_name" : "Estimuladores funcionales neuromusculares y sistemas ortésicos híbridos" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 18 ,
+					"subclass_name" : "Prótesis de miembro superior" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 24 ,
+					"subclass_name" : "Prótesis de miembro inferior" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 30 ,
+					"subclass_name" : "Prótesis distintas a las prótesis de miembros" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				}
+			]
+		} , 
+		{
+			"class_id" : 09 ,
+			"class_name" : "Productos de apoyo para las actividades de cuidado personal y de participación en el cuidado personal" ,
+			"subclass" : [
+				{
+					"subclass_id" : 03 ,
+					"subclass_name" : "Ropa y calzado" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 06 ,
+					"subclass_name" : "Productos de apoyo usados sobre el cuerpo para protegerlo" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 07 ,
+					"subclass_name" : "Productos de apoyo para la estabilización del cuerpo" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 09 ,
+					"subclass_name" : "Productos de apoyo para vestirse y desvestirse" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 12 ,
+					"subclass_name" : "Productos de apoyo para funciones de aseo (evacuación)" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 15 ,
+					"subclass_name" : "Productos de apoyo para traqueotomía" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 18 ,
+					"subclass_name" : "Productos de apoyo para ostomía" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 21 ,
+					"subclass_name" : "Productos para la protección y limpieza de la piel" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 24 ,
+					"subclass_name" : "ECanalizadores de orina" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 27 ,
+					"subclass_name" : "Productos de apoyo para la recogida de orina y de heces" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 30 ,
+					"subclass_name" : "Productos de apoyo para la absorción de orina y heces" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 31 ,
+					"subclass_name" : "Productos de apoyo para prevenir escapes involuntarios de orina o de heces" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 32 ,
+					"subclass_name" : "Productos de apoyo para la gestión de la menstruación" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 33 ,
+					"subclass_name" : "Productos de apoyo para lavarse, bañarse y ducharse" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+							{
+					"subclass_id" : 36 ,
+					"subclass_name" : "Productos de apoyo para manicura y pedicura" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 39 ,
+					"subclass_name" : "Productos de apoyo para el cuidado del cabello" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 42 ,
+					"subclass_name" : "Productos de apoyo para el cuidado dental" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				}
+				 ,
+				{
+					"subclass_id" : 45 ,
+					"subclass_name" : "Productos de apoyo para el cuidado facial" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				}
+				 ,
+				{
+					"subclass_id" : 54 ,
+					"subclass_name" : "Productos de apoyo para actividades sexuales" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} 
+			]
+		} ,
+		{
+			"class_id" : 12 ,
+			"class_name" : "Productos de apoyo para las actividades y la participación relacionadas con la movilidad personal y el transporte" ,
+			"subclass" : [
+				{
+					"subclass_id" : 03 ,
+					"subclass_name" : "Productos de apoyo para caminar, manejados por un brazo" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 06 ,
+					"subclass_name" : "Productos de apoyo para caminar, manejados por ambos brazos" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 07 ,
+					"subclass_name" : "Accesorios de los productos de apoyo para caminar" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 10 ,
+					"subclass_name" : "Coches, furgonetas y camiones" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 11 ,
+					"subclass_name" : "Vehículos para el transporte colectivo" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 12 ,
+					"subclass_name" : "Accesorios y adaptaciones para vehículos" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 16 ,
+					"subclass_name" : "Motocicletas y ciclomotores" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 17 ,
+					"subclass_name" : "Diversos vehículos motorizados" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 18 ,
+					"subclass_name" : "Ciclos" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 22 ,
+					"subclass_name" : "Sillas de ruedas de manuales" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 23 ,
+					"subclass_name" : "Sillas de ruedas de motorizadas" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 24 ,
+					"subclass_name" : "Accesorios para sillas de ruedas" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 27 ,
+					"subclass_name" : "Diversos vehículos de propulsión humana" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 31 ,
+					"subclass_name" : "Productos de apoyo para el cambio de postura corporal" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+							{
+					"subclass_id" : 36 ,
+					"subclass_name" : "Productos de apoyo para la elevación de personas" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 39 ,
+					"subclass_name" : "Productos de apoyo para orientación" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+					
+				}
+			]
+		} , 
+		{
+			"class_id" : 15 ,
+			"class_name" : "Productos de apoyo para actividades domésticas y participación en la vida doméstica" ,
+			"subclass" : [
+				{
+					"subclass_id" : 03 ,
+					"subclass_name" : "Productos de apoyo para preparar comida y bebida" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 06 ,
+					"subclass_name" : "Productos de apoyo para lavar la vajilla" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 09 ,
+					"subclass_name" : "Productos de apoyo para comer y beber" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 12 ,
+					"subclass_name" : "Productos de apoyo para la limpieza de la casa" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 15 ,
+					"subclass_name" : "Productos de apoyo para confeccionar y mantener tejidos para uso doméstico" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 18 ,
+					"subclass_name" : "Productos de apoyo para jardinería y cuidado del césped para uso doméstico" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				}
+			]
+		} ,
+		{
+			"class_id" : 18 ,
+			"class_name" : "Mobiliario, accesorios y otros productos de apoyo para facilitar actividades en entornos hechos por seres humanos tanto en interiores como en exteriores" ,
+			"subclass" : [
+				{
+					"subclass_id" : 03 ,
+					"subclass_name" : "Mesas" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 06 ,
+					"subclass_name" : "Equipos para iluminación" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 09 ,
+					"subclass_name" : "Mobiliario para sentarse" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 10 ,
+					"subclass_name" : "Accesorios de mobiliario para sentarse" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 12 ,
+					"subclass_name" : "Camas y equipo de cama" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 15 ,
+					"subclass_name" : "Productos de apoyo para ajustar la altura del mobiliario" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 18 ,
+					"subclass_name" : "Pasamanos y barras de apoyo" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 21 ,
+					"subclass_name" : "Dispositivos para abrir y cerrar verjas, puertas, ventanas y cortinas" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 24 ,
+					"subclass_name" : "Elementos de construcción en viviendas y otros locales" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 30 ,
+					"subclass_name" : "Productos de apoyo para accesibilidad vertical" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 33 ,
+					"subclass_name" : "Equipos de seguridad para viviendas y otros locales" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 36 ,
+					"subclass_name" : "Muebles para almacenamiento" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				}
+			]
+		} , 
+		{
+			"class_id" : 22 ,
+			"class_name" : "Productos de apoyo para la comunicación y la gestión de la información" ,
+			"subclass" : [
+				{
+					"subclass_id" : 03 ,
+					"subclass_name" : "Productos de apoyo para la visión" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 06 ,
+					"subclass_name" : "Productos de apoyo para la audición" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 09 ,
+					"subclass_name" : "Productos de apoyo para la producción vocal" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 12 ,
+					"subclass_name" : "Productos de apoyo para dibujo y escritura" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 15 ,
+					"subclass_name" : "Productos de apoyo para cálculo" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 18 ,
+					"subclass_name" : "Productos de apoyo para grabar, reproducir y presentar información sonora y visual" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 21 ,
+					"subclass_name" : "Productos de apoyo para comunicación cara a cara" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 27 ,
+					"subclass_name" : "Productos de apoyo para emitir alarmas, indicar, recordar y señalar" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 30 ,
+					"subclass_name" : "Productos de apoyo para la lectura" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 33 ,
+					"subclass_name" : "Ordenadores y terminales" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 36 ,
+					"subclass_name" : "Dispositivos de entrada para ordenadores" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 39 ,
+					"subclass_name" : "Dispositivos de salida para ordenadores" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 42 ,
+					"subclass_name" : "Dispositivos interactivos para ordenadores" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				}
+			]
+		} , 
+		{
+			"class_id" : 24 ,
+			"class_name" : "Productos de apoyo para controlar, transportar, mover y manipular objetos y dispositivos" ,
+			"subclass" : [
+				{
+					"subclass_id" : 06 ,
+					"subclass_name" : "Productos de apoyo para manipular recipientes" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 09 ,
+					"subclass_name" : "Productos de apoyo para accionar y controlar dispositivos" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 13 ,
+					"subclass_name" : "Productos de apoyo para controlar a distancia" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 18 ,
+					"subclass_name" : "Productos de apoyo para compensar o sustituir la función del brazo, de la mano o de los dedos, o combinación de estas funciones" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 21 ,
+					"subclass_name" : "Productos de apoyo para alcanzar a distancia" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 24 ,
+					"subclass_name" : "Productos de apoyo para colocación" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 27 ,
+					"subclass_name" : "Productos de apoyo para fijación" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 36 ,
+					"subclass_name" : "Productos de apoyo para llevar y transportar" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 39 ,
+					"subclass_name" : "Recipientes para almacenamiento de objetos" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				}
+			]
+		} , 
+		{
+			"class_id" : 27 ,
+			"class_name" : "Productos de apoyo para controlar, adaptar o medir elementos de los entornos físicos" ,
+			"subclass" : [
+				{
+					"subclass_id" : 03 ,
+					"subclass_name" : "Productos de apoyo para la mejora del ambiente/entorno" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 06 ,
+					"subclass_name" : "Instrumentos de medida" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				}
+			]
+		} , 
+		{
+			"class_id" : 28 ,
+			"class_name" : "Productos de apoyo para las actividades de trabajo y la participación en el empleo" ,
+			"subclass" : [
+				{
+					"subclass_id" : 03 ,
+					"subclass_name" : "Mobiliario y elementos de mobiliario para lugares de trabajo" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 06 ,
+					"subclass_name" : "Productos de apoyo para transportar objetos en lugares de trabajo" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 09 ,
+					"subclass_name" : "Productos de apoyo para elevar y reposicionar objetos en lugares de trabajo" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 12 ,
+					"subclass_name" : "Productos de apoyo para fijar, alcanzar y agarrar objetos en lugares de trabajo" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 15 ,
+					"subclass_name" : "Máquinas y herramientas de uso en lugares de trabajo" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 18 ,
+					"subclass_name" : "Dispositivos para análisis y control en lugares de trabajo" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 21 ,
+					"subclass_name" : "Productos de apoyo para la administración de la oficina, el almacenamiento y la gestión de la información en el trabajo" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 24 ,
+					"subclass_name" : "Productos de apoyo para la protección de la salud y la seguridad en lugares de trabajo" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 27 ,
+					"subclass_name" : "Productos de apoyo para la evaluación laboral y la formación profesional" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				}
+			]
+		} , 
+		{
+			"class_id" : 30 ,
+			"class_name" : "Productos de apoyo para el esparcimiento y el ocio" ,
+			"subclass" : [
+				{
+					"subclass_id" : 03 ,
+					"subclass_name" : "Productos de apoyo para jugar" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 09 ,
+					"subclass_name" : "Productos de apoyo para el deporte" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 12 ,
+					"subclass_name" : "Productos de apoyo para tocar y componer música" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 15 ,
+					"subclass_name" : "Productos de apoyo para realizar fotos, películas y vídeos" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 18 ,
+					"subclass_name" : "Herramientas, materiales y equipo para manualidades" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 24 ,
+					"subclass_name" : "Productos de apoyo para la caza y la pesca" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 27 ,
+					"subclass_name" : "Productos de apoyo para acampar e ir en caravana" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 30 ,
+					"subclass_name" : "Productos de apoyo para fumar" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				} ,
+				{
+					"subclass_id" : 34 ,
+					"subclass_name" : "Productos de apoyo para el cuidado de animales" ,
+					"divisions" : [
+						{
+							"division_id" : 0 ,
+							"division_name" : "name"
+						}
+					]
+				}
+			]
+		}
+	]
+}

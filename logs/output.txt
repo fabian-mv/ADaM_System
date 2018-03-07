@@ -9,10 +9,819 @@
 
 
 
-Analyzing document...Done.
-Encoding bytes...Done.
-Rectifying string...Done.
-Generating Superhaystack...Removing head and tail...Removing headers and footers...Removing page numbers...Done.
-['04\n\nProductos de apoyo para la medición, soporte, entrenamiento o sustitución de funciones corporales', '05\n\nProductos de apoyo para la capacitación/aprendizaje de habilidades', '06\n\nProductos de apoyo unidos al cuerpo para dar soporte a funciones neuromusculoesqueléticas o relacionadas con el movimiento (órtesis) y sustitución de estructuras anatómicas (prótesis)', '09\n\nProductos de apoyo para las actividades de cuidado personal y de participación en el cuidado personal', '12\n\nProductos de apoyo para las actividades y la participación relacionadas con la movilidad personal y el transporte', '15\n\nProductos de apoyo para actividades domésticas y participación en la vida doméstica', '18\n\nMobiliario, accesorios y otros productos de apoyo para facilitar actividades en entornos hechos por seres humanos tanto en interiores como en exteriores', '22\n\nProductos de apoyo para la comunicación y la gestión de la información', '24\n\nProductos de apoyo para controlar, transportar, mover y manipular objetos y dispositivos', '27\n\nProductos de apoyo para controlar, adaptar o medir elementos de los entornos físicos', '28\n\nProductos de apoyo para las actividades de trabajo y la participación en el empleo', '30\n\nProductos de apoyo para el esparcimiento y el ocio']
-['04', '05', '06', '09', '12', '15', '18', '22', '24', '27', '28', '30']
-['Productos de apoyo para la medición, soporte, entrenamiento o sustitución de funciones corporales', 'Productos de apoyo para la capacitación/aprendizaje de habilidades', 'Productos de apoyo unidos al cuerpo para dar soporte a funciones neuromusculoesqueléticas o relacionadas con el movimiento (órtesis) y sustitución de estructuras anatómicas (prótesis)', 'Productos de apoyo para las actividades de cuidado personal y de participación en el cuidado personal', 'Productos de apoyo para las actividades y la participación relacionadas con la movilidad personal y el transporte', 'Productos de apoyo para actividades domésticas y participación en la vida doméstica', 'Mobiliario, accesorios y otros productos de apoyo para facilitar actividades en entornos hechos por seres humanos tanto en interiores como en exteriores', 'Productos de apoyo para la comunicación y la gestión de la información', 'Productos de apoyo para controlar, transportar, mover y manipular objetos y dispositivos', 'Productos de apoyo para controlar, adaptar o medir elementos de los entornos físicos', 'Productos de apoyo para las actividades de trabajo y la participación en el empleo', 'Productos de apoyo para el esparcimiento y el ocio']
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+5
+estoy aqui
+0
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+0
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+5
+estoy aqui
+0
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+0
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+5
+estoy aqui
+0
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+0
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+5
+estoy aqui
+0
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+0
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+5
+estoy aqui
+0
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+0
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+5
+estoy aqui
+0
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+0
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+5
+estoy aqui
+0
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+0
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+5
+estoy aqui
+0
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+0
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+5
+estoy aqui
+0
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+0
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+5
+estoy aqui
+0
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+0
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+5
+estoy aqui
+0
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+0
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+5
+estoy aqui
+0
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+0
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+4
+estoy aqui
+1
+estoy aqui
+1
+estoy aqui
+2
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+3
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
+estoy aqui
+3
+estoy aqui
+2
+estoy aqui
+1
+estoy aqui
+0
+estoy aqui
+4
+estoy aqui
+0
+estoy aqui
+3
